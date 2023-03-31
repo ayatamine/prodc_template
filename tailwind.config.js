@@ -31,9 +31,13 @@ module.exports = {
         secondary: "#13C296",
         "body-color": "#637381",
         warning: "#FBBF24",
-        primaryTextColor:"#2C4C7E",
+        primaryTextColor:"#2196f3",
+        primaryTextColorDarken:"#0079cf",
         primaryBg:"#ECFEF5",
-        secondaryBg:'#fee5d3'
+        secondaryBg:'#fee5d3',
+        body:'#f9f9f9',
+        sectionTitleColor:'#BF8F00',
+        textBgColor:'#FFE69A'
       },
       boxShadow: {
         input: "0px 7px 20px rgba(0, 0, 0, 0.03)",

@@ -10,7 +10,7 @@ body {
 }
 
 .sticky {
-  @apply fixed z-[9999] bg-white bg-opacity-80 transition;
+  @apply fixed z-[9999] bg-white  transition;
   backdrop-filter: blur(5px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
@@ -22,12 +22,20 @@ body {
 .sticky #navbarToggler span {
   @apply bg-dark;
 }
-
+.submenu.top-dropdown{
+  @apply relative top-full left-0 hidden w-[200px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full shadow-md
+}
 .sticky #navbarCollapse li a {
   @apply text-dark hover:text-primary hover:opacity-100;
 }
+#navbarCollapse li .topnav-link{
+ @apply  mx-8 flex px-4 py-2 text-base text-primaryTextColor group-hover:text-primary lg:mr-0 lg:inline-flex  hover:bg-gray-100   transition-all duration-200 ease-in-out
+}
+.sidenav-link{
+  @apply  flex items-center gap-x-2 px-5 py-2 text-sm  hover:bg-body   transition-all duration-200 ease-in-out
+}
 #navbarCollapse li .ud-menu-scroll.active {
-  @apply opacity-70;
+  @apply bg-gray-100 font-semibold;
 }
 .sticky #navbarCollapse li .ud-menu-scroll.active {
   @apply text-primary opacity-100;
@@ -48,4 +56,49 @@ body {
 }
 .navbarTogglerActive > span:nth-child(3) {
   @apply top-[-8px] rotate-[135deg];
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+.carousel-item {
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+#carousel-1:checked
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-2:checked
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-3:checked
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
+ @apply text-primaryTextColor font-bold  /*Set to match the Tailwind colour you want the active one to be */
+}
+.intro-cards{
+  @apply  border-2  border-yellow-200 text-center font-semibold text-base text-primaryTextColor leading-8 p-3 md:min-h-full
 }
