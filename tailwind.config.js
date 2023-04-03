@@ -28,6 +28,7 @@ module.exports = {
         dark: "#090E34",
         "dark-700": "#090e34b3",
         primary: "#2AA7FF",
+        primaryDarken: "#0079cf",
         secondary: "#13C296",
         "body-color": "#637381",
         warning: "#FBBF24",
@@ -37,7 +38,8 @@ module.exports = {
         secondaryBg:'#fee5d3',
         body:'#f9f9f9',
         sectionTitleColor:'#BF8F00',
-        textBgColor:'#FFE69A'
+        textBgColor:'#FFE69A',
+        textBgColorDarken:'#e0c77d',
       },
       boxShadow: {
         input: "0px 7px 20px rgba(0, 0, 0, 0.03)",

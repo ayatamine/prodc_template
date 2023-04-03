@@ -102,3 +102,22 @@ body {
 .intro-cards{
   @apply  border-2  border-yellow-200 text-center font-semibold text-base text-primaryTextColor leading-8 p-3 md:min-h-full
 }
+.highlighted-offer{
+  @apply text-primaryTextColorDarken dark:text-primaryTextColor
+}
+.unhighlighted-offer{
+  @apply text-gray-500 dark:text-gray-200
+}
+
+@media screen {
+  #testimonial .swiper-slide{
+    height: 21rem;
+  }
+  #testimonial .swiper-slide-next{
+   /* height: 25rem; */
+   transform: scaleY(1.1) !important;
+  }
+}
+.footer-link{
+  @apply text-gray-600 hover:text-primaryTextColor md:hover:font-semibold dark:text-gray-400
+}
