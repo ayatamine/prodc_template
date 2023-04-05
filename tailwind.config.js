@@ -36,7 +36,8 @@ module.exports = {
         primaryTextColorDarken:"#0079cf",
         primaryBg:"#ECFEF5",
         secondaryBg:'#fee5d3',
-        body:'#f9f9f9',
+        body:'#f3f4fe',
+        input:'#f3f4fe',
         sectionTitleColor:'#BF8F00',
         textBgColor:'#FFE69A',
         textBgColorDarken:'#e0c77d',
@@ -46,6 +47,12 @@ module.exports = {
         pricing: "0px 39px 23px -27px rgba(0, 0, 0, 0.04)",
         "switch-1": "0px 0px 5px rgba(0, 0, 0, 0.15)",
         testimonial: "0px 20px 48px -28px #a3aed8",
+      },
+      theme: {
+        fontSize: {
+            xs: ['0.775rem', '1.25rem'],
+            smd:['1rem']
+        },
       },
     },
     fontFamily: {

@@ -121,3 +121,30 @@ body {
 .footer-link{
   @apply text-gray-600 hover:text-primaryTextColor md:hover:font-semibold dark:text-gray-400
 }
+
+.filter-input{
+  @apply  h-9 p-1 px-2 w-full rounded  bg-body border border-gray-300 text-sm text-gray-500 focus:outline-none focus-visible:ring-1    focus:text-gray-900 focus-visible:font-bold;
+}
+/* Toggle B */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #2196f3;
+}
+input[type="radio"] + label span {
+  transition: background .2s,
+    transform .2s;
+}
+
+input[type="radio"] + label span:hover,
+input[type="radio"] + label:hover span{
+transform: scale(1.2);
+} 
+
+input[type="radio"]:checked + label span {
+background-color: #2196f3; 
+box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type="radio"]:checked + label{
+ color: #2196f3; 
+}
