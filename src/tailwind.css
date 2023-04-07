@@ -148,3 +148,18 @@ box-shadow: 0px 0px 0px 2px white inset;
 input[type="radio"]:checked + label{
  color: #2196f3; 
 }
+/* tab styme */ 
+.tab-active{
+  @apply  text-primaryTextColor border-b-4 border-primaryTextColor  !important;
+}
+.tab-link{
+  @apply  flex justify-between items-center gap-1  py-1 md:py-3 pl-1 ltr:pr-1 align-middle text-lg text-gray-500 no-underline hover:text-gray-900 border-b-4 border-white  hover:border-primaryTextColorDarken;
+} 
+.tab-active{
+ @apply text-primaryTextColor;
+}
+
+/* buttons */
+.primaryBtn{
+  @apply bg-primaryTextColor py-2 px-4 text-white hover:bg-primaryTextColorDarken
+}
