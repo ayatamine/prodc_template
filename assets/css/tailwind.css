@@ -735,6 +735,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: auto;
 }
 
+.mx-0{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
@@ -1163,6 +1168,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-1{
   flex: 1 1 0%;
+}
+
+.flex-none{
+  flex: none;
 }
 
 .flex-grow{
@@ -1837,11 +1846,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2.25rem;
 }
 
-.px-9{
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1850,6 +1854,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .pt-2{
@@ -2224,6 +2233,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-underline-offset: 8px;
 }
 
+.underline-offset-2{
+  text-underline-offset: 2px;
+}
+
+.underline-offset-4{
+  text-underline-offset: 4px;
+}
+
 .accent-primaryTextColor{
   accent-color: #2196f3;
 }
@@ -2584,6 +2601,12 @@ body {
   display: block;
 }
 
+#carousel-11:checked ~ .control-11,
+#carousel-22:checked ~ .control-22,
+#carousel-33:checked ~ .control-33 {
+  display: table;
+}
+
 .carousel-indicators {
   list-style: none;
   margin: 0;
@@ -2614,7 +2637,26 @@ body {
   color: rgb(33 150 243 / var(--tw-text-opacity));
 }
 
+#carousel-11:checked
+  ~ .control-11
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet, #carousel-22:checked
+  ~ .control-22
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet, #carousel-33:checked
+  ~ .control-33
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet{
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(33 150 243 / var(--tw-text-opacity));
+}
+
 .intro-cards{
+  min-height: 100%;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(254 240 138 / var(--tw-border-opacity));
@@ -2625,12 +2667,6 @@ body {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(33 150 243 / var(--tw-text-opacity));
-}
-
-@media (min-width: 720px){
-  .intro-cards{
-    min-height: 100%;
-  }
 }
 
 .highlighted-offer{
@@ -3460,6 +3496,10 @@ input[type="radio"]:checked + label{
   .md\:leading-snug{
     line-height: 1.375;
   }
+
+  [dir="ltr"] .ltr\:md\:mr-10{
+    margin-right: 2.5rem;
+  }
 }
 
 @media (min-width: 960px){
@@ -3694,9 +3734,9 @@ input[type="radio"]:checked + label{
     padding-bottom: 6rem;
   }
 
-  .lg\:px-24{
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .lg\:px-9{
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 
   .lg\:px-8{

@@ -71,6 +71,11 @@ body {
 #carousel-3:checked ~ .control-3 {
   display: block;
 }
+#carousel-11:checked ~ .control-11,
+#carousel-22:checked ~ .control-22,
+#carousel-33:checked ~ .control-33 {
+  display: table;
+}
 .carousel-indicators {
   list-style: none;
   margin: 0;
@@ -99,8 +104,25 @@ body {
   .carousel-bullet {
  @apply text-primaryTextColor font-bold  /*Set to match the Tailwind colour you want the active one to be */
 }
+#carousel-11:checked
+  ~ .control-11
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-22:checked
+  ~ .control-22
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-33:checked
+  ~ .control-33
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
+ @apply text-primaryTextColor font-bold  /*Set to match the Tailwind colour you want the active one to be */
+}
 .intro-cards{
-  @apply  border-2  border-yellow-200 text-center font-semibold text-base text-primaryTextColor leading-8 p-3 md:min-h-full
+  @apply  border-2  border-yellow-200 text-center font-semibold text-base text-primaryTextColor leading-8 p-3 min-h-full
 }
 .highlighted-offer{
   @apply text-primaryTextColorDarken dark:text-primaryTextColor
