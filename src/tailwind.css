@@ -189,5 +189,5 @@ input[type="radio"]:checked + label{
 }
 
 .white-input-theme{
-  @apply border-2 w-full border-gray-400 p-2 focus:outline-none focus:border-primary focus:shadow-[0_1px_2px_#2196f3]
+  @apply border w-full border-gray-400 p-2 focus:outline-none focus:border-primary focus:shadow-[0_1px_2px_#2196f3]
 }
