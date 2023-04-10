@@ -139,7 +139,9 @@ body {
    /* height: 25rem; */
    transform: scaleY(1.1) !important;
   }
+  #testimonial .swiper-slide-next img{@apply h-14;width: 4.5rem;}
 }
+
 .footer-link{
   @apply text-gray-600 hover:text-primaryTextColor md:hover:font-semibold dark:text-gray-400
 }
@@ -184,4 +186,8 @@ input[type="radio"]:checked + label{
 /* buttons */
 .primaryBtn{
   @apply bg-primaryTextColor py-2 px-4 text-white hover:bg-primaryTextColorDarken
+}
+
+.white-input-theme{
+  @apply border-2 w-full border-gray-400 p-2 focus:outline-none focus:border-primary focus:shadow-[0_1px_2px_#2196f3]
 }
