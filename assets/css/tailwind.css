@@ -603,10 +603,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0px;
 }
 
-.left-4{
-  left: 1rem;
-}
-
 .z-40{
   z-index: 40;
 }
@@ -695,14 +691,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.25rem;
 }
 
-.mx-10{
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .mt-4{
@@ -897,6 +893,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 13rem;
 }
 
+.h-9{
+  height: 2.25rem;
+}
+
 .min-h-fit{
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
@@ -983,6 +983,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 13rem;
 }
 
+.w-max{
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.w-5\/6{
+  width: 83.333333%;
+}
+
+.w-1\/5{
+  width: 20%;
+}
+
 .w-1\/6{
   width: 16.666667%;
 }
@@ -1017,18 +1031,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 60%;
 }
 
-.w-5\/6{
-  width: 83.333333%;
+.w-1\/12{
+  width: 8.333333%;
 }
 
-.w-1\/5{
-  width: 20%;
+.w-9{
+  width: 2.25rem;
 }
 
-.w-max{
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.w-0{
+  width: 0px;
 }
 
 .max-w-full{
@@ -1051,8 +1063,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 1140px;
 }
 
-.max-w-sm{
-  max-width: 24rem;
+.max-w-2xl{
+  max-width: 42rem;
+}
+
+.max-w-5xl{
+  max-width: 64rem;
 }
 
 .flex-1{
@@ -1147,40 +1163,6 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation: bounce 1s infinite;
 }
 
-@-webkit-keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin{
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
-}
-
-@-webkit-keyframes pulse{
-  50%{
-    opacity: .5;
-  }
-}
-
-@keyframes pulse{
-  50%{
-    opacity: .5;
-  }
-}
-
-.animate-pulse{
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
 .cursor-pointer{
   cursor: pointer;
 }
@@ -1201,12 +1183,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   list-style-type: decimal;
 }
 
-.appearance-none{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .auto-rows-min{
   grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
@@ -1218,10 +1194,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.flex-row{
-  flex-direction: row;
 }
 
 .flex-col{
@@ -1307,6 +1279,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-1{
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
+}
+
+.gap-y-2{
+  row-gap: 0.5rem;
+}
+
+.gap-y-1{
+  row-gap: 0.25rem;
+}
+
+.gap-y-0{
+  row-gap: 0px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -1553,26 +1537,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-secondary{
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 194 150 / var(--tw-bg-opacity));
-}
-
-.bg-primaryDarken{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 121 207 / var(--tw-bg-opacity));
-}
-
-.bg-textBgColor{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 230 154 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-90{
   --tw-bg-opacity: 0.9;
 }
@@ -1589,9 +1553,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   fill: currentColor;
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.object-none{
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.object-scale-down{
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.object-center{
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-1{
@@ -1739,9 +1728,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 2.5rem;
 }
 
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pt-2{
@@ -1814,6 +1803,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-5{
   padding-bottom: 1.25rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .text-center{
@@ -2051,11 +2044,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-.text-secondary{
-  --tw-text-opacity: 1;
-  color: rgb(19 194 150 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -2915,6 +2903,10 @@ input[type="radio"]:checked + label{
   padding-left: 2.5rem;
 }
 
+[dir="ltr"] .ltr\:pl-2{
+  padding-left: 0.5rem;
+}
+
 [dir="ltr"] .ltr\:text-left{
   text-align: left;
 }
@@ -3095,8 +3087,16 @@ input[type="radio"]:checked + label{
     display: flex;
   }
 
+  .md\:grid{
+    display: grid;
+  }
+
   .md\:hidden{
     display: none;
+  }
+
+  .md\:h-4{
+    height: 1rem;
   }
 
   .md\:w-2\/3{
@@ -3113,6 +3113,18 @@ input[type="radio"]:checked + label{
 
   .md\:w-1\/4{
     width: 25%;
+  }
+
+  .md\:w-4{
+    width: 1rem;
+  }
+
+  .md\:w-2\/5{
+    width: 40%;
+  }
+
+  .md\:w-3\/5{
+    width: 60%;
   }
 
   .md\:max-w-full{
@@ -3143,6 +3155,10 @@ input[type="radio"]:checked + label{
     padding: 2rem;
   }
 
+  .md\:p-0{
+    padding: 0px;
+  }
+
   .md\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
@@ -3161,6 +3177,11 @@ input[type="radio"]:checked + label{
   .md\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:py-16{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .md\:pb-0{
@@ -3185,6 +3206,11 @@ input[type="radio"]:checked + label{
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   [dir="ltr"] .ltr\:md\:mr-10{
@@ -3254,16 +3280,12 @@ input[type="radio"]:checked + label{
     width: 40%;
   }
 
-  .lg\:w-auto{
-    width: auto;
-  }
-
-  .lg\:w-1\/2{
-    width: 50%;
-  }
-
   .lg\:w-1\/4{
     width: 25%;
+  }
+
+  .lg\:w-auto{
+    width: auto;
   }
 
   .lg\:max-w-full{
@@ -3272,10 +3294,6 @@ input[type="radio"]:checked + label{
 
   .lg\:max-w-screen-xl{
     max-width: 1140px;
-  }
-
-  .lg\:max-w-4xl{
-    max-width: 56rem;
   }
 
   .lg\:max-w-7xl{
@@ -3383,6 +3401,11 @@ input[type="radio"]:checked + label{
     line-height: 2.25rem;
   }
 
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .lg\:shadow-none{
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
@@ -3391,6 +3414,12 @@ input[type="radio"]:checked + label{
 
   [dir="rtl"] .rtl\:lg\:mr-auto{
     margin-right: auto;
+  }
+
+  @media (min-width: 720px){
+    .lg\:md\:grid-cols-3{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 }
 
