@@ -35,27 +35,12 @@
       <div class="container">
         <div class="relative -mx-4 flex items-center justify-between">
           <div class="w-60 max-w-full px-4">
-            <a href="index.html" class="navbar-logo block w-full py-2 md-py-3">
+            <a href="index.html" class="navbar-logo block  py-2 md-py-3" >
               <img
-              src="assets/images/logo/real_logo.jpeg"
+              src="assets/images/logo/real_logo.svg"
               alt="logo"
-              class="header-logo w-11/12 h-10"
+              class="header-logo w-11/12 h-10 object-contain"
             />
-              <!-- <h1 class="text-2xl uppercase text-primaryTextColor font-semibold flex justify-start gap-2 items-center">
-                <svg
-                class="text-primary p-1 bg-primary rounded-full"
-                  width="35"
-                  height="35"
-                  viewBox="0 0 35 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M29.5312 21.6562L28.6563 21.1641L29.6953 20.5625C30.7344 19.9062 31.3359 18.8125 31.2812 17.6094C31.2266 16.4063 30.625 15.3125 29.5312 14.7109L27.8906 13.7813L29.6406 12.6875C30.6797 12.0313 31.2812 10.9375 31.2266 9.73438C31.1719 8.53125 30.5703 7.4375 29.4766 6.83594L19.25 1.09375C18.2109 0.492187 16.9531 0.546875 15.9141 1.09375L5.41406 7.21875C4.375 7.82031 3.71875 8.91406 3.71875 10.1172C3.71875 11.3203 4.375 12.4141 5.41406 13.0156L7.10938 14L5.41406 14.9844C4.375 15.5859 3.71875 16.6797 3.71875 17.8828C3.71875 19.0859 4.32031 20.1797 5.41406 20.7812L6.39844 21.3281L5.46875 21.875C4.42969 22.4766 3.77344 23.5703 3.77344 24.7734C3.77344 25.9766 4.375 27.0703 5.46875 27.6719L15.9141 33.6875C16.4609 34.0156 17.0078 34.125 17.6094 34.125C18.2109 34.125 18.8125 33.9609 19.3594 33.6328L29.6953 27.2891C30.7344 26.6328 31.3359 25.5391 31.2812 24.3359C31.2266 23.2969 30.625 22.2031 29.5312 21.6562ZM5.63281 10.1172C5.63281 9.57031 5.90625 9.13281 6.34375 8.85938L16.8438 2.78906C17.0625 2.67969 17.3359 2.57031 17.5547 2.57031C17.7734 2.57031 18.0469 2.625 18.2656 2.73437L28.5469 8.47656C28.9844 8.75 29.2578 9.1875 29.3125 9.73438C29.3125 10.2812 29.0391 10.7188 28.6016 10.9922L18.3203 17.3906C17.8828 17.6641 17.2812 17.6641 16.8438 17.3906L6.39844 11.375C5.90625 11.1562 5.63281 10.6641 5.63281 10.1172ZM5.63281 17.9375C5.63281 17.3906 5.90625 16.9531 6.34375 16.6797L9.02344 15.1484L15.8594 19.0859C16.4062 19.4141 16.9531 19.5234 17.5547 19.5234C18.1562 19.5234 18.7578 19.3594 19.3047 19.0312L26.0312 14.875L28.6016 16.2969C29.0391 16.5703 29.3125 17.0078 29.3672 17.5547C29.3672 18.1016 29.0938 18.5391 28.6563 18.8125L18.3203 25.2656C17.8828 25.5391 17.2812 25.5391 16.8438 25.2656L6.39844 19.25C5.90625 18.9766 5.63281 18.4844 5.63281 17.9375ZM28.6563 25.8125L18.3203 32.2109C17.8828 32.4844 17.2812 32.4844 16.8438 32.2109L6.39844 26.1953C5.96094 25.9219 5.6875 25.4844 5.6875 24.9375C5.6875 24.3906 5.96094 23.9531 6.39844 23.6797L8.3125 22.5859L15.8594 26.9609C16.4062 27.2891 16.9531 27.3984 17.5547 27.3984C18.1562 27.3984 18.7578 27.2344 19.3047 26.9062L26.7969 22.2578L28.6563 23.2969C29.0938 23.5703 29.3672 24.0078 29.4219 24.5547C29.3672 25.0469 29.0938 25.5391 28.6563 25.8125Z"
-                    fill="white"
-                  />
-                </svg> نيوميد
-              </h1> -->
             </a>
           </div>
           <div class="flex w-full items-center justify-between px-4">
@@ -733,143 +718,7 @@
       </div>
     </section>
 
-    <!-- plans -->
-    <div class="bg-white dark:bg-gray-900" id="plans">
-      <div class="container p-16 mx-auto wow fadeInUp" x-data="{ isFreeOfferOpen: true }">
-          <h1 class="text-2xl font-semibold text-center text-primaryTextColor capitalize lg:text-3xl dark:text-white">
-           باقات المحترف القوي الأمين  
-          </h1>
-  
-          <div class="grid grid-cols-1 gap-8 mt-6 lg:grid-cols-3 xl:mt-12">
-              <div :class="isFreeOfferOpen ? 'border-blue-500 ' : ''" class="flex items-center justify-between px-8 py-4 border cursor-pointer rounded-xl dark:border-gray-700"
-                    @click="isFreeOfferOpen = true">
-                  <div class="flex flex-col items-center space-y-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" :class="isFreeOfferOpen ? 'highlighted-offer  ' : 'text-gray-400'" class="w-5 h-5  sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                      </svg>
-  
-                      <h2  :class="isFreeOfferOpen ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-lg font-medium  sm:text-xl ">العادية</h2>
-                  </div>
-  
-                  <h2 :class="isFreeOfferOpen ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-2xl font-semibold  sm:text-3xl ">مجانية</h2>
-              </div>
-  
-              <div :class="!isFreeOfferOpen ? 'border-blue-500 ' : ''" class="flex items-center justify-between px-8 py-4 border cursor-pointer rounded-xl"
-                     @click="isFreeOfferOpen = false">
-                  <div class="flex flex-col items-center space-y-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" :class="!isFreeOfferOpen ? 'highlighted-offer  ' : 'text-gray-400'" class="w-5 h-5 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                      </svg>
-  
-                      <h2 :class="!isFreeOfferOpen ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-lg font-medium  sm:text-xl">المتداولة</h2>
-                  </div>
-  
-  
-                  <div class="flex flex-col items-center space-y-1">
-                      <div :class="!isFreeOfferOpen ? 'highlighted-offer ' : 'unghilighted-offer '" class="px-2 text-xs  bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
-                          Save 30%
-                      </div>
-  
-                      <h2 :class="!isFreeOfferOpen ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-2xl font-semibold  sm:text-3xl">$99 <span class="text-base font-medium">/Yearly</span></h2>
-                  </div>
-              </div>
-  
-          </div>
-         <!-- free offers -->
-          <div x-show="isFreeOfferOpen" x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 scale-90"
-          x-transition:enter-end="opacity-100 scale-100">
-            <div  class="p-8 mt-8 space-y-4 bg-gray-100 dark:bg-gray-800 rounded-xl">
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">
-                      - متاحة لجميع الشركات من مختلف المجالات والقطاعات، باستثناء <a href="#" class="underline text-primaryTextColor">قطاع الأغذية
-                        والمشروبات.</a>
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- .دفع عمولة للمنصة تتراوح مابين 1% و 5% وتختلف حسب المجال </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- 
-                      .العمولة تشمل كل معاملة تمت من خلال المنصة بطريقة مباشرة أو غير مباشرة </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- 
-                      .العمولة تشمل عملية تسهيل وصول العميل إلى المحترف</p>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- 
-                      .العمولة تشمل التعامل المباشر مع العملاء مشتركين في المنصة
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-            </div>
-            <div class="flex justify-center mt-8 gap-2">
-                <button class="px-10 py-2 tracking-wide text-white capitalize transition-colors duration-300 ease-in-out  transform bg-primary rounded hover:bg-primaryDarken focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                  اشترك الان
-                </button>
-                <button class="px-8 py-2 tracking-wide capitalize transition-colors duration-300 ease-in-out  transform bg-white text-primaryTextColor hover:text-white rounded border hover:bg-primary  focus:bg-primary focus:ring focus:ring-primary">
-                  تصفح نسبة العمولة
-                </button>
-            </div>
-          </div>
-          <!-- paid offer -->
-          <div x-show="!isFreeOfferOpen" x-transition:enter="transition ease-out duration-300"
-          x-transition:enter-start="opacity-0 scale-90"
-          x-transition:enter-end="opacity-100 scale-100">
-            <div  class="p-8 mt-8 space-y-4 bg-gray-100 dark:bg-gray-800 rounded-xl">
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- 
-                      هذه الباقة المدفوعة الأنسب للشركات والمؤسسات التي تعمل في مجال بيع السلع المرتفعة السعر
-                      أو تقديم خدمات باهظة الثمن.
-                    </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- دفع قيمة الباقة فقط.</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- التمتع بالمزايا دون الحاجة لدفع عمولة على كل معاملة .</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- العمولة لاتدفع مهما كان حالة المعاملة طريقة مباشرة أو غير مباشرة  وبغض النظر عن حجم المبيعات.</p>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-            </div>
-            <div class="flex justify-center mt-8">
-              <button class="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 ease-in-out  transform bg-primary rounded hover:bg-primaryDarken focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                اشترك الان
-              </button>
-                
-            </div>
-          </div>
-      </div>
-    </div>
-    <!-- end plans -->
+    
 
     <!-- prodc network -->
     <section
