@@ -147,7 +147,7 @@ body {
 }
 
 .filter-input{
-  @apply  h-9 p-1 px-2 w-full rounded  bg-body border border-gray-300 text-sm text-gray-500 focus:outline-none focus-visible:ring-1    focus:text-gray-900 focus-visible:font-bold;
+  @apply  bg-zinc-100 px-2  border border-gray-300 text-sm text-gray-600 focus:outline-none focus:bg-white;
 }
 /* Toggle B */
 input:checked ~ .dot {

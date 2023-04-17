@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      تفاصيل المشروع - برمجة موقع الكتروني
+    </title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+ 
+
+    <!-- ==== WOW JS ==== -->
+    <script src="assets/js/wow.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
+
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+
+    <script>
+      new WOW().init();
+    </script>
+  </head>
+  <body class="font-Noto">
+    <!-- ====== Navbar Section Start -->
+    <div
+      class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-white"
+    >
+      <div class="container">
+        <div class="relative -mx-4 flex items-center justify-between">
+          <div class="w-60 max-w-full px-4">
+            <a href="index.html" class="navbar-logo block  py-2 md-py-3" >
+              <img
+              src="assets/images/logo/real_logo.svg"
+              alt="logo"
+              class="header-logo w-11/12 h-10 object-contain"
+            />
+            </a>
+          </div>
+          <div class="flex w-full items-center justify-between px-4">
+            <div>
+              <button
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+              >
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-white"
+                ></span>
+              </button>
+              <nav
+                id="navbarCollapse"
+                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-white lg:py-0 lg:px-4 lg:shadow-none xl:px-6"
+              >
+                <ul class="block lg:flex items-center">
+                  <li class="group relative">
+                    <a
+                      href="index.html#home"
+                      class="ud-menu-scroll topnav-link "
+                    >
+                     الرئيسية
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="index.html#about-us"
+                      class="ud-menu-scroll topnav-link "
+                    >
+                       المحترف القوي الأمين
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="index.html#jobs"
+                      class="ud-menu-scroll topnav-link "
+                    >
+                      ميثاق الأخلاق المهنية
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="index.html#plans"
+                      class="ud-menu-scroll topnav-link "
+                    >
+                      شبكة القوي الأمين
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="categories.html"
+                      class="ud-menu-scroll topnav-link active"
+                    >
+                      التصنيفات
+                    </a>
+                  </li>
+                  <li class="submenu-item group relative">
+                    <a
+                      href="javascript:void(0)"
+                      class="relative topnav-link"
+                    >
+                      الصفحات
+                    </a>
+                    <div
+                      class="submenu top-dropdown"
+                    >
+                      <a
+                        href="index.html"
+                        class="topnav-link m-0 w-full"
+                      >
+                        اتصل بنا
+                      </a>
+                      <a
+                        href="index.html"
+                        class="topnav-link m-0 w-full"
+                      >
+                      المدونة
+                      </a>
+                     
+                    </div>
+                  </li>
+                </ul>
+
+              </nav>
+              
+            </div>
+            <div x-data="{ open: false }" :class="{ 'overflow-hidden': open }">
+              <!-- Sidebar -->
+              <div class="fixed inset-y-0 left-0 z-20 bg-white w-64  py-4 transform transition duration-300 ease-in-out h-screen "
+                   x-show="open"
+                   x-transition:enter="transition transform ease-out duration-300"
+                   x-transition:enter-start="-translate-x-full opacity-0"
+                   x-transition:enter-end="translate-x-0 opacity-100"
+                   x-transition:leave="transition transform ease-in duration-300"
+                   x-transition:leave-start="translate-x-0 opacity-100"
+                   x-transition:leave-end="-translate-x-full opacity-0"
+                   @click.away="open = false"
+                   :class="{ '-translate-x-full': !open }">
+                <!-- Sidebar content here -->
+                <div class="dropdown px-4" x-data="{dropOpen:false}">
+                  <button class="w-full flex justify-between items-center gap-2 bg-white  text-gray-700 font-semibold p-1 text-sm border-1" @click="dropOpen = !dropOpen">
+                    <div class="flex justify-start gap-2 items-center ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33a457" d="M96.502 156.137V36.589H8.504v119.548h87.998z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M118.932 93.49l11.347 3.584-11.351 3.738.222 12.086-7.142-9.802-11.112 3.658 6.836-9.58-6.839-9.318 11.007 3.48 6.698-9.125.334 11.279z"/><path d="M127.129 115.793c-4.4 3.689-10.205 5.902-16.393 5.902-13.997 0-25.343-11.361-25.343-25.377 0-14.014 11.347-25.375 25.343-25.375 6.211 0 12.059 2.218 16.467 5.931-5.578-6.741-13.846-11.056-23.271-11.056-16.795 0-30.412 13.633-30.412 30.451 0 16.816 13.617 30.449 30.412 30.449 9.371.001 17.619-4.251 23.197-10.925z" fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229"/><path fill="none" stroke="#000" stroke-width=".497" stroke-miterlimit="2.613" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/></svg>
+                    العربية  
+                    </div>
+                    <svg class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M18 15l-6-6l-6 6h12" transform="rotate(180 12 12)" /></svg>
+                  </button>
+                  <div class="absolute  bg-white border  dropdown-content min-w-[14rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
+                    <a  @click="dropOpen = !dropOpen" href="#" class="text-sm text-gray-900 flex justify-start items-center gap-2 p-2 border-b hover:bg-white">
+                      <svg class="h-5 w-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 149.619V43.135H8.504v106.484h175.748z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33348e" d="M184.252 149.619V43.135H8.504v106.484h175.748z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M116.75 149.619v-37.152h67.502v-32.18H116.75V43.135H75.058v37.152H8.504v32.18h66.554v37.152h41.692z"/><path fill="#fff" d="M29.907 43.135l154.345 93.521v12.965H163.23L8.504 55.869V43.135h21.403z"/><path fill="#fff" d="M162.85 43.135L8.504 136.656v12.965h21.023l154.725-93.752V43.135H162.85z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M184.252 86.106H109.09V43.135H83.738v42.971H8.504v20.542h75.234v42.971h25.352v-42.971h75.162V86.106z"/><path fill="#cc2229" d="M8.584 43.135l61.055 37.152H55.936L8.504 51.424v-8.289h.08zM8.504 149.434v.187h13.394l53.16-32.348v-4.806h-5.805L8.504 149.434zM184.252 149.621v-7.762l-48.303-29.392h-13.703l61.059 37.154h.947zM169.764 43.135l-53.014 32.26v4.892h5.662l61.055-37.152h-13.703z"/></svg>
+                      English
+                    </a>
+                    <a  @click="dropOpen = !dropOpen" href="#"  class=" text-sm text-gray-900 flex justify-start items-center gap-2 p-2 hover:bg-white">
+                      <svg  class="h-5 w-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 216.504 128.088"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M216.252 127.836V.252h-216v127.584h216z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#27569f" d="M71.748 127.836V.252H.252v127.584h71.496z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2136" d="M216.252 127.836V.252h-71.496v127.584h71.496z"/><path fill="none" stroke="#000" stroke-width=".504" stroke-miterlimit="2.613" d="M216.252 127.836V.252h-216v127.584h216z"/></svg>
+                      Francais
+                    </a>
+                  </div>
+                </div> 
+                <ul class="mt-4 border-t py-4">
+                  <li class="group relative my-2">
+                    <a    href="projects.html"   class="sidenav-link"           >
+                    <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+                    </svg>
+                    <span> تصفح الطلبات  </span>
+                    </a>
+                  </li>
+                  <li class="group relative my-2"> 
+                    <a    href="professionals.html"   class="sidenav-link"           >
+                      <svg class="h5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                      </svg>
+                    <span> تصفح شبكة المحترفين  </span>
+                    </a>
+                  </li>
+                  <li class="group relative my-2"> 
+                    <a    href=""   class="sidenav-link"           >
+                      <svg class="h-5 w-5 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />  <circle cx="8.5" cy="8.5" r="1.5" />  <polyline points="21 15 16 10 5 21" /></svg>
+                       <span> تصفح معرض الأعمال  </span>
+                    </a>
+                  </li>
+                  <li class="group relative my-2">
+                    <a    href="categories.html"   class="sidenav-link"           >
+                      <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                      </svg>
+                       <span> التصنيفات  </span>
+                    </a>
+                  </li>
+                  <li class="group relative my-2">
+                    <a    href="add_project.html"   class="sidenav-link"           >
+                      <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
+                       <span> مشروع جديد  </span>
+                    </a>
+                  </li>
+                  <li class="group relative my-2">
+                    
+                    <div class="dropdown " x-data="{dropOpen:false}">
+                      <a    href=""  class="flex items-center justify-between"        @click.prevent="dropOpen = !dropOpen"   >
+                        <div class="sidenav-link  flex items-center justify-between">
+                          <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
+                           <span> المحترف القوي الأمين </span>
+                        </div>
+                        <svg x-show="!dropOpen" class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+                         <svg x-show="dropOpen" class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M18 15l-6-6l-6 6h12" transform="rotate(180 12 12)" /></svg>
+                      </a>
+                      <div class="  dropdown-content min-w-[14rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
+                        <ul class=" border-t p-4">
+                          <li class="group relative my-2">
+                            <a   href="about.html"   class="sidenav-link"           >
+                              من نحن
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="ethiks.html"   class="sidenav-link"           >
+                              ميثاق المحترف القوي الأمين
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="offers.html"   class="sidenav-link"           >
+                              باقات المحترف
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="faqs.html"   class="sidenav-link"           >
+                              الأسئلة الشائعة
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="conditions.html"   class="sidenav-link"           >
+                              شروط الاستخدام
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="privacy.html"   class="sidenav-link"           >
+                            بيان الخصوصية
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </div>
+                    </div> 
+                  </li>
+                  
+                </ul>
+              </div>
+            
+              <!-- Toggle button -->
+              <button @click="open = !open" class="fixed top-1 left-5 p-3 pt-2">
+                <svg x-show="!open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg x-show="open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+              <div class="fixed inset-0 z-10 bg-gray-900 opacity-50 h-screen " x-show="open" @click="open = false"></div>
+            </div>
+            <!-- <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
+             <a
+                href="signin.html"
+                class="loginBtn flex items-start gap-1 py-3 px-7 text-sm font-medium text-primaryTextColor hover:text-primary hover:text-base"
+              >
+              <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />  <line x1="15" y1="9" x2="20" y2="4" />  <polyline points="15 5 15 9 19 9" /></svg>
+                <span >Call Now</span>
+              </a>
+              <a
+                href="signup.html"
+                class="signUpBtn rounded-full bg-white  border-primary py-1 px-3 text-sm leading-10 font-medium text-primary duration-300 ease-in-out bg-opacity-90 hover:bg-opacity-100 hover:bg-primary hover:text-white"
+              >
+                احجز استشارة
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== Navbar Section End -->
+    <!-- beadcrumb -->
+    <div class="flex items-center text-sm md:text-md  overflow-x-auto whitespace-nowrap mt-[65px] py-6 pb-3 px-5 md:px-8 bg-body">
+      <a href="#" class="text-gray-600 dark:text-gray-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+      </a>
+  
+      <span class="mx-0 md:mx-3 text-gray-500 dark:text-gray-300 rtl:-scale-x-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+      </span>  
+      <a href="projects.html" class="text-primaryTextColor dark:text-blue-400 hover:underline">
+        المشاربع 
+      </a>
+
+      <span class="mx-0 md:mx-3 text-gray-500 dark:text-gray-300 rtl:-scale-x-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+      </span>
+      <span class="text-gray-500 dark:text-gray-300 ">
+          برمجة موقع الكتروني laravel
+      </span>
+      
+    </div>
+    <!-- page heading -->
+    <h2 class="text-base md:text-xl bg-body text-gray-800  pb-6 px-4 md:px-8">برمجة موقع الكتروني laravel</h2>
+    <!-- breadcrumb -->
+    
+    <section id="search-filter" class="px-4 md:px-8 bg-body text-gray-800 relative overflow-hidden  pb-16" >
+      <!-- filter in popup -->
+
+      <div class="md:flex justify-between gap-8 space-x-2">
+        <!-- right side -->
+        <div class="w-full md:w-2/3 grid grid-cols-1 gap-8">
+          <!-- project progress -->
+          <div class="bg-white p-4 px-6 md:px-12">
+          
+            <div
+              class="relative after:absolute after:inset-x-0 after:top-1/2 after:block after:h-0.5 after:-translate-y-1/2 after:rounded-lg after:bg-gray-100"
+            >
+              <ol
+                class="relative z-10 md:flex justify-between text-sm font-medium text-gray-500"
+              >
+                <li class="flex items-center gap-3 md:gap-2 bg-white p-2">
+                  <span
+                    class="h-7 w-7  rounded-full bg-primaryTextColor flex items-center"
+                  >
+                    <svg class="h-5 w-5 text-white m-auto"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 12l5 5l10 -10" /></svg>
+                  </span>
+          
+                  <span class="block"> نشر المشروع   </span>
+                </li>
+          
+                <li class="flex items-center gap-3 md:gap-2 bg-white p-2">
+                  <span
+                    class="h-7 w-7  rounded-full bg-primaryTextColor flex items-center"
+                  >
+                  <svg class="h-5 w-5 text-white m-auto"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="15 18 9 12 15 6" /></svg>
+                  </span>
+          
+                  <span class="block"> تلقي العروض </span>
+                </li>
+          
+                <li class="flex items-center gap-3 md:gap-2 bg-white p-2">
+                  <span
+                    class="h-7 w-7 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
+                  >
+                    
+                  </span>
+          
+                  <span class="block"> تنفيذ المشروع </span>
+                </li>
+                <li class="flex items-center gap-3 md:gap-2 bg-white p-2">
+                  <span
+                    class="h-7 w-7 rounded-full bg-gray-100 text-center text-[10px] font-bold leading-6"
+                  >
+                    
+                  </span>
+          
+                  <span class="block"> استلام المشروع </span>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <!-- project description -->
+          <div class="bg-white rounded ">
+            <h2 class="border-b p-2 px-6 text-md md:text-base">وصف المشروع</h2>
+            <p class="p-6 text-sm leading-8">
+              تصميم متجري علي شوبيفاي وتهيئة الموقع للبدء في البيع ووضع خمس منتجات متخصص في بيع النظارات الشمسيه ومنتجات الأعمال الفنية اليدوية خرز
+            </p>
+          </div>
+          <!-- project skills -->
+          <div class="bg-white rounded ">
+            <h2 class="border-b p-2 px-6 text-md md:text-base">المهارات المطلوبة</h2>
+            <div class="mt-4 mb-6 p-2 px-6 flex flex-wrap justify-start items-center gap-2">
+              <span class="bg-primaryTextColor text-white text-sm p-1">هندسة برمحيات   </span>
+              <span class="bg-primaryTextColor text-white text-sm p-1">تصميم   </span>
+              <span class="bg-primaryTextColor text-white text-sm p-1">جديد   </span>
+            </div>
+          </div>
+          <!-- add offer -->
+          <div class="bg-white rounded">
+            <h2 class="border-b p-2 px-6 text-md md:text-base">المهارات المطلوبة</h2>
+            <form class="mt-4 mb-6 p-2 px-6 ">
+              <!-- price + duration -->
+              <div class="project-budget mb-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-center"> 
+                <!-- price -->
+                <div class="">
+                  <label for="project-budget" class=" my-2 flex">
+                    <span>قيمة العرض</span>
+                    <span class="text-red-600 text-xl font-bold mr-2">*</span>
+                  </label>
+                  <div class="flex itmes-center">
+                    <input type="number" class="white-input-theme w-10/12" style="p-2" id="offer-price""  value="">
+                    <span class="bg-body w-2/12 text-center leading-[2rem] border-l border-y border-gray-400">€</span>
+    
+                  </div>
+                </div>
+                <!-- duration  -->
+                <div class="">
+                  <label for="project-budget" class=" my-2 flex">
+                    <span>مدة التسليم</span>
+                    <span class="text-red-600 text-xl font-bold mr-2">*</span>
+                  </label>
+                  <div class="flex itmes-center">
+                    <input type="number" class="white-input-theme w-10/12" id="project-duration" value="">
+                    <span class="bg-body w-2/12 text-center leading-[2rem] border-l border-y border-gray-400">أيام</span>
+    
+                  </div>
+                </div>
+                <div class="">
+                  <label for="project-budget" class=" my-2 mt-3 block ">
+                    <span>مستحقاتك</span>
+                  </label>
+                  <div class="flex itmes-center">
+                    <input type="number" disabled class="white-input-theme w-10/12"  value="205 ">
+                    <span class="bg-body w-2/12 text-center leading-[2rem] border-l border-y border-gray-400">€</span>
+    
+                  </div>
+                </div>
+              </div>
+              <div class="description mt-8 mb-5">
+                <label for="description" class=" my-2 flex">
+                  <span>وصف المشروع</span>
+                  <span class="text-red-600 text-xl font-bold mr-2">*</span>
+                </label>
+                <textarea class="white-input-theme w-full" name="description" id="description" rows="10"></textarea>
+              </div>
+              <!-- file uploader -->
+              <div x-data="dataFileDnD()" class="relative flex flex-col p-4 text-gray-400 border border-gray-200 rounded">
+                  <div x-ref="dnd"
+                      class="relative flex flex-col text-gray-400 border border-gray-200 border-dashed rounded cursor-pointer">
+                      <input accept="*" type="file" multiple
+                          class="absolute inset-0 z-50 w-full h-full p-0 m-0 outline-none opacity-0 cursor-pointer"
+                          @change="addFiles($event)"
+                          @dragover="$refs.dnd.classList.add('border-blue-400'); $refs.dnd.classList.add('ring-4'); $refs.dnd.classList.add('ring-inset');"
+                          @dragleave="$refs.dnd.classList.remove('border-blue-400'); $refs.dnd.classList.remove('ring-4'); $refs.dnd.classList.remove('ring-inset');"
+                          @drop="$refs.dnd.classList.remove('border-blue-400'); $refs.dnd.classList.remove('ring-4'); $refs.dnd.classList.remove('ring-inset');"
+                          title="" />
+
+                      <div class="flex items-center gap-2 justify-start py-4 ">
+                          <svg class="w-12 h-12 mr-1 text-current-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                              stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <div class="">
+                            <h2 class="text-smd text-gray-800">اسحب الملفات الى هنا</h2>
+                            <p class="text-sm m-0">أو انقر للاختيار اليدوي</p>
+                          </div>
+                      </div>
+                      
+                  </div>
+
+                  <template x-if="files.length > 0">
+                      <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-6" @drop.prevent="drop($event)"
+                          @dragover.prevent="$event.dataTransfer.dropEffect = 'move'">
+                          <template x-for="(_, index) in Array.from({ length: files.length })">
+                              <div class="relative flex flex-col items-center overflow-hidden text-center bg-gray-100 border rounded cursor-move select-none"
+                                  style="padding-top: 100%;" @dragstart="dragstart($event)" @dragend="fileDragging = null"
+                                  :class="{'border-blue-600': fileDragging == index}" draggable="true" :data-index="index">
+                                  <button class="absolute top-0 right-0 z-50 p-1 bg-white rounded-bl focus:outline-none" type="button" @click="remove(index)">
+                                      <svg class="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                          viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                      </svg>
+                                  </button>
+                                  <template x-if="files[index].type.includes('audio/')">
+                                      <svg class="absolute w-12 h-12 text-gray-400 transform top-1/2 -translate-y-2/3"
+                                          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                                      </svg>
+                                  </template>
+                                  <template x-if="files[index].type.includes('application/') || files[index].type === ''">
+                                      <svg class="absolute w-12 h-12 text-gray-400 transform top-1/2 -translate-y-2/3"
+                                          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                      </svg>
+                                  </template>
+                                  <template x-if="files[index].type.includes('image/')">
+                                      <img class="absolute inset-0 z-0 object-cover w-full h-full border-4 border-white preview"
+                                          x-bind:src="loadFile(files[index])" />
+                                  </template>
+                                  <template x-if="files[index].type.includes('video/')">
+                                      <video
+                                          class="absolute inset-0 object-cover w-full h-full border-4 border-white pointer-events-none preview">
+                                          <fileDragging x-bind:src="loadFile(files[index])" type="video/mp4">
+                                      </video>
+                                  </template>
+
+                                  <div class="absolute bottom-0 left-0 right-0 flex flex-col p-2 text-xs bg-white bg-opacity-50">
+                                      <span class="w-full font-bold text-gray-900 truncate"
+                                          x-text="files[index].name">Loading</span>
+                                      <span class="text-xs text-gray-900" x-text="humanFileSize(files[index].size)">...</span>
+                                  </div>
+
+                                  <div class="absolute inset-0 z-40 transition-colors duration-300" @dragenter="dragenter($event)"
+                                      @dragleave="fileDropping = null"
+                                      :class="{'bg-blue-200 bg-opacity-80': fileDropping == index && fileDragging != index}">
+                                  </div>
+                              </div>
+                          </template>
+                      </div>
+                  </template>
+              </div>
+              <!-- offer help -->
+              <ul class="list-disc mt-8 px-5 text-sm leading-7">
+                <li>تجنب وضع وسائل تواصل خارجية</li>
+                <li>لاتضع روابط خارجية ، قم بالاهتمام <a href="" class="underline underline-offset-2 text-primaryTextColor">بمعرض أعمالك</a> بدلا منها</li>
+                <li><a href="" class="underline underline-offset-2 text-primaryTextColor">اقرأ هنا كيف تضيف عرض مميز على مشروع</a></li>
+              </ul>
+                <!-- submit form -->
+              <div class="mt-8 inline-block text-center">
+                <button class="bg-primaryTextColor  text-smd md:text-base text-white font-bold py-1 px-4 w-full rounded hover:bg-primaryTextColorDarken">أضف عرضك</button>
+              </div>
+            </form>
+          </div>
+           <!-- offers list -->
+          <div class="bg-white rounded " x-data="offersListDropdown()">
+            <h2  class="border-b p-2 px-6 text-md md:text-base flex justify-between  items-center">
+              <span>العروض المقدمة</span>
+              <!-- filters -->
+              <div class="flex justify-between items-center gap-2">
+                <select class=" filter-input " >
+                  <option value="" selected>تلقائي</option>
+                  <option value="newest" >الأحدث</option>
+                  <option value="oldest" >الأقدم</option>
+                </select>
+                <div @click="toggle()" class="cursor-pointer">
+                  <svg class="h-5 w-5" x-show="!isOffersListOpen"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
+                  <svg class="h-5 w-5" x-show="isOffersListOpen"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 15 12 9 18 15" /></svg>
+                </div>
+              </div>
+            </h2>
+            <div class="mt-4 " >
+                <!-- professional single card -->
+                <div class="border-b pb-6 p-2 px-6 ">
+                  <div class="flex items-start md:items-center gap-x-3 mb-2  py-6 rounded ">
+                    <!-- image -->
+                    <div class="w-16 h-16 md:w-1/12 mt-2 md:mt-0 ">
+                      <img src="https://via.placeholder.com/150" alt="Profile picture" class="w-full h-full rounded-full">
+                    </div>
+                    <div class="flex-1">
+                      <!-- name + dropdown actions -->
+                      <div class="flex items-center justify-between">
+                        <a href="professional_details.html" class="text-md md:text-base  text-primaryTextColor">
+                          احمد امين عياط
+                        </a>
+                         <!-- dropdown actions -->
+                        <div class="flex items-center ">
+
+                          <div x-data="{ dropdownOpen: false }" class="relative">
+                            <button @click="dropdownOpen = !dropdownOpen" class="flex justify-center items-center gap-1 bg-zinc-100 px-2 py-1 border border-gray-300 text-sm text-gray-600 focus:outline-none focus:bg-white">
+                              <svg class="h-4 w-4 text-current"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                              </svg>
+                              
+                              <span>خيارات</span>
+                            </button>
+
+
+                            <div x-show="dropdownOpen" class="absolute left-0 border mt-2 w-36 bg-white rounded overflow-hidden shadow-xl z-20">
+                              <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-800 border-b hover:bg-gray-200">
+                                <svg class="h-5 w-5 text-gray-600 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="5" x2="5" y2="21" />  <line x1="19" y1="5" x2="19" y2="14" />  <path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0" />  <path d="M5 14a5 5 0 0 1 7 0a5 5 0 0 0 7 0" /></svg>
+                                <span>تبليغ كمخالف</span>
+
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-gray-600 text-sm md:text-md my-1 flex justify-start gap-x-8 items-center">
+                        <!-- rating box -->
+                        <div class="flex items-center">
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-1 text-sm ">
+                        <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>منذ 30 دقيقة</span>
+                      </div>
+                  
+                    </div>
+                  
+                  </div>
+                  <!-- comment -->
+                  <p class="text-sm md:text-smd mt-2">
+                    السلام عليكم و رحمة الله تعالى
+                    حياك الله اخي معك اسامة  من الجزائر مبرمج مواقع الكترونية لدي خبرة في برمجة و تطوير المواقع بما فيها المواقع ا...
+                  </p>
+                </div>
+                <div class="border-b pb-6 p-2 px-6 ">
+                  <div class="flex items-start md:items-center gap-x-3 mb-2  py-6 rounded ">
+                    <div class="w-16 h-16 md:w-1/12 mt-2 md:mt-0 ">
+                      <img src="https://via.placeholder.com/150" alt="Profile picture" class="w-full h-full rounded-full">
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex items-center justify-between">
+                        <a href="professional_details.html" class="text-md md:text-base text-primaryTextColor">
+                          احمد امين عياط
+                        </a>
+                        <!-- component -->
+                        <!-- dropdown actions -->
+                        <div class="flex items-center ">
+
+                          <div x-data="{ dropdownOpen: false }" class="relative">
+                            <button @click="dropdownOpen = !dropdownOpen" class="flex justify-center items-center gap-1 bg-zinc-100 px-2 py-1 border border-gray-300 text-sm text-gray-600 focus:outline-none focus:bg-white">
+                              <svg class="h-4 w-4 text-current"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                              </svg>
+                              
+                              <span>خيارات</span>
+                            </button>
+
+
+                            <div x-show="dropdownOpen" class="absolute left-0 border mt-2 w-36 bg-white rounded overflow-hidden shadow-xl z-20">
+                              <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-gray-800 border-b hover:bg-gray-200">
+                                <svg class="h-5 w-5 text-gray-600 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="5" x2="5" y2="21" />  <line x1="19" y1="5" x2="19" y2="14" />  <path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0" />  <path d="M5 14a5 5 0 0 1 7 0a5 5 0 0 0 7 0" /></svg>
+                                <span>تبليغ كمخالف</span>
+
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-gray-600 text-sm md:text-md my-1 flex justify-start gap-x-8 items-center">
+                        <!-- rating box -->
+                        <div class="flex items-center">
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                          <svg class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-1 text-sm ">
+                        <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>منذ 30 دقيقة</span>
+                      </div>
+                  
+                    </div>
+                  
+                  </div>
+                  <!-- comment -->
+                  <p class="text-sm md:text-smd mt-2">
+                    السلام عليكم و رحمة الله تعالى
+                    حياك الله اخي معك اسامة  من الجزائر مبرمج مواقع الكترونية لدي خبرة في برمجة و تطوير المواقع بما فيها المواقع ا...
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/3">
+          <!-- project details -->
+          <div class="bg-white rounded  pb-4 mb-4">
+            <h2 class="border-b p-2 px-6 text-md md:text-base ">بطاقة المشروع</h2>
+
+            <div class="flex justify-between gap-2 px-6 py-2 pt-6 text-sm">
+              <span  class="w-1/2"> حالة المشروع</span>
+              <div class="w-1/2">
+                <span class=" bg-primaryTextColor text-white w-auto px-1">قيد التنفيذ</span>
+              </div>
+            </div>
+            <div class="flex justify-between gap-2 px-6 py-2  text-sm">
+              <span  class="w-1/2"> تاريخ النشر</span>
+              <span class="w-1/2 ">منذ ساعة </span>
+            </div>
+            <div class="flex justify-between gap-2 px-6 py-2  text-sm">
+              <span  class="w-1/2"> الميزانية</span>
+              <span class="w-1/2 ">230 - 300 € </span>
+            </div>
+            <div class="flex justify-between gap-2 px-6 py-2  text-sm">
+              <span  class="w-1/2"> مدة التنفيذ</span>
+              <span class="w-1/2 ">أسبوع واحد</span>
+            </div>
+            <div class="flex justify-between gap-2 px-6 py-2  text-sm">
+              <span  class="w-1/2"> عدد العروض</span>
+              <span class="w-1/2 ">3<span>
+            </div>
+            <div class="flex justify-between gap-2 px-6 py-2 pb-6 text-sm">
+              <span  class="w-1/2"> متوسط العروض</span>
+              <span class="w-1/2 ">200€<span>
+            </div>
+            <!-- project owner -->
+            <div class="border-t p-2 px-6 ">
+              <span>صاحب المشروع</span>
+              <div class="flex items-start md:items-center gap-x-3 mb-2 py-2 rounded ">
+                <div class="w-16 h-16  mt-2 md:mt-0 ">
+                  <img src="https://via.placeholder.com/150" alt="Profile picture" class="w-full h-full rounded-full">
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <a href="professional_details.html" class="text-smd mx-1">
+                      احمد امين عياط
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-1 text-sm ">
+                    <svg class="h-6 w-6 text-gray-500" fill="#6b6666" width="64px" height="64px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="#6b6666"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="44.6" cy="36.2" r="16.1"></circle><path d="M48.8,79.6c2.8,0,1.2-1.9,1.2-1.9h0a19.22,19.22,0,0,1-4.2-12,18.65,18.65,0,0,1,1.7-7.9l.2-.4a1.17,1.17,0,0,0-.9-1.9h0a17.7,17.7,0,0,0-2.3-.1A24.35,24.35,0,0,0,20.4,76.3c0,1.2.4,3.5,4.2,3.5H48.3C48.7,79.6,48.7,79.6,48.8,79.6Z"></path><path d="M65.3,51.2A14.25,14.25,0,1,0,79.5,65.5,14.25,14.25,0,0,0,65.3,51.2Zm0,4.5a3.22,3.22,0,0,1,3.2,3.2,3.06,3.06,0,0,1-.7,2l2.3,4.3c.1.2,0,.4-.2.4a2.7,2.7,0,0,0-1.1.5c-.2.1-.4,0-.4-.1l-2.2-4.1a3.08,3.08,0,0,1-.9.1,3.22,3.22,0,0,1-3.2-3.2A3.08,3.08,0,0,1,65.3,55.7Zm-2,8.2L61.1,68a3.26,3.26,0,0,1,1,2.3,3.2,3.2,0,1,1-3.2-3.2h.4l2.3-4.3c.1-.2.2-.2.5-.1a2.87,2.87,0,0,0,1.1.6C63.3,63.7,63.4,63.9,63.3,63.9Zm8.3,9.8a3.29,3.29,0,0,1-3-1.9H64.2c-.2,0-.4-.2-.2-.4a2.48,2.48,0,0,0,.1-.9v-.2c0-.2.1-.4.2-.4h4.2a3.12,3.12,0,0,1,3.1-2.6,3.22,3.22,0,0,1,3.2,3.2A3.44,3.44,0,0,1,71.6,73.7Z"></path></g></svg>
+                    <span>مدير تدريب</span>
+                  </div>
+              
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          <!-- share projec -->
+          <div class="bg-white rounded ">
+            <h2 class="border-b p-2 px-6 text-md md:text-base">شارك المشروع</h2>
+            <div class="flex flex-wrap justify-center gap-2 px-6 py-6 text-sm">
+              <!-- facebook -->
+              <button title="facebook" class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+              </button>
+              <!-- twitter -->
+              <button title="twitter" class="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" /></svg>
+              </button>
+              <!-- linkedin -->
+              <button title="linkedin" class="bg-blue-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                <svg class="h-5 w-5 fill-current"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />  <rect x="2" y="9" width="4" height="12" />  <circle cx="4" cy="4" r="2" /></svg>
+              </button>
+              <!-- whatsapp -->
+              <button title="whatsapp" class="bg-[#25D366] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                <svg class="h-5 w-5 fill-current"  width="64px" height="64px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z"></path><path d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z"></path></g></svg>
+              </button>
+              <!-- copy paste -->
+              <button title="copy paste" class="bg-gray-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                <svg class="h-5 w-5 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="8" y="8" width="12" height="12" rx="2" />  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" /></svg>
+              </button>
+      
+      
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ====== Footer Section Start -->
+    <footer class="mx-auto border-t">
+
+      <div class="p-6 bg-white sm:p-6 dark:bg-gray-800">
+        <div class="md:flex gap-3 md:justify-between">
+          <div class=" md:w-1/3 mb-6 md:mb-0">
+            <a href="#" target="_blank" class="flex items-center text-gray-700 gap-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sectionTitleColor" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+              <span class="ml-2 font-semibold text-[#252C32] text-2xl"><span class="font-bold text-theme">Prodc</span></span>
+            </a>
+          </div>
+          <div class="flex-1 grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 p-3">
+            <!-- most links -->
+            <div>
+              <h3 class="mb-6 text-smd px-2 font-bold text-gray-900 uppercase ">أهم الروابط</h3>
+              <ul>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">الاشتراك بباقة</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">توثيق العضوية والتراخيص</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">حساب وسداد عمولة الموقع</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mb-6 text-smd px-2 font-bold text-gray-900 uppercase ">تعرف أكثر على</h3>
+              <ul>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">نظام التقييم</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">نظام النقاط</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">القائمة السوداء</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mb-6 text-smd font-bold text-gray-900 uppercase ">صفحات - تواصل</h3>
+              <ul>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="" 
+                    class="footer-link">سياسة الخصوصية</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="" 
+                    class="footer-link">شروط الاستخدام</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link flex items-center justify-start gap-x-2">
+                    <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="3" y="5" width="18" height="14" rx="2" />  <polyline points="3 7 12 13 21 7" /></svg>
+                    <span>عبر البريد</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+        <div class="sm:flex sm:items-center sm:justify-between text-center">
+          <span class="text-sm text-gray-600 font-semibold sm:text-center dark:text-gray-400">
+            جميع الحقوق محفوظة @prodc
+          </span>
+          <div class="flex flex-wrap justify-center gap-2 p-4 my-2">
+            <!-- facebook -->
+            <a href="#" class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:animate-bounce duration-300 ease-in">
+              <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+            </a href="#">
+            <!-- instagram -->
+            <a href="#" class="bg-[#4f5bd5] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:animate-bounce duration-300 ease-in">
+              <svg  class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/> </svg>
+            </a href="#">
+           <!-- youtube -->
+            <a href="#" class="bg-red-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:animate-bounce duration-300 ease-in">
+              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /></svg>
+            </a href="#">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== Footer Section End -->
+
+    <!-- ====== Back To Top Start -->
+    <a
+      href="javascript:void(0)"
+      class="back-to-top fixed bottom-8 right-8 left-auto z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"
+    >
+      <span
+        class="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"
+      ></span>
+    </a>
+    <!-- ====== Back To Top End -->
+
+    <!-- ====== All Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/create-file-list"></script>
+    <script>
+      function dataFileDnD() {
+          return {
+              files: [],
+              fileDragging: null,
+              fileDropping: null,
+              humanFileSize(size) {
+                  const i = Math.floor(Math.log(size) / Math.log(1024));
+                  return (
+                      (size / Math.pow(1024, i)).toFixed(2) * 1 +
+                      " " +
+                      ["B", "kB", "MB", "GB", "TB"][i]
+                  );
+              },
+              remove(index) {
+                  let files = [...this.files];
+                  files.splice(index, 1);
+      
+                  this.files = createFileList(files);
+              },
+              drop(e) {
+                  let removed, add;
+                  let files = [...this.files];
+      
+                  removed = files.splice(this.fileDragging, 1);
+                  files.splice(this.fileDropping, 0, ...removed);
+      
+                  this.files = createFileList(files);
+      
+                  this.fileDropping = null;
+                  this.fileDragging = null;
+              },
+              dragenter(e) {
+                  let targetElem = e.target.closest("[draggable]");
+      
+                  this.fileDropping = targetElem.getAttribute("data-index");
+              },
+              dragstart(e) {
+                  this.fileDragging = e.target
+                      .closest("[draggable]")
+                      .getAttribute("data-index");
+                  e.dataTransfer.effectAllowed = "move";
+              },
+              loadFile(file) {
+                  const preview = document.querySelectorAll(".preview");
+                  const blobUrl = URL.createObjectURL(file);
+      
+                  preview.forEach(elem => {
+                      elem.onload = () => {
+                          URL.revokeObjectURL(elem.src); // free memory
+                      };
+                  });
+      
+                  return blobUrl;
+              },
+              addFiles(e) {
+                  const files = createFileList([...this.files], [...e.target.files]);
+                  this.files = files;
+                  this.form.formData.files = [...files];
+              }
+          };
+      }
+      </script>
+    <script>
+      function offersListDropdown() {
+        return {
+          isOffersListOpen:false,
+            toggle() {
+                this.isOffersListOpen = ! this.isOffersListOpen
+            },
+        }
+      }
+    </script>
+  </body>
+</html>
