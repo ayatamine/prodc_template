@@ -191,3 +191,11 @@ input[type="radio"]:checked + label{
 .white-input-theme{
   @apply border w-full border-gray-400 p-2 focus:outline-none focus:border-primary focus:shadow-[0_1px_2px_#2196f3]
 }
+.outline-btn{
+  @apply bg-white border text-primaryTextColor border-primaryTextColor w-fit py-1 px-2  rounded hover:bg-primaryTextColor hover:text-white transition-colors duration-300 ease-in-out
+}
+/* dashboard */
+.dashboard-tab{
+  @apply  bg-white rounded p-2 flex flex-col justify-center items-center
+}
+.dashboard-tab.active{ @apply bg-primary text-white transition-colors duration-300 ease-in-out delay-75}
