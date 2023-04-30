@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      احمد امين
+     رصيدي
     </title>
     <link
       rel="shortcut icon"
@@ -18,7 +18,11 @@
     <script src="assets/js/wow.min.js"></script>
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
-
+    <style>
+      [x-cloak] {
+        display: none;
+      }
+    </style>
     <script>
       new WOW().init();
     </script>
@@ -279,7 +283,7 @@
     </div>
     <section class="px-4 md:px-14 py-6 mt-[65px] bg-body text-gray-700 relative overflow-hidden ">
 
-      <div class="w-full mx-auto my-6 md:flex gap-3" id="myTabContent" >
+      <div class="w-full mx-auto my-6 md:flex gap-6" id="myTabContent" >
         <div class="w-full md:w-3/12    mt-2 pt-2 lg:mt-0 z-20" id="nav-content">
           <!-- user avatar -->
           <div>
@@ -297,10 +301,76 @@
             
           </div>
           <!-- user links -->
-           <!-- user links -->
-           <div class="mt-6" x-data="{show:false}">
+          <div class="mt-6" x-data="{show:false}">
             <h3 class="text-smd md:text-md my-3  text-gray-800 hidden md:block">لوحة التحكم  </h3>
             <ul class="list-reset hidden md:grid grid-cols-3 gap-2  px-4 md:px-0" >
+              <li class="">
+                <a href="professional_dashboard.html" class="dashboard-tab hover:text-white hover:bg-primary" >
+                <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                  
+                  <span class="pb-1 md:pb-0 text-sm">الرئيسية</span>
+                </a>
+              </li>  
+              <li class="" role="presentation">
+                    <a href="my_account_settings.html" class="dashboard-tab hover:bg-primary hover:text-white" >
+                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
+                      
+                      <span class="pb-1 md:pb-0 text-sm">حسابي</span>
+                    </a>
+              </li>
+              <li class="" role="presentation">
+                    <a href="my_ballance.html" class="dashboard-tab active" >
+                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                      </svg>
+                      
+                      <span class="pb-1 md:pb-0 text-sm">الرصيد</span>
+                    </a>
+              </li>
+              <li class="" role="presentation">
+                    <a href="my_projects.html" class="dashboard-tab hover:bg-primary hover:text-white" >
+                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                      </svg>
+
+                      <span class="pb-1 md:pb-0 text-sm">مشاريعي</span>
+                    </a>
+              </li>
+              <li class="" role="presentation">
+                    <a href="my_portfolio.html" class="dashboard-tab hover:bg-primary hover:text-white" >
+                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="15" y1="6" x2="15.01" y2="6" />  <rect x="3" y="3" width="18" height="14" rx="3" />  <path d="M3 13l4 -4a3 5 0 0 1 3 0l 4 4" />  <path d="M13 12l2 -2a3 5 0 0 1 3 0l 3 3" />  <line x1="8" y1="21" x2="8.01" y2="21" />  <line x1="12" y1="21" x2="12.01" y2="21" />  <line x1="16" y1="21" x2="16.01" y2="21" /></svg>
+                      
+                      <span class="pb-1 md:pb-0 text-sm">أعمالي</span>
+                    </a>
+              </li>
+              <li class="" role="presentation">
+                    <a href="my_tickets.html" class="dashboard-tab hover:bg-primary hover:text-white" >
+                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                      </svg>
+                      
+                      <span class="pb-1 md:pb-0 text-sm">تذاكري</span>
+                    </a>
+              </li>
+              <li class="" role="presentation">
+                    <a href="my_verifications.html" class="dashboard-tab hover:bg-primary hover:text-white" >
+                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                      </svg>
+                      
+                      <span class="pb-1 md:pb-0 text-sm">توثيقات</span>
+                    </a>
+              </li>
+            </ul>
+            <div class="md:hidden flex justify-between items-center p-2 px-4 bg-white border rounded">
+              <h3 class="text-sm md:text-md my-3  text-gray-800">لوحة التحكم  </h3>
+              <span class="cursor-pointer" @click.prevent="show = !show">
+                <svg class="h-7 w-7"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+              </span>              
+            </div>
+            <ul x-show="show" class="list-reset grid grid-cols-3 gap-3 md:hidden py-4 " >
               <li class="">
                 <a href="professional_dashboard.html" class="dashboard-tab hover:text-white hover:bg-primary" >
                 <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
@@ -359,241 +429,204 @@
                     </a>
               </li>
             </ul>
-            <div class="md:hidden flex justify-between items-center p-2 px-4 bg-white border rounded">
-              <h3 class="text-sm md:text-md my-3  text-gray-800">لوحة التحكم  </h3>
-              <span class="cursor-pointer" @click.prevent="show = !show">
-                <svg class="h-7 w-7"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-              </span>              
-            </div>
-            <ul x-show="show" class="list-reset grid grid-cols-3 gap-3 md:hidden py-4 " >
-              <li class="">
-                <a href="professional_dashboard.html" class="dashboard-tab active" >
-                <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                  
-                  <span class="pb-1 md:pb-0 text-sm">الرئيسية</span>
-                </a>
-              </li>  
-              <li class="" role="presentation">
-                    <a href="my_account_settings.html" class="dashboard-tab hover:bg-primary hover:text-white " >
-                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">حسابي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_ballance.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">الرصيد</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_projects.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                      </svg>
-
-                      <span class="pb-1 md:pb-0 text-sm">مشاريعي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_portfolio.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="15" y1="6" x2="15.01" y2="6" />  <rect x="3" y="3" width="18" height="14" rx="3" />  <path d="M3 13l4 -4a3 5 0 0 1 3 0l 4 4" />  <path d="M13 12l2 -2a3 5 0 0 1 3 0l 3 3" />  <line x1="8" y1="21" x2="8.01" y2="21" />  <line x1="12" y1="21" x2="12.01" y2="21" />  <line x1="16" y1="21" x2="16.01" y2="21" /></svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">أعمالي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_tickets.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">تذاكري</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_verifications.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">توثيقات</span>
-                    </a>
-              </li>
-            </ul>
            
           </div>
 
         </div>
         <div class="w-full md:w-9/12 mt-2  lg:mt-0  z-20">
-          
-          <div id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab" class="">
-            <!-- the tabulation section -->
-            <div class="w-full">
-              <div class="bg-white  rounded grid grid-cols-3 border-b">
-                <div class="flex flex-col justify-center items-center gap-2 border-l p-2">
-                  <span>الرصيد الكلي</span>
-                  <strong class="text-primaryTextColor text-2xl">$ 99,0 </strong>
+   
+          <!-- my projects -->
+          <div class="w-full mt-4">
+            <div class="bg-white rounded ">
+              <h2 class="border-b px-6 py-2 text-md flex justify-between items-center ">
+                <span class=" p-2 ">رصيد الحساب</span>
+                <div class="flex justify-between gap-2" x-data="{showWithdrowBallance:false,showDebitBallance:false,toggle() { this.showReportModel = ! this.showReportModel } }">
+                  <button @click="showWithdrowBallance= true"  class="md-button primary-btn" >سحب الرصيد</button>
+                  <!-- Modal Background -->
+                  <div  x-show="showWithdrowBallance" @click.self="toggle()" class="fixed text-gray-500 overflow-auto z-50 bg-black bg-opacity-40 left-0 right-0 top-0 bottom-0 h-screen flex items-center" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                    <div class="w-full md:w-2/3 mx-auto z-20 inset-0 bg-white rounded">
+                      <h2 class="border-b p-3 text-md flex  justify-between items-center  ">
+                        <span class=" p-2 ">سحب الرصيد</span>
+                        <button @click="showWithdrowBallance=false">
+                          <svg class="h-6 w-6 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                          </svg>                          
+                        </button>
+                      </h2>
+                      <form class="bg-white p-6">
+                        <div class="flex justify-start items-center gap-3">
+                          <div class=" mb-5 md:mb-0 w-full md:w-1/3">
+                            <label for="specialitye" class=" my-2 flex" style="margin-bottom: 11px;">
+                              <span>وسيلة السحب</span>
+                              <span class="text-red-600 text-xl font-bold mr-2">*</span>
+                            </label>
+                            <select class="white-input-theme overflow-y-visible" id="speciality" style="    padding: 0.22rem;
+                               margin-bottom: 0.2rem;"  >
+                              <option value="inge">بيبال</option>
+                              <option value="dedi">كاش sq</option>
+                            </select>
+                          </div>
+                          <div class="w-full md:w-1/3">
+                            <label for="withdrow-ballance" class=" my-2 flex">
+                              <span>المبلغ المطلوب</span>
+                              <span class="text-red-600 text-xl font-bold mr-2">*</span>
+                            </label>
+                            <div class="flex itmes-center">
+                              <input type="number" class="white-input-theme w-10/12" id="withdrow-ballance" type="button" value="">
+                              <span class="bg-body w-2/12 text-sm text-center leading-[2rem] border-l border-y border-gray-400 حف-1">الأورو</span>
+              
+                            </div>
+              
+                          </div>
+                        </div>
+                      </form>
+                      <h6 class="mx-6 my-4 text-sm">
+                        الرصيد القابل للسحب حاليا هو 
+                        <span class=" text-green-600 font-semibold">35 اورو</span>
+                      </h6>
+                      <!-- div with faq questions footer-->
+                      <div x-data="{showFaqSection:false,toggle(){this.showFaqSection = !this.showFaqSection}}">
+                        <div class="flex justify-between items-center gap border-t mt-6 py-3 px-6">
+                          <h6 class="text-sm text-green-600 flex  items-center justify-start gap-2">
+                            <span>
+                              <svg class="h-8 w-8"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                            </span>
+                            <span>
+                              الحد الأدنى لعملية السحب هو 25 دولار
+                            </span>
+                          </h6>
+                      
+                          <div class="flex justify-between gap-2 items-center" >
+                            <button @click.prevent="toggle()" class="bg-blue-200 border border-blue-500">
+                              <svg class="h-8 w-8 text-blue-500 mx-auto"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                            </button>
+  
+                            <button type="submit" class="w-auto md-button primary-btn">
+                              تأكيد السحب
+                             </button>
+                          </div>
+                        </div>
+                        <!-- faq questions -->
+                        <div class="p-6" x-show="showFaqSection">
+                          <div  x-data="{open:false}" class="border-b py-3 mb-2">
+                            <h2 class="text-smd flex justify-between items-center cursor-pointer" @click.prevent="open = !open">
+                              <span>هل يمكنني ربح مبالغ مالية دون انجاز مشاريع أو تقديم خدمات مصغرة ؟</span>
+                              <svg class="h-5 w-5" x-show="!open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
+                              <svg class="h-5 w-5" x-show="open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 15 12 9 18 15" /></svg>
+                            </h2> 
+                            <div class="mt-3 py-2 text-sm leading-9" x-show="open" 
+                              x-transition:enter="transition ease-out duration-300"
+                              x-transition:enter-start="opacity-0 scale-95"
+                              x-transition:enter-end="opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-300"
+                              x-transition:leave-start="opacity-100 scale-100"
+                              x-transition:leave-end="opacity-0 scale-95"
+                              >
+                              بكل تأكيد يمكنك الاستفادة من التسويق بالعمولة عبر تسويق الخدمات وبداية استلام المبالغ المالية عبر نظام التسويق بالعمولة في لوحة التحكم الخاصة بك . من هنا لمزيد من التفاصيل ستجدها هنا .    
+                            </div>
+                          </div>
+                          <!-- question here -->
+                          <div  x-data="{open:false}" class="border-b py-3  mb-2">
+                            <h2 class="text-smd flex justify-between items-center cursor-pointer" @click.prevent="open = !open">
+                              <span>متى يصبح الرصيد المكتسب من التوظيف أو بيع الخدمات متاحاً ؟</span>
+                              <svg class="h-5 w-5" x-show="!open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
+                              <svg class="h-5 w-5" x-show="open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 15 12 9 18 15" /></svg>
+                            </h2> 
+                            <div class="mt-3 py-2 text-sm leading-9" x-show="open" 
+                            x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95"
+                            >
+                            يتحول الرصيد من معلق إلى قابل للسحب بعد مرور 14 يوم من لحظة استلام المشروع او استلام الخدمة من قبل العميل . وهي مدة حماية المستهلك طبقاً للقوانين الدولية .
+                            </div>
+                          </div>  
+                          <!-- question here  -->
+                          <div  x-data="{open:false}" class="border-b py-3 mb-2">
+                            <h2 class="text-smd flex justify-between items-center cursor-pointer" @click.prevent="open = !open">
+                              <span>لقد قمت بشحن مبلغ مالي وأردت سحبه مرة أخرى الرصيد غير قابل للسحب ؟</span>
+                              <svg class="h-5 w-5" x-show="!open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
+                              <svg class="h-5 w-5" x-show="open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 15 12 9 18 15" /></svg>
+                            </h2> 
+                            <div class="mt-3 py-2 text-sm leading-9" x-show="open" 
+                              x-transition:enter="transition ease-out duration-300"
+                              x-transition:enter-start="opacity-0 scale-95"
+                              x-transition:enter-end="opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-300"
+                              x-transition:leave-start="opacity-100 scale-100"
+                              x-transition:leave-end="opacity-0 scale-95"
+                              >
+                              بكل تأكيد يمكنك استرجاع مبلغ قمت بشحنه عبر المنصة وذلك قبل مرور 90 يوم على عملية الشحن . وذلك عبر التواصل معنا ، حيث أننا نقوم بعملية ارجاع المبلغ Refund على نفس الوسيلة المستخدمة في عملية الشحن بنفس مبلغ الشحن .  
+                            </div>
+                          </div>
+                          <!-- question here  -->
+                          <div  x-data="{open:false}" class="border-b py-3 mb-2">
+                            <h2 class="text-smd flex justify-between items-center cursor-pointer" @click.prevent="open = !open">
+                              <span>ماذا أفعل إذا واجهتني أي مشكلة اثناء عملية السحب أو كان لدي أي استفسار آخر ؟</span>
+                              <svg class="h-5 w-5" x-show="!open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
+                              <svg class="h-5 w-5" x-show="open"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 15 12 9 18 15" /></svg>
+                            </h2> 
+                            <div class="mt-3 py-2 text-sm leading-9" x-show="open" 
+                              x-transition:enter="transition ease-out duration-300"
+                              x-transition:enter-start="opacity-0 scale-95"
+                              x-transition:enter-end="opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-300"
+                              x-transition:leave-start="opacity-100 scale-100"
+                              x-transition:leave-end="opacity-0 scale-95"
+                              >
+                              ستجدنا في خدمتك على مدار الساعة للرد على أي استفسارات لك عبر التواصل معنا ، كذلك قد أجبنا على العديد من الاستفسارات التي قد تدور في ذهنك من <a href="faqs.html">هنا</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>   
+                  </div>
+                  <a href="my_website_setting.html " class=" md-button success-btn "> شحن الرصيد</a>
                 </div>
+              </h2>
+              <div class="bg-white  rounded grid grid-cols-1 md:grid-cols-4 px-2 py-6">
+                
                 <div class="flex flex-col justify-center items-center gap-2 border-l p-2">
                   <span>الرصيد القابل للسحب</span>
                   <strong class="text-primaryTextColor text-2xl">$ 99,0 </strong>
                 </div>
-                <a href="" class="p-2 text-md md:text-xl text-white bg-primaryTextColor justify-center flex items-center">
-                  <span>عرض الرصيد</span>
-                </a>
+                <div class="flex flex-col justify-center items-center gap-2 border-l p-2">
+                  <span>الرصيد المعلق</span>
+                  <strong class="text-primaryTextColor text-2xl">$ 99,0 </strong>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 border-l p-2">
+                  <span>الرصيد المتاح</span>
+                  <strong class="text-primaryTextColor text-2xl">$ 99,0 </strong>
+                </div>
+                <div class="flex flex-col justify-center items-center gap-2 p-2">
+                  <span class="font-bold">الرصيد الكلي</span>
+                  <strong class="text-green-500 text-3xl">$ 99,0 </strong>
+                </div>
               </div>
-              <!-- my projects -->
-              <div class="w-full mt-4">
-                <div class="bg-white rounded ">
-                  <h2 class="border-b p-2 px-6 text-md">مشاريعي</h2>
-                  <!-- statistics -->
-                  <div class="flex justify-center gap-2 p-6">
-                    <div class="w-full md:w-1/3 flex flex-col items-center justify-center">
-                        <div class="mb-3 flex items-center justify-center" x-data="{ circumference: 2 * 22 / 7 * 120 }">
-                          <svg class="transform -rotate-90 w-12 h-12">
-                              <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="30" fill="transparent"
-                                  class="text-gray-100" />
-              
-                              <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="30" fill="transparent"
-                                  :stroke-dasharray="circumference"
-                                  :stroke-dashoffset="circumference - 2 / 100 * circumference"
-                                  class="text-primaryTextColor" />
-                          </svg>
-                          <span class="absolute text-5xl" x-text="`25%`"></span>
-                        </div>
-                        <!--add new project  -->
-                        <a href="add_project.html" class="outline-btn flex justify-start gap-x-2 mt-2 mx-auto">
-                          <svg class="h-5 w-5 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="12" y1="5" x2="12" y2="19" />  <line x1="5" y1="12" x2="19" y2="12" /></svg>
-                          <span>مشروع جديد</span>
-                        </a>
-                    </div>
-                    <!-- progress bars -->
-                    <div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <div class="text-sm ">
-                        <h6 class="mb-3">المفتوحة 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">المرفوضة 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">بانتظار المرجعة 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">المكتملة 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3"> قيد التنفيذ 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 0%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3"> الملغية 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 0%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">المغلقة  
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 0%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">الاجمالي  
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 0%"></div>
-                        </div>
-                      </div>
+              <!-- alert of ballance -->
+              <div class=" mx-auto text-center p-6 mt-4">
+                <div class="max-w-lg mx-auto bg-blue-100 border-t-4 border-blue-500 rounded-b text-blue-900 px-4 py-3 shadow-md" role="alert">
+                  <div class="py-1">
+                    <svg class="h-12 w-12 text-blue-500 mx-auto"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  <div class="flex">
+                    
+                    <div>
+                      <p class="text-sm leading-8">
+                        صفحة الرصيد تحتوي على ملخص للرصيد الموجود في حسابك سواء الذي قمت بشحنه أو قمت ببدئ صفقات به أو حتى ربحته من بيع أحد الخدمات أو تنفيذ المشاريع ، مع العلم أنه يمكنك استرداد المبالغ المشحونة أو أجزاء منها في حالة لم تجد المنفذ المناسب لأعمالك في أي وقت على نفذلي
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- my offers -->
-              <div class="w-full mt-4">
-                <div class="bg-white rounded ">
-                  <h2 class="border-b p-2 px-6 text-md">عروضي</h2>
-                  <!-- statistics -->
-                  <div class="flex justify-center gap-2 p-6">
-                    <div class="w-full md:w-1/3 flex flex-col items-center justify-center">
-   
-                        <!--add new project  -->
-                        <a href="projects.html" class="outline-btn flex justify-start gap-x-2 mt-2 mx-auto">
-                          <svg class="h-5 w-5 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="12" y1="5" x2="12" y2="19" />  <line x1="5" y1="12" x2="19" y2="12" /></svg>
-                          <span> عرض جديد</span>
-                        </a>
-                    </div>
-                    <!-- progress bars -->
-                    <div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-3">
-                      <div class="text-sm ">
-                        <h6 class="mb-3">بانتظار الموافقة 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">قيد التنفيذ 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">المستبعدة
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                      <div class="text-sm ">
-                        <h6 class="mb-3">المنجزة 
-                         <span class="mx-3">2</span>  
-                        </h6>
-                        <div class="shadow  bg-gray-100 h-2 rounded">
-                          <div class="bg-primaryTextColor text-xs h-2 leading-4   text-center text-white" style="width: 45%"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -717,25 +750,66 @@
     <!-- ====== All Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
-      <!-- tabs script -->
-      <script>
-        document.querySelectorAll('#myTab li a').forEach(link => 
-        link.addEventListener('click',function(e){
-          e.preventDefault()
-          changeTab(e.currentTarget)
-        })
-        )
-        function changeTab(target){
-          document.querySelectorAll('#myTab li a').forEach(child => child.classList.remove('tab-active'))
-           target.classList.add('tab-active')
-           let data_tabcontent = target.getAttribute('data-tabs-target');
-           document.querySelectorAll('#myTabContent > div').forEach(d => {
-            d.classList.add('hidden')
-           }); 
+    <script>
+      const MONTH_NAMES = ['يناير', 'فبراير', 'مارس', 'إبريل', 'ماي', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+      const DAYS = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
 
-           document.querySelector(""+data_tabcontent+"").classList.remove('hidden')
-        }
-  
-      </script>
+      function app() {
+          return {
+              showDatepicker: false,
+              datepickerValue: '',
+
+              month: '',
+              year: '',
+              no_of_days: [],
+              blankdays: [],
+              days: ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+
+              initDate() {
+                  let today = new Date();
+                  this.month = today.getMonth();
+                  this.year = today.getFullYear();
+                  this.datepickerValue = new Date(this.year, this.month, today.getDate()).toDateString();
+              },
+
+              isToday(date) {
+                  const today = new Date();
+                  const d = new Date(this.year, this.month, date);
+
+                  return today.toDateString() === d.toDateString() ? true : false;
+              },
+
+              getDateValue(date) {
+                  let selectedDate = new Date(this.year, this.month, date);
+                  this.datepickerValue = selectedDate.toDateString();
+
+                  this.$refs.date.value = selectedDate.getFullYear() +"-"+ ('0'+ selectedDate.getMonth()).slice(-2) +"-"+ ('0' + selectedDate.getDate()).slice(-2);
+
+                  console.log(this.$refs.date.value);
+
+                  this.showDatepicker = false;
+              },
+
+              getNoOfDays() {
+                  let daysInMonth = new Date(this.year, this.month + 1, 0).getDate();
+
+                  // find where to start calendar day of week
+                  let dayOfWeek = new Date(this.year, this.month).getDay();
+                  let blankdaysArray = [];
+                  for ( var i=1; i <= dayOfWeek; i++) {
+                      blankdaysArray.push(i);
+                  }
+
+                  let daysArray = [];
+                  for ( var i=1; i <= daysInMonth; i++) {
+                      daysArray.push(i);
+                  }
+
+                  this.blankdays = blankdaysArray;
+                  this.no_of_days = daysArray;
+              }
+          }
+      }
+  </script>
   </body>
 </html>
