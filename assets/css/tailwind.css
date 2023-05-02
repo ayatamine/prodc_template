@@ -751,6 +751,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1.5rem;
 }
 
+.-mx-2{
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
@@ -1183,6 +1188,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-5xl{
   max-width: 64rem;
+}
+
+.max-w-sm{
+  max-width: 24rem;
 }
 
 .flex-1{
@@ -4081,6 +4090,10 @@ input[type="radio"]:checked + label{
 @media (min-width: 1140px){
   .xl\:mt-12{
     margin-top: 3rem;
+  }
+
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:p-\[70px\]{
