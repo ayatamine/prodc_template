@@ -6,10 +6,6 @@
   "scripts": {
     "build-css": "tailwindcss -i ./src/tailwind.css -o ./assets/css/tailwind.css -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uideck/play-tailwind.git"
-  },
   "keywords": [],
   "author": "",
   "license": "MIT",
