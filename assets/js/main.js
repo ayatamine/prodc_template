@@ -15,9 +15,9 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/real_logo.svg";
+      logo.src = "assets/images/logo/WhatsApp Image 2023-05-03 at 5.54.05 PM.jpeg";
     } else {
-      logo.src = "assets/images/logo/real_logo.svg";
+      logo.src = "assets/images/logo/WhatsApp Image 2023-05-03 at 5.54.05 PM.jpeg";
     }
 
     // show or hide the back-top-top button

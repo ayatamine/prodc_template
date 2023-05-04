@@ -976,6 +976,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.5rem;
 }
 
+.h-36{
+  height: 9rem;
+}
+
 .h-40{
   height: 10rem;
 }
@@ -988,10 +992,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 13rem;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .min-h-fit{
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
+}
+
+.min-h-\[4\.8rem\]{
+  min-height: 4.8rem;
 }
 
 .w-full{
@@ -1122,6 +1134,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: auto;
 }
 
+.w-2{
+  width: 0.5rem;
+}
+
+.w-36{
+  width: 9rem;
+}
+
 .w-2\/6{
   width: 33.333333%;
 }
@@ -1154,8 +1174,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 16.666667%;
 }
 
-.w-36{
-  width: 9rem;
+.w-1\/12{
+  width: 8.333333%;
 }
 
 .min-w-\[14rem\]{
@@ -1186,16 +1206,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 42rem;
 }
 
-.max-w-5xl{
-  max-width: 64rem;
-}
-
 .max-w-sm{
   max-width: 24rem;
 }
 
+.max-w-5xl{
+  max-width: 64rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
+}
+
+.flex-auto{
+  flex: 1 1 auto;
 }
 
 .flex-grow{
@@ -1354,6 +1378,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1364,6 +1392,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .items-start{
   align-items: flex-start;
+}
+
+.items-end{
+  align-items: flex-end;
 }
 
 .items-center{
@@ -1384,6 +1416,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
 }
 
 .gap-2{
@@ -1414,6 +1450,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1436,6 +1476,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+
+.gap-y-12{
+  row-gap: 3rem;
 }
 
 .gap-x-1{
@@ -1778,6 +1822,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
+.bg-green-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
 .bg-neutral-100{
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
@@ -1883,6 +1932,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-0{
   padding: 0px;
+}
+
+.p-0\.5{
+  padding: 0.125rem;
 }
 
 .px-4{
@@ -2007,12 +2060,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 4rem;
 }
 
+.pt-0\.5{
+  padding-top: 0.125rem;
+}
+
 .pt-0{
   padding-top: 0px;
 }
 
 .pr-6{
   padding-right: 1.5rem;
+}
+
+.pt-1{
+  padding-top: 0.25rem;
 }
 
 .pb-8{
@@ -2033,10 +2094,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pr-10{
   padding-right: 2.5rem;
-}
-
-.pt-1{
-  padding-top: 0.25rem;
 }
 
 .pr-8{
@@ -2081,10 +2138,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-6{
   padding-top: 1.5rem;
-}
-
-.pt-0\.5{
-  padding-top: 0.125rem;
 }
 
 .text-center{
@@ -2156,6 +2209,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 10px;
 }
 
+.text-\[12px\]{
+  font-size: 12px;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -2184,8 +2241,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
-.leading-\[3rem\]{
-  line-height: 3rem;
+.leading-\[2\.4rem\]{
+  line-height: 2.4rem;
 }
 
 .leading-9{
@@ -2194,6 +2251,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-8{
   line-height: 2rem;
+}
+
+.leading-\[3rem\]{
+  line-height: 3rem;
 }
 
 .leading-tight{
@@ -2226,10 +2287,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-7{
   line-height: 1.75rem;
-}
-
-.leading-\[2\.4rem\]{
-  line-height: 2.4rem;
 }
 
 .tracking-wide{
@@ -3103,6 +3160,38 @@ input[type="radio"]:checked + label{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.success-outline-btn{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.success-outline-btn:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /* dashboard */
 
 .dashboard-tab{
@@ -3171,6 +3260,11 @@ input[type="radio"]:checked + label{
 .success-btn:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.work_details p{
+  line-height: 2rem;
+  font-size: 0.9rem;
 }
 
 .after\:absolute::after{
@@ -4090,10 +4184,6 @@ input[type="radio"]:checked + label{
 @media (min-width: 1140px){
   .xl\:mt-12{
     margin-top: 3rem;
-  }
-
-  .xl\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .xl\:p-\[70px\]{

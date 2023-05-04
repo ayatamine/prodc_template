@@ -191,11 +191,14 @@ input[type="radio"]:checked + label{
 .white-input-theme{
   @apply border w-full border-gray-400 p-2 py-1.5 focus:outline-none focus:border-primary focus:shadow-[0_1px_2px_#2196f3]
 }
-.white-input-select{
+.white-input-select{ 
   @apply border w-full border-gray-400 p-2 py-0.5 focus:outline-none focus:border-primary focus:shadow-[0_1px_2px_#2196f3]
 }
 .outline-btn{
   @apply bg-white border text-primaryTextColor border-primaryTextColor w-fit py-1 px-2  rounded hover:bg-primaryTextColor hover:text-white transition-colors duration-300 ease-in-out
+}
+.success-outline-btn{
+  @apply bg-white border text-sm text-green-600 border-green-600 w-fit py-1 px-2  rounded hover:bg-green-600 hover:text-white transition-colors duration-300 ease-in-out
 }
 /* dashboard */
 .dashboard-tab{
@@ -209,4 +212,8 @@ input[type="radio"]:checked + label{
 }
 .success-btn{
   @apply bg-green-500  hover:bg-green-600 
+}
+.work_details p{
+  @apply leading-8 ;
+  font-size: 0.9rem
 }
