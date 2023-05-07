@@ -264,7 +264,7 @@
 
                <!-- messag component -->
               <div class="relative " x-data="{showMessages:false,toggle(){hideOthers(),this.showMessages = !this.showMessages}}">
-                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2   rounded" :class="showMessages && ' bg-body'" >
+                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2   rounded" :class="showMessages && 'p-3 bg-body'" >
                     <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
                         <div slot="icon" class="relative">
                             <div class="absolute text-xs rounded-full -mt-1 -mr-4 ltr:-ml-4 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
@@ -273,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <div x-show="showMessages" class="topNotMess absolute w-[22rem] -left-44 md:left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                <div x-show="showMessages" class="topNotMess absolute w-[22rem] left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
                     <!-- notifications inside  -->
                   <div class="h-52 overflow-y-scroll">
                       <!-- notification item -->
@@ -334,7 +334,7 @@
               </div>
               <!-- notification component -->
               <div class="relative " x-data="{showNotifications:false,toggle(){hideOthers(),this.showNotifications = !this.showNotifications}}">
-                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2  rounded" :class="showNotifications && 'bg-body'">
+                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2  rounded" :class="showNotifications && 'p-3 bg-body'">
                     <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
                         <div slot="icon" class="relative">
                             <div class="absolute text-xs rounded-full -mt-1 -mr-3 ltr:-mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
@@ -342,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-                <div x-show="showNotifications" class="topNotMess absolute w-[22rem] -left-28 md:left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                <div x-show="showNotifications" class="topNotMess absolute w-[22rem] left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
                     <!-- notifications inside  -->
                   <div class="h-52 overflow-y-scroll">
                       <!-- notification item -->
@@ -403,7 +403,8 @@
               </div>
               <!-- user component -->
               <div class="relative rounded-md" :class="{showUserDropDown:'bg-body'}" x-data="{showUserDropDown:false,toggle(){hideOthers(),this.showUserDropDown = !this.showUserDropDown}}">
-                <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2 rounded" :class="showUserDropDown && 'bg-body'" style="min-width:48px">
+                <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate  rounded" :class="showUserDropDown && 'p-3 bg-body'">
+                    <div></div>
                     <div class="flex flex-row-reverse w-full">
                         <div slot="icon" class="relative">
                             <img src="assets/images/hero/hero-image.jpg" alt="user-logo" class="h-8 w-8 rounded-full border">
@@ -516,8 +517,8 @@
               
             </div>
             <!-- form -->
-            <div class="relative w-full md:w-1/3 mx-auto">
-              <input type="text" name="search" placeholder="اسم صنف المهنة أو الشركة" class="w-full border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm w-full">
+            <div class="relative w-2/3 md:w-1/3 mx-auto">
+              <input type="text" name="search" placeholder="اسم صنف المهنة أو الشركة" class="border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm w-full">
               <button type="submit" class=" primary-btn text-[14px] py-1 px-2 absolute top-1 left-2 ">ابحث الان</button>
             </div>
           </form>
@@ -774,13 +775,77 @@
     <!-- about us -->
     <section
     id="about-us"
-    class="bg-white p-4 p-12  "
+    class="bg-white p-12  "
      >
     <div class="container">
       <div class="wow fadeInUp bg-white" data-wow-delay=".2s">
         <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4">
-
+            <div
+              class="items-center justify-between overflow-hidden border lg:flex"
+            >
+              <div
+                class="w-full py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
+              >
+                <span
+                  class="mb-5 block text-lg font-semibold text-primaryTextColor"
+                >
+                  من هو المحترف القوي الأمين؟
+                </span>
+                <ul class="mb-2 text-sm leading-10 text-slate-700 font-semibold">
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span> <span class="text-red-600 text-base font-bold">أقسم بالله العلي العظيم</span> وتعهد على الإلتزام <a href="#" class="text-primaryTextColor underline">بميثاق الأخلاق المهنية</a></span>
+                  </li>
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span> له مرجعية وهوية إلكترونية على الأنترنت وصفحة تعريفية يمكن الرجوع اليها في أي وقت
+                  </li>
+                </ul>
+                <!-- client rates -->
+                <p class="leading-10 text-sm font-semibold text-slate-700">
+                  للإطلاع على تقييمات وآراء العملاء السابقين حول جودة خدماته أو المنتجات التي يعرضها للبيع ، يتيح ذلك
+                  للعملاء تكوين صورة واضحة عن المحترف قبل التعامل معه والاستفادة من تجارب العملاء السابقين في اختيار
+                  المحترف المناسب لاحتياجهم ، ثم تقييم خدماته والإدلاء بآرائهم فيه بعد التعامل معه ليستفيد الآخرين من
+                  شهادتهم الصادقة عنه
+                </p>
+                <ul class="mt-2 text-sm leading-10 text-slate-700 font-semibold">
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span> يتعامل بالإتقان والأمانة والإحسان
+                  </li>
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span> يخضع ل 
+                    <a href="#" class="text-primaryTextColor underline underline-offset-4">رقابة ذاتية</a> + 
+                    <a href="#" class="text-primaryTextColor underline underline-offset-4">رقابة ميدانية</a> + 
+                    <a href="#" class="text-primaryTextColor underline underline-offset-4">رقابة الكترونية</a> + 
+                    <a href="#" class="text-primaryTextColor underline underline-offset-4">رقابة تقييمية من زبنائه</a> + 
+                  </li>
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span> يتبنى مبدأ الإنصات والتفهم لزبائنه، ويتلقى بكل سعة صدر شكاويهم وتقييماتهم الصادقة
+                    والبناءة ليعمل على تحسين خدماته ومنتجاته، وتطوير نفسه وتطوير أعماله بشكل مستمر
+                  </li>
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span>  لا يغش ولا يتحايل ولا يطفف في الميزان
+                  </li>
+                  <li class="my-1">
+                    <span class="text-primaryTextColor">هو محترف</span>  أسعاره كلها معلنة ولديه خدمة ما بعد البيع
+                  </li>
+                </ul>
+                <a
+                  href="javascript:void(0)"
+                  class="my-3 inline-flex items-center justify-center rounded bg-primary py-2 px-4 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
+                >
+                  انضم الينا
+                </a>
+              </div>
+              <div class="text-center lg:w-1/3 h-full">
+                <div class="relative z-10 inline-block p-4">
+                  <img
+                    src="assets/images/about/mohtarif1.png"
+                    alt="image"
+                    class="mx-auto lg:h-96 lg:ml-auto rtl:lg:mr-auto"
+                  />
+                </div>
+              </div>
+            </div>
             <div
               class="mt-4 items-center justify-center overflow-hidden border lg:flex"
             >
@@ -797,8 +862,8 @@
                 class="w-full py-12 px-7 sm:px-12 md:p-8 lg:w-2/5 lg:py-9 lg:px-10 "
               >
                 <div class="text-center leading-10">
-                  <p class="text-primaryTextColor text-md lg:text-xl mb-2">إجعل المحترف الحاصل على</p> 
-                  <span class="text-primaryTextColor text-lg lg:text-2xl font-bold ">شهادة المحترف القوي الأمين
+                  <p class="text-primaryTextColor text-lg lg:text-xl mb-2">إجعل المحترف الحاصل على</p> 
+                  <span class="text-primaryTextColor text-xl lg:text-2xl font-bold ">شهادة المحترف القوي الأمين
                     هو خيارك الأول</span> 
                 </div>
               </div>
@@ -814,9 +879,9 @@
     <!-- timeline -->
     <section
       id="steps"
-      class="bg-body p-6 md:p-12  "
+      class="bg-body p-12  "
         >
-      <div class="container p-0">
+      <div class="container">
         <div class="wow fadeInUp bg-white" data-wow-delay=".2s">
           <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="md:flex items-center justify-center gap-3">
@@ -827,7 +892,7 @@
                   alt=""
                 />
               </div>    
-              <div class="w-full md:w-2/3 mt-3 md:mt-0 text-sm md:text-base">
+              <div class="w-full md:w-2/3 mt-3 md:mt-0">
                 <div class="flex">
                   <div class="flex flex-col items-center ltr:mr-4 ml-4">
                     <div>
@@ -841,7 +906,7 @@
                     <div class="w-px h-full bg-primaryTextColor"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-md md:text-lg font-bold  text-primaryTextColor">الخطوة الأولى</p>
+                    <p class="mb-2 text-lg font-bold  text-primaryTextColor">الخطوة الأولى</p>
                     <p class="text-gray-700 font-semibold">
                       تحميل تطبيق المحترف القوي الأمين
                     </p>
@@ -860,7 +925,7 @@
                     <div class="w-px h-full bg-primaryTextColor"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-md md:text-lg font-bold  text-primaryTextColor">الخطوة الثانية</p>
+                    <p class="mb-2 text-lg font-bold  text-primaryTextColor">الخطوة الثانية</p>
                     <p class="text-gray-700 font-semibold">
                       التسجيل وإدخال البيانات المطلوبة
                     </p>
@@ -879,7 +944,7 @@
                     <div class="w-px h-full bg-primaryTextColor"></div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-md md:text-lg font-bold text-primaryTextColor">الخطوة الثالثة</p>
+                    <p class="mb-2 text-lg font-bold text-primaryTextColor">الخطوة الثالثة</p>
                     <p class="text-gray-700 font-semibold">
                       دراسة الطلب من قبل إدارة المحترف القوي الأمين 
                     </p>
@@ -907,7 +972,7 @@
                     </div>
                   </div>
                   <div class="pt-1 pb-8">
-                    <p class="mb-2 text-md md:text-lg font-bold text-primaryTextColor">الخطوة الرابعة</p>
+                    <p class="mb-2 text-lg font-bold text-primaryTextColor">الخطوة الرابعة</p>
                     <p class="text-gray-700 font-semibold">
                       إستلام شهادة المحترف القوي الأمين
                     </p>
@@ -925,7 +990,7 @@
     <!-- prodc network -->
     <section
     id="prodc-network"
-    class="bg-white p-4 md:p-12  "
+    class="bg-white p-12  "
      >
     <div class="container">
       <div class="wow fadeInUp bg-white" data-wow-delay=".2s">
@@ -939,24 +1004,24 @@
              class="items-center justify-between overflow-hidden  lg:flex"
            >
              <div
-               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
+               class="w-full py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
              >
                <span
-                 class="mb-5 block text-md md:text-lg font-semibold text-primaryTextColor"
+                 class="mb-5 block text-lg font-semibold text-primaryTextColor"
                >
              شبكة المحترف القوي الأمين
              </span>
                
-               <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
                  تتكون شبكة المحترف القوي الأمين من محترفين في كافة المجالات والقطاعات، أقوياء وأ َمناء ومن أفضل  
                  الكفاءات المهنية بمعايير عالمية وأخلاق مهنية إسلامية        
                </p>
-               <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
                  تهدف الشبكة إلى تحفيز ودعم جهود المحترفين الأعضاء وإعطائهم القيمة المضافة في إظهار منتوجاتهم
                  وخدماتهم من خلال التسويق الرقمي وتوفير آخر التقنيات الرقمية والأساليب التسويقية المعاصرة والمبتكرة
                  ودعم تطورهم المهني والتشجيع على بناء علاقات شبكية فعالة تمكنهم من التواصل مباشرة مع العملاء
                </p>
-               <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
                  يمكن لأي محترف يستوفي شروط الكفاءة والأمانة الانضمام إلى شبكة المحترف القوي الأمين عن طريق
                  <a href="#" class="text-primaryTextColor underline">استكمال النموذج الموجود أدناه</a>
                </p>
@@ -987,7 +1052,7 @@
                </div>
              </div>
              <div
-               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 md:p-8 lg:w-2/3 lg:py-9 lg:px-10 "
+               class="w-full py-12 px-7 sm:px-12 md:p-8 lg:w-2/3 lg:py-9 lg:px-10 "
              >
              <span
              class="mb-5 block text-lg font-semibold text-red-500"
@@ -1014,7 +1079,7 @@
                  <span class="text-red-500">E194, E120 , قبل أن تشتري وقبل أن تأكل تأكد من وجود علامة المحترف القوي الأمين</span>
                </p>
                <span
-               class="mt-5 block text-md md:text-lg font-semibold text-primaryTextColor underline"
+               class="mt-5 block text-lg font-semibold text-primaryTextColor underline"
                  >
                  # تعاملك مع المحترف القوي الأمين يحميك
                </span>
@@ -1030,7 +1095,7 @@
              class="items-center justify-between overflow-hidden lg:flex"
            >
              <div
-               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
+               class="w-full py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
              >
                
                <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
@@ -1048,7 +1113,7 @@
                  على الإتقان وأداء الأمانة
                </p>
                <span
-               class="mt-5 block text-md md:text-lg font-semibold text-primaryTextColor "
+               class="mt-5 block text-lg font-semibold text-primaryTextColor "
                  >
                  # تعاملك مع المحترف القوي الأمين يحميك
                </span>
@@ -1106,7 +1171,7 @@
     <!-- end prodc network -->
 
     <!-- testimonials -->
-    <section id="testimonial" class="bg-white">
+    <section id="testimonial">
       <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8">
         <h2 class="text-xl lg:text-3xl text-sectionTitleColor text-center mb-10 underline underline-offset-8">شهادات .. قالوا عنا</h2>
         <div class="swiper-container !overflow-hidden pt-8">
@@ -1299,40 +1364,8 @@
       </div>
     </section>
     <!-- end partners -->
-    <!-- download-app -->
-    <section id="download-app" class="py-12 lg:pt-[50px] lg:pb-[50px] bg-white mb-5">
-      <div
-           class="mt-4 items-center justify-center overflow-hidden  lg:flex"
-           >
-             <div class="text-center lg:w-1/5 h-4/5">
-               <div class="relative z-10 inline-block p-4">
-                 <img
-                   src="assets/images/hero/phone.webp"
-                   alt="image"
-                   class="mx-auto  lg:ml-auto rtl:lg:mr-auto"
-                 />
-               </div>
-             </div>
-             <div
-               class="w-full  px-7 sm:px-12 md:p-8 lg:w-2/5  lg:px-10 "
-             >
-               <div class="intro-cards py-3 ">
-                 <p class="text-xl text-yellow-500 mb-2 px-6 leading-10">حمل تطبيق المحترف القوي الأمين PRODC </p> 
-                 
-                 <p class="text-[#1d3c5f] mb-2">تطبيق لتأكيد وضمان جودة الخدمات بأيادي المحترف القوي الأمين</p> 
-               </div>
-              <div class="flex justify-center gap-3 p-4 mt-3">
-                <a href="https://itunes.apple.com/" target="_blank" >
-                  <img src="assets/images/hero/google_play.png" class="h-12" alt="Download on the App Store">
-                 </a>
-                <a href="https://play.google.com/" target="_blank">
-                  <img src="assets/images/hero/google_play.png" class="h-12" alt="Download on the google Play">
-                 </a>
-              </div>
-             </div>
-             
-           </div>
-    </section>
+
+
 
     <!-- ====== Footer Section Start -->
     <footer class="mx-auto mt-5">
