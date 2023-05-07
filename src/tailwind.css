@@ -23,22 +23,22 @@ body {
   @apply bg-dark;
 }
 .submenu.top-dropdown{
-  @apply relative top-full left-0 hidden w-[200px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full shadow-md
+  @apply relative top-full left-0 hidden w-[180px] rounded-sm bg-white p-4 px-0 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full shadow-md
 }
 .sticky #navbarCollapse li a {
-  @apply text-dark hover:text-primary hover:opacity-100;
+  @apply text-gray-600;
 }
 #navbarCollapse li .topnav-link{
- @apply  mx-8 flex px-4 py-2 text-base text-primaryTextColor group-hover:text-primary lg:mr-0 lg:inline-flex  hover:bg-gray-100   transition-all duration-200 ease-in-out
+ @apply  mx-1 flex px-5 py-3 text-base text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
 }
 .sidenav-link{
   @apply  flex items-center gap-x-2 px-5 py-2 text-sm  hover:bg-body   transition-all duration-200 ease-in-out
 }
 #navbarCollapse li .ud-menu-scroll.active {
-  @apply bg-gray-100 font-semibold;
+  @apply bg-body text-gray-600;
 }
 .sticky #navbarCollapse li .ud-menu-scroll.active {
-  @apply text-primary opacity-100;
+  @apply text-gray-600 bg-body;
 }
 .sticky .loginBtn {
   @apply text-dark hover:text-primary hover:opacity-100;
@@ -121,8 +121,13 @@ body {
   .carousel-bullet {
  @apply text-primaryTextColor font-bold  /*Set to match the Tailwind colour you want the active one to be */
 }
+.intro-section{
+          min-height: 32rem;
+         /* padding-top: 7rem; */
+       
+}
 .intro-cards{
-  @apply  border-2  border-yellow-200 text-center font-semibold text-base text-primaryTextColor leading-8 p-3 min-h-full
+  @apply  border-2  border-yellow-200 text-center font-semibold text-sm text-primaryTextColor leading-8 p-3 min-h-full
 }
 .highlighted-offer{
   @apply text-primaryTextColorDarken dark:text-primaryTextColor
