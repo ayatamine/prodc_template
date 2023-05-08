@@ -27,7 +27,7 @@
       new WOW().init();
     </script>
   </head>
-  <body class="font-Noto">
+  <body class="font-Noto bg-body">
     <!-- ====== Navbar Section Start -->
     <div
       class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-white"
@@ -39,7 +39,7 @@
               <img
               src="assets/images/logo/WhatsApp Image 2023-05-03 at 5.54.05 PM.jpeg"
               alt="logo"
-              class="header-logo w-11/12 h-10 object-contain"
+              class="header-logo w-full w-11/12 h-10 object-contain"
             />
             </a>
           </div>
@@ -47,7 +47,7 @@
             <div>
               <button
                 id="navbarToggler"
-                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                class="absolute hidden right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
               >
                 <span
                   class="relative my-[6px] block h-[2px] w-[30px] bg-white"
@@ -59,82 +59,10 @@
                   class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
               </button>
-              <nav
-                id="navbarCollapse"
-                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-white lg:py-0 lg:px-4 lg:shadow-none xl:px-6"
-              >
-                <ul class="block lg:flex items-center">
-                  <li class="group relative">
-                    <a
-                      href="index.html#home"
-                      class="ud-menu-scroll topnav-link "
-                    >
-                     الرئيسية
-                    </a>
-                  </li>
-                  <li class="group relative">
-                    <a
-                      href="index.html#about-us"
-                      class="ud-menu-scroll topnav-link "
-                    >
-                       المحترف القوي الأمين
-                    </a>
-                  </li>
-                  <li class="group relative">
-                    <a
-                      href="index.html#jobs"
-                      class="ud-menu-scroll topnav-link "
-                    >
-                      ميثاق الأخلاق المهنية
-                    </a>
-                  </li>
-                  <li class="group relative">
-                    <a
-                      href="index.html#plans"
-                      class="ud-menu-scroll topnav-link "
-                    >
-                      شبكة القوي الأمين
-                    </a>
-                  </li>
-                  <li class="group relative">
-                    <a
-                      href="categories.html"
-                      class="ud-menu-scroll topnav-link active"
-                    >
-                      التصنيفات
-                    </a>
-                  </li>
-                  <li class="submenu-item group relative">
-                    <a
-                      href="javascript:void(0)"
-                      class="relative topnav-link"
-                    >
-                      الصفحات
-                    </a>
-                    <div
-                      class="submenu top-dropdown"
-                    >
-                      <a
-                        href="index.html"
-                        class="topnav-link m-0 w-full"
-                      >
-                        اتصل بنا
-                      </a>
-                      <a
-                        href="index.html"
-                        class="topnav-link m-0 w-full"
-                      >
-                      المدونة
-                      </a>
-                     
-                    </div>
-                  </li>
-                </ul>
-
-              </nav>
+  
               
             </div>
-            <div x-data="{ open: false }" :class="{ 'overflow-hidden': open }">
+            <div x-data="{ open: false,activeItem:false }" :class="{ 'overflow-hidden': open }" class="flex justify-end items-center gap-2">
               <!-- Sidebar -->
               <div class="fixed inset-y-0 left-0 z-20 bg-white w-64  py-4 transform transition duration-300 ease-in-out h-screen "
                    x-show="open"
@@ -227,6 +155,11 @@
                             </a>
                           </li>
                           <li class="group relative my-2">
+                            <a   href="properties.html"   class="sidenav-link"           >
+                              صفات المحترف القوي الأمين
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
                             <a   href="offers.html"   class="sidenav-link"           >
                               باقات المحترف
                             </a>
@@ -254,9 +187,193 @@
                   
                 </ul>
               </div>
-            
+
+               <!-- messag component -->
+              <div class="relative " x-data="{showMessages:false,toggle(){hideOthers(),this.showMessages = !this.showMessages}}">
+                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2   rounded" :class="showMessages && ' bg-body'" >
+                    <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
+                        <div slot="icon" class="relative">
+                            <div class="absolute text-xs rounded-full -mt-1 -mr-4 ltr:-ml-4 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
+                            <svg class="h-6 w-6 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div x-show="showMessages" class="topNotMess absolute w-[22rem] -left-44 md:left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                    <!-- notifications inside  -->
+                  <div class="h-52 overflow-y-scroll">
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start gap-2">
+                        <div class="border p-1  w-[56px] ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط والمحتوى يب مواثق كم مكشسي على سحبسب
+                            .</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div>
+                    <a href="notifications.html" class="w-full  text-[14px] flex justify-start gap-2 p-3">
+                      <svg class="h-4 w-4 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+
+                      عرض  كل الرسائل
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- notification component -->
+              <div class="relative " x-data="{showNotifications:false,toggle(){hideOthers(),this.showNotifications = !this.showNotifications}}">
+                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2  rounded" :class="showNotifications && 'bg-body'">
+                    <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
+                        <div slot="icon" class="relative">
+                            <div class="absolute text-xs rounded-full -mt-1 -mr-3 ltr:-mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
+                            <svg class="h-7 w-7 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="showNotifications" class="topNotMess absolute w-[22rem] -left-28 md:left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                    <!-- notifications inside  -->
+                  <div class="h-52 overflow-y-scroll">
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start gap-2">
+                        <div class="border p-1  w-[56px] ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط والمحتوى يب مواثق كم مكشسي على سحبسب
+                            .</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div>
+                    <a href="notifications.html" class="w-full  text-[14px] flex justify-start gap-2 p-3">
+                      <svg class="h-4 w-4 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+
+                      عرض  كل الاشعارات
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- user component -->
+              <div class="relative rounded-md" :class="{showUserDropDown:'bg-body'}" x-data="{showUserDropDown:false,toggle(){hideOthers(),this.showUserDropDown = !this.showUserDropDown}}">
+                <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2 rounded" :class="showUserDropDown && 'bg-body'" style="min-width:48px">
+                    <div class="flex flex-row-reverse w-full">
+                        <div slot="icon" class="relative">
+                            <img src="assets/images/hero/hero-image.jpg" alt="user-logo" class="h-8 w-8 rounded-full border">
+                        </div>
+                    </div>
+                </div>
+                <div x-show="showUserDropDown" class="topNotMess w-max absolute  left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                    <!-- notifications inside  -->
+                  <div class="py-3 text-gray-700">
+                      <a    href="dashboard.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="13" r="2" />  <line x1="13.45" y1="11.55" x2="15.5" y2="9.5" />  <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
+                         <span> لوحة التحكم  </span>
+                      </a>
+                      <a    href="my_project.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                         <span> مشاريعي  </span>
+                      </a>
+                      <a    href="my_account_settings.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
+                         <span> حسابي الشخصي  </span>
+                      </a>
+                      <a    href="my_favorites.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 20l-7 -7a4 4 0 0 1 6.5 -6a.9 .9 0 0 0 1 0a4 4 0 0 1 6.5 6l-7 7" /></svg>
+                        <span> المفضلة  </span>
+                      </a>
+                      <a    href="my_ballance.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                        
+                         <span> الرصيد  </span>
+                      </a>
+                      <a    href=""   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />  <polyline points="16 17 21 12 16 7" />  <line x1="21" y1="12" x2="9" y2="12" /></svg>
+                         <span> تسجيل الخروج  </span>
+                      </a>
+                  </div>
+                </div>
+              </div>
+
               <!-- Toggle button -->
-              <button @click="open = !open" class="fixed top-1 left-5 p-3 pt-2">
+              <button @click="open = !open" class=" p-3 pt-2">
                 <svg x-show="!open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 <svg x-show="open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
@@ -281,31 +398,32 @@
         </div>
       </div>
     </div>
-    <section class="px-4 md:px-14 py-12 mt-[65px] bg-body text-gray-700 relative overflow-hidden ">
+    <!-- end navbar -->
+    <section class="px-4 md:px-14 py-12 pt-[58px] bg-body text-gray-700 relative overflow-hidden ">
       <!-- the intro profile sction -->
       <div class="bg-white rounded p-12 text-center">
         <img src="assets/images/hero/doctor.png" class="mx-auto h-40 w-40 rounded-full shadow-lg border" alt="">
-        <h3 class="text-lg md:text-2xl font-semibold my-2 flex justify-center items-center gap-x-3">
+        <h3 class="text-md md:text-xl  my-2 flex justify-center items-center gap-x-3">
           <span>عياط احمد امين</span>
-          <span class="h-4 w-4 rounded-full bg-green-500"></span>
+          <span class="h-4 w-4 rounded-full mt-1 bg-green-500"></span>
         </h3>
         <div class="flex items-center justify-center gap-6 my-3">
-          <div class="flex justify-between items-center gap-x-2  text-md md:text-lg text-gray-700 leading-6">
-            <svg class="h-5 w-5 text-gray-600"  fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="flex justify-between items-center gap-x-1  text-sm md:text-md text-gray-700 leading-6">
+            <svg class="h-4 w-4 text-gray-600"  fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
             </svg>
             <span>مطور ويب</span>
           </div>
-          <div class="flex justify-between items-center gap-x-2  text-md md:text-lg text-gray-700 leading-6">
-            <svg class="h-5 w-5 text-gray-600" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6b6666"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3856 23.789L11.3831 23.7871L11.3769 23.7822L11.355 23.765C11.3362 23.7501 11.3091 23.7287 11.2742 23.7008C11.2046 23.6451 11.1039 23.5637 10.9767 23.4587C10.7224 23.2488 10.3615 22.944 9.92939 22.5599C9.06662 21.793 7.91329 20.7041 6.75671 19.419C5.60303 18.1371 4.42693 16.639 3.53467 15.0528C2.64762 13.4758 2 11.7393 2 10C2 7.34784 3.05357 4.8043 4.92893 2.92893C6.8043 1.05357 9.34784 0 12 0C14.6522 0 17.1957 1.05357 19.0711 2.92893C20.9464 4.8043 22 7.34784 22 10C22 11.7393 21.3524 13.4758 20.4653 15.0528C19.5731 16.639 18.397 18.1371 17.2433 19.419C16.0867 20.7041 14.9334 21.793 14.0706 22.5599C13.6385 22.944 13.2776 23.2488 13.0233 23.4587C12.8961 23.5637 12.7954 23.6451 12.7258 23.7008C12.6909 23.7287 12.6638 23.7501 12.645 23.765L12.6231 23.7822L12.6169 23.7871L12.615 23.7885C12.615 23.7885 12.6139 23.7894 12 23L12.6139 23.7894C12.2528 24.0702 11.7467 24.0699 11.3856 23.789ZM12 23L11.3856 23.789C11.3856 23.789 11.3861 23.7894 12 23ZM15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z" fill="currentColor"></path> </g></svg>
+          <div class="flex justify-between items-center gap-x-1  text-sm md:text-md text-gray-700 leading-6">
+            <svg class="h-4 w-4 text-gray-600" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6b6666"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3856 23.789L11.3831 23.7871L11.3769 23.7822L11.355 23.765C11.3362 23.7501 11.3091 23.7287 11.2742 23.7008C11.2046 23.6451 11.1039 23.5637 10.9767 23.4587C10.7224 23.2488 10.3615 22.944 9.92939 22.5599C9.06662 21.793 7.91329 20.7041 6.75671 19.419C5.60303 18.1371 4.42693 16.639 3.53467 15.0528C2.64762 13.4758 2 11.7393 2 10C2 7.34784 3.05357 4.8043 4.92893 2.92893C6.8043 1.05357 9.34784 0 12 0C14.6522 0 17.1957 1.05357 19.0711 2.92893C20.9464 4.8043 22 7.34784 22 10C22 11.7393 21.3524 13.4758 20.4653 15.0528C19.5731 16.639 18.397 18.1371 17.2433 19.419C16.0867 20.7041 14.9334 21.793 14.0706 22.5599C13.6385 22.944 13.2776 23.2488 13.0233 23.4587C12.8961 23.5637 12.7954 23.6451 12.7258 23.7008C12.6909 23.7287 12.6638 23.7501 12.645 23.765L12.6231 23.7822L12.6169 23.7871L12.615 23.7885C12.615 23.7885 12.6139 23.7894 12 23L12.6139 23.7894C12.2528 24.0702 11.7467 24.0699 11.3856 23.789ZM12 23L11.3856 23.789C11.3856 23.789 11.3861 23.7894 12 23ZM15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z" fill="currentColor"></path> </g></svg>
             <span>فرنسا ، باريس</span>
           </div>
           <div class="hidden md:flex justify-between items-center gap-x-2  text-md md:text-lg text-gray-700 leading-6">
-            <div class="bg-neutral-100 p-2 rounded shadow-md">
-              <svg class="h-8 w-8" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.007 8.27C22.194 9.125 23 10.45 23 12c0 1.55-.806 2.876-1.993 3.73.24 1.442-.134 2.958-1.227 4.05-1.095 1.095-2.61 1.459-4.046 1.225C14.883 22.196 13.546 23 12 23c-1.55 0-2.878-.807-3.731-1.996-1.438.235-2.954-.128-4.05-1.224-1.095-1.095-1.459-2.611-1.217-4.05C1.816 14.877 1 13.551 1 12s.816-2.878 2.002-3.73c-.242-1.439.122-2.955 1.218-4.05 1.093-1.094 2.61-1.467 4.057-1.227C9.125 1.804 10.453 1 12 1c1.545 0 2.88.803 3.732 1.993 1.442-.24 2.956.135 4.048 1.227 1.093 1.092 1.468 2.608 1.227 4.05Zm-4.426-.084a1 1 0 0 1 .233 1.395l-5 7a1 1 0 0 1-1.521.126l-3-3a1 1 0 0 1 1.414-1.414l2.165 2.165 4.314-6.04a1 1 0 0 1 1.395-.232Z" fill="#3eb142"></path></g></svg>
+            <div class="bg-neutral-100 p-1 rounded shadow-md">
+              <svg class="h-7 w-7" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.007 8.27C22.194 9.125 23 10.45 23 12c0 1.55-.806 2.876-1.993 3.73.24 1.442-.134 2.958-1.227 4.05-1.095 1.095-2.61 1.459-4.046 1.225C14.883 22.196 13.546 23 12 23c-1.55 0-2.878-.807-3.731-1.996-1.438.235-2.954-.128-4.05-1.224-1.095-1.095-1.459-2.611-1.217-4.05C1.816 14.877 1 13.551 1 12s.816-2.878 2.002-3.73c-.242-1.439.122-2.955 1.218-4.05 1.093-1.094 2.61-1.467 4.057-1.227C9.125 1.804 10.453 1 12 1c1.545 0 2.88.803 3.732 1.993 1.442-.24 2.956.135 4.048 1.227 1.093 1.092 1.468 2.608 1.227 4.05Zm-4.426-.084a1 1 0 0 1 .233 1.395l-5 7a1 1 0 0 1-1.521.126l-3-3a1 1 0 0 1 1.414-1.414l2.165 2.165 4.314-6.04a1 1 0 0 1 1.395-.232Z" fill="#3eb142"></path></g></svg>
             </div>
-            <div class="bg-neutral-100 p-2 rounded shadow-md">
-              <svg class="h-8 w-8" fill="#57adff" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22.838,1.455A1,1,0,0,0,22,1H16a1,1,0,0,0-.895.553L12,7.764,8.9,1.553A1,1,0,0,0,8,1H2a1,1,0,0,0-.914,1.406L5.739,12.889A6.937,6.937,0,0,0,5,16a7,7,0,0,0,14,0,6.937,6.937,0,0,0-.739-3.111L22.914,2.406A1,1,0,0,0,22.838,1.455ZM3.538,3H7.382l3.087,6.174A6.991,6.991,0,0,0,7.1,11.014ZM12,21a5,5,0,1,1,5-5A5.006,5.006,0,0,1,12,21Zm4.905-9.986a6.991,6.991,0,0,0-3.374-1.84L16.618,3h3.844ZM15,15.292l-1.667,1.375L13.854,19,12,17.667,10.146,19l.521-2.333L9,15.292,11,15l1-2,1,2Z"></path></g></svg>
+            <div class="bg-neutral-100 p-1 rounded shadow-md">
+              <svg class="h-7 w-7" fill="#57adff" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22.838,1.455A1,1,0,0,0,22,1H16a1,1,0,0,0-.895.553L12,7.764,8.9,1.553A1,1,0,0,0,8,1H2a1,1,0,0,0-.914,1.406L5.739,12.889A6.937,6.937,0,0,0,5,16a7,7,0,0,0,14,0,6.937,6.937,0,0,0-.739-3.111L22.914,2.406A1,1,0,0,0,22.838,1.455ZM3.538,3H7.382l3.087,6.174A6.991,6.991,0,0,0,7.1,11.014ZM12,21a5,5,0,1,1,5-5A5.006,5.006,0,0,1,12,21Zm4.905-9.986a6.991,6.991,0,0,0-3.374-1.84L16.618,3h3.844ZM15,15.292l-1.667,1.375L13.854,19,12,17.667,10.146,19l.521-2.333L9,15.292,11,15l1-2,1,2Z"></path></g></svg>
             </div>
             
           </div>
@@ -324,38 +442,38 @@
       <div class="w-full mx-auto my-6" id="myTabContent" >
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 pt-2 lg:mt-0 bg-white z-20" id="nav-content">
           <ul class="list-reset lg:flex flex-1 items-center  px-4 md:px-0" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-              <li class="mr-6 my-2 md:my-0" role="presentation">
+              <li class="mr-4 my-2 md:my-0" role="presentation">
                   <a href="#" class="tab-link tab-active" id="user-tab" data-tabs-target="#user" type="button" role="tab" aria-controls="user" aria-selected="true">
-                    <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-4 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
                     </svg>
                     
-                    <span class="pb-1 md:pb-0 text-smd">الملف الشخصي</span>
+                    <span class="pb-1 md:pb-0 text-sm ">الملف الشخصي</span>
                   </a>
               </li>
-              <li class="mr-6 my-2 md:my-0" role="presentation">
+              <li class="mr-4 my-2 md:my-0" role="presentation">
                   <a href="#" class="tab-link " id="project-tab" data-tabs-target="#project" type="button" role="tab" aria-controls="project" aria-selected="false">
                     <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                     </svg>
                     
-                    <span class="pb-1 md:pb-0 text-smd">المشاريع</span>
+                    <span class="pb-1 md:pb-0 text-sm ">المشاريع</span>
                   </a>
               </li>
-              <li class="mr-6 my-2 md:my-0" role="presentation">
+              <li class="mr-4 my-2 md:my-0" role="presentation">
                   <a href="#" class="tab-link" id="rating-tab" data-tabs-target="#rating" type="button" role="tab" aria-controls="rating" aria-selected="true">
                     <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
                     </svg>
-                    <span class="pb-1 md:pb-0 text-smd">التقييمات</span>
+                    <span class="pb-1 md:pb-0 text-sm ">التقييمات</span>
                   </a>
               </li>
-              <li class="mr-6 my-2 md:my-0" role="presentation">
+              <li class="mr-4 my-2 md:my-0" role="presentation">
                   <a href="#" class="tab-link" id="portfolio-tab" data-tabs-target="#portfolio" type="button" role="tab" aria-controls="portfolio" aria-selected="false">
                     <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                     </svg>
-                    <span class="pb-1 md:pb-0 text-smd">معرض الأعمال</span>
+                    <span class="pb-1 md:pb-0 text-sm ">معرض الأعمال</span>
                   </a>
               </li>
           </ul>
@@ -368,8 +486,8 @@
             <!-- bio -->
             <div class="w-full md:w-2/3">
               <div class="bg-white rounded ">
-                <h2 class="border-b p-2 px-6 text-lg">نبدة عني</h2>
-                <p class="p-6 text-lg leading-10">
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">نبدة عني</h2>
+                <p class="p-6 text-smd leading-9">
                   مهندس برمجيات - مطور مواقع انترنت | بكالوريوس في الحاسبات و الذكاء الاصطناعي
                   قدمت العديد من الحلول التقنية إلى العديد من الشركات و أصحاب الأعمال
                   ساهمت في نجاح وتعزيز العديد من الشركات .
@@ -378,18 +496,18 @@
                 </p>
               </div>
               <div class="bg-white rounded mt-3">
-                <h2 class="border-b p-2 px-6 text-lg">مهاراتي</h2>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">مهاراتي</h2>
                 <div class="p-6 flex justify-start flex-wrap gap-2">
-                  <a href="#" class="bg-primaryTextColor w-fit text-white flex justify-center items-center  gap-x-1  p-1 px-3 ">
-                    <svg class="h-4 w-4" width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>tag_fill_round [#ffffff1176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -2959.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M129.020148,2805.2265 C128.444271,2805.2265 127.976892,2804.76459 127.976892,2804.19545 C127.976892,2803.62631 128.444271,2803.1644 129.020148,2803.1644 C129.596025,2803.1644 130.063404,2803.62631 130.063404,2804.19545 C130.063404,2804.76459 129.596025,2805.2265 129.020148,2805.2265 M143.388913,2809.64763 L139.933649,2806.2328 L139.933649,2806.2328 C134.061161,2800.42903 135.435129,2801.81888 133.157701,2799.41861 C132.961569,2799.22477 132.696582,2799 132.420119,2799 L126.085469,2799 C124.933714,2799 124,2800.15684 124,2801.29511 L124,2807.5546 C124,2807.82886 124.109542,2808.09075 124.304631,2808.28458 C128.396281,2812.32732 125.450126,2809.41564 134.536886,2818.39606 C135.351669,2819.20131 136.672431,2819.20131 137.487214,2818.39606 L137.487214,2818.39606 C142.018074,2813.91926 141.012376,2814.91215 143.388913,2812.56343 C144.203696,2811.75818 144.203696,2810.45287 143.388913,2809.64763" id="tag_fill_round-[#ffffff1176]"> </path> </g> </g> </g> </g></svg>
+                  <a href="#" class="bg-primaryTextColor w-fit text-sm text-white flex justify-center items-center  gap-x-1  p-1 px-3 ">
+                    <svg class="h-3 w-3" width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>tag_fill_round [#ffffff1176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -2959.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M129.020148,2805.2265 C128.444271,2805.2265 127.976892,2804.76459 127.976892,2804.19545 C127.976892,2803.62631 128.444271,2803.1644 129.020148,2803.1644 C129.596025,2803.1644 130.063404,2803.62631 130.063404,2804.19545 C130.063404,2804.76459 129.596025,2805.2265 129.020148,2805.2265 M143.388913,2809.64763 L139.933649,2806.2328 L139.933649,2806.2328 C134.061161,2800.42903 135.435129,2801.81888 133.157701,2799.41861 C132.961569,2799.22477 132.696582,2799 132.420119,2799 L126.085469,2799 C124.933714,2799 124,2800.15684 124,2801.29511 L124,2807.5546 C124,2807.82886 124.109542,2808.09075 124.304631,2808.28458 C128.396281,2812.32732 125.450126,2809.41564 134.536886,2818.39606 C135.351669,2819.20131 136.672431,2819.20131 137.487214,2818.39606 L137.487214,2818.39606 C142.018074,2813.91926 141.012376,2814.91215 143.388913,2812.56343 C144.203696,2811.75818 144.203696,2810.45287 143.388913,2809.64763" id="tag_fill_round-[#ffffff1176]"> </path> </g> </g> </g> </g></svg>
                     <span>فوتشوب</span>
                   </a>
-                  <a href="#" class="bg-primaryTextColor w-fit text-white flex justify-center items-center  gap-x-1  p-1 px-3 ">
-                    <svg class="h-4 w-4" width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>tag_fill_round [#ffffff1176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -2959.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M129.020148,2805.2265 C128.444271,2805.2265 127.976892,2804.76459 127.976892,2804.19545 C127.976892,2803.62631 128.444271,2803.1644 129.020148,2803.1644 C129.596025,2803.1644 130.063404,2803.62631 130.063404,2804.19545 C130.063404,2804.76459 129.596025,2805.2265 129.020148,2805.2265 M143.388913,2809.64763 L139.933649,2806.2328 L139.933649,2806.2328 C134.061161,2800.42903 135.435129,2801.81888 133.157701,2799.41861 C132.961569,2799.22477 132.696582,2799 132.420119,2799 L126.085469,2799 C124.933714,2799 124,2800.15684 124,2801.29511 L124,2807.5546 C124,2807.82886 124.109542,2808.09075 124.304631,2808.28458 C128.396281,2812.32732 125.450126,2809.41564 134.536886,2818.39606 C135.351669,2819.20131 136.672431,2819.20131 137.487214,2818.39606 L137.487214,2818.39606 C142.018074,2813.91926 141.012376,2814.91215 143.388913,2812.56343 C144.203696,2811.75818 144.203696,2810.45287 143.388913,2809.64763" id="tag_fill_round-[#ffffff1176]"> </path> </g> </g> </g> </g></svg>
+                  <a href="#" class="bg-primaryTextColor w-fit text-sm text-white flex justify-center items-center  gap-x-1  p-1 px-3 ">
+                    <svg class="h-3 w-3" width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>tag_fill_round [#ffffff1176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -2959.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M129.020148,2805.2265 C128.444271,2805.2265 127.976892,2804.76459 127.976892,2804.19545 C127.976892,2803.62631 128.444271,2803.1644 129.020148,2803.1644 C129.596025,2803.1644 130.063404,2803.62631 130.063404,2804.19545 C130.063404,2804.76459 129.596025,2805.2265 129.020148,2805.2265 M143.388913,2809.64763 L139.933649,2806.2328 L139.933649,2806.2328 C134.061161,2800.42903 135.435129,2801.81888 133.157701,2799.41861 C132.961569,2799.22477 132.696582,2799 132.420119,2799 L126.085469,2799 C124.933714,2799 124,2800.15684 124,2801.29511 L124,2807.5546 C124,2807.82886 124.109542,2808.09075 124.304631,2808.28458 C128.396281,2812.32732 125.450126,2809.41564 134.536886,2818.39606 C135.351669,2819.20131 136.672431,2819.20131 137.487214,2818.39606 L137.487214,2818.39606 C142.018074,2813.91926 141.012376,2814.91215 143.388913,2812.56343 C144.203696,2811.75818 144.203696,2810.45287 143.388913,2809.64763" id="tag_fill_round-[#ffffff1176]"> </path> </g> </g> </g> </g></svg>
                     <span>PHP</span>
                   </a>
-                  <a href="#" class="bg-primaryTextColor w-fit text-white flex justify-center items-center  gap-x-1  p-1 px-3 ">
-                    <svg class="h-4 w-4" width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>tag_fill_round [#ffffff1176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -2959.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M129.020148,2805.2265 C128.444271,2805.2265 127.976892,2804.76459 127.976892,2804.19545 C127.976892,2803.62631 128.444271,2803.1644 129.020148,2803.1644 C129.596025,2803.1644 130.063404,2803.62631 130.063404,2804.19545 C130.063404,2804.76459 129.596025,2805.2265 129.020148,2805.2265 M143.388913,2809.64763 L139.933649,2806.2328 L139.933649,2806.2328 C134.061161,2800.42903 135.435129,2801.81888 133.157701,2799.41861 C132.961569,2799.22477 132.696582,2799 132.420119,2799 L126.085469,2799 C124.933714,2799 124,2800.15684 124,2801.29511 L124,2807.5546 C124,2807.82886 124.109542,2808.09075 124.304631,2808.28458 C128.396281,2812.32732 125.450126,2809.41564 134.536886,2818.39606 C135.351669,2819.20131 136.672431,2819.20131 137.487214,2818.39606 L137.487214,2818.39606 C142.018074,2813.91926 141.012376,2814.91215 143.388913,2812.56343 C144.203696,2811.75818 144.203696,2810.45287 143.388913,2809.64763" id="tag_fill_round-[#ffffff1176]"> </path> </g> </g> </g> </g></svg>
+                  <a href="#" class="bg-primaryTextColor w-fit text-sm text-white flex justify-center items-center  gap-x-1  p-1 px-3 ">
+                    <svg class="h-3 w-3" width="64px" height="64px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>tag_fill_round [#ffffff1176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-180.000000, -2959.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M129.020148,2805.2265 C128.444271,2805.2265 127.976892,2804.76459 127.976892,2804.19545 C127.976892,2803.62631 128.444271,2803.1644 129.020148,2803.1644 C129.596025,2803.1644 130.063404,2803.62631 130.063404,2804.19545 C130.063404,2804.76459 129.596025,2805.2265 129.020148,2805.2265 M143.388913,2809.64763 L139.933649,2806.2328 L139.933649,2806.2328 C134.061161,2800.42903 135.435129,2801.81888 133.157701,2799.41861 C132.961569,2799.22477 132.696582,2799 132.420119,2799 L126.085469,2799 C124.933714,2799 124,2800.15684 124,2801.29511 L124,2807.5546 C124,2807.82886 124.109542,2808.09075 124.304631,2808.28458 C128.396281,2812.32732 125.450126,2809.41564 134.536886,2818.39606 C135.351669,2819.20131 136.672431,2819.20131 137.487214,2818.39606 L137.487214,2818.39606 C142.018074,2813.91926 141.012376,2814.91215 143.388913,2812.56343 C144.203696,2811.75818 144.203696,2810.45287 143.388913,2809.64763" id="tag_fill_round-[#ffffff1176]"> </path> </g> </g> </g> </g></svg>
                     <span>لارافيل</span>
                   </a>
                 </div>
@@ -399,8 +517,8 @@
             <div class="w-full md:w-1/3">
               <!-- statistics -->
               <div class="bg-white rounded  pb-4">
-                <h2 class="border-b p-2 px-6 text-lg">الاحصائيات</h2>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">الاحصائيات</h2>
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2 ">التقييمات</span>
                   <div class="w-1/2 flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -431,59 +549,60 @@
                     </svg>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2">معدل التوظيف	</span>
                   <div class="w-1/2 shadow  bg-gray-100 h-4 rounded-md">
                     <div class="bg-blue-500 text-xs h-4 leading-4 rounded-md  text-center text-white" style="width: 45%">45%</div>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span  class="w-1/2">المعاملات المكتملة		</span>
                   <span class="w-1/2 font-semibold">2</span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2">تاريخ الانضمام	</span>
                   <span class="w-1/2 font-semibold">14 مارس 2015   </span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2">آخر تواجد		</span>
                   <span class="w-1/2 font-semibold">منذ دقيقة  </span>
                 </div>
               </div>
+              <!-- general infos -->
               <div class="bg-white rounded  pb-4 mt-4">
-                <h2 class="border-b p-2 px-6 text-lg">معلومات عامة</h2>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">معلومات عامة</h2>
 
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span  class="w-1/3">العنوان</span>
                   <span class="w-2/3 font-semibold">92 rue Lebon 78500 Sartrouville France</span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/3">الهاتف	</span>
                   <span class="w-2/3 font-semibold">0033659299938 </span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/3">الايميل		</span>
                   <span class="w-2/3 font-semibold">email@exammple.com </span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/3">الموقع		</span>
                   <a href="#" class="w-2/3 font-semibold underline">www.example.com</a>
                 </div>
               </div>
               <!-- verfications -->
               <div class="bg-white rounded  pb-4 mt-4">
-                <h2 class="border-b p-2 px-6 text-lg">التوثيقات</h2>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">التوثيقات</h2>
                 <div class="grid grid-cols-2 gap-3 pt-3 px-6">
-                  <div class="flex justify-start gap-2 py-1">
-                    <svg class="h-6 w-6 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  <div class="flex justify-start gap-2 py-1 text-sm">
+                    <svg class="h-5 w-5 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                     البريد الالكتروني
                   </div>
-                  <div class="flex justify-start gap-2 py-1">
-                    <svg class="h-6 w-6 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  <div class="flex justify-start gap-2 py-1 text-sm">
+                    <svg class="h-5 w-5 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                     رقم الهاتف
                   </div>
-                  <div class="flex justify-start gap-2 py-1">
-                    <svg class="h-6 w-6 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  <div class="flex justify-start gap-2 py-1 text-sm">
+                    <svg class="h-5 w-5 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                     أقسم على الميثاق
                   </div>
                 </div>
@@ -491,11 +610,11 @@
               </div>
                <!-- working time -->
               <div class="bg-white rounded  pb-4 mt-4">
-                <h2 class="border-b p-2 px-6 text-lg flex justify-between items-center">أوقات العمل
-                  <span class="text-blue-600 text-sm">التوقيت على حسب توقيت مكة المكرمة</span>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold flex justify-between items-center">أوقات العمل
+                  <span class="text-blue-600 text-[14px]">التوقيت على حسب توقيت مكة المكرمة</span>
                 </h2>
 
-                <div class="flex justify-between gap-2 px-6 py-2 pt-4">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm pt-4">
                   <span class="w-2/5 text-blue-800">الإثنين</span>
                   <p class="w-3/5 text-smd">
                     <strong>08:00 صباحا</strong>
@@ -503,7 +622,7 @@
                     <strong>08:00 مساءا</strong>
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">الثلاثاء</span>
                   <p class="w-3/5 text-smd">
                     <strong>08:00 صباحا</strong>
@@ -511,7 +630,7 @@
                     <strong>08:00 مساءا</strong>
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">الأربعاء</span>
                   <p class="w-3/5 text-smd">
                     <strong>08:00 صباحا</strong>
@@ -519,7 +638,7 @@
                     <strong>08:00 مساءا</strong>
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">الخميس</span>
                   <p class="w-3/5 text-smd">
                     <strong>08:00 صباحا</strong>
@@ -551,67 +670,77 @@
           <div class="my-5 w-full md:flex justify-between gap-6">
               <div class="w-full md:w-2/3">
                 <div class="flex items-center mb-2 p-4 border rounded bg-white shadow-lg">
-                  <div class="w-1/6 mr-4">
-                    <img src="https://via.placeholder.com/150" alt="Profile picture" class="w-2/3 h-2/3 rounded">
-                  </div>
                   <div class="flex-1">
-                    <div class="flex items-center justify-between">
-                      <a href="professional_details.html" class="flex justify-start items-center gap-x-2 text-md md:text-lg font-semibold text-primaryTextColor">
-                        احمد امين عياط
-                        <span class="h-4 w-4 rounded-full bg-green-500 mr-2 ltr!ml-2"></span>
+                    <div class="flex items-center justify-between"  x-data="{ showReportModel : false ,toggle() { this.showReportModel = ! this.showReportModel } }" class=" overflow-y-scroll">
+                      <a href="project_details.html" class="text-smd md:text-base  text-primaryTextColor">
+                          برمجة موقع 3 صفحات
                       </a>
-                      <a href="" class="px-4 py-2 font-medium text-white bg-primaryTextColor rounded hover:bg-primaryTextColorDarken">وظفني</a>
-                    </div>
-                    <div class="text-gray-600 my-4 flex justify-start gap-x-8 items-center">
-                      <!-- rating box -->
-                      <div class="flex items-center">
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                          </path>
+                     
+                      <a href="#" @click.prevent="toggle()" class="flex items-center justify-center gap-x-2 px-3 py-1 text-sm text-white bg-primaryTextColor rounded hover:bg-primaryTextColorDarken">
+                        <svg class="h-4 w-4 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
                         </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                          </path>
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                          </path>
-                        </svg>
-                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                          </path>
-                        </svg>
-                        <svg class="w-5 h-5 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                          </path>
-                        </svg>
-                      </div>
-                      <!-- jobs rating -->
-                      <h6 class="">معدل توظيف
-                        <span class="font-semibold">82%</span>
-                      </h6>
-                      <!-- tags -->
-                      <div>
-                        برمجة ، تطوير المواقع ، تصميم
+                        <span>تبليغ</span>
+                      </a>
+                      <!-- Modal Background -->
+                      <div  x-show="showReportModel" @click.self="toggle()" class="fixed text-gray-500 overflow-auto z-50 bg-black bg-opacity-40 left-0 right-0 top-0 bottom-0 h-screen flex items-center" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+                        <div class="w-full md:w-1/3 mx-auto z-20 inset-0">
+                          <div class="flex flex-col p-5 rounded-lg shadow bg-white">
+                          <div class="flex flex-col items-center text-center">
+                            <div class="inline-block p-4 bg-yellow-50 rounded-full">
+                            <svg class="w-12 h-12 fill-current text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                            </div>
+                            <h2 class="mt-2 font-semibold text-gray-800">هل تريد فعلا التبليغ عن هذا المشروع كمخالف؟</h2>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">من خلال التأكيد فإنك بذلك تقر على أن هذا المشروع مخالف وسيتم مراجعنه واتخاد الاجراءات اللازمة</p>
+                          </div>
+                        
+                          <div class="flex items-center gap mt-3">
+                            <button @click="toggle()" class="flex-1 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md">
+                            تراجع
+                            </button>
+                        
+                            <button @click="toggle()" class="flex-1 px-4 py-2 ml-2 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium rounded-md">
+                            تأكيد
+                            </button>
+                          </div>
+                          </div>
+                        </div>   
                       </div>
                     </div>
                     <!-- short description -->
-                    <p class="text-sm mt-2">
-                      مهندس حاسبات سوري الأصل مقيم يف مصر. مهتم بعلوم الحاسب وفروعها، وأعمل تطوير الويب والتصميم الجرافي يك
+                    <p class="text-ellipsis overflow-hidden text-sm my-3 leading-8">
+                      <span class="block md:hidden">ارغب في التعاون مع مستقل لطلوب من المستقلطريقة ...</span>
+                     <span class="hidden md:block"> ارغب في التعاون مع مستقل لغرض تنسيق ك المسعادة كتابة المحتوى بطر                    
+                      ...</span>
                     </p>
+                    <div class="flex justify-start gap-x-3 p-1 border">
+
+                      <div class="flex items-center gap-1 text-sm ">
+                        <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>منذ 30 دقيقة</span>
+                      </div>
+                      <div class="flex items-center gap-1 text-sm ">
+                        <svg class="h-4 w-4 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>                        
+                        <span>مفتوح</span>
+                      </div>
+                      <div class="flex items-center gap-1 text-sm ">
+                        <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>                                               
+                        <span>7 عروض</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- statistics -->
               <div class="w-full md:w-1/3 bg-white rounded  pb-4">
-                <h2 class="border-b p-2 px-6 text-lg">الاحصائيات</h2>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">الاحصائيات</h2>
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2 ">التقييمات</span>
                   <div class="w-1/2 flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -642,21 +771,21 @@
                     </svg>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2">معدل إكمال المشاريع	</span>
                   <div class="w-1/2 shadow  bg-gray-100 h-4 rounded-md">
                     <div class="bg-blue-500 text-xs h-4 leading-4 rounded-md  text-center text-white" style="width: 45%">45%</div>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span  class="w-1/2">مشاريع يعمل عليها		</span>
                   <span class="w-1/2 font-semibold">2</span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2">تاريخ الانضمام	</span>
                   <span class="w-1/2 font-semibold">14 مارس 2015   </span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/2">آخر تواجد		</span>
                   <span class="w-1/2 font-semibold">منذ دقيقة  </span>
                 </div>
@@ -669,8 +798,8 @@
             <!-- ratings -->
             <div class="w-full md:w-2/3">
               <div class="bg-white rounded py-3">
-                <h2 class="border-b p-2 px-6 text-lg">التقييمات</h2>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <h2 class="border-b p-4 px-6 text-base text-gray-600 font-semibold">التقييمات</h2>
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">الاحترافية بالتعامل</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -702,7 +831,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">التواصل والمتابعة</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -734,7 +863,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">لخبرة بمجال العمل</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -766,7 +895,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">التسليم في الموعد</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -798,7 +927,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">التعامل معه مرة أخرى</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -830,7 +959,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">نظافة المحل والمعدات</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -862,7 +991,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">الأسعار</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -894,7 +1023,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">خدمة بعد البيع</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -926,7 +1055,7 @@
                     <span class="mr-2 ltr:ml-2">4.5</span>
                   </div>
                 </div>
-                <div class="flex justify-between gap-2 px-6  py-2">
+                <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                   <span class="">ترشحه للآخرين</span>
                   <div class=" flex items-center">
                     <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -962,9 +1091,9 @@
               <!-- clients reviews -->
               <div class="bg-white rounded mt-3">
                 <!-- filter button -->
-                <h2 class="flex justify-between items-center border-b p-2 px-6 text-lg">
+                <h2 class="flex justify-between items-center border-b p-2 px-6 text-base text-gray-600 font-semibold">
                     <span>آراء العملاء</span>
-                    <select id="reviews" class="inline-block bg-body text-base text-gray-800 outline-none border px-4 border-gray-400 rounded">
+                    <select id="reviews" class=" white-input-select text-sm" style="padding-top:0;padding-bottom:0;width:auto">
                       <option value="newest" selected>الاحدث</option>
                       <option value="oldest">الأقدم</option>
                     </select>
@@ -972,18 +1101,18 @@
                 <div class="my-2 ">
                   <div class="mb-2 py-4  rounded bg-white shadow-lg">
                     <!-- review example -->
-                    <div class="py-5 px-4">
+                    <div class="py-5 px-4 ">
                       <div class="flex justify-start items-center gap-x-2">
                         <div> 
                           <img src="https://via.placeholder.com/150" alt="Profile picture" class="h-14 w-14 border shadow-md rounded-full">
                         </div>
                         <div >
-                          <div class="flex items-center justify-between">
-                            <span class="text-md md:text-lg font-semibold ">
+                          <a href="" class="flex items-center justify-between">
+                            <span class="text-sm md:text-md font-semibold text-primaryTextColor">
                               احمد امين عياط
                             </span>
-                          </div>
-                          <div class="text-gray-700 mt-3 flex justify-start gap-x-8 items-center">
+                          </a>
+                          <div class="text-gray-700 text-sm mt-3 flex justify-start gap-x-4 items-center">
                             <!-- rating box -->
                             <span><strong>1</strong> تعليق</span>
                             <!--  location -->
@@ -1002,13 +1131,13 @@
                       <!-- short description -->
                       <p class="text-smd mt-6 text-gray-700">
                         <svg class="h-5 w-5 inline-block " viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve"  transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-opacity="0.8" stroke-width="0.2" stroke-linejoin="round" d="M 56.9368,27.36C 51.9175,29.3708 49.1308,34.0575 49.0833,41.1667L 55.4167,41.1667L 55.4167,53.8333L 41.1667,53.8333L 41.1667,42.0533C 41.1667,38.7442 41.9425,35.5062 42.3542,33.0679C 42.7658,30.6296 43.8465,29.7706 45.5961,27.3244C 47.3456,24.8781 50.0333,22.8633 53.6592,21.28L 56.9368,27.36 Z M 34.77,27.36C 29.7983,29.3708 27.0117,34.0575 26.9167,41.1667L 33.25,41.1667L 33.25,53.8333L 19,53.8333L 19,42.0533C 19,38.7442 19.7758,35.5062 20.1875,33.0679C 20.5992,30.6296 21.664,29.7706 23.3819,27.3244C 25.0998,24.8781 27.8033,22.8633 31.4925,21.28L 34.77,27.36 Z "></path> </g></svg>
-                        <span>رجل خبير في التصميم وذو خبرة عالية متجاوب وخدوم بدرجة عالية يقدم النصح ويبذل قصارى جهده في ذلك .. أنصح بالتعامل</span>
+                        <span>رجل خبير في التصميم وذو خبرة عالية متجاوب وخدوم بدرجة عالية يقدم الن صح ويبذل قصارى جهده في ذلك .. أنصح بالتعامل</span>
                         <svg class="h-5 w-5 inline-block " viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-opacity="0.8" stroke-width="0.2" stroke-linejoin="round" d="M 56.9368,27.36C 51.9175,29.3708 49.1308,34.0575 49.0833,41.1667L 55.4167,41.1667L 55.4167,53.8333L 41.1667,53.8333L 41.1667,42.0533C 41.1667,38.7442 41.9425,35.5062 42.3542,33.0679C 42.7658,30.6296 43.8465,29.7706 45.5961,27.3244C 47.3456,24.8781 50.0333,22.8633 53.6592,21.28L 56.9368,27.36 Z M 34.77,27.36C 29.7983,29.3708 27.0117,34.0575 26.9167,41.1667L 33.25,41.1667L 33.25,53.8333L 19,53.8333L 19,42.0533C 19,38.7442 19.7758,35.5062 20.1875,33.0679C 20.5992,30.6296 21.664,29.7706 23.3819,27.3244C 25.0998,24.8781 27.8033,22.8633 31.4925,21.28L 34.77,27.36 Z "></path> </g></svg>
                       </p>
                       <div x-data="{ open: false, toggle() { this.open = ! this.open } }">
-                        <a href="#" @click.prevent="toggle()" class="p-1 px-2 inline-block my-4 text-white bg-primaryTextColor hover:bg-primaryTextDarken duration-300 transition-colors ease-in">عرض التقييم</a>
+                        <a href="#" @click.prevent="toggle()" class="p-1 px-2 inline-block my-4 text-sm text-white bg-primaryTextColor hover:bg-primaryTextDarken duration-300 transition-colors ease-in">عرض التقييم</a>
                         <div x-show="open">
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">الاحترافية بالتعامل</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1040,7 +1169,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التواصل والمتابعة</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1072,7 +1201,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">لخبرة بمجال العمل</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1104,7 +1233,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التسليم في الموعد</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1136,7 +1265,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التعامل معه مرة أخرى</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1168,7 +1297,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">نظافة المحل والمعدات</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1200,7 +1329,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">الأسعار</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1232,7 +1361,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">خدمة بعد البيع</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1264,7 +1393,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">ترشحه للآخرين</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1300,18 +1429,18 @@
                       </div>
                     </div>
                     <!-- review example -->
-                    <div class="py-5 px-4 border-t">
+                    <div class="py-5 px-4 border-t ">
                       <div class="flex justify-start items-center gap-x-2">
                         <div> 
                           <img src="https://via.placeholder.com/150" alt="Profile picture" class="h-14 w-14 border shadow-md rounded-full">
                         </div>
                         <div >
-                          <div class="flex items-center justify-between">
-                            <span class="text-md md:text-lg font-semibold ">
+                          <a href="" class="flex items-center justify-between">
+                            <span class="text-sm md:text-md font-semibold text-primaryTextColor">
                               احمد امين عياط
                             </span>
-                          </div>
-                          <div class="text-gray-700 mt-3 flex justify-start gap-x-8 items-center">
+                          </a>
+                          <div class="text-gray-700 text-sm mt-3 flex justify-start gap-x-4 items-center">
                             <!-- rating box -->
                             <span><strong>1</strong> تعليق</span>
                             <!--  location -->
@@ -1330,13 +1459,13 @@
                       <!-- short description -->
                       <p class="text-smd mt-6 text-gray-700">
                         <svg class="h-5 w-5 inline-block " viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve"  transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-opacity="0.8" stroke-width="0.2" stroke-linejoin="round" d="M 56.9368,27.36C 51.9175,29.3708 49.1308,34.0575 49.0833,41.1667L 55.4167,41.1667L 55.4167,53.8333L 41.1667,53.8333L 41.1667,42.0533C 41.1667,38.7442 41.9425,35.5062 42.3542,33.0679C 42.7658,30.6296 43.8465,29.7706 45.5961,27.3244C 47.3456,24.8781 50.0333,22.8633 53.6592,21.28L 56.9368,27.36 Z M 34.77,27.36C 29.7983,29.3708 27.0117,34.0575 26.9167,41.1667L 33.25,41.1667L 33.25,53.8333L 19,53.8333L 19,42.0533C 19,38.7442 19.7758,35.5062 20.1875,33.0679C 20.5992,30.6296 21.664,29.7706 23.3819,27.3244C 25.0998,24.8781 27.8033,22.8633 31.4925,21.28L 34.77,27.36 Z "></path> </g></svg>
-                        <span>رجل خبير في التصميم وذو خبرة عالية متجاوب وخدوم بدرجة عالية يقدم النصح ويبذل قصارى جهده في ذلك .. أنصح بالتعامل</span>
+                        <span>رجل خبير في التصميم وذو خبرة عالية متجاوب وخدوم بدرجة عالية يقدم الن صح ويبذل قصارى جهده في ذلك .. أنصح بالتعامل</span>
                         <svg class="h-5 w-5 inline-block " viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-opacity="0.8" stroke-width="0.2" stroke-linejoin="round" d="M 56.9368,27.36C 51.9175,29.3708 49.1308,34.0575 49.0833,41.1667L 55.4167,41.1667L 55.4167,53.8333L 41.1667,53.8333L 41.1667,42.0533C 41.1667,38.7442 41.9425,35.5062 42.3542,33.0679C 42.7658,30.6296 43.8465,29.7706 45.5961,27.3244C 47.3456,24.8781 50.0333,22.8633 53.6592,21.28L 56.9368,27.36 Z M 34.77,27.36C 29.7983,29.3708 27.0117,34.0575 26.9167,41.1667L 33.25,41.1667L 33.25,53.8333L 19,53.8333L 19,42.0533C 19,38.7442 19.7758,35.5062 20.1875,33.0679C 20.5992,30.6296 21.664,29.7706 23.3819,27.3244C 25.0998,24.8781 27.8033,22.8633 31.4925,21.28L 34.77,27.36 Z "></path> </g></svg>
                       </p>
                       <div x-data="{ open: false, toggle() { this.open = ! this.open } }">
-                        <a href="#" @click.prevent="toggle()" class="p-1 px-2 inline-block my-4 text-white bg-primaryTextColor hover:bg-primaryTextDarken duration-300 transition-colors ease-in">عرض التقييم</a>
+                        <a href="#" @click.prevent="toggle()" class="p-1 px-2 inline-block my-4 text-sm text-white bg-primaryTextColor hover:bg-primaryTextDarken duration-300 transition-colors ease-in">عرض التقييم</a>
                         <div x-show="open">
-                          <div class="flex justify-between gap-2 px-6 py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">الاحترافية بالتعامل</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1368,7 +1497,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التواصل والمتابعة</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1400,7 +1529,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">لخبرة بمجال العمل</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1432,7 +1561,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التسليم في الموعد</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1464,7 +1593,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التعامل معه مرة أخرى</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1496,7 +1625,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">نظافة المحل والمعدات</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1528,7 +1657,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">الأسعار</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1560,7 +1689,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">خدمة بعد البيع</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1592,7 +1721,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">ترشحه للآخرين</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1628,18 +1757,18 @@
                       </div>
                     </div>
                     <!-- review example -->
-                    <div class="py-5 px-4 border-t">
+                    <div class="py-5 px-4 border-t ">
                       <div class="flex justify-start items-center gap-x-2">
                         <div> 
                           <img src="https://via.placeholder.com/150" alt="Profile picture" class="h-14 w-14 border shadow-md rounded-full">
                         </div>
                         <div >
-                          <div class="flex items-center justify-between">
-                            <span class="text-md md:text-lg font-semibold ">
+                          <a href="" class="flex items-center justify-between">
+                            <span class="text-sm md:text-md font-semibold text-primaryTextColor">
                               احمد امين عياط
                             </span>
-                          </div>
-                          <div class="text-gray-700 mt-3 flex justify-start gap-x-8 items-center">
+                          </a>
+                          <div class="text-gray-700 text-sm mt-3 flex justify-start gap-x-4 items-center">
                             <!-- rating box -->
                             <span><strong>1</strong> تعليق</span>
                             <!--  location -->
@@ -1658,13 +1787,13 @@
                       <!-- short description -->
                       <p class="text-smd mt-6 text-gray-700">
                         <svg class="h-5 w-5 inline-block " viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve"  transform="rotate(180)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-opacity="0.8" stroke-width="0.2" stroke-linejoin="round" d="M 56.9368,27.36C 51.9175,29.3708 49.1308,34.0575 49.0833,41.1667L 55.4167,41.1667L 55.4167,53.8333L 41.1667,53.8333L 41.1667,42.0533C 41.1667,38.7442 41.9425,35.5062 42.3542,33.0679C 42.7658,30.6296 43.8465,29.7706 45.5961,27.3244C 47.3456,24.8781 50.0333,22.8633 53.6592,21.28L 56.9368,27.36 Z M 34.77,27.36C 29.7983,29.3708 27.0117,34.0575 26.9167,41.1667L 33.25,41.1667L 33.25,53.8333L 19,53.8333L 19,42.0533C 19,38.7442 19.7758,35.5062 20.1875,33.0679C 20.5992,30.6296 21.664,29.7706 23.3819,27.3244C 25.0998,24.8781 27.8033,22.8633 31.4925,21.28L 34.77,27.36 Z "></path> </g></svg>
-                        <span>رجل خبير في التصميم وذو خبرة عالية متجاوب وخدوم بدرجة عالية يقدم النصح ويبذل قصارى جهده في ذلك .. أنصح بالتعامل</span>
+                        <span>رجل خبير في التصميم وذو خبرة عالية متجاوب وخدوم بدرجة عالية يقدم الن صح ويبذل قصارى جهده في ذلك .. أنصح بالتعامل</span>
                         <svg class="h-5 w-5 inline-block " viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-opacity="0.8" stroke-width="0.2" stroke-linejoin="round" d="M 56.9368,27.36C 51.9175,29.3708 49.1308,34.0575 49.0833,41.1667L 55.4167,41.1667L 55.4167,53.8333L 41.1667,53.8333L 41.1667,42.0533C 41.1667,38.7442 41.9425,35.5062 42.3542,33.0679C 42.7658,30.6296 43.8465,29.7706 45.5961,27.3244C 47.3456,24.8781 50.0333,22.8633 53.6592,21.28L 56.9368,27.36 Z M 34.77,27.36C 29.7983,29.3708 27.0117,34.0575 26.9167,41.1667L 33.25,41.1667L 33.25,53.8333L 19,53.8333L 19,42.0533C 19,38.7442 19.7758,35.5062 20.1875,33.0679C 20.5992,30.6296 21.664,29.7706 23.3819,27.3244C 25.0998,24.8781 27.8033,22.8633 31.4925,21.28L 34.77,27.36 Z "></path> </g></svg>
                       </p>
                       <div x-data="{ open: false, toggle() { this.open = ! this.open } }">
-                        <a href="#" @click.prevent="toggle()" class="p-1 px-2 inline-block my-4 text-white bg-primaryTextColor hover:bg-primaryTextDarken duration-300 transition-colors ease-in">عرض التقييم</a>
+                        <a href="#" @click.prevent="toggle()" class="p-1 px-2 inline-block my-4 text-sm text-white bg-primaryTextColor hover:bg-primaryTextDarken duration-300 transition-colors ease-in">عرض التقييم</a>
                         <div x-show="open">
-                          <div class="flex justify-between gap-2 px-6 py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">الاحترافية بالتعامل</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1696,7 +1825,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التواصل والمتابعة</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1728,7 +1857,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">لخبرة بمجال العمل</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1760,7 +1889,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التسليم في الموعد</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1792,7 +1921,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">التعامل معه مرة أخرى</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1824,7 +1953,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">نظافة المحل والمعدات</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1856,7 +1985,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">الأسعار</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1888,7 +2017,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">خدمة بعد البيع</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1920,7 +2049,7 @@
                               <span class="mr-2 ltr:ml-2">4.5</span>
                             </div>
                           </div>
-                          <div class="flex justify-between gap-2 px-6  py-2">
+                          <div class="flex justify-between gap-2 px-6  py-2 text-sm">
                             <span class="">ترشحه للآخرين</span>
                             <div class=" flex items-center">
                               <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -1965,71 +2094,71 @@
             <div class="w-full md:w-1/3">
               <!-- badges -->
               <div class="bg-white rounded  pb-4">
-                <h2 class="border-b p-2 px-6 text-lg">الأوسمة</h2>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">الأوسمة</h2>
 
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">المحترف القوي الأمين	</span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     أقسم على الميثاق+  20معاملة إيجابية
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف موثوق فيه    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     معلومات التواصل صحيحة :
                     الهاتف / الإيميل/الهوية/الحساب البنكي 
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف متعاون    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     يعطي فواتير + خدمة ما بعد البيع+ يقبل التقسيط
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف مميز    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     قدم أكثر من  20معاملة لأعضاء المنصة
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف ملفه كامل    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     إضافة كافة بياناته: الاسم الكامل، السجل
                     التجاري ، ...
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف متعدد اللغات    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     ضافة كافة بياناته: الاسم الكامل، السجل
                         التجاري ، 
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف يقبل خصومات    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     يقبل تقديم خصومات لأعضاء المنصة
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف أكثر من 1 سنة    </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     عنده أكثر من 1 سنة في المنصة
                   </p>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-2/5 text-blue-800">محترف معتمد   </span>
-                  <p class="w-3/5 text-sm">
+                  <p class="w-3/5">
                     أدى يمين القسم وتعهد بالإلتزام ببنود الميثاق
                   </p>
                 </div>
-                <div class=" px-6 py-2">
+                <div class=" px-6 py-2 text-sm">
                   <span class="w-full text-blue-800">المحترف القوي الأمين المثالي
                     <strong> لعام 2022م   </strong>
                   </span>
                 </div>
-                <div class=" px-6 py-2">
+                <div class=" px-6 py-2 text-sm">
                   <span class="w-full text-blue-800">المحترف القوي الأمين المثالي
                     <strong> لشهر مارس 2022م   </strong>
                   </span>
@@ -2038,39 +2167,39 @@
               </div>
               <!-- general info -->
               <div class="bg-white rounded  pb-4 mt-4">
-                <h2 class="border-b p-2 px-6 text-lg">معلومات عامة</h2>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">معلومات عامة</h2>
 
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span  class="w-1/3">العنوان</span>
                   <span class="w-2/3 font-semibold">92 rue Lebon 78500 Sartrouville France</span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/3">الهاتف	</span>
                   <span class="w-2/3 font-semibold">0033659299938 </span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/3">الايميل		</span>
                   <span class="w-2/3 font-semibold">email@exammple.com </span>
                 </div>
-                <div class="flex justify-between gap-2 px-6 py-2">
+                <div class="flex justify-between gap-2 px-6 py-2 text-sm">
                   <span class="w-1/3">الموقع		</span>
                   <a href="#" class="w-2/3 font-semibold underline">www.example.com</a>
                 </div>
               </div>
               <!-- verfications -->
               <div class="bg-white rounded  pb-4 mt-4">
-                <h2 class="border-b p-2 px-6 text-lg">التوثيقات</h2>
+                <h2 class="border-b p-2 px-6 text-base text-gray-600 font-semibold">التوثيقات</h2>
                 <div class="grid grid-cols-2 gap-3 pt-3 px-6">
-                  <div class="flex justify-start gap-2 py-1">
-                    <svg class="h-6 w-6 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  <div class="flex justify-start gap-2 py-1 text-sm">
+                    <svg class="h-5 w-5 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                     البريد الالكتروني
                   </div>
-                  <div class="flex justify-start gap-2 py-1">
-                    <svg class="h-6 w-6 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  <div class="flex justify-start gap-2 py-1 text-sm">
+                    <svg class="h-5 w-5 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                     رقم الهاتف
                   </div>
-                  <div class="flex justify-start gap-2 py-1">
-                    <svg class="h-6 w-6 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                  <div class="flex justify-start gap-2 py-1 text-sm">
+                    <svg class="h-5 w-5 text-green-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="9 11 12 14 20 6" />  <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
                     أقسم على الميثاق
                   </div>
                 </div>

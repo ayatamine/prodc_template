@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  
   // ======= Sticky
   window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
@@ -104,3 +105,11 @@
     scrollTo(document.documentElement);
   };
 })();
+      // hide user menu 
+      function hideOthers(){
+        document.querySelectorAll('.topNotMess').forEach(item => item.style.display="none")
+        document.querySelectorAll('.topNotMessCallable').forEach((item) => {
+        item.classList.remove("p-3") 
+        item.classList.remove("bg-body") 
+      })
+      }
