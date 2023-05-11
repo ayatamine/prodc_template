@@ -1806,7 +1806,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-body{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 254 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
 
 .bg-blue-500{
@@ -2837,7 +2837,7 @@ body {
 
 #navbarCollapse li .topnav-link:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 254 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 960px){
@@ -2864,19 +2864,19 @@ body {
 
 .sidenav-link:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 254 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
 
 #navbarCollapse li .ud-menu-scroll.active{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 254 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .sticky #navbarCollapse li .ud-menu-scroll.active{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 254 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
@@ -3501,7 +3501,7 @@ input[type="radio"]:checked + label{
 
 .hover\:bg-body:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 244 254 / var(--tw-bg-opacity));
+  background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-dark:hover{

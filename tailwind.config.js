@@ -36,7 +36,7 @@ module.exports = {
         primaryTextColorDarken:"#0079cf",
         primaryBg:"#ECFEF5",
         secondaryBg:'#fee5d3',
-        body:'#f3f4fe',
+        body:'#f4f4f4',
         input:'#f3f4fe',
         sectionTitleColor:'#BF8F00',
         textBgColor:'#FFE69A',
