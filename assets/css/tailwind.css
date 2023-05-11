@@ -897,6 +897,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 3rem;
 }
 
+.mt-32{
+  margin-top: 8rem;
+}
+
 .ml-1{
   margin-left: 0.25rem;
 }
@@ -1011,6 +1015,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-16{
   height: 4rem;
+}
+
+.h-\[14rem\]{
+  height: 14rem;
 }
 
 .h-4\/5{
@@ -2201,16 +2209,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 3rem;
 }
 
+.pb-0{
+  padding-bottom: 0px;
+}
+
 .pl-4{
   padding-left: 1rem;
 }
 
 .pr-10{
   padding-right: 2.5rem;
-}
-
-.pb-0{
-  padding-bottom: 0px;
 }
 
 .pb-4{
@@ -2984,7 +2992,7 @@ body {
 }
 
 .intro-section{
-  min-height: 32rem;
+  min-height: 33rem;
   /* padding-top: 7rem; */
 }
 
@@ -2994,12 +3002,11 @@ body {
   --tw-border-opacity: 1;
   border-color: rgb(254 240 138 / var(--tw-border-opacity));
   padding: 0.75rem;
-  text-align: center;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 2rem;
+  text-align: justify;
+  font-size: 13px;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(33 150 243 / var(--tw-text-opacity));
+  color: rgb(0 121 207 / var(--tw-text-opacity));
 }
 
 .highlighted-offer{
@@ -3373,6 +3380,30 @@ input[type="radio"]:checked + label{
 .work_details p{
   line-height: 2rem;
   font-size: 0.9rem;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 143 0 / var(--tw-bg-opacity));
+  padding: 4px;
+  /* border: 2px solid black; */
+  height: 35px;
+  width: 35px;
+  /* background: #0e99fb;; */
+}
+
+#testimonial .swiper-button-prev{
+  left:-2rem
+}
+
+#testimonial .swiper-button-next{
+  right:-2rem
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
 }
 
 .after\:absolute::after{
@@ -4159,6 +4190,10 @@ input[type="radio"]:checked + label{
     height: 18rem;
   }
 
+  .lg\:h-\[20rem\]{
+    height: 20rem;
+  }
+
   .lg\:w-full{
     width: 100%;
   }
@@ -4177,6 +4212,22 @@ input[type="radio"]:checked + label{
 
   .lg\:w-2\/5{
     width: 40%;
+  }
+
+  .lg\:w-\[57\%\]{
+    width: 57%;
+  }
+
+  .lg\:w-\[43\%\]{
+    width: 43%;
+  }
+
+  .lg\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .lg\:w-\[60\%\]{
+    width: 60%;
   }
 
   .lg\:w-1\/5{
@@ -4277,6 +4328,16 @@ input[type="radio"]:checked + label{
     padding-bottom: 5rem;
   }
 
+  .lg\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .lg\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:pr-0{
     padding-right: 0px;
   }
@@ -4327,6 +4388,10 @@ input[type="radio"]:checked + label{
 
   .xl\:p-\[70px\]{
     padding: 70px;
+  }
+
+  .xl\:p-\[50px\]{
+    padding: 50px;
   }
 
   .xl\:px-6{

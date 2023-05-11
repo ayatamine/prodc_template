@@ -122,12 +122,12 @@ body {
  @apply text-primaryTextColor font-bold  /*Set to match the Tailwind colour you want the active one to be */
 }
 .intro-section{
-          min-height: 32rem;
+          min-height: 33rem;
          /* padding-top: 7rem; */
        
 }
 .intro-cards{
-  @apply  border-2  border-yellow-200 text-center font-semibold text-sm text-primaryTextColor leading-8 p-3 min-h-full
+  @apply  border-2  border-yellow-200 text-justify  text-[13px] text-primaryTextColorDarken leading-6 p-3 min-h-full
 }
 .highlighted-offer{
   @apply text-primaryTextColorDarken dark:text-primaryTextColor
@@ -222,4 +222,23 @@ input[type="radio"]:checked + label{
 .work_details p{
   @apply leading-8 ;
   font-size: 0.9rem
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply bg-sectionTitleColor rounded-full;
+
+  padding:4px;
+  padding: 4px;
+  /* border: 2px solid black; */
+  height: 35px;
+  width: 35px;
+  /* background: #0e99fb;; */
+}
+#testimonial .swiper-button-prev{left:-2rem}
+#testimonial .swiper-button-next{right:-2rem}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
 }

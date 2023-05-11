@@ -17,7 +17,7 @@
 
     <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css"> -->
 
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -483,42 +483,71 @@
       <!-- <div class=" absolute h-full w-full"></div> -->
       <div class=" block h-full w-full text-right px-10 py-8 bg-cover bg-center intro-section"  style=" background-image: url(assets/images/hero/intro_bg.webp)">
         
-        <div class="text-center md:w-1/3 ">
+        <div class="text-center lg:w-1/3 ">
           <h2 class=" text-xl font-semibold  text-red-600">أقسم بالله العلي العظيم</h2>
-          <p class="my-3 text-white ">
-            أن أؤدي واجباتي بكل شرف واتقان واحترافية وأن أكون صادقا أمينا في تعاملي
+          <p class="my-3 text-white text-sm ">
+            أن أقوم بواجباتي المهنية بكل شرف وأمانة .
+          </p>
+          <p class="my-3 text-white text-sm">
+            كما أتعهد بالالتزام  بكل بنود الميثاق وأن أسعى جاهدا لتنفيذها.
           </p>
           <h3 class=" text-lg font-semibold  text-red-600">والله خير الشاهدين</h3>
         </div>
-        <div class="mt-28">
+        <div class="mt-32">
           <h2 class="text-center text-xl font-semibold text-white">
             إنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين األكفاء واألمناء 
           </h2>
           <form action="" class="my-8 text-white">
-            <div class="flex justify-center gap-5 text-sm">
+            <div class="flex justify-center gap-5 text-sm" x-data="{activeTriangle:'professionals'}">
               <!-- professionals -->
               <div>
-                <label for="professionals" class=" cursor-pointer">المحترفون</label>
+                <label @click="activeTriangle = 'professionals'"
+                 for="professionals" class=" cursor-pointer">المحترفون</label>
                 <input type="text" value="professionals" class="hidden" id="professionals">
-                <div class="mx-auto h-0 w-0 border-x-[11px] border-x-transparent border-b-[10px] border-b-white"></div>
+                <div x-show="activeTriangle == 'professionals'" 
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                class="search-triangle mx-auto h-0 w-0 border-x-[11px] border-x-transparent border-b-[10px] border-b-white"></div>
 
               </div>
               <!-- services -->
               <div>
-                <label for="services" class=" cursor-pointer">الخدمات</label>
+                <label @click="activeTriangle = 'services'" for="services" class=" cursor-pointer">الخدمات</label>
                 <input type="text" value="services" class="hidden" id="services">
+                <div x-show="activeTriangle == 'services'"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                 class="search-triangle mx-auto h-0 w-0 border-x-[11px] border-x-transparent border-b-[10px] border-b-white"></div>
               </div>
               <!-- products -->
               <div>
-                <label for="products" class=" cursor-pointer">السلع</label>
+                <label @click="activeTriangle = 'products'" for="products" class=" cursor-pointer">السلع</label>
                 <input type="text" value="products" class="hidden" id="products">
+                <div x-show="activeTriangle == 'products'"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-90"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-90"
+                 class="search-triangle mx-auto h-0 w-0 border-x-[11px] border-x-transparent border-b-[10px] border-b-white"></div>
               </div>
               
             </div>
             <!-- form -->
-            <div class="relative w-full md:w-1/3 mx-auto">
-              <input type="text" name="search" placeholder="اسم صنف المهنة أو الشركة" class="w-full border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm w-full">
+            <div class="relative w-full md:w-1/2 lg:1/3 mx-auto">
+              <input type="text" name="search" placeholder="اسم صنف المهنة أو الشركة" class="w-full border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm ">
               <button type="submit" class=" primary-btn text-[14px] py-1 px-2 absolute top-1 left-2 ">ابحث الان</button>
+              <a href="register.html" class="text-white mt-2 block text-center text-[14px] underline mx-auto underline-offset-2">سجل كمحترف</a>
+
             </div>
           </form>
           
@@ -532,44 +561,114 @@
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 items-center py-8 px-14">
         <div class="intro-cards" >
-          هم محترفون أقسموا بالله
-          العلي العظيم بالتعهد والالتزام
-          بميثاق الأخلاق المهنية
+          <h6 class="text-yellow-500 text-sm">ملتزم بميثاق الأخلاق المهنية</h6>
+          <p >
+            لأن المحترف القوي الأمين يعمل بنزاهة وشفافية
+            ملتزمًا بضوابط ميثاق األخالق المهنية في عمله
+            <span class="text-red-500">مؤديًا للقسم الأعظم</span> على الوفاء بالعهد واحترام هذا
+            الميثاق والعمل به في كل ممارساته المهنية 
+          </p>
         </div>
         <div class="intro-cards" >
-            لكل محترف قوي أمين هوية
-            إلكترونية وصفحة تعريفية تقييمية
-            يمكن من خلالها إختيار الأنسب لك.
+          <h6 class="text-yellow-500 text-sm"> لديه هوية إلكترونية </h6>
+          <p >
+            لأن المحترف القوي الأمين له هوية إلكترونية وملفات
+          شخصية على الموقع تعرض أعماله وتقييمات العملاء
+          السابقين ونبذة عن أهم خبراته ومهاراته مما
+          يساعدك على إختيار المحترف األنسب لك، ثم يمكنك
+          تقديم تقييم له بعد الانتهاء من التعامل معه
+          </p>
+        </div>
+        <div class="intro-cards" >
+          <h6 class="text-yellow-500 text-sm">الكفاءة والأمانة وخدمات ذات جودة عالية</h6>
+          <p >
+            لأن المحترف القوي الأمين يتحلى بالكفاءة والأمانة
+            ويعمل باإلتقان واإلحسان مع الحرص الدائم على
+         تجنب اإلهمال والتقصير والغش والفساد، يقدم أعمالا
+            ذات جودة عالية، وكل تعاملاته المهنية مبنية على
+            الصدق والشفافية والثقة المتبادلة مع العميل 
+          </p>
         </div>
         <div class="intro-cards">
-          معاملات شفافة مبنية على
-          الثقة المتبادلة بين المحترف
-          القوي الأمين والعميل
+          <h6 class="text-yellow-500 text-sm">ملتزم بميثاق الأخلاق المهنية</h6>
+          <p>
+            أسعار معلنة ومدروسة وخدمات
+            ذات جودة عالية
+            خدمة ما بعد البيع مضمونة
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 items-center py-8 px-14">
+        <div class="intro-cards" >
+          <h6 class="text-yellow-500 text-sm">لديه خدمة ما بعد البيع   </h6>
+          <p >
+            لأن المحترف القوي الأمين التزم بتوفير خدمة ما بعد
+            البيع للعملاء ومعالجة أي مشاكل قد تظهر بعد إتمام
+            ًما بالوقت
+            عملية البيع أو بعد تقديم الخدمة، ملتز
+            المحدد في الاتفاق.
+          </p>
+        </div>
+        <div class="intro-cards" >
+          <h6 class="text-yellow-500 text-sm"> ملتزم بالتطوير المهني المستمر  </h6>
+          <p >
+            لأن المحترف القوي الأمين ملتزم بتطوير مهاراته
+            ومعرفته المهنية باستمرار وتحديثها بما يتوافق مع
+            أحدث التطورات التقنية والتكنولوجية في مجاله
+          </p>
+        </div>
+        <div class="intro-cards" >
+          <h6 class="text-yellow-500 text-sm">يتعامل بجدية مع الشكاوي واإلنتقادات  </h6>
+          <p >
+            لأن المحترف القوي الأمين يتبنى مبدأ الإنصات
+            والتفهم لزبائنه، ويتلقى بكل سعة صدر شكاويهم
+            وتقييماتهم الصادقة والبناءة ليعمل على تحسين
+            خدماته ومنتجاته .
+          </p>
         </div>
         <div class="intro-cards">
-          أسعار معلنة ومدروسة وخدمات
-          ذات جودة عالية
-          خدمة ما بعد البيع مضمونة
+          <h6 class="text-yellow-500 text-sm">معرفة أحكام الحالل والحرام في عمله </h6>
+          <p>
+            لأن المحترف القوي الأمين يسعى جاهدا في تعلم
+            أحكام الحلال والحرام المتعلقة بمجال عمله ويتق الله
+            تعالى ما استطاع في تعامله مع العميل
+          </p>
         </div>
       </div>
       <!-- intro cards how prodc can help you-->
       <h2 class="text-blue-900 mt-8 text-center px-4 leading-8">
-        كيف يساعدك المحترف القوي األمين على إنجاز أعمالك بحرفية وسهولة و بجودة عالية 
+        كيف يساعدك المحترف القوي الأمين على إنجاز أعمالك بحرفية وسهولة و بجودة عالية 
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 items-center py-8 px-14">
         <div class="intro-cards relative" >
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">1</div>
-          <h6 class="text-yellow-500">أضف مشروعك</h6>
-          أضف تفاصيل مشروعك والمهارات المطلوبة
-إنجازه وابدأ باستقبال عروض المحترفين عليه   
+          <h6 class="text-yellow-500">استعرض المحترفين </h6>
+          <ul class="list-disc px-5">
+            <li>
+              ابحث عن المحترف الذي تحتاجه باستخدام مربع
+              البحث في األعلى أو عبر التصنيفات 
+            </li>
+            <li>
+              أضف تفاصيل الخدمة المطلوبة والمهارات الالزمة
+              إلنجازه وابدأ باستقبال عروض المحترفين عليه
+            </li>
+          </ul>
         </div>
         <div class="intro-cards relative" >
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">2</div>
-          <h6 class="text-yellow-500">اختر العرض المناسب</h6>
+          <h6 class="text-yellow-500">اختر العرض / المحترف المناسب</h6>
+          <ul class="list-disc px-5">
+            <li>
+              من بين العروض المقدمة لمشروعك، اختر
+              العرض المناسب لمتطلبات المشروع ثم ابدأ
+              مباشرة مرحلة التنفيذ .
+            </li>
+            <li>
+              راجع ملف المحترف واعماله وسيرته المهنية
+              وتقييمات المتعاملين معه وآرائهم فيه
+            </li>
+          </ul>
 
-          من بين العروض المقدمة لمشروعك، اختر
-          العرض المناسب لمتطلبات المشروع ثم ابدأ
-          مباشرة مرحلة التنفيذ .
         </div>
         <div class="intro-cards relative">
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">3</div>
@@ -798,8 +897,8 @@
               >
                 <div class="text-center leading-10">
                   <p class="text-primaryTextColor text-md lg:text-xl mb-2">إجعل المحترف الحاصل على</p> 
-                  <span class="text-primaryTextColor text-lg lg:text-2xl font-bold ">شهادة المحترف القوي الأمين
-                    هو خيارك الأول</span> 
+                  <span class="text-yellow-500 text-lg lg:text-2xl font-bold ">شهادة المحترف القوي الأمين</span> 
+                  <p class="text-primaryTextColor text-lg lg:text-2xl font-bold "> هو خيارك الأول</p> 
                 </div>
               </div>
               
@@ -822,8 +921,8 @@
             <div class="md:flex items-center justify-center gap-3">
               <div class="w-full md:w-1/3 p-5">
                 <img
-                  class="mx-auto h-64 w-4/5 lg:h-80 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
-                  src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  class="mx-auto h-[14rem] md:h-auto lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
+                  src="assets/images/home/prodc_certificate.jpg"
                   alt=""
                 />
               </div>    
@@ -939,7 +1038,7 @@
              class="items-center justify-between overflow-hidden  lg:flex"
            >
              <div
-               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
+               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 pb-0 lg:w-[57%] lg:py-9 lg:px-14 xl:p-[50px]"
              >
                <span
                  class="mb-5 block text-md md:text-lg font-semibold text-primaryTextColor"
@@ -948,7 +1047,7 @@
              </span>
                
                <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
-                 تتكون شبكة المحترف القوي الأمين من محترفين في كافة المجالات والقطاعات، أقوياء وأ َمناء ومن أفضل  
+                 تتكون شبكة المحترف القوي الأمين من محترفين في كافة المجالات والقطاعات، أقوياء وأمناء ومن أفضل  
                  الكفاءات المهنية بمعايير عالمية وأخلاق مهنية إسلامية        
                </p>
                <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
@@ -962,66 +1061,18 @@
                </p>
                
              </div>
-             <div class="text-center lg:w-1/3 h-full">
+             <div class="text-center lg:w-[43%] h-full">
                <div class="relative z-10 inline-block p-4">
                  <img
-                   src="assets/images/about/mohtarif1.png"
+                   src="assets/images/home/prodc network.jpg"
                    alt="image"
-                   class="mx-auto lg:h-96 lg:ml-auto rtl:lg:mr-auto"
+                   class="mx-auto lg:h-80 lg:ml-auto rtl:lg:mr-auto"
                  />
                </div>
              </div>
            </div>
            <!-- end first section -->
-           <!-- second section -->
-           <div
-             class="mt-4 items-center justify-start overflow-hidden lg:flex"
-           >
-             <div class="text-center lg:w-1/3 h-full">
-               <div class="relative z-10 inline-block p-4">
-                 <img
-                   src="assets/images/about/mohtarif.jpeg"
-                   alt="image"
-                   class="mx-auto lg:h-72 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
-                 />
-               </div>
-             </div>
-             <div
-               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 md:p-8 lg:w-2/3 lg:py-9 lg:px-10 "
-             >
-             <span
-             class="mb-5 block text-lg font-semibold text-red-500"
-               >
-               الحشرات في قائمة الطعام ونحن لا ندري
-             </span>
-               
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 
-                 هل تعلم بأنك قد تكون تأكل أطعمة مضاف لها ملونات مستخلصة من الحشرات من دون أن تعرف؟!!
 
-               </p>
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 هل تعلم ما هو الملون الغذائي الاحمر  <span class="text-red-500">E120</span>       </p>
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 مصنوع من حشرة ما تسمى ب  cochenille او  carmine او  Red 20 من أكثر المواد خطرا ومسرطنة.
-
-               </p>
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 نشعر بالقرف والاشمئزاز عندما نرى الحشرات كالقمل والصراصير والوزغ منتشرة في مكان ما لأنها تدل
-                 على وساخة ذلك المكان لذلك نحاربها ونستبعدها بالنظافة المستمرة وباستخدام المبيدات ..
-                 لكن اليوم، توضع هذه الحشرات في أطباقنا وندخلها بأيدينا الى أفواهنا وأجسامنا متنكرة تحت مسميات
-                 مختلفة وبرموز بالكاد تكون ظاهرة مثل
-                 <span class="text-red-500">E194, E120 , قبل أن تشتري وقبل أن تأكل تأكد من وجود علامة المحترف القوي الأمين</span>
-               </p>
-               <span
-               class="mt-5 block text-md md:text-lg font-semibold text-primaryTextColor underline"
-                 >
-                 # تعاملك مع المحترف القوي الأمين يحميك
-               </span>
-             </div>
-             
-           </div>
-           <!-- end second section -->
            </div>
            <!-- second intro explain -->
            <div class="border mt-6">
@@ -1029,8 +1080,17 @@
            <div
              class="items-center justify-between overflow-hidden lg:flex"
            >
+            <div class="text-center lg:w-[40%] h-full">
+              <div class="relative z-10 inline-block p-4">
+                <img
+                  src="assets/images/home/enterprenership.jpg"
+                  alt="image"
+                  class="mx-auto lg:h-[20rem] lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
+                />
+              </div>
+            </div>
              <div
-               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 md:p-16 lg:w-2/3 lg:py-9 lg:px-16 xl:p-[70px]"
+               class="w-full text-sm md:text-md py-12 px-7 sm:px-12  lg:w-[60%] lg:py-9 lg:px-12 xl:p-[70px]"
              >
                
                <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
@@ -1054,30 +1114,14 @@
                </span>
                
              </div>
-             <div class="text-center lg:w-1/3 h-full">
-               <div class="relative z-10 inline-block p-4">
-                 <img
-                   src="assets/images/about/mohtarif1.png"
-                   alt="image"
-                   class="mx-auto lg:h-96 lg:ml-auto rtl:lg:mr-auto"
-                 />
-               </div>
-             </div>
+             
            </div>
            <!-- end third section -->
            <!-- forth section -->
            <div
            class="mt-4 items-center justify-center overflow-hidden  lg:flex"
            >
-             <div class="text-center lg:w-2/5 h-full">
-               <div class="relative z-10 inline-block p-4">
-                 <img
-                   src="assets/images/about/mohtarif.jpeg"
-                   alt="image"
-                   class="mx-auto  lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
-                 />
-               </div>
-             </div>
+             
              <div
                class="w-full py-12 px-7 sm:px-12 md:p-8 lg:w-2/5 lg:py-9 lg:px-10 "
              >
@@ -1093,6 +1137,15 @@
                  <p class="text-primaryTextColor mb-2">أصدق من ألف كلمة من تسويقك</p> 
                </div>
              </div>
+             <div class="text-center lg:w-2/5 h-full">
+              <div class="relative z-10 inline-block p-4">
+                <img
+                  src="assets/images/home/review.jpg"
+                  alt="image"
+                  class="mx-auto  lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
+                />
+              </div>
+            </div>
              
            </div>
            <!-- end forth section -->
@@ -1107,7 +1160,7 @@
 
     <!-- testimonials -->
     <section id="testimonial" class="bg-white">
-      <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8">
+      <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8  relative">
         <h2 class="text-xl lg:text-3xl text-sectionTitleColor text-center mb-10 underline underline-offset-8">شهادات .. قالوا عنا</h2>
         <div class="swiper-container !overflow-hidden pt-8">
           <div class="swiper-wrapper">
@@ -1263,9 +1316,16 @@
             </div>
 
           </div>
-    
-          <div class="swiper-pagination !relative !bottom-0 mt-12"></div>
+         
+          <div class="swiper-pagination  swiper-pagination2 !relative !bottom-0 mt-12"></div>
         </div>
+         <div class="swiper-button-next">
+          <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="9 18 15 12 9 6" /></svg>
+         </div>
+          <div class="swiper-button-prev">
+            <svg class="h-8 w-8 text-white z-40"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+
+          </div>
       </div>
     </section>
     <!-- end testimonials -->
@@ -1293,7 +1353,7 @@
             </a>
 
           </div>
-    
+          
           <div class="swiper-pagination !relative !bottom-0 mt-12"></div>
         </div>
       </div>
@@ -1307,7 +1367,7 @@
              <div class="text-center lg:w-1/5 h-4/5">
                <div class="relative z-10 inline-block p-4">
                  <img
-                   src="assets/images/hero/phone.webp"
+                   src="assets/images/home/prodc_app.jpg"
                    alt="image"
                    class="mx-auto  lg:ml-auto rtl:lg:mr-auto"
                  />
@@ -1443,7 +1503,56 @@
     <!-- ====== All Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+    <!-- <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Swiper('#testimonial .swiper-container', {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 9,
+          autoplay: {
+            delay: 8000,
+          },
+          pagination: {
+            el: '.swiper-pagination2',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 1.5,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          },
+        })
+        new Swiper('#partners .swiper-container', {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 9,
+          autoplay: {
+            delay: 8000,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 1.5,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          },
+        })
+      })
+
+    </script>
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
@@ -1489,50 +1598,6 @@
 
       window.document.addEventListener("scroll", onScroll);
     </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('#testimonial .swiper-container', {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          },
-        })
-        new Swiper('#partners .swiper-container', {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          },
-        })
-      })
-
-    </script>
+  
   </body>
 </html>
