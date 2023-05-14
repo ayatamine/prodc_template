@@ -220,32 +220,176 @@
     </div>
     <!-- ====== Navbar Section End -->
     <!--main content  -->
-    <div class=" bg-body mt-16 py-8  px-6 md:px-12">
+    <div class=" bg-body mt-16 py-8  px-6 md:px-12" id="ethiks">
       <a href="index.html" class=" text-md text-primaryTextColor underline underline-offset-4 ">الرئيسية</a>
       <h2 class="text-gray-800  text-lg md:text-2xl my-4">ميثاق الاخلاق المهنية</h2>
-      <div class="bg-white p-6">
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          يهدف المحترف القوي الامين لإيجاد منصّة تجارة إلكترونية آمنة تضمن للمستخدمين حقوقهم وتساعد الالمحترف القوي الامينين على إيجاد مشاريع ينفذونها وتساعد أصحاب المشاريع على إيجاد المحترف القوي الامينين محترفين ينفذون أعمالهم المختلفة. لتحقيق ذلك، نرجو من المستخدمين الكرام الالتزام بالشروط التالية وفهمها جيداً. إن لم تكن موافقاً على أي من الشروط التالية، نرجو ألا تستخدم موقع المحترف القوي الامين وألا تنشئ حساباً به. باستخدامك لموقع المحترف القوي الامين أنت تقر على موافقتك الكاملة على هذه الشروط.        </p>
+      <div class="bg-white p-6 px-8 pt-0">
+        <div x-data="{ activeTab: 'tab1' }" class="relative">
+          <nav class="-mb-px flex border-b p-2 swiper swiper-container !overflow-hidden" aria-label="Tabs">
+            <div class="swiper-wrapper  md:flex gap-x-2">
+              <a href="#" x-on:click.prevent="activeTab = 'tab1'" style="min-width: 225px;" class="swiper-slide py-1 px-1 text-center font-medium border-primary  text-sm md:text-base border rounded-sm" x-bind:class="{ 'border-primaryTextColorDarken bg-primaryTextColor text-white': activeTab === 'tab1','text-primaryTextColor':activeTab !== 'tab1'}" >
+                الميثاق العام
+              </a>
+              <a href="#" x-on:click.prevent="activeTab = 'tab2'" style="min-width: 225px;" class="swiper-slide py-1 px-1 text-center font-medium border-primary  text-sm md:text-base border rounded-sm" x-bind:class="{ 'border-primaryTextColorDarken bg-primaryTextColor text-white': activeTab === 'tab2','text-primaryTextColor':activeTab !== 'tab2'}" >
+                الطبيب القوي الأمين
+              </a>
+              <a href="#" x-on:click.prevent="activeTab = 'tab3'" style="min-width: 225px;" class="swiper-slide py-1 px-1 text-center font-medium border-primary  text-sm md:text-base border rounded-sm" x-bind:class="{ 'border-primaryTextColorDarken bg-primaryTextColor text-white': activeTab === 'tab3','text-primaryTextColor':activeTab !== 'tab3'}" >
+                المحامي القوي الأمين
+              </a>
+              <a href="#" x-on:click.prevent="activeTab = 'tab4'" style="min-width: 225px;" class="swiper-slide py-1 px-1 text-center font-medium border-primary  text-sm md:text-base border rounded-sm" x-bind:class="{ 'border-primaryTextColorDarken bg-primaryTextColor text-white': activeTab === 'tab4','text-primaryTextColor':activeTab !== 'tab4'}" >
+                الوكيل السياحي القوي الأمين
+              </a>
+              <a href="#" x-on:click.prevent="activeTab = 'tab5'" style="min-width: 225px;" class="swiper-slide py-1 px-1 text-center font-medium border-primary  text-sm md:text-base border rounded-sm" x-bind:class="{ 'border-primaryTextColorDarken bg-primaryTextColor text-white': activeTab === 'tab5','text-primaryTextColor':activeTab !== 'tab5'}" >
+                التاجر القوي الأمين
+              </a>
+              <a href="#" x-on:click.prevent="activeTab = 'tab6'" style="min-width: 225px;" class="swiper-slide py-1 px-1 text-center font-medium border-primary  text-sm md:text-base border rounded-sm" x-bind:class="{ 'border-primaryTextColorDarken bg-primaryTextColor text-white': activeTab === 'tab6','text-primaryTextColor':activeTab !== 'tab6'}" >
+                البائع القوي الأمين
+              </a>
+             
+            </div>
+           
+          </nav>
+          <div class="swiper-button-next top-7 -right-7">
+            <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="9 18 15 12 9 6" /></svg>
+           </div>
+            <div class="swiper-button-prev top-7 -left-7">
+              <svg class="h-8 w-8 text-white z-40"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+            </div>
+          <div x-show="activeTab === 'tab1'" class="py-8">
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              يهدف المحترف القوي الامين لإيجاد منصّة تجارة إلكترونية آمنة تضمن للمستخدمين حقوقهم وتساعد الالمحترف القوي الامينين على إيجاد مشاريع ينفذونها وتساعد أصحاب المشاريع على إيجاد المحترف القوي الامينين محترفين ينفذون أعمالهم المختلفة. لتحقيق ذلك، نرجو من المستخدمين الكرام الالتزام بالشروط التالية وفهمها جيداً. إن لم تكن موافقاً على أي من الشروط التالية، نرجو ألا تستخدم موقع المحترف القوي الامين وألا تنشئ حساباً به. باستخدامك لموقع المحترف القوي الامين أنت تقر على موافقتك الكاملة على هذه الشروط.        </p>
+    
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <div class="flex items-center gap-2 text-smd md:text-base  mt-8">
+              <input type="checkbox" name="privacy" class="border-gray-300 rounded h-5 md:h-4 w-5 md:w-4"  >
+              <label for="">قرأت وأوقع على ماجاء في مضمون
+                <span  class="text-primaryTextColorDarken underline underline-offset-4">الميثاق</span>
+              </label>
+            </div>
+            <div class="mt-8 flex justify-start items-center gap-3">
+              <button class="flex justify-center items-center gap-1 w-auto bg-primaryTextColor  text-smd md:text-base text-white font-bold py-1 px-4 rounded hover:bg-primaryTextColorDarken">
+                <svg class="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 12l5 5l10 -10" />  <path d="M2 12l5 5m5 -5l5 -5" /></svg>
+                <span>تأكيد</span>
+              </button>
+              <button class="outline-btn flex justify-center items-center gap-1">
+                <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>         
+              </button>
+            </div>
+          </div>
+          <div x-show="activeTab === 'tab2'" class="py-4">
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              يهدف المحترف القوي الامين لإيجاد منصّة تجارة إلكترونية آمنة تضمن للمستخدمين حقوقهم وتساعد الالمحترف القوي الامينين على إيجاد مشاريع ينفذونها وتساعد أصحاب المشاريع على إيجاد المحترف القوي الامينين محترفين ينفذون أعمالهم المختلفة. لتحقيق ذلك، نرجو من المستخدمين الكرام الالتزام بالشروط التالية وفهمها جيداً. إن لم تكن موافقاً على أي من الشروط التالية، نرجو ألا تستخدم موقع المحترف القوي الامين وألا تنشئ حساباً به. باستخدامك لموقع المحترف القوي الامين أنت تقر على موافقتك الكاملة على هذه الشروط.        </p>
+    
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <div class="flex items-center gap-2 text-smd md:text-base  mt-8">
+              <input type="checkbox" name="privacy" class="border-gray-300 rounded h-5 md:h-4 w-5 md:w-4"  >
+              <label for="">قرأت وأوقع على ماجاء في مضمون
+                <span  class="text-primaryTextColorDarken underline underline-offset-4">الميثاق</span>
+              </label>
+            </div>
+            <div class="mt-8 flex justify-start items-center gap-3">
+              <button class="flex justify-center items-center gap-1 w-auto bg-primaryTextColor  text-smd md:text-base text-white font-bold py-1 px-4 rounded hover:bg-primaryTextColorDarken">
+                <svg class="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 12l5 5l10 -10" />  <path d="M2 12l5 5m5 -5l5 -5" /></svg>
+                <span>تأكيد</span>
+              </button>
+              <button class="outline-btn flex justify-center items-center gap-1">
+                <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>         
+              </button>
+            </div>
+          </div>
+          <div x-show="activeTab === 'tab3'" class="py-4">
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              يهدف المحترف القوي الامين لإيجاد منصّة تجارة إلكترونية آمنة تضمن للمستخدمين حقوقهم وتساعد الالمحترف القوي الامينين على إيجاد مشاريع ينفذونها وتساعد أصحاب المشاريع على إيجاد المحترف القوي الامينين محترفين ينفذون أعمالهم المختلفة. لتحقيق ذلك، نرجو من المستخدمين الكرام الالتزام بالشروط التالية وفهمها جيداً. إن لم تكن موافقاً على أي من الشروط التالية، نرجو ألا تستخدم موقع المحترف القوي الامين وألا تنشئ حساباً به. باستخدامك لموقع المحترف القوي الامين أنت تقر على موافقتك الكاملة على هذه الشروط.        </p>
+    
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <div class="flex items-center gap-2 text-smd md:text-base  mt-8">
+              <input type="checkbox" name="privacy" class="border-gray-300 rounded h-5 md:h-4 w-5 md:w-4"  >
+              <label for="">قرأت وأوقع على ماجاء في مضمون
+                <span  class="text-primaryTextColorDarken underline underline-offset-4">الميثاق</span>
+              </label>
+            </div>
+            <div class="mt-8 flex justify-start items-center gap-3">
+              <button class="flex justify-center items-center gap-1 w-auto bg-primaryTextColor  text-smd md:text-base text-white font-bold py-1 px-4 rounded hover:bg-primaryTextColorDarken">
+                <svg class="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 12l5 5l10 -10" />  <path d="M2 12l5 5m5 -5l5 -5" /></svg>
+                <span>تأكيد</span>
+              </button>
+              <button class="outline-btn flex justify-center items-center gap-1">
+                <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>         
+              </button>
+            </div>
+          </div>
+          <div x-show="activeTab === 'tab4'" class="py-4">
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              يهدف المحترف القوي الامين لإيجاد منصّة تجارة إلكترونية آمنة تضمن للمستخدمين حقوقهم وتساعد الالمحترف القوي الامينين على إيجاد مشاريع ينفذونها وتساعد أصحاب المشاريع على إيجاد المحترف القوي الامينين محترفين ينفذون أعمالهم المختلفة. لتحقيق ذلك، نرجو من المستخدمين الكرام الالتزام بالشروط التالية وفهمها جيداً. إن لم تكن موافقاً على أي من الشروط التالية، نرجو ألا تستخدم موقع المحترف القوي الامين وألا تنشئ حساباً به. باستخدامك لموقع المحترف القوي الامين أنت تقر على موافقتك الكاملة على هذه الشروط.        </p>
+    
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
+            <p class="mb-4 text-sm text-gray-700 leading-10">
+              حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
+              إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
+            </p>
+            <div class="flex items-center gap-2 text-smd md:text-base  mt-8">
+              <input type="checkbox" name="privacy" class="border-gray-300 rounded h-5 md:h-4 w-5 md:w-4"  >
+              <label for="">قرأت وأوقع على ماجاء في مضمون
+                <span  class="text-primaryTextColorDarken underline underline-offset-4">الميثاق</span>
+              </label>
+            </div>
+            <div class="mt-8 flex justify-start items-center gap-3">
+              <button class="flex justify-center items-center gap-1 w-auto bg-primaryTextColor  text-smd md:text-base text-white font-bold py-1 px-4 rounded hover:bg-primaryTextColorDarken">
+                <svg class="h-6 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M7 12l5 5l10 -10" />  <path d="M2 12l5 5m5 -5l5 -5" /></svg>
+                <span>تأكيد</span>
+              </button>
+              <button class="outline-btn flex justify-center items-center gap-1">
+                <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>         
+              </button>
+            </div>
+          </div>
 
-        <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
-          إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
-        </p>
-        <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
-          إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
-        </p>
-        <div class="flex items-center gap-2 text-smd md:text-base  mt-8">
-          <input type="checkbox" name="privacy" class="border-gray-300 rounded h-5 md:h-4 w-5 md:w-4"  >
-          <label for="">قرأت وأوقع على ماجاء في مضمون
-            <span  class="text-primaryTextColorDarken underline underline-offset-4">الميثاق</span>
-          </label>
         </div>
-        <div class="mt-8 inline-block text-center">
-          <button class="bg-primaryTextColor  text-smd md:text-base text-white font-bold py-2 px-4 w-full rounded hover:bg-primaryTextColorDarken">تأكيد</button>
-        </div>
+
       </div>
     </div>
 
@@ -360,7 +504,6 @@
     <!-- ====== All Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
     <!-- <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
@@ -377,48 +520,19 @@
 
     </script> -->
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('#testimonial .swiper-container', {
+        new Swiper('#ethiks .swiper-container', {
           loop: true,
-          slidesPerView: 1,
+          slidesPerView: 5,
           spaceBetween: 9,
+          grabCursor: true,
           autoplay: {
             delay: 8000,
           },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
         })
-        new Swiper('#partners .swiper-container', {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          },
-        })
-      })
     </script>
     <script>
       function includeHTML() {

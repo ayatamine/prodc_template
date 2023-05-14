@@ -29,7 +29,7 @@ body {
   @apply text-gray-600;
 }
 #navbarCollapse li .topnav-link{
- @apply  mx-1 flex px-5 py-3 text-base text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
+ @apply  mx-1 flex px-1 py-3 text-[15px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
 }
 .sidenav-link{
   @apply  flex items-center gap-x-2 px-5 py-2 text-sm  hover:bg-body   transition-all duration-200 ease-in-out
