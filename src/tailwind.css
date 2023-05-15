@@ -34,6 +34,7 @@ body {
 .sidenav-link{
   @apply  flex items-center gap-x-2 px-5 py-2 text-sm  hover:bg-body   transition-all duration-200 ease-in-out
 }
+.sidenav-link.active{@apply text-primaryTextColor font-semibold}
 #navbarCollapse li .ud-menu-scroll.active {
   @apply bg-body text-gray-600;
 }

@@ -555,7 +555,15 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2">الوظيفة</label>
                             <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" placeholder="">
                         </div>
-                       
+                        <div class="flex items-center gap-2 text-sm md:text-md  mt-5">
+                          <input type="checkbox" name="privacy" class="border-gray-300 rounded h-5 md:h-4 w-5 md:w-4"  >
+                          <label for="">قرأت وأوافق على 
+                            <a href="conditions.html" class="text-primaryTextColorDarken underline underline-offset-4">شروط الاستخدام</a>
+                            و
+                            <a href="privacy.html" class="text-primaryTextColorDarken underline underline-offset-4">سياسة الخصوصية</a>
+        
+                          </label>
+                        </div>
                       
                     </div>
                   </div>
@@ -586,7 +594,7 @@
                         @click="step = 'complete'"
                         x-show="step === 3"
                         class="w-32 focus:outline-none border border-transparent py-2 px-3 rounded shadow-sm text-center text-white bg-green-500 hover:bg-green-600 font-medium" 
-                      >نشر</button>
+                      >تأكيد</button>
                     </div>
                   </div>
                 </div>
@@ -595,7 +603,7 @@
             </div>
           </div>
       </div>
-      <p class="my-6 text-center">جميع الحقوق محفوظة موقع المحترف القوي الأمين</p>
+      <!-- <p class="my-6 text-center">جميع الحقوق محفوظة موقع المحترف القوي الأمين</p> -->
     </div>
 
 
@@ -709,66 +717,7 @@
     <!-- ====== All Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
-    <!-- <script>
-      // ==== for menu scroll
-      const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
-      pageLink.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            offsetTop: 1 - 60,
-          });
-        });
-      });
-
-    </script> -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('#testimonial .swiper-container', {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          },
-        })
-        new Swiper('#partners .swiper-container', {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          },
-        })
-      })
-    </script>
 
       <script>
         function app() {

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      privacy
+     سياسة الخصوصية
     </title>
     <link
       rel="shortcut icon"
@@ -15,17 +15,9 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
  
 
-    <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
-
-    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-    <script>
-      new WOW().init();
-    </script>
   </head>
   <body class="font-Noto">
     <!-- ====== Navbar Section Start -->
@@ -39,15 +31,15 @@
               <img
               src="assets/images/logo/WhatsApp Image 2023-05-03 at 5.54.05 PM.jpeg"
               alt="logo"
-              class="header-logo w-11/12 h-10 object-contain"
+              class="header-logo w-full w-11/12 h-10 object-contain"
             />
             </a>
           </div>
-          <div class="flex w-full items-center justify-end px-10">
+          <div class="flex w-full items-center justify-between px-4">
             <div>
               <button
                 id="navbarToggler"
-                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                class="absolute hidden right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
               >
                 <span
                   class="relative my-[6px] block h-[2px] w-[30px] bg-white"
@@ -59,19 +51,10 @@
                   class="relative my-[6px] block h-[2px] w-[30px] bg-white"
                 ></span>
               </button>
-              <nav
-                id="navbarCollapse"
-                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-white lg:py-0 lg:px-4 lg:shadow-none xl:px-6"
-              >
-                <ul class="block lg:flex items-center justify-end gap-x-2">
-                  <a href="register.html" class="border border-primaryTextColor bg-primaryTextColor text-white text-sm hover:bg-primaryTextColorDarken p-2 px-3">إنشاء حساب</a>
-                  <a href="login.html" class="border border-primaryTextColor text-primaryTextColor text-sm hover:text-primaryTextColorDarken p-2 px-3">تسجيل الدخول</a>
-                </ul>
 
-              </nav>
               
             </div>
-            <div x-data="{ open: false }" :class="{ 'overflow-hidden': open }">
+            <div x-data="{ open: false,activeItem:false }" :class="{ 'overflow-hidden': open }" class="flex justify-end items-center gap-2">
               <!-- Sidebar -->
               <div class="fixed inset-y-0 left-0 z-20 bg-white w-64  py-4 transform transition duration-300 ease-in-out h-screen "
                    x-show="open"
@@ -114,7 +97,7 @@
                   </li>
                   <li class="group relative my-2"> 
                     <a    href="professionals.html"   class="sidenav-link"           >
-                      <svg class="h5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                       </svg>
                     <span> تصفح شبكة المحترفين  </span>
@@ -164,6 +147,11 @@
                             </a>
                           </li>
                           <li class="group relative my-2">
+                            <a   href="properties.html"   class="sidenav-link"           >
+                              صفات المحترف القوي الأمين
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
                             <a   href="offers.html"   class="sidenav-link"           >
                               باقات المحترف
                             </a>
@@ -191,9 +179,193 @@
                   
                 </ul>
               </div>
-            
+
+               <!-- messag component -->
+              <div class="relative " x-data="{showMessages:false,toggle(){hideOthers(),this.showMessages = !this.showMessages}}">
+                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2   rounded" :class="showMessages && ' bg-body'" >
+                    <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
+                        <div slot="icon" class="relative">
+                            <div class="absolute text-xs rounded-full -mt-1 -mr-4 ltr:-ml-4 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
+                            <svg class="h-6 w-6 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div x-show="showMessages" class="topNotMess absolute w-[22rem] -left-44 md:left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                    <!-- notifications inside  -->
+                  <div class="h-52 overflow-y-scroll">
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start gap-2">
+                        <div class="border p-1  w-[56px] ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط والمحتوى يب مواثق كم مكشسي على سحبسب
+                            .</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div>
+                    <a href="notifications.html" class="w-full  text-[14px] flex justify-start gap-2 p-3">
+                      <svg class="h-4 w-4 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+
+                      عرض  كل الرسائل
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- notification component -->
+              <div class="relative " x-data="{showNotifications:false,toggle(){hideOthers(),this.showNotifications = !this.showNotifications}}">
+                <div @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2  rounded" :class="showNotifications && 'bg-body'">
+                    <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
+                        <div slot="icon" class="relative">
+                            <div class="absolute text-xs rounded-full -mt-1 -mr-3 ltr:-mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
+                            <svg class="h-7 w-7 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="showNotifications" class="topNotMess absolute w-[22rem] -left-28 md:left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                    <!-- notifications inside  -->
+                  <div class="h-52 overflow-y-scroll">
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start gap-2">
+                        <div class="border p-1  w-[56px] ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط والمحتوى يب مواثق كم مكشسي على سحبسب
+                            .</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- notification item -->
+                      <div class="border-b p-3 flex flex-row items-start ">
+                        <div class="border p-1 w-[56px]  ">
+                          <img src="https://via.placeholder.com/150" alt="Placeholder image" class=" h-full w-full">
+                        </div>
+                        <div class="mr-4 lt:ml-4" style="width:calc(100% - 56px)">
+                          <a href="" class="text-[13px] text-gray-700 hover:text-primaryTextColor">تم اضافة عرض على طلبك من قبل  عياط.</a>
+                          <div class="flex items-center gap-1 text-[13px] ">
+                            <svg class="h-4 w-4 text-gray-400 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>منذ 30 دقيقة</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div>
+                    <a href="notifications.html" class="w-full  text-[14px] flex justify-start gap-2 p-3">
+                      <svg class="h-4 w-4 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+
+                      عرض  كل الاشعارات
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- user component -->
+              <div class="relative rounded-md" :class="{showUserDropDown:'bg-body'}" x-data="{showUserDropDown:false,toggle(){hideOthers(),this.showUserDropDown = !this.showUserDropDown}}">
+                <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2 rounded" :class="showUserDropDown && 'bg-body'" style="min-width:48px">
+                    <div class="flex flex-row-reverse w-full">
+                        <div slot="icon" class="relative">
+                            <img src="assets/images/hero/hero-image.jpg" alt="user-logo" class="h-8 w-8 rounded-full border">
+                        </div>
+                    </div>
+                </div>
+                <div x-show="showUserDropDown" class="topNotMess w-max absolute  left-0 mt-1 drop-shadow-md rounded-b border-t-0 z-10 bg-white">
+                    <!-- notifications inside  -->
+                  <div class="py-3 text-gray-700">
+                      <a    href="dashboard.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="13" r="2" />  <line x1="13.45" y1="11.55" x2="15.5" y2="9.5" />  <path d="M6.4 20a9 9 0 1 1 11.2 0Z" /></svg>
+                         <span> لوحة التحكم  </span>
+                      </a>
+                      <a    href="my_project.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                         <span> مشاريعي  </span>
+                      </a>
+                      <a    href="my_account_settings.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
+                         <span> حسابي الشخصي  </span>
+                      </a>
+                      <a    href="my_favorites.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 20l-7 -7a4 4 0 0 1 6.5 -6a.9 .9 0 0 0 1 0a4 4 0 0 1 6.5 6l-7 7" /></svg>
+                        <span> المفضلة  </span>
+                      </a>
+                      <a    href="my_ballance.html"   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                        
+                         <span> الرصيد  </span>
+                      </a>
+                      <a    href=""   class="flex  items-center gap-2 p-2 px-4 text-sm"           >
+                        <svg class="h-5 w-5 text-gray-600"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />  <polyline points="16 17 21 12 16 7" />  <line x1="21" y1="12" x2="9" y2="12" /></svg>
+                         <span> تسجيل الخروج  </span>
+                      </a>
+                  </div>
+                </div>
+              </div>
+
               <!-- Toggle button -->
-              <button @click="open = !open" class="fixed top-1 left-5 p-3 pt-2">
+              <button @click="open = !open" class=" p-3 pt-2">
                 <svg x-show="!open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 <svg x-show="open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
@@ -219,32 +391,277 @@
       </div>
     </div>
     <!-- ====== Navbar Section End -->
-    <!--main content  -->
-    <div class=" bg-body mt-16 py-8  px-6 md:px-12">
-      <a href="index.html" class=" text-md text-primaryTextColor underline underline-offset-4 ">الرئيسية</a>
-      <h2 class="text-gray-800  text-lg md:text-2xl my-4">بيان الخصوصية</h2>
-      <div class="bg-white p-6">
-        <h2 class="text-md md:text-xl text-gray-900 mb-3">كيف يتعامل المحترف القوي الامين مع المعلومات التي تزودنا بها؟        </h2>
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          يلتزم موقع المحترف القوي الامين بتأمين خصوصيتك حين تزور موقعنا وتتواصل معنا إلكترونيًا. هذه الصفحة توضح الوجه الذي سيتم عبره استخدام أي معلومات شخصية تزودنا بها خلال تواجدك في موقعنا.
-        </p>
-        <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
-          إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
-        </p>
-        <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
-          إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
-        </p>
-        <h2 class="text-md md:text-xl text-gray-900 mb-3">كمثال لنص يمكن ان يستبدل هنا كمثال لنص يمكن ان يستبدل؟        </h2>
-        <p class="mb-4 text-sm text-gray-700 leading-10">
-          حتفظ إدارة موقع المحترف القوي الامين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم.
-          إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.       
-        </p>
-      </div>
+    <section class="px-4 md:px-14 py-6 mt-[65px] bg-body text-gray-700 relative overflow-hidden ">
+
+      <div class="w-full mx-auto my-6 md:flex gap-6" id="myTabContent" >
+        <div class="w-full md:w-3/12  lg:mt-0 z-20" id="nav-content">
+      
+          <!-- user links -->
+           <!-- user links -->
+           <div x-data="{show:false}">
+            
+            <div class="bg-white p-4 px-2">
+              <div class="md:hidden flex justify-between items-center px-4 bg-white rounded">
+                  <h3 class="text-smd md:text-base my-3  text-gray-800">القائمة </h3>
+                  <span class="cursor-pointer" @click.prevent="show = !show">
+                  <svg class="h-7 w-7"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>
+                </span>              
+              </div>
+              
+                <ul x-show="show" class="md:hidden border-t">
+                    <li class="group relative mb-1"> 
+                        <a    href="guide.html"   class="sidenav-link gap-5 "           >
+                          <svg class="h-4 w-4 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                          <span> دليل أصحاب المشاريع  </span>
+                        </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="prodc_guide.html"   class="sidenav-link gap-5"           >
+                          <svg class="h-4 w-4 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                          <span> دليل المنفذين  </span>
+                        </a>
+                    </li>
+                    <hr class="border-b my-4">
+                    <li class="group relative mb-1"> 
+                      <a    href="visual_guide.html"   class="sidenav-link gap-5  "           >
+                        <svg class="h-4 w-4 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        <span> المحتوى المرئي </span>
+                      </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="support.html"   class="sidenav-link gap-5"           >
+                          <svg class="h-4 w-4 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                          </svg>
+                          <span> الدعم الفني  </span>
+                        </a>
+                    </li>
+                    <hr class="border-b my-4">
+                    <li class="group relative mb-1"> 
+                      <a    href="faqs.html"   class="sidenav-link gap-5  "           >
+                        <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span> الأسئلة الشائعة </span>
+                      </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="guarantite.html"   class="sidenav-link gap-5 "           >
+                          <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 12l5 5l10 -10" /></svg>
+                          <span> ضمان الحقوق  </span>
+                        </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="blog.html"   class="sidenav-link gap-5"           >
+                          <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /></svg>
+                          <span> المدونة  </span>
+                        </a>
+                    </li>
+                    <hr class="border-b my-4">
+                    <li class="group relative mb-1"> 
+                      <a    href="conditions.html"   class="sidenav-link gap-5  "           >
+                        <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="9" y1="6" x2="20" y2="6" />  <line x1="9" y1="12" x2="20" y2="12" />  <line x1="9" y1="18" x2="20" y2="18" />  <line x1="5" y1="6" x2="5" y2="6.01" />  <line x1="5" y1="12" x2="5" y2="12.01" />  <line x1="5" y1="18" x2="5" y2="18.01" /></svg>
+                        <span> شروط الاستخدام</span>
+                      </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="privacy.html"   class="sidenav-link gap-5 active"           >
+                          <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                          </svg>
+                          
+                          <span> سياسة الخصوصية  </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul  class="hidden md:block">
+                    <li class="group relative mb-1"> 
+                        <a    href="guide.html"   class="sidenav-link gap-5 "           >
+                          <svg class="h-4 w-4 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                          <span> دليل أصحاب المشاريع  </span>
+                        </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="prodc_guide.html"   class="sidenav-link gap-5"           >
+                          <svg class="h-4 w-4 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                          <span> دليل المنفذين  </span>
+                        </a>
+                    </li>
+                    <hr class="border-b my-4">
+                    <li class="group relative mb-1"> 
+                      <a    href="visual_guide.html"   class="sidenav-link gap-5  "           >
+                        <svg class="h-4 w-4 "  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polygon points="5 3 19 12 5 21 5 3" /></svg>
+                        <span> المحتوى المرئي </span>
+                      </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="support.html"   class="sidenav-link gap-5"           >
+                          <svg class="h-4 w-4 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                          </svg>
+                          <span> الدعم الفني  </span>
+                        </a>
+                    </li>
+                    <hr class="border-b my-4">
+                    <li class="group relative mb-1"> 
+                      <a    href="faqs.html"   class="sidenav-link gap-5  "           >
+                        <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span> الأسئلة الشائعة </span>
+                      </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="guarantite.html"   class="sidenav-link gap-5 "           >
+                          <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 12l5 5l10 -10" /></svg>
+                          <span> ضمان الحقوق  </span>
+                        </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="blog.html"   class="sidenav-link gap-5"           >
+                          <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /></svg>
+                          <span> المدونة  </span>
+                        </a>
+                    </li>
+                    <hr class="border-b my-4">
+                    <li class="group relative mb-1"> 
+                      <a    href="conditions.html"   class="sidenav-link gap-5  "           >
+                        <svg class="h-5 w-5 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="9" y1="6" x2="20" y2="6" />  <line x1="9" y1="12" x2="20" y2="12" />  <line x1="9" y1="18" x2="20" y2="18" />  <line x1="5" y1="6" x2="5" y2="6.01" />  <line x1="5" y1="12" x2="5" y2="12.01" />  <line x1="5" y1="18" x2="5" y2="18.01" /></svg>
+                        <span> شروط الاستخدام</span>
+                      </a>
+                    </li>
+                    <li class="group relative mb-1"> 
+                        <a    href="privacy.html"   class="sidenav-link gap-5 active"           >
+                          <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                          </svg>
+                          
+                          <span> سياسة الخصوصية  </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+           
+           
+          </div>
+
+        </div>
+        <div class="w-full md:w-9/12 mt-2  lg:mt-0  z-20">
+          
+          <div class="bg-white p-6">
+            <!-- privacy item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span> كيف يتعامل المحترف القوي الأمين مع المعلومات التي تزودنا بها؟  </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              يلتزم موقع المحترف القوي الأمين بتأمين خصوصيتك حين تزور موقعنا وتتواصل معنا إلكترونيًا. هذه الصفحة توضح الوجه الذي سيتم عبره استخدام أي معلومات شخصية تزودنا بها خلال تواجدك في موقعنا.
+            </p>
+           </div>
+           <hr class="border my-6">
+
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>  انتفاء المسؤولية القانونية      </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              يقر المُستخدِم بأنه المسؤول الوحيد عن طبيعة الاستخدام الذي يحدده للموقع الإلكتروني المحترف القوي الأمين، وتخلي إدارة موقع المحترف القوي الأمين طرفها، إلى أقصى مدى يجيزه القانون، من كامل المسؤولية عن أية خسائر أو أضرار أو نفقات أو مصاريف يتكبدها المُستخدِم أو يتعرض لها هو أو أي طرف آخر من جراء استخدام الموقع الإلكتروني المحترف القوي الأمين أو العجز عن استخدامه
+
+            </p>
+           </div>
+           <hr class="border my-6">
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>  حالات انقطاع الخدمة والسهو والخطأ في الموقع الإلكتروني المحترف القوي الأمين    </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              تبذل إدارة الموقع قصارى جهدها للحرص والحفاظ على استمرار عمل الموقع الإلكتروني بدون مشاكل، رغم ذلك قد تقع في أي وقت أخطاء وحالات سهو وانقطاع للخدمة وتأخير لها، وفي مثل هذه الحالات سنتوقع من المستخدمين الصبر حتى تعود الخدمة إلى معدلها الطبيعي.
+            </p>
+           </div>
+           <hr class="border my-6">
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>  حساب المشترك وكلمة السر وأمن المعلومات  </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              يختار المشترك كلمة سر / مرور لحسابه، وسيُدخل عنوانا بريديا خاصا به لمراسلته عليه، وتكون مسؤولية حماية كلمة السر هذه وعدم مشاركتها أو نشرها على المشترك، وفي حال حدوث أي معاملات باستخدام كلمة السر هذه فسيتحمل المشترك كافة المسؤوليات المترتبة على ذلك، دون أدنى مسؤولية على موقع المحترف القوي الأمين.
+            </p>
+           </div>
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>  يتحمل المشترك كامل المسؤولية عن جميع المحتويات الخاصة به، التي يرفعها وينشرها عبر الموقع.          </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              لا يمكن للمشترك حذف حسابه من المحترف القوي الأمين بأي وسيلة ولا تعديل اسم المستخدم لحسابه، بسبب تعلق الحساب بأمور مالية وحقوق مستخدمين آخرين يمكن الرجوع لها في أي وقت.
+            </p>
+           </div>
+           <hr class="border my-6">
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span> التسجيل في الموقع              </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              بعض أجزاء الموقع لا تفتح إلا للأعضاء المشتركين المسجلين بعد تقديم بعض المعلومات الشخصية عنهم. يوافق المشترك عند تسجيله مع الموقع بأن المعلومات المقدمة هي كاملة ودقيقة، ويلتزم بأنه لن يقوم بالتسجيل في الموقع ولن يحاول دخوله منتحلاً اسم مشترك آخر ولن يستخدم اسماً قد ترى الإدارة أنه غير مناسب، أو غير ملائم، مثل أرقام الهواتف، والأسماء المنتحلة لشخصيات شهيرة، وروابط المواقع، والأسماء غير المفهومة، وما في حكمها.
+            </p>
+           </div>
+           <hr class="border my-6">
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>  استخدام ومشاركة المعلومات       </span>
+            </h2>
+            <p class=" text-black text-smd mt-2">
+              يتم التعامل مع جميع المعلومات التي يزودها المستخدمين بسرية تامة ولا يتم بيعها أو مشاركتها مع أي طرف ثالث غير مخوّل بالوصول إليها. حالات استخدام المعلومات:
+              <ul class="list-disc py-2  pr-5 pl-0">
+                <li class="leading-10 text-sm  text-black">تطوير الخدمات التي يقدمها الموقع وخدمات شركتنا المختلفة.</li>
+                <li class="leading-10 text-sm  text-black">في حال التعاقد مع طرف ثالث لتطوير الخدمات التي نقدمها بعد الالتزام بعدم مشاركة أي معلومات تتعارض مع بيان الخصوصية هذا.
+                </li>
+                <li class="leading-10 text-sm  text-black">إذا كنا ملزمين قانونيا بأمر قضائي بالكشف عن أي معلومات.</li>
+              </ul>
+            </p>
+           </div>
+           <hr class="border my-6">
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>   الرقابة على المحتوى         </span>
+            </h2>
+            <p class="text-black text-smd mt-2">
+              تحتفظ إدارة موقع المحترف القوي الأمين الإلكتروني بالحق في مراقبة أي محتوى يدخله المشترك، دون أن يكون ذلك لزاما عليها، لذا تحتفظ بالحق (من دون التزام) في حذف أو إزالة أو تحرير أي مواد مدخلة من شأنها انتهاك شروط وأحكام الموقع دون الرجوع للمستخدم. إن قوانين حقوق النشر والتأليف المحلية و العالمية والأجنبية والمعاهدات الدولية تحمي جميع محتويات هذا الموقع، ومن خلال الاشتراك فيه فإن المشترك يوافق ضمنيا وبشكل صريح على الالتزام بإشعارات حقوق النشر التي تظهر على صفحاته.
+            </p>
+           </div>
+           <hr class="border my-6">
+           <!-- privact item -->
+           <div class="privacy-item">
+            <h2 class="flex justify-start gap-2 items-center text-smd md:text-lg text-gray-800 font-semibold">
+              <span class="h-4 w-4 bg-primaryTextColor rounded-full"></span>
+              <span>    هذه السياسة محل تغيير دائم وتطوير، مع إشعار المشتركين والزوار بذلك، وعلى المشتركين مراجعة هذه السياسات بشكل دوري        </span>
+            </h2>
+           </div>
+          </div>
+        </div>
+
+       
     </div>
+      
+    
+      
+    </section>
 
 
 
@@ -357,94 +774,6 @@
     <!-- ====== All Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
-    <!-- <script>
-      // ==== for menu scroll
-      const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
-      pageLink.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            offsetTop: 1 - 60,
-          });
-        });
-      });
-
-    </script> -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('#testimonial .swiper-container', {
-          loop: true,
-          slidesPerView: 1,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          },
-        })
-        new Swiper('#partners .swiper-container', {
-          loop: true,
-          slidesPerView: 2,
-          spaceBetween: 9,
-          autoplay: {
-            delay: 8000,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1.5,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          },
-        })
-      })
-    </script>
-    <script>
-      function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /* Loop through a collection of all HTML elements: */
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-          elmnt = z[i];
-          /*search for elements with a certain atrribute:*/
-          file = elmnt.getAttribute("w3-include-html");
-          if (file) {
-            /* Make an HTTP request using the attribute value as the file name: */
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4) {
-                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                /* Remove the attribute, and call this function once more: */
-                elmnt.removeAttribute("w3-include-html");
-                includeHTML();
-              }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /* Exit the function: */
-            return;
-          }
-        }
-      }
-      </script>
   </body>
 </html>
