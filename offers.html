@@ -224,529 +224,316 @@
       <div class="bg-white py-8 px-2 md:px-6">
         <a href="index.html" class=" text-md text-primaryTextColor underline underline-offset-4 ">الرئيسية</a>
         <h2 class="text-gray-800  text-lg md:text-2xl my-4">باقات المحترف القوي الأمين</h2>
-        <!-- plans -->
-        <div class="bg-white dark:bg-gray-900 " id="plans">
-          <div class="container  mx-auto wow fadeInUp" x-data="{ activePlan: 'free' }">
-              <!-- <h1 class="text-2xl font-semibold text-center text-primaryTextColor capitalize lg:text-3xl dark:text-white">
-              باقات المحترف القوي الأمين
-              </h1> -->
-              <div class="grid grid-cols-1 gap-8 mt-6 lg:grid-cols-4 xl:mt-12">
-                  <div :class="activePlan == 'free' ? 'border-blue-500 ' : ''" class="flex items-center justify-between px-3 py-2 border cursor-pointer rounded dark:border-gray-700"
-                        @click="activePlan = 'free'">
-                      <div class="flex flex-col items-center space-y-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" :class="activePlan == 'free' ? 'highlighted-offer  ' : 'text-gray-400'" class="w-5 h-5  sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                          </svg>
-                          <h2  :class="activePlan == 'free' ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-md font-medium  sm:text-base ">العادية</h2>
+
+        <!-- start plans v2 -->
+        <div class="bg-white dark:bg-gray-900">
+          <div class="container px-3 py-8 mx-auto">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 space-y-8 lg:-mx-2 lg:space-y-0">
+                  <div class="flex flex-col !mt-0  bg-[#ffca2c0d] w-full max-w-sm p-3 space-y-8 text-center border-2 border-gray-200 rounded-lg lg:mx-2 dark:bg-gray-900 dark:border-gray-700">
+                      <div class="flex-shrink-0">
+                          <h2 class="inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-100 dark:bg-gray-700">
+                              الباقة المجانية
+                          </h2>
                       </div>
-                      <h2 :class="activePlan == 'free' ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-base font-semibold  sm:text-lg ">مجانية</h2>
+      
+                      <div class="flex-shrink-0">
+                          <span class="pt-2 text-3xl font-bold text-gray-800 uppercase dark:text-gray-100">
+                              0£
+                          </span>
+                      </div>
+      
+                      <ul class="flex-1 space-y-4 text-[12px] font-semibold">
+                          <li class="text-gray-800 dark:text-gray-400 border border-gray-400 font-bold text-[13px] py-3">
+                            عدد الموظفين غير محدود  
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                             .دفع نسبة عمولة للمنصة 5% وتختلف المجال
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>
+                          </li>
+      
+                          <li class="text-gray-800 dark:text-gray-400">
+                            ترسل <a href="" class="text-primaryTextColor underline underline-offset-2">شهادة المحترف القوي الأمين</a>
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            استلام <a href="" class="text-primaryTextColor underline underline-offset-2">البادج والملصقات</a> (بعد عشر معاملات)                       
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            صفحة تعريفية تسويقية للسلع والخدمات
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            لوحة تحكم شاملة
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            الإخطار بالإشعارات الجديدة
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            متابعة إلكترونية يومية
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            محادثات داخلية
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحترف </a> من قبل إدارة المنصة 
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            تقديم عروض على المشاريع
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            امكانية الحصول على مشاريع
+                          </li>
+                          <li class="text-gray-800 dark:text-gray-400">
+                            حجز إلكتروني لخدماته وسلعه
+                          </li>
+                      </ul>
+      
+                      <div class="flex justify-center mt-8 gap-2">
+                        <button class="px-4 py-2 tracking-wide text-white text-[14px] capitalize transition-colors duration-300 ease-in-out  transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                          ابدأ الان
+                        </button>
+                        <!-- <button class="px-8 py-2 tracking-wide capitalize transition-colors duration-300 ease-in-out  transform bg-white text-primaryTextColor hover:text-white rounded border hover:bg-primary  focus:bg-primary focus:ring focus:ring-primary">
+                          تصفح نسبة العمولة
+                        </button> -->
+                      </div>
                   </div>
-                  <div :class="activePlan == 'second' ? 'border-blue-500 ' : ''" class="flex items-center justify-between px-3 py-2 border cursor-pointer rounded"
-                        @click="activePlan = 'second'">
-                      <div class="flex flex-col items-center space-y-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" :class="activePlan == 'second' ? 'highlighted-offer  ' : 'text-gray-400'" class="w-5 h-5 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                          </svg>
-                          <h2 :class="activePlan == 'second' ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-md font-medium  sm:text-base" style="letter-spacing:-2px">من <strong>1</strong> الى <strong>5</strong> عمال</h2>
+      
+                  <div class="flex flex-col !mt-0  bg-[#b0ffe2] text-white w-full max-w-sm p-3 space-y-8 text-center  border-2 border-gray-200 rounded-lg lg:mx-2 dark:bg-gray-900 dark:border-gray-700">
+                      <div class="flex-shrink-0">
+                          <h2 class="inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700">
+                              الباقة الصغرى
+                          </h2>
                       </div>
-                      <div class="flex flex-col items-center space-y-1">
-                          <div :class="activePlan == 'second' ? 'highlighted-offer ' : 'unghilighted-offer '" class="px-2 text-xs  bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
-                              Save 30%
-                          </div>
-                          <h2 :class="activePlan == 'second' ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-base font-semibold  sm:text-lg">$99 <span class="text-base font-medium">/Yearly</span></h2>
+      
+                      <div class="flex-shrink-0">
+                          <span class="pt-2 text-3xl font-bold text-gray-800 uppercase dark:text-gray-100">
+                             111£
+                          </span>
+                          
                       </div>
+      
+
+                      <ul class="flex-1 space-y-4 text-[12px] font-semibold">
+                        <li class="text-gray-800 dark:text-gray-400 border border-gray-400 font-bold text-[13px] py-3">
+                          عدد الموظفين من 1 إلى 5  
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                           .دفع نسبة عمولة للمنصة 0%
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          تسلم <a href="" class="text-primaryTextColor underline underline-offset-2">شهادة المحترف القوي الأمين</a>
+                        </li>
+    
+                        <li class="text-gray-800 dark:text-gray-400">
+                          استلام <a href="" class="text-primaryTextColor underline underline-offset-2">البادج والملصقات</a> 
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          صفحة تعريفية تسويقية للسلع والخدمات                       
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          تقييم العملاء مع إبداء الآراء والرد عليهم
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          لوحة تحكم شاملة
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          الإخطار بالإشعارات الجديدة
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          متابعة إلكترونية يومية
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          محادثات داخلية
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة 
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          تقديم عروض على المشاريع
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                         امكانية قبول مشاريع 
+                        </li>
+                        <li class="text-gray-800 dark:text-gray-400">
+                          حجز إلكتروني لخدماته وسلعه
+                        </li>
+                    </ul>
+      
+                    <div class="flex justify-center mt-8 gap-2">
+                      <button class="px-4 py-2 tracking-wide text-white text-[14px] capitalize transition-colors duration-300 ease-in-out  transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                        اشترك الان
+                      </button>
+                      <!-- <button class="px-8 py-2 tracking-wide capitalize transition-colors duration-300 ease-in-out  transform bg-white text-primaryTextColor hover:text-white rounded border hover:bg-primary  focus:bg-primary focus:ring focus:ring-primary">
+                        تصفح نسبة العمولة
+                      </button> -->
+                    </div>
                   </div>
-                  <div :class="activePlan == 'third' ? 'border-blue-500 ' : ''" class="flex items-center justify-between px-3 py-2 border cursor-pointer rounded"
-                        @click="activePlan = 'third'">
-                      <div class="flex flex-col items-center space-y-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" :class="activePlan == 'third' ? 'highlighted-offer  ' : 'text-gray-400'" class="w-5 h-5 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                          </svg>
-                          <h2 :class="activePlan == 'third' ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-md font-medium  sm:text-base" style="letter-spacing:-2px">من <strong>6</strong> الى <strong>15</strong> عمال</h2>
-                      </div>
-                      <div class="flex flex-col items-center space-y-1">
-                          <div :class="activePlan == 'third' ? 'highlighted-offer ' : 'unghilighted-offer '" class="px-2 text-xs  bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
-                              Save 40%
-                          </div>
-                          <h2 :class="activePlan == 'third' ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-base font-semibold  sm:text-lg">$99 <span class="text-base font-medium">/Yearly</span></h2>
-                      </div>
-                  </div>
-                  <div :class="activePlan == 'fourth' ?  'border-blue-500 ' : ''" class="flex items-center justify-between px-3 py-2 border cursor-pointer rounded"
-                        @click="activePlan = 'fourth'">
-                      <div class="flex flex-col items-center space-y-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" :class="activePlan == 'fourth' ?  'highlighted-offer  ' : 'text-gray-400'" class="w-5 h-5 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                          </svg>
-                          <h2 :class="activePlan == 'fourth' ?  'highlighted-offer ' : 'unghilighted-offer '" class="text-md font-medium  sm:text-base" style="letter-spacing:-2px">من <strong>16</strong> عامل فما فوق </h2>
-                      </div>
-                      <div class="flex flex-col items-center space-y-1">
-                          <div :class="activePlan == 'fourth'  ? 'highlighted-offer ' : 'unghilighted-offer '" class="px-2 text-xs  bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
-                              Save 40%
-                          </div>
-                          <h2 :class="activePlan == 'fourth'  ? 'highlighted-offer ' : 'unghilighted-offer '" class="text-base font-semibold  sm:text-lg">$99 <span class="text-base font-medium">/Yearly</span></h2>
-                      </div>
-                  </div>
-              </div>
-            <!-- free offers -->
-              <div x-show="activePlan == 'free'" x-transition:enter="transition ease-out duration-300"
-              x-transition:enter-start="opacity-0 scale-90"
-              x-transition:enter-end="opacity-100 scale-100">
-                <div  class="p-8 mt-8 space-y-4 bg-gray-100 dark:bg-gray-800 rounded">
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                        <p class="textlg sm:text-lg">كل المجالات والاختصاصات </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- .دفع نسبة عمولة للمنصة 5% وتختلف حسب المجال </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>  </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">-  ترسل <a href="" class="text-primaryTextColor underline underline-offset-2">شهادة المحترف القوي الأمين</a>  </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">-  استلام <a href="" class="text-primaryTextColor underline underline-offset-2">البادج والملصقات</a> (بعد عشر معاملات) </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">-  صفحة تعريفية تسويقية للسلع والخدمات </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- تقييم العملاء مع إبداء الآراء والرد عليهم </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- لوحة تحكم شاملة  </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- الإخطار بالإشعارات الجديدة  </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- متابعة إلكترونية يومية </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- محادثات داخلية</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">-  <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة </p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- تقديم عروض على المشاريع</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- قبول مشاريع</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                  <p class="textlg sm:text-lg">- حجز إلكتروني لخدماته وسلعه</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                    <!-- <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                        <p class="textlg sm:text-lg">
-                          - متاحة لجميع الشركات من مختلف المجالات والقطاعات، باستثناء <a href="#" class="underline text-primaryTextColor">قطاع الأغذية
-                            والمشروبات.</a>
-                        </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
+                  <div class="flex flex-col w-full !mt-0 max-w-sm p-3 space-y-8 text-center bg-[#DDE9F5] border-2 border-gray-200 rounded-lg lg:mx-2 dark:bg-gray-900 dark:border-gray-700">
+                    <div class="flex-shrink-0">
+                        <h2 class="inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700">
+                            الباقة المتوسطة
+                        </h2>
                     </div>
-                    <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                        <p class="textlg sm:text-lg">- .دفع عمولة للمنصة تتراوح مابين 1% و 5% وتختلف حسب المجال </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
+    
+                    <div class="flex-shrink-0">
+                        <span class="pt-2 text-3xl font-bold text-gray-800 uppercase dark:text-gray-100">
+                           222£
+                        </span>
+                        
                     </div>
-                    <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                        <p class="textlg sm:text-lg">-
-                          .العمولة تشمل كل معاملة تمت من خلال المنصة بطريقة مباشرة أو غير مباشرة </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                        <p class="textlg sm:text-lg">-
-                          .العمولة تشمل عملية تسهيل وصول العميل إلى المحترف</p>
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                        <p class="textlg sm:text-lg">-
-                          .العمولة تشمل التعامل المباشر مع العملاء مشتركين في المنصة
-                        </p>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                    </div> -->
-                </div>
-                <div class="flex justify-center mt-8 gap-2">
-                    <button class="px-10 py-2 tracking-wide text-white capitalize transition-colors duration-300 ease-in-out  transform bg-primary rounded hover:bg-primaryDarken focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+    
+
+                    <ul class="flex-1 space-y-4 text-[12px] font-semibold">
+                      <li class="text-gray-800 dark:text-gray-400 border border-gray-400 font-bold text-[13px] py-3">
+                        عدد الموظفين من 5 إلى 15  
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                         .دفع نسبة عمولة للمنصة 0%
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تسلم <a href="" class="text-primaryTextColor underline underline-offset-2">شهادة المحترف القوي الأمين</a>
+                      </li>
+  
+                      <li class="text-gray-800 dark:text-gray-400">
+                        استلام <a href="" class="text-primaryTextColor underline underline-offset-2">البادج والملصقات</a> 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        صفحة تعريفية تسويقية للسلع والخدمات                       
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تقييم العملاء مع إبداء الآراء والرد عليهم
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        لوحة تحكم شاملة
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        الإخطار بالإشعارات الجديدة
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        متابعة إلكترونية يومية
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        محادثات داخلية
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تقديم عروض على المشاريع
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                       امكانية قبول مشاريع 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        حجز إلكتروني لخدماته وسلعه
+                      </li>
+                    </ul>
+    
+                  <div class="flex justify-center mt-8 gap-2">
+                    <button class="px-4 py-2 tracking-wide text-white text-[14px] capitalize transition-colors duration-300 ease-in-out  transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
                       اشترك الان
                     </button>
-                    <button class="px-8 py-2 tracking-wide capitalize transition-colors duration-300 ease-in-out  transform bg-white text-primaryTextColor hover:text-white rounded border hover:bg-primary  focus:bg-primary focus:ring focus:ring-primary">
+                    <!-- <button class="px-8 py-2 tracking-wide capitalize transition-colors duration-300 ease-in-out  transform bg-white text-primaryTextColor hover:text-white rounded border hover:bg-primary  focus:bg-primary focus:ring focus:ring-primary">
                       تصفح نسبة العمولة
+                    </button> -->
+                  </div>
+                  </div>
+                  <div class="flex flex-col w-full !mt-0  max-w-sm p-3 space-y-8 text-center bg-[#ffcf707c] border-2 border-gray-200 rounded-lg lg:mx-2 dark:bg-gray-900 dark:border-gray-700">
+                    <div class="flex-shrink-0">
+                        <h2 class="inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700">
+                            الباقة الكبرى
+                        </h2>
+                    </div>
+    
+                    <div class="flex-shrink-0">
+                        <span class="pt-2 text-3xl font-bold text-gray-800 uppercase dark:text-gray-100">
+                           333£
+                        </span>
+                        
+                    </div>
+    
+
+                    <ul class="flex-1 space-y-4 text-[12px] font-semibold">
+                      <li class="text-gray-800 dark:text-gray-400 border border-gray-400 font-bold text-[13px] py-3">
+                        عدد الموظفين من 16 فمافوق 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                         .دفع نسبة عمولة للمنصة 0%
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تسلم <a href="" class="text-primaryTextColor underline underline-offset-2">شهادة المحترف القوي الأمين</a>
+                      </li>
+  
+                      <li class="text-gray-800 dark:text-gray-400">
+                        استلام <a href="" class="text-primaryTextColor underline underline-offset-2">البادج والملصقات</a> 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        صفحة تعريفية تسويقية للسلع والخدمات                       
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تقييم العملاء مع إبداء الآراء والرد عليهم
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        لوحة تحكم شاملة
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        الإخطار بالإشعارات الجديدة
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        متابعة إلكترونية يومية
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        محادثات داخلية
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        تقديم عروض على المشاريع
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                       امكانية قبول مشاريع 
+                      </li>
+                      <li class="text-gray-800 dark:text-gray-400">
+                        حجز إلكتروني لخدماته وسلعه
+                      </li>
+                  </ul>
+    
+                  <div class="flex justify-center mt-8 gap-2">
+                    <button class="px-4 py-2 tracking-wide text-white text-[14px] capitalize transition-colors duration-300 ease-in-out  transform bg-blue-500 rounded hover:bg-blue-600 focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                      اشترك الان
                     </button>
-                </div>
-              </div>
-              <!-- paid offer -->
-              <div x-show="activePlan == 'second'" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 scale-90"
-                x-transition:enter-end="opacity-100 scale-100">
-                <div  class="p-8 mt-8 space-y-4 bg-gray-100 dark:bg-gray-800 rounded">
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- . نسبة عمولة للمنصة 0% </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
+                    <!-- <button class="px-8 py-2 tracking-wide capitalize transition-colors duration-300 ease-in-out  transform bg-white text-primaryTextColor hover:text-white rounded border hover:bg-primary  focus:bg-primary focus:ring focus:ring-primary">
+                      تصفح نسبة العمولة
+                    </button> -->
                   </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
                   </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  تسلم شهادة المحترف القوي الأمين  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-   إستلام البادج + الملصقات </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  صفحة تعريفية تسويقية للسلع والخدمات </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تقييم العملاء مع إبداء الآراء والرد عليهم </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- لوحة تحكم شاملة  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- الإخطار بالإشعارات الجديدة  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- متابعة إلكترونية يومية </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- محادثات داخلية</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تقديم عروض على المشاريع</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- قبول مشاريع</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- حجز إلكتروني لخدماته وسلعه</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="flex justify-center mt-8">
-                  <button class="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 ease-in-out  transform bg-primary rounded hover:bg-primaryDarken focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    اشترك الان
-                  </button>
-        
-                </div>
-              </div>
-              <!-- paid offer -->
-              <div x-show="activePlan == 'third'" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 scale-90"
-                x-transition:enter-end="opacity-100 scale-100">
-                <div  class="p-8 mt-8 space-y-4 bg-gray-100 dark:bg-gray-800 rounded">
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- . نسبة عمولة للمنصة 0% </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  تسلم شهادة المحترف القوي الأمين  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-   إستلام البادج + الملصقات </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  صفحة تعريفية تسويقية للسلع والخدمات </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تقييم العملاء مع إبداء الآراء والرد عليهم </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- لوحة تحكم شاملة  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- الإخطار بالإشعارات الجديدة  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- متابعة إلكترونية يومية </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- محادثات داخلية</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تقديم عروض على المشاريع</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- قبول مشاريع</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- حجز إلكتروني لخدماته وسلعه</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="flex justify-center mt-8">
-                  <button class="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 ease-in-out  transform bg-primary rounded hover:bg-primaryDarken focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    اشترك الان
-                  </button>
-        
-                </div>
-              </div>
-              <!-- paid offer -->
-              <div x-show="activePlan == 'fourth'" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 scale-90"
-                x-transition:enter-end="opacity-100 scale-100">
-                <div  class="p-8 mt-8 space-y-4 bg-gray-100 dark:bg-gray-800 rounded">
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- . نسبة عمولة للمنصة 0% </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- <span class=" text-red-500">القسم بالله</span> على الالتزام <a href="" class="text-primaryTextColor underline underline-offset-2">بميثاق األخالق المهنية</a>  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  تسلم شهادة المحترف القوي الأمين  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-   إستلام البادج + الملصقات </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  صفحة تعريفية تسويقية للسلع والخدمات </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تقييم العملاء مع إبداء الآراء والرد عليهم </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- لوحة تحكم شاملة  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- الإخطار بالإشعارات الجديدة  </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- متابعة إلكترونية يومية </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تثبيت الهوية الإلكترونية بعد 20 تقييم إيجابي </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- محادثات داخلية</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">-  <a href="" class="text-primaryTextColor underline underline-offset-2">زيارات عشوائية للمحل </a> من قبل إدارة المنصة </p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- تقديم عروض على المشاريع</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- قبول مشاريع</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                  <div class="flex items-center justify-between text-gray-800 dark:text-gray-200">
-                    <p class="textlg sm:text-lg">- حجز إلكتروني لخدماته وسلعه</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 sm:h-7 sm:w-7" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-                <div class="flex justify-center mt-8">
-                  <button class="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 ease-in-out  transform bg-primary rounded hover:bg-primaryDarken focus:outline-none  focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                    اشترك الان
-                  </button>
-        
-                </div>
+      
               </div>
           </div>
-        </div>
-        <!-- end plans -->
+      </div>
+        <!-- end plans v2 -->
         <!-- details -->
         <div class="border-b pb-6 my-6 mt-10">
           <h2 class="text-smd md:text-lg mb-5">الفئات التي يمكن لها الحصول على شهادة المحترف القوي  الأمين بدون رسوم وبدون عمولة :</h2>

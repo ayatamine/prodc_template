@@ -67,6 +67,14 @@
                   <li class="group relative">
                     <a
                       href="#home"
+                      class="ud-menu-scroll topnav-link"
+                    >
+                     v-0.0.6
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="#home"
                       class="ud-menu-scroll topnav-link active"
                     >
                      الرئيسية
@@ -104,7 +112,7 @@
                       التصنيفات
                     </a>
                   </li>
-                  <li class="submenu-item group relative">
+                  <!-- <li class="submenu-item group relative">
                     <a
                       href="javascript:void(0)"
                       class="relative topnav-link"
@@ -112,31 +120,32 @@
                       الصفحات
                     </a>
                     <div
-                      class="submenu top-dropdown px-0"
+                      class="submenu top-dropdown px-0 py-1 shadow-black drop-shadow-md"
                     >
                       <a
                         href="index.html"
-                        class="topnav-link m-0 w-full"
+                        class="topnav-link m-0 w-full" style="padding:0.25rem 1rem;margin:0"
                         style="margin-right:0 !important;margin-left:0 !important"
                       >
                         اتصل بنا
                       </a>
                       <a
                         href="index.html"
-                        class="topnav-link m-0 w-full"
+                        class="topnav-link m-0 w-full" style="padding:0.25rem 1rem;margin:0"
                         style="margin-right:0 !important;margin-left:0 !important"
                       >
                       المدونة
                       </a>
                      
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
 
               </nav>
               
             </div>
             <div x-data="{ open: false,activeItem:false }" :class="{ 'overflow-hidden': open }" class="flex justify-end items-center gap-2">
+             
               <!-- Sidebar -->
               <div class="fixed inset-y-0 left-0 z-20 bg-white w-64  py-4 transform transition duration-300 ease-in-out h-screen "
                    x-show="open"
@@ -148,8 +157,13 @@
                    x-transition:leave-end="-translate-x-full opacity-0"
                    @click.away="open = false"
                    :class="{ '-translate-x-full': !open }">
+                   <div x-show="open" class="absolute border-l -right-16 top-8 bg-white w-16 h-16 z-40 flex items-center justify-center ">
+                    <button class="border rounded p-1 bg-body" @click.prevent="open =false">
+                      <svg class="h-9 w-9 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="4" y1="12" x2="14" y2="12" />  <line x1="4" y1="12" x2="8" y2="16" />  <line x1="4" y1="12" x2="8" y2="8" />  <line x1="20" y1="4" x2="20" y2="20" /></svg>
+                    </button>
+                  </div>
                 <!-- Sidebar content here -->
-                <div class="dropdown px-4" x-data="{dropOpen:false}">
+                <!-- <div class="dropdown px-4" x-data="{dropOpen:false}">
                   <button class="w-full flex justify-between items-center gap-2 bg-white  text-gray-700 font-semibold p-1 text-sm border-1" @click="dropOpen = !dropOpen">
                     <div class="flex justify-start gap-2 items-center ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33a457" d="M96.502 156.137V36.589H8.504v119.548h87.998z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M118.932 93.49l11.347 3.584-11.351 3.738.222 12.086-7.142-9.802-11.112 3.658 6.836-9.58-6.839-9.318 11.007 3.48 6.698-9.125.334 11.279z"/><path d="M127.129 115.793c-4.4 3.689-10.205 5.902-16.393 5.902-13.997 0-25.343-11.361-25.343-25.377 0-14.014 11.347-25.375 25.343-25.375 6.211 0 12.059 2.218 16.467 5.931-5.578-6.741-13.846-11.056-23.271-11.056-16.795 0-30.412 13.633-30.412 30.451 0 16.816 13.617 30.449 30.412 30.449 9.371.001 17.619-4.251 23.197-10.925z" fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229"/><path fill="none" stroke="#000" stroke-width=".497" stroke-miterlimit="2.613" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/></svg>
@@ -167,7 +181,7 @@
                       Francais
                     </a>
                   </div>
-                </div> 
+                </div>  -->
                 <ul class="mt-4 border-t py-4">
                   <li class="group relative my-2">
                     <a    href="projects.html"   class="sidenav-link"           >
@@ -406,7 +420,7 @@
                 <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2 rounded" :class="showUserDropDown && 'bg-body'" style="min-width:48px">
                     <div class="flex flex-row-reverse w-full">
                         <div slot="icon" class="relative">
-                            <img src="assets/images/hero/hero-image.jpg" alt="user-logo" class="h-8 w-8 rounded-full border">
+                            <img src="assets/images/team/profil_picture_2.jpeg" alt="user-logo" class="h-8 w-8 rounded-full border">
                         </div>
                     </div>
                 </div>
@@ -445,6 +459,24 @@
                   </div>
                 </div>
               </div>
+              <div class="dropdown" x-data="{dropOpen:false}" >
+                <button class="w-full flex justify-between items-center gap-2 bg-white  text-gray-700  p-1 text-[13px] border-1" @click="dropOpen = !dropOpen">
+                  <div class="flex justify-start gap-2 items-center ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33a457" d="M96.502 156.137V36.589H8.504v119.548h87.998z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M118.932 93.49l11.347 3.584-11.351 3.738.222 12.086-7.142-9.802-11.112 3.658 6.836-9.58-6.839-9.318 11.007 3.48 6.698-9.125.334 11.279z"/><path d="M127.129 115.793c-4.4 3.689-10.205 5.902-16.393 5.902-13.997 0-25.343-11.361-25.343-25.377 0-14.014 11.347-25.375 25.343-25.375 6.211 0 12.059 2.218 16.467 5.931-5.578-6.741-13.846-11.056-23.271-11.056-16.795 0-30.412 13.633-30.412 30.451 0 16.816 13.617 30.449 30.412 30.449 9.371.001 17.619-4.251 23.197-10.925z" fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229"/><path fill="none" stroke="#000" stroke-width=".497" stroke-miterlimit="2.613" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/></svg>
+                  العربية  
+                  </div>
+                </button>
+                <div @click.outside="dropOpen = false" class="absolute  bg-white border  dropdown-content min-w-[4rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
+                  <a  @click="dropOpen = !dropOpen" href="#" class="text-sm text-gray-900 flex justify-start items-center gap-2 p-2 border-b hover:bg-body">
+                    <svg class="h-5 w-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 149.619V43.135H8.504v106.484h175.748z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33348e" d="M184.252 149.619V43.135H8.504v106.484h175.748z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M116.75 149.619v-37.152h67.502v-32.18H116.75V43.135H75.058v37.152H8.504v32.18h66.554v37.152h41.692z"/><path fill="#fff" d="M29.907 43.135l154.345 93.521v12.965H163.23L8.504 55.869V43.135h21.403z"/><path fill="#fff" d="M162.85 43.135L8.504 136.656v12.965h21.023l154.725-93.752V43.135H162.85z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M184.252 86.106H109.09V43.135H83.738v42.971H8.504v20.542h75.234v42.971h25.352v-42.971h75.162V86.106z"/><path fill="#cc2229" d="M8.584 43.135l61.055 37.152H55.936L8.504 51.424v-8.289h.08zM8.504 149.434v.187h13.394l53.16-32.348v-4.806h-5.805L8.504 149.434zM184.252 149.621v-7.762l-48.303-29.392h-13.703l61.059 37.154h.947zM169.764 43.135l-53.014 32.26v4.892h5.662l61.055-37.152h-13.703z"/></svg>
+                    English
+                  </a>
+                  <a  @click="dropOpen = !dropOpen" href="#"  class=" text-sm text-gray-900 flex justify-start items-center gap-2 p-2 hover:bg-body">
+                    <svg  class="h-5 w-5 text-gray-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 216.504 128.088"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M216.252 127.836V.252h-216v127.584h216z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#27569f" d="M71.748 127.836V.252H.252v127.584h71.496z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2136" d="M216.252 127.836V.252h-71.496v127.584h71.496z"/><path fill="none" stroke="#000" stroke-width=".504" stroke-miterlimit="2.613" d="M216.252 127.836V.252h-216v127.584h216z"/></svg>
+                    Francais
+                  </a>
+                </div>
+              </div> 
 
               <!-- Toggle button -->
               <button @click="open = !open" class=" p-3 pt-2">
@@ -495,13 +527,13 @@
         </div>
         <div class="mt-32">
           <h2 class="text-center text-xl font-semibold text-white">
-            إنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين األكفاء والأمناء 
+            إنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين الأكفاء والأمناء 
           </h2>
-          <form action="" class="my-8 text-white">
-            <div class="flex justify-center gap-5 text-sm" x-data="{activeTriangle:'professionals'}">
+          <form action="" class="my-8 text-white" x-data="{activeTriangle:'professionals',activePlaceholder:'اسم صنف المهنة أو الشركة'}">
+            <div class="flex justify-center gap-5 text-sm" >
               <!-- professionals -->
               <div>
-                <label @click="activeTriangle = 'professionals'"
+                <label @click="activeTriangle = 'professionals';activePlaceholder='اسم صنف المهنة أو الشركة'"
                  for="professionals" class=" cursor-pointer">المحترفون</label>
                 <input type="text" value="professionals" class="hidden" id="professionals">
                 <div x-show="activeTriangle == 'professionals'" 
@@ -516,7 +548,7 @@
               </div>
               <!-- services -->
               <div>
-                <label @click="activeTriangle = 'services'" for="services" class=" cursor-pointer">الخدمات</label>
+                <label @click="activeTriangle = 'services';activePlaceholder ='أكتب عنوان الخدمة أو كلمة مفتاحية مثلا: إصلاح سيارة'" for="services" class=" cursor-pointer">الخدمات</label>
                 <input type="text" value="services" class="hidden" id="services">
                 <div x-show="activeTriangle == 'services'"
                 x-transition:enter="transition ease-out duration-300"
@@ -529,7 +561,7 @@
               </div>
               <!-- products -->
               <div>
-                <label @click="activeTriangle = 'products'" for="products" class=" cursor-pointer">السلع</label>
+                <label @click="activeTriangle = 'products';activePlaceholder='اكتب اسم المنتوج مثلا: كمبيوتر'" for="products" class=" cursor-pointer">السلع</label>
                 <input type="text" value="products" class="hidden" id="products">
                 <div x-show="activeTriangle == 'products'"
                 x-transition:enter="transition ease-out duration-300"
@@ -544,7 +576,7 @@
             </div>
             <!-- form -->
             <div class="relative w-full md:w-1/2 lg:1/3 mx-auto">
-              <input type="text" name="search" placeholder="اسم صنف المهنة أو الشركة" class="w-full border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm ">
+              <input type="text" name="search" :placeholder="activePlaceholder" class="w-full border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm ">
               <button type="submit" class=" primary-btn text-[14px] py-1 px-2 absolute top-1 left-2 ">ابحث الان</button>
               <a href="register.html" class="text-white mt-2 block text-center text-[14px] underline mx-auto underline-offset-2">سجل كمحترف</a>
 
@@ -642,47 +674,74 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 items-center py-8 px-14">
         <div class="intro-cards relative" >
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">1</div>
-          <h6 class="text-yellow-500">استعرض المحترفين </h6>
-          <ul class="list-disc px-5">
-            <li>
-              ابحث عن المحترف الذي تحتاجه باستخدام مربع
-              البحث في األعلى أو عبر التصنيفات 
-            </li>
-            <li>
-              أضف تفاصيل الخدمة المطلوبة والمهارات الالزمة
-              إلنجازه وابدأ باستقبال عروض المحترفين عليه
-            </li>
-          </ul>
+          <h6 class="text-yellow-500 text-center mb-3">استعرض المحترفين </h6>
+          <p>
+            ابحث عن المحترف الذي تحتاجه باستخدام مربع البحث
+              في الأعلى أو تصفح المحترفين حسب التصنيفات
+              والمجالات المختلفة      
+          </p>
+          <div class="relative px-4 my-2">
+            <span class="bg-yellow-500 p-3 py-0  text-black mx-auto intro-card-divider block w-fit">
+              الطريقة الثانية
+            </span>
+          </div>
+          <h6 class="text-yellow-500 text-center my-3">أضف الخدمة المطلوبة</h6>
+          <p>
+            أضف تفاصيل الخدمة التي تحتاجها والمهارات اللازمة
+            لإنجازها وابدأ في استقبال عروض المحترفين عليها
+          </p>
         </div>
         <div class="intro-cards relative" >
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">2</div>
-          <h6 class="text-yellow-500">اختر العرض / المحترف المناسب</h6>
-          <ul class="list-disc px-5">
-            <li>
-              من بين العروض المقدمة لمشروعك، اختر
-              العرض المناسب لمتطلبات المشروع ثم ابدأ
-              مباشرة مرحلة التنفيذ .
-            </li>
-            <li>
-              راجع ملف المحترف واعماله وسيرته المهنية
-              وتقييمات المتعاملين معه وآرائهم فيه
-            </li>
-          </ul>
+          <h6 class="text-yellow-500 text-center mb-3">أضف الخدمة المطلوبة</h6>
+          <p>
+            أضف تفاصيل الخدمة التي تحتاجها والمهارات اللازمة
+            لإنجازها وابدأ في استقبال عروض المحترفين عليها
+          </p>
+         <div class="relative px-4 my-2">
+          <span class="bg-yellow-500 p-3 py-0  text-black mx-auto intro-card-divider block w-fit">
+            الطريقة الثانية
+          </span>
+         </div>
+          <h6 class="text-yellow-500 text-center my-3">اختر العرض المناسب</h6>
+          <p>
+              قم بمقارنة العروض التي تم تقديمها من المحترفين،
+              تصفح بعناية ملفاتهم الشخصية، تقييماتهم،
+              خبراتهم وسيرتهم المهنية ثم اختر العرض الذي
+              يتوافق مع احتياجاتك بشكل أفضل
+          </p>
 
         </div>
         <div class="intro-cards relative">
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">3</div>
-          <h6 class="text-yellow-500">تابع المشروع</h6>
-
-          سيعمل المستقل الذي اخترته معك حتى انتهاء
-          العمل وتسليم مشروعك بشكل كامل كما أردته.
+          <h6 class="text-yellow-500 text-center mb-3">تواصل مع المحترف</h6>
+          تواصل مع المحترفين الذين اخترتهم، سواء عبر
+          الرسائل الداخلية، الهاتف أو عن طريق مقابلتهم
+          مباشرة وزيارتهم في مكان عملهم للدخول في
+          تفاصيل المطلوب واختيار الأفضل لتقديم الخدمة
+          المطلوبة والحصول على افضل وأنجع النتائج
         </div>
         <div class="intro-cards relative">
           <div class="border bg-body p-3 py-0 border-yellow-500 text-yellow-500 absolute -right-4 -top-4">4</div>
-          <h6 class="text-yellow-500">إعلام إدارة الموقع بالمعاملة وسعرها </h6>
-
-          سيعمل المستقل الذي اخترته معك حتى انتهاء
-العمل وتسليم مشروعك بشكل كامل كما أردته.
+          <h6 class="text-yellow-500">اضمن حقوقك </h6>
+          <ul class="list-disc px-5">
+            <li class="text-[12px]">
+              من أجل ضمان حقوقك وتقديم أفضل خدمة ممكنة،
+              نحثك على إبلاغ إدارة الموقع بتفاصيل الاتفاق الذي
+              تبرمه مع المحترف من خلال مسح رمز الكويري الخاص
+              بالمحترف والنقر على زر <span class="text-green-500">"تم الاتفاق"</span> مع ذكر المدة
+              المحددة لإنجاز الخدمة والتكلفة المتفق عليها
+            </li>
+            <li class="text-[12px]">
+              بعد انتهاء الخدمة، الرجاء تقييم المحترف وترك
+                تعليق حول تجربتك معه .
+            </li>
+            <li class="text-[12px]">
+              إن تقييمك للمحترف ومشارتك لتجربتك معه يساهم
+              في تحسين جودة خدماتنا وتوجيه المستخدمين
+              الآخرين ويساعد في بناء مجتمع أفضل
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -895,9 +954,21 @@
               <div
                 class="w-full py-12 px-7 sm:px-12 md:p-8 lg:w-2/5 lg:py-9 lg:px-10 "
               >
-                <div class="text-center leading-10">
-                  <p class="text-primaryTextColor text-md lg:text-xl mb-2">إجعل المحترف الحاصل على</p> 
-                  <span class="text-yellow-500 text-lg lg:text-2xl font-bold ">شهادة المحترف القوي الأمين</span> 
+                <!-- <img src="assets/images/home/aya.png" alt="اية  من القرءان"> -->
+                <h6 class="text-yellow-600 text-center mb-3">أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ</h6>
+                <div class="flex justify-center ">
+                  <p class="text-[#246da7] text-xl text-center font-semibold leading-10">
+                    <span class="text-2xl text-yellow-600 " style="font-family:auto">﴿</span>
+
+                    قَالَتْ إِحْدَاهُمَا يَا أَبَتِ اسْتَأْجِرْهُ ۖ إِنَّ خَيْرَ مَنِ اسْتَأْجَرْتَ <span class="text-yellow-600">الْقَوِيُّ الْأَمِين</span>
+                    <span class="text-2xl text-yellow-600"  style="font-family:auto">﴾</span>
+                    <span class="text-yellow-600 text-sm">   [ القصص: 26]  </span>
+                  </p>
+                </div>
+                <img src="assets/images/qoran_border.png" alt="qoran border" class="w-44 m-auto mt-2">
+                <div class="text-center leading-10 mt-6">
+                  <p class="text-primaryTextColor text-md lg:text-xl mb-2">إجعل المحترف الحاصل على علامة</p> 
+                  <span class="text-yellow-500 text-lg lg:text-2xl font-semibold "> المحترف الْقَوِيُّ الْأَمِينُ </span> 
                   <p class="text-primaryTextColor text-lg lg:text-2xl font-bold "> هو خيارك الأول</p> 
                 </div>
               </div>
@@ -921,7 +992,7 @@
             <div class="md:flex items-center justify-center gap-3">
               <div class="w-full md:w-1/3 p-5">
                 <img
-                  class="mx-auto h-[14rem] md:h-auto lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
+                  class="mx-auto h-[14rem] md:h-auto lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
                   src="assets/images/home/prodc_certificate.jpg"
                   alt=""
                 />
@@ -1033,6 +1104,49 @@
           <div class="w-full px-4 ">
             <!-- first intro explain -->
            <div class="border">
+             <!-- plans section -->
+             <div
+             class="items-center justify-between overflow-hidden  lg:flex"
+           >
+            <div class="text-center lg:w-[40%] h-full">
+              <div class="relative z-10 inline-block">
+                <img
+                  src="assets/images/plans_prodc.png"
+                  alt="image"
+                  class="mx-auto lg:h-80 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
+                />
+              </div>
+            </div>
+             <div
+               class="w-full text-sm md:text-md py-12 px-7 sm:px-12 pb-0 lg:w-[60%] lg:py-9 lg:px-6 xl:p-[35px]"
+             >
+               <span
+                 class="mb-5 block text-md md:text-lg font-semibold text-primaryTextColor text-center"
+               >
+             باقات المحترف القوي الأمين
+             </span>
+               <h2 class="text-lg text-yellow-600">الباقة المجانية</h2>
+               <p class="leading-8 text-sm md:text-smd font-semibold text-slate-700 mb-2">
+                الباقة المجانية هي باقة متاحة لجميع الشركات من مختلف المجالات والقطاعات. يقوم صاحب الباقة بدفع عمولة للمنصة
+                بنسبة تتراوح بين  %1و) %5تختلف العمولة على حسب المجال( من كل معاملة تمت من خلال المنصة بطريقة مباشرة أو غير
+                مباشرة أو من خلال تسهيل وصول العميل إلى المحترف أو من خلال التعامل المباشر مع العملاء الأعضاء في المنصة     
+               </p>
+               <p class="leading-8 text-sm md:text-smd font-semibold text-slate-700 mb-2">
+                الفئات التي يمكن لها الحصول على شهادة المحترف القوي الأمين<span class="text-red-500"> بدون رسوم وبدون عمولة</span> : 
+                <span class="text-primaryTextColorDarken underline underline-offset-4">سلك التعليم والإدارات</span>
+               </p>
+               <h2 class="text-lg text-yellow-600">الباقة المدفوعة</h2>
+               <p class="leading-8 text-sm md:text-smd font-semibold text-slate-700 mb-2">
+                تعد الباقة المدفوعة خيارًا مثاليا للشركات والمؤسسات التي تتعامل ببيع السلع المرتفعة القيمة أو تقديم الخدمات الراقية
+                والمكلفة. تتيح هذه الباقة للشركة دفع رسوم ثابتة (قيمة الباقة المدفوعة) للاستفادة من خدمات المنصة والاستمتاع
+                بمزاياها، دون الحاجة لتقديم عمولة على كل معاملة تتم عبر المنصة - سواء بشكل مباشر أو غير مباشر. وذلك بغض النظر عن
+                حجم المبيعات المحرزة
+               </p>
+               
+             </div>
+
+           </div>
+           <!-- plans section -->
              <!-- first section -->
              <div
              class="items-center justify-between overflow-hidden  lg:flex"
@@ -1041,7 +1155,7 @@
                class="w-full text-sm md:text-md py-12 px-7 sm:px-12 pb-0 lg:w-[57%] lg:py-9 lg:px-14 xl:p-[50px]"
              >
                <span
-                 class="mb-5 block text-md md:text-lg font-semibold text-primaryTextColor"
+                 class="mb-5 block text-md md:text-lg font-semibold text-primaryTextColor text-center"
                >
              شبكة المحترف القوي الأمين
              </span>
@@ -1066,7 +1180,7 @@
                  <img
                    src="assets/images/home/prodc network.jpg"
                    alt="image"
-                   class="mx-auto lg:h-80 lg:ml-auto rtl:lg:mr-auto"
+                   class="mx-auto lg:h-80 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
                  />
                </div>
              </div>
@@ -1085,7 +1199,7 @@
                 <img
                   src="assets/images/home/enterprenership.jpg"
                   alt="image"
-                  class="mx-auto lg:h-[20rem] lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
+                  class="mx-auto lg:h-[20rem] lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
                 />
               </div>
             </div>
@@ -1094,18 +1208,22 @@
              >
                
                <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 هل دخلت في شراكة مع شخص ثم اكتشفت أنه غير مناسب وأنك انخدعت فيه ؟
+                 <span class="text-red-500">هل</span> دخلت في شراكة مع شخص ثم اكتشفت أنه غير مناسب وأنك انخدعت فيه <span class="text-red-500">؟</span>
                </p>
                <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 هل شعرت بخيبة أمل كبيرة بعدما إكتشفت أن المقاول أنجز الأشغال المتفق عليها بجودة سيئة
-                 وبسعر مبالغ فيه ؟
+                 <span class="text-red-500">هل</span> شعرت بخيبة أمل كبيرة بعدما إكتشفت أن المقاول أنجز الأشغال المتفق عليها بجودة سيئة
+                 وبسعر مبالغ فيه <span class="text-red-500">؟</span>
                </p>
                <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 هل أدخلت سيارتك لإصلاح عطل ما لكنك أخرجتها أكثر ضررا وتلفا ؟
+                 <span class="text-red-500">هل</span> أدخلت سيارتك لإصلاح عطل ما لكنك أخرجتها أكثر ضررا وتلفا <span class="text-red-500">؟</span>
                </p>
                <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
                  إختر التعامل مع شخص معروف تاريخه المهني وتقييم الناس له <span class="text-red-500 font-semibold">وأقسم بالله العلي العظيم</span>
                  على الإتقان وأداء الأمانة
+               </p>
+               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
+                <span class="text-red-500">هل</span> شعرت يوما ما بمرارة وبإحباط كبيرين عندما إكتشفت أنك ضحية لعملية غش واحتيال<span class="text-red-500">؟</span>
+
                </p>
                <span
                class="mt-5 block text-md md:text-lg font-semibold text-primaryTextColor "
@@ -1134,7 +1252,7 @@
                    <svg aria-hidden="true" class="text-yellow-400 w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                    <svg aria-hidden="true" class="text-gray-300 w-7 h-7 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                  </div>
-                 <p class="text-primaryTextColor mb-2">أصدق من ألف كلمة من تسويقك</p> 
+                 <p class="text-primaryTextColor mb-2">أصدق من <span class="text-yellow-500 text-2xl">ألف كلمة</span> من تسويقك</p> 
                </div>
              </div>
              <div class="text-center lg:w-2/5 h-full">
@@ -1162,26 +1280,24 @@
     <section id="testimonial" class="bg-white">
       <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8  relative">
         <h2 class="text-xl lg:text-3xl text-sectionTitleColor text-center mb-10 underline underline-offset-8">شهادات .. قالوا عنا</h2>
-        <div class="swiper-container !overflow-hidden pt-8">
+        <div class="swiper-container !overflow-hidden pt-20">
           <div class="swiper-wrapper">
             <div class="swiper-slide border border-gray-500 " >
-              <blockquote class=" p-6">
-                <div class="flex items-center gap-4">
-                  <img
-                    alt="human"
-                    src="assets/images/team/profil_picture_4.jpeg"
-                    class="h-16 w-16 rounded-full object-cover ring-2 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
-                  />
-    
-                  <div >
-                    <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
-                    <p class="mt-1 text-sm font-semibold text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
-                  </div>
-                </div>
+              <div class="flex justify-center gap-4 absolute -top-[3.2rem] text-center w-full">
+                <img
+                  alt="human"
+                  src="assets/images/team/profil_picture_4.jpeg"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                />
+  
+               
+              </div>
+              <blockquote class=" p-6 relative mt-2">
+
     
                 <div class="relative mt-4 text-gray-500">
                   <span class="text-5xl text-sectionTitleColor leading-3 relative top-4">&rdquo;</span>
-                  <div class="leading-6 text-gray-700 text-sm">
+                  <div class="leading-6 text-gray-700 text-sm text-justify">
                       يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى العلاج
                       وفي اليوم التالي وجدت قصتك واسمك الحقيقي منشورين
                       على صفحة "فيسبوك" الخاصة بالطبيب والتعليقات الساخرة
@@ -1192,86 +1308,28 @@
                   <span class="text-5xl text-sectionTitleColor   float-left ltr:float-right">&ldquo;</span>
 
                 </div>
-              </blockquote>
-            </div>
-            <div class="swiper-slide border border-gray-500 " >
-              <blockquote class=" p-6">
-                <div class="flex items-center gap-4">
-                  <img
-                    alt="human"
-                    src="assets/images/team/profil_picture_1.png"
-                    class="h-16 w-16 rounded-full object-cover ring-2 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
-                  />
-    
-                  <div >
-                    <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
-                    <p class="mt-1 text-sm font-semibold text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
-                  </div>
-                </div>
-    
-                <div class="relative mt-4 text-gray-500">
-                  <span class="text-5xl text-sectionTitleColor leading-3 relative top-4">&rdquo;</span>
-                  <div class="leading-6 text-gray-700 text-sm">
-                    يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى
-                    العلاج وفي اليوم التالي وجدت قصتك واسمك الحقيقي
-                    منشورين على صفحة "فيسبوك" الخاصة بالطبيب
-                    والتعليقات الساخرة وغير المسؤولة تنهال عليك؟ وهل
-                    تقبلين أن تزوري طبيبة نسائية سمعتها
-                  </div>
-
-                  <span class="text-5xl text-sectionTitleColor   float-left ltr:float-right">&ldquo;</span>
-
+                <div class="text-center mt-6">
+                  <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
+                  <p class="mt-1 text-sm  text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
                 </div>
               </blockquote>
             </div>
             <div class="swiper-slide border border-gray-500 " >
-              <blockquote class=" p-6">
-                <div class="flex items-center gap-4">
-                  <img
-                    alt="human"
-                    src="assets/images/team/profil_picture_3.png"
-                    class="h-16 w-16 rounded-full object-cover ring-2 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
-                  />
-    
-                  <div >
-                    <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
-                    <p class="mt-1 text-sm font-semibold text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
-                  </div>
-                </div>
+              <div class="flex justify-center gap-4 absolute -top-[3.2rem] text-center w-full">
+                <img
+                  alt="human"
+                  src="assets/images/team/profil_picture_1.png"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                />
+  
+               
+              </div>
+              <blockquote class=" p-6 relative mt-2">
+
     
                 <div class="relative mt-4 text-gray-500">
                   <span class="text-5xl text-sectionTitleColor leading-3 relative top-4">&rdquo;</span>
-                  <div class="leading-6 text-gray-700 text-sm">
-                    يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى العلاج
-                    وفي اليوم التالي وجدت قصتك واسمك الحقيقي منشورين
-                    على صفحة "فيسبوك" الخاصة بالطبيب والتعليقات الساخرة
-                    وغير المسؤولة تنهال عليك؟ وهل تقبلين أن تزوري طبيبة
-                    نسائية سمعتها تسخر من شكل جسد مريضة تراجع عيادتها
-                  </div>
-
-                  <span class="text-5xl text-sectionTitleColor   float-left ltr:float-right">&ldquo;</span>
-
-                </div>
-              </blockquote>
-            </div>
-            <div class="swiper-slide border border-gray-500 " >
-              <blockquote class=" p-6">
-                <div class="flex items-center gap-4">
-                  <img
-                    alt="human"
-                    src="assets/images/team/profil_picture_2.jpeg"
-                    class="h-16 w-16 rounded-full object-cover ring-2 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
-                  />
-    
-                  <div >
-                    <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
-                    <p class="mt-1 text-sm font-semibold text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
-                  </div>
-                </div>
-    
-                <div class="relative mt-4 text-gray-500">
-                  <span class="text-5xl text-sectionTitleColor leading-3 relative top-4">&rdquo;</span>
-                  <div class="leading-6 text-gray-700 text-sm">
+                  <div class="leading-6 text-gray-700 text-sm text-justify">
                       يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى العلاج
                       وفي اليوم التالي وجدت قصتك واسمك الحقيقي منشورين
                       على صفحة "فيسبوك" الخاصة بالطبيب والتعليقات الساخرة
@@ -1282,50 +1340,88 @@
                   <span class="text-5xl text-sectionTitleColor   float-left ltr:float-right">&ldquo;</span>
 
                 </div>
+                <div class="text-center mt-6">
+                  <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
+                  <p class="mt-1 text-sm  text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
+                </div>
               </blockquote>
             </div>
             <div class="swiper-slide border border-gray-500 " >
-              <blockquote class=" p-6">
-                <div class="flex items-center gap-4">
-                  <img
-                    alt="human"
-                    src="assets/images/team/profil_picture_3.png"
-                    class="h-16 w-16 rounded-full object-cover ring-2 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
-                  />
-    
-                  <div >
-                    <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
-                    <p class="mt-1 text-sm font-semibold text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
-                  </div>
-                </div>
+              <div class="flex justify-center gap-4 absolute -top-[3.2rem] text-center w-full">
+                <img
+                  alt="human"
+                  src="assets/images/team/profil_picture_3.png"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                />
+  
+               
+              </div>
+              <blockquote class=" p-6 relative mt-2">
+
     
                 <div class="relative mt-4 text-gray-500">
                   <span class="text-5xl text-sectionTitleColor leading-3 relative top-4">&rdquo;</span>
-                  <div class="leading-6 text-gray-700 text-sm">
-                    يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى
-                    العلاج وفي اليوم التالي وجدت قصتك واسمك الحقيقي
-                    منشورين على صفحة "فيسبوك" الخاصة بالطبيب
-                    والتعليقات الساخرة وغير المسؤولة تنهال عليك؟ وهل
-                    تقبلين أن تزوري طبيبة نسائية سمعتها
+                  <div class="leading-6 text-gray-700 text-sm text-justify">
+                      يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى العلاج
+                      وفي اليوم التالي وجدت قصتك واسمك الحقيقي منشورين
+                      على صفحة "فيسبوك" الخاصة بالطبيب والتعليقات الساخرة
+                      وغير المسؤولة تنهال عليك؟ وهل تقبلين أن تزوري طبيبة
+                      نسائية سمعتها تسخر من شكل جسد مريضة تراجع عيادتها
                   </div>
 
                   <span class="text-5xl text-sectionTitleColor   float-left ltr:float-right">&ldquo;</span>
 
                 </div>
+                <div class="text-center mt-6">
+                  <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
+                  <p class="mt-1 text-sm  text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
+                </div>
               </blockquote>
             </div>
+            <div class="swiper-slide border border-gray-500 " >
+              <div class="flex justify-center gap-4 absolute -top-[3.2rem] text-center w-full">
+                <img
+                  alt="human"
+                  src="assets/images/team/profil_picture_2.jpeg"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                />
+  
+               
+              </div>
+              <blockquote class=" p-6 relative mt-2">
 
+    
+                <div class="relative mt-4 text-gray-500">
+                  <span class="text-5xl text-sectionTitleColor leading-3 relative top-4">&rdquo;</span>
+                  <div class="leading-6 text-gray-700 text-sm text-justify">
+                      يمكن أن تتخيل أَّنك ذهبت إلى طبيب نفسي لتتلقى العلاج
+                      وفي اليوم التالي وجدت قصتك واسمك الحقيقي منشورين
+                      على صفحة "فيسبوك" الخاصة بالطبيب والتعليقات الساخرة
+                      وغير المسؤولة تنهال عليك؟ وهل تقبلين أن تزوري طبيبة
+                      نسائية سمعتها تسخر من شكل جسد مريضة تراجع عيادتها
+                  </div>
+
+                  <span class="text-5xl text-sectionTitleColor   float-left ltr:float-right">&ldquo;</span>
+
+                </div>
+                <div class="text-center mt-6">
+                  <p class="font-semibold text-sectionTitleColor text-base">محمد سعيد</p>
+                  <p class="mt-1 text-sm  text-gray-700">رئيس المعهد الأعلى للشريعة وعلوم الدين    </p>
+                </div>
+              </blockquote>
+            </div>
           </div>
          
           <div class="swiper-pagination  swiper-pagination2 !relative !bottom-0 mt-12"></div>
         </div>
-         <div class="swiper-button-next">
+        <div class="swiper-button-next">
           <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="9 18 15 12 9 6" /></svg>
-         </div>
-          <div class="swiper-button-prev">
-            <svg class="h-8 w-8 text-white z-40"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
 
-          </div>
+        </div>
+         <div class="swiper-button-prev">
+          <svg class="h-8 w-8 text-white z-40"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+         </div>
+
       </div>
     </section>
     <!-- end testimonials -->
@@ -1377,10 +1473,10 @@
                class="w-full  px-7 sm:px-12 md:p-8 lg:w-2/5  lg:px-10 "
              >
                <div class="intro-cards py-3">
-                 <p class="text-xl text-yellow-500 mb-2 px-6 leading-10  text-center">حمل تطبيق المحترف القوي الأمين  </p> 
-                 <p class="text-xl text-yellow-500 mb-2 px-6 leading-10 text-center">PRODC  </p> 
+                 <p class="text-xl text-[#1d3c5f] mb-2 px-6 leading-10  text-center">حمل تطبيق المحترف القوي الأمين  </p> 
+                 <p class="text-xl text-yellow-500 mb-2 px-6 leading-10 text-center font-semibold">PRODC  </p> 
                  
-                 <p class="text-[#1d3c5f] mb-2  text-center">تطبيق لتأكيد وضمان جودة الخدمات بأيادي المحترف القوي الأمين</p> 
+                 <p class="text-[#1d3c5f] mb-2  text-center font-semibold">تطبيق لتأكيد وضمان جودة الخدمات بأيادي المحترف القوي الأمين</p> 
                </div>
               <div class="flex justify-center gap-3 p-4 mt-3">
                 <a href="https://itunes.apple.com/" target="_blank" >
@@ -1407,6 +1503,14 @@
               </svg>
               <span class="ml-2 font-semibold text-[#252C32] text-2xl"><span class="font-bold text-theme">Prodc</span></span>
             </a>
+          <div class="mt-6 w-full md:w-2/3 flex justify-between items-center gap-6">
+            <label for="country">اختر البلد</label>
+            <select class=" filter-input " id="country" >
+              <option value="france" selected>فرنسا</option>
+              <option value="belgique" >بلجيكا</option>
+              <option value="italy" >ايطاليا</option>
+            </select>
+          </div>
           </div>
           <div class="flex-1 grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 p-3">
             <!-- most links -->
@@ -1425,6 +1529,10 @@
                   <a href="#" 
                     class="footer-link">حساب وسداد عمولة الموقع</a>
                 </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="#" 
+                    class="footer-link">إشترك معنا في نشرتنا البريدية</a>
+                </li>
               </ul>
             </div>
             <div>
@@ -1441,6 +1549,10 @@
                 <li class="p-2 rounded hover:bg-body">
                   <a href="#" 
                     class="footer-link">القائمة السوداء</a>
+                </li>
+                <li class="p-2 rounded hover:bg-body">
+                  <a href="guarantite.html" 
+                    class="footer-link">ضمان الحقوق</a>
                 </li>
               </ul>
             </div>
@@ -1469,7 +1581,7 @@
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
         <div class="sm:flex sm:items-center sm:justify-between text-center">
           <span class="text-sm text-gray-600 font-semibold sm:text-center dark:text-gray-400">
-            جميع الحقوق محفوظة @prodc
+            جميع الحقوق محفوظة © للمنصة المحترف القوي الأمين 2023
           </span>
           <div class="flex flex-wrap justify-center gap-2 p-4 my-2">
             <!-- facebook -->
@@ -1479,11 +1591,10 @@
             <!-- instagram -->
             <a href="#" class="bg-[#4f5bd5] p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:animate-bounce duration-300 ease-in">
               <svg  class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/> </svg>
-            </a href="#">
-           <!-- youtube -->
-            <a href="#" class="bg-red-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:animate-bounce duration-300 ease-in">
-              <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" /></svg>
-            </a href="#">
+            </a>
+            <a href="#" title="twitter" class="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded  hover:animate-bounce duration-300 ease-in">
+              <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" /></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1511,6 +1622,7 @@
           loop: true,
           slidesPerView: 1,
           spaceBetween: 9,
+          observer: true,
           autoplay: {
             delay: 8000,
           },
@@ -1598,6 +1710,7 @@
       }
 
       window.document.addEventListener("scroll", onScroll);
+
     </script>
   
   </body>

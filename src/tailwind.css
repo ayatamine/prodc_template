@@ -29,7 +29,7 @@ body {
   @apply text-gray-600;
 }
 #navbarCollapse li .topnav-link{
- @apply  mx-1 flex px-1 py-3 text-[15px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
+ @apply  mx-1 flex px-2 py-2 text-[13.5px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
 }
 .sidenav-link{
   @apply  flex items-center gap-x-2 px-5 py-2 text-sm  hover:bg-body   transition-all duration-200 ease-in-out
@@ -130,6 +130,27 @@ body {
 .intro-cards{
   @apply  border-2  border-yellow-200 text-justify  text-[13px] text-primaryTextColorDarken leading-6 p-3 min-h-full
 }
+.intro-card-divider:before {
+  @apply bg-yellow-500;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    position: absolute;
+  }
+  
+.intro-card-divider:after {
+  @apply bg-yellow-500;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}
 .highlighted-offer{
   @apply text-primaryTextColorDarken dark:text-primaryTextColor
 }
@@ -145,11 +166,11 @@ body {
    /* height: 25rem; */
    transform: scaleY(1.1) !important;
   }
-  #testimonial .swiper-slide-next img{@apply h-14;width: 4.5rem;}
+  #testimonial .swiper-slide-next img{@apply scale-x-[1.1]}
 }
 
 .footer-link{
-  @apply text-gray-600 hover:text-primaryTextColor md:hover:font-semibold dark:text-gray-400
+  @apply text-gray-700 text-sm dark:text-gray-400
 }
 
 .filter-input{
