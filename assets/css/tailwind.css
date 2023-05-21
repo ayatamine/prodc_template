@@ -1150,6 +1150,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 4.8rem;
 }
 
+.min-h-\[95px\]{
+  min-height: 95px;
+}
+
 .w-full{
   width: 100%;
 }
