@@ -264,3 +264,9 @@ input[type="radio"]:checked + label{
 .swiper-button-prev::after {
   content: "";
 }
+#ethiks .bg-white p{
+  @apply mb-4 text-[1.125rem] text-black leading-9 text-justify
+}
+#ethiks .what_gets_from_ethiks{
+  @apply leading-10  text-black flex justify-start gap-2 items-center 
+}
