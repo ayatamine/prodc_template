@@ -922,6 +922,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.25rem;
 }
 
+.mt-12{
+  margin-top: 3rem;
+}
+
 .-mb-px{
   margin-bottom: -1px;
 }
@@ -936,10 +940,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-10{
   margin-bottom: 2.5rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
 }
 
 .mt-32{
@@ -1128,6 +1128,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[2\.4rem\]{
   height: 2.4rem;
+}
+
+.h-fit{
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .max-h-\[540px\]{
@@ -1342,20 +1348,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-width: 14rem;
 }
 
+.min-w-\[0\.75rem\]{
+  min-width: 0.75rem;
+}
+
 .min-w-\[4rem\]{
   min-width: 4rem;
 }
 
 .min-w-\[3rem\]{
   min-width: 3rem;
-}
-
-.min-w-\[4\%\]{
-  min-width: 4%;
-}
-
-.min-w-\[0\.75rem\]{
-  min-width: 0.75rem;
 }
 
 .max-w-full{
@@ -1408,10 +1410,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-auto{
   flex: 1 1 auto;
-}
-
-.flex-none{
-  flex: none;
 }
 
 .flex-shrink-0{
@@ -1660,12 +1658,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
 }
 
-.gap-12{
-  gap: 3rem;
-}
-
 .gap-20{
   gap: 5rem;
+}
+
+.gap-12{
+  gap: 3rem;
 }
 
 .gap-x-2{
@@ -1731,12 +1729,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-
-.space-x-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-auto{
@@ -1926,14 +1918,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: transparent;
 }
 
-.border-yellow-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(234 179 8 / var(--tw-border-opacity));
-}
-
 .border-textBgColor{
   --tw-border-opacity: 1;
   border-color: rgb(255 230 154 / var(--tw-border-opacity));
+}
+
+.border-yellow-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
 }
 
 .border-gray-500{
@@ -2190,6 +2182,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.8;
 }
 
+.bg-opacity-60{
+  --tw-bg-opacity: 0.6;
+}
+
 .bg-cover{
   background-size: cover;
 }
@@ -2403,11 +2399,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.125rem;
 }
 
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .pt-2{
   padding-top: 0.5rem;
 }
@@ -2524,6 +2515,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
+.text-left{
+  text-align: left;
+}
+
 .text-center{
   text-align: center;
 }
@@ -2596,6 +2591,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 10px;
 }
 
+.text-\[13\.5px\]{
+  font-size: 13.5px;
+}
+
+.text-\[123\.5px\]{
+  font-size: 123.5px;
+}
+
+.\!text-\[13\.5px\]{
+  font-size: 13.5px !important;
+}
+
+.\!text-\[16\.5px\]{
+  font-size: 16.5px !important;
+}
+
+.\!text-\[18\.5px\]{
+  font-size: 18.5px !important;
+}
+
+.\!text-\[12px\]{
+  font-size: 12px !important;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -2610,6 +2629,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-normal{
   font-weight: 400;
+}
+
+.font-extrabold{
+  font-weight: 800;
+}
+
+.\!font-extrabold{
+  font-weight: 800 !important;
 }
 
 .uppercase{
@@ -2674,6 +2701,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .leading-7{
   line-height: 1.75rem;
+}
+
+.\!leading-7{
+  line-height: 1.75rem !important;
 }
 
 .tracking-wide{
@@ -2886,12 +2917,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-underline-offset: 4px;
 }
 
-.underline-offset-8{
-  text-underline-offset: 8px;
-}
-
 .underline-offset-2{
   text-underline-offset: 2px;
+}
+
+.underline-offset-8{
+  text-underline-offset: 8px;
 }
 
 .accent-primaryTextColor{
@@ -2954,13 +2985,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-sectionTitleColor{
-  --tw-shadow-color: #BF8F00;
+.shadow-black{
+  --tw-shadow-color: #212b36;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.shadow-black{
-  --tw-shadow-color: #212b36;
+.shadow-sectionTitleColor{
+  --tw-shadow-color: #BF8F00;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
