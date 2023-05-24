@@ -220,7 +220,7 @@
     </div>
     <!-- ====== Navbar Section End -->
     <!--main content  -->
-    <div  x-data="{show_pdf:false,current_pdf:'assets/pdf/ethiks.pdf'}" class=" bg-body mt-16 py-8  px-6 md:px-12" id="ethiks">
+    <div class=" bg-body mt-16 py-8  px-6 md:px-12" id="ethiks">
       <a href="index.html" class=" text-md text-primaryTextColor underline underline-offset-4 ">الرئيسية</a>
       <h2 class="text-gray-800  text-lg md:text-2xl my-4">ميثاق الاخلاق المهنية</h2>
       <div class="bg-white py-12 px-8 ">
@@ -315,46 +315,79 @@
         <h2 class="text-primaryTextColor text-center  text-lg md:text-2xl mt-8 my-4">نماذج من ميثاق الأخلاق المهنية   </h2>
         <h4 class="text-md md:text-lg text-center text-yellow-600 mb-8">إلتزام، تعهد، ضمان، تطوير مستمر ومتابعة        </h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-20 md:px-16">
-          <div>
-            <h4 class="text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للطبيب  </h4>
-            <a  @click.prevent="setPdf('assets/pdf/doctor_ethiks.pdf');show_pdf=true" href=""><img src="assets/images/ethiks_docs/doctor_ethiks.jpg" alt="الاخلاق المهنية للطبيب" 
+          <a href="assets/pdf/doctor_ethiks.pdf" target="_blank">
+            <span class="block text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8" href="assets/pdf/doctor_ethiks.pdf" target="_blank">ميثاق الأخلاق المهنية للطبيب  </span>
+            <img src="assets/images/ethiks_docs/doctor_ethiks.jpg" alt="الاخلاق المهنية للطبيب" 
               class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
-            </a>
+            
+          </a>
+          <a href="assets/pdf/lawyer_ethiks.pdf" target="_blank">
+            <span class="block text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للمحامي  </span>
+           <img src="assets/images/ethiks_docs/laywer_ethiks.jpg" alt="الاخلاق المهنية للمحامي" 
+              class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
+          </a>
+          <a href="assets/pdf/tourist_ethiks.pdf" target="_blank">
+            <span class="block text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للوكالات السياحية  </span>
+            <img src="assets/images/ethiks_docs/tourist_agent_ethiks.jpg" alt="الاخلاق المهنية للوكالات السياحية" 
+              class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
+         
+          </a>
+          <a href="assets/pdf/all_ethiks.pdf" target="_blank">
+            <span class="block text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للتاجر  </span>
+            <img src="assets/images/ethiks_docs/merchant_ethis.jpg" alt="الاخلاق المهنية للتاجر" 
+              class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
+          </a>
+        </div>
+        <h2 class="text-primaryTextColor text-center  text-lg md:text-2xl mt-12 my-4 mb-8">تصفح باقي النماذج</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-12 sm:px-4 md:px-8">
+          <div class="ehik_card p-3 bg-white rounded border">
+            <span class="block text-base md:text-md text-center text-yellow-600 font-semibold  mb-8" href="assets/pdf/doctor_ethiks.pdf" target="_blank">السائق القوي الأمين</span>
+            <div class="flex justify-center gap-2 items-center mt-3 mb-2">
+              <a href="assets/pdf/all_ethiks.pdf" target="_blank" class="primary-btn sm-button flex items-center gap-1">
+                <svg class="h-5 w-5"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                <span>قراءة</span>
+              </a>
+              <a href="assets/pdf/all_ethiks.pdf" download class="bg-yellow-500 hover:bg-yellow-600 sm-button  flex items-center gap-1">
+                <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>
+              </a>
+            </div>
           </div>
-          <div>
-            <h4 class="text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للمحامي  </h4>
-            <a  @click.prevent="setPdf('assets/pdf/all_ethiks.pdf');show_pdf=true" href=""><img src="assets/images/ethiks_docs/laywer_ethiks.jpg" alt="الاخلاق المهنية للمحامي" 
-              class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
-            </a>
+          <div class="ehik_card p-3 bg-white rounded border">
+            <span class="block text-base md:text-md text-center text-yellow-600 font-semibold  mb-8" href="assets/pdf/doctor_ethiks.pdf" target="_blank">الطباخ القوي الأمين</span>
+            <div class="flex justify-center gap-2 items-center mt-3 mb-2">
+              <a href="assets/pdf/all_ethiks.pdf" target="_blank" class="primary-btn sm-button flex items-center gap-1">
+                <svg class="h-5 w-5"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                <span>قراءة</span>
+              </a>
+              <a href="assets/pdf/all_ethiks.pdf" download class="bg-yellow-500 hover:bg-yellow-600 sm-button  flex items-center gap-1">
+                <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>
+              </a>
+            </div>
           </div>
-          <div>
-            <h4 class="text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للوكالات السياحية  </h4>
-            <a  @click.prevent="setPdf('assets/pdf/tourist_ethiks.pdf');show_pdf=true" href=""><img src="assets/images/ethiks_docs/tourist_agent_ethiks.jpg" alt="الاخلاق المهنية للوكالات السياحية" 
-              class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
-            </a>
-          </div>
-          <div>
-            <h4 class="text-md md:text-lg text-center text-yellow-600 font-semibold underline underline-offset-2 mb-8">ميثاق الأخلاق المهنية للطبيب  </h4>
-            <a  @click.prevent="setPdf('assets/pdf/all_ethiks.pdf');show_pdf=true" href=""><img src="assets/images/ethiks_docs/merchant_ethis.jpg" alt="الاخلاق المهنية للتاجر" 
-              class="mx-auto max-h-[540px] border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black">
-            </a>
+          <div class="ehik_card p-3 bg-white rounded border">
+            <span class="block text-base md:text-md text-center text-yellow-600 font-semibold  mb-8" href="assets/pdf/doctor_ethiks.pdf" target="_blank">الميكانيكي القوي الأمين</span>
+            <div class="flex justify-center gap-2 items-center mt-3 mb-2">
+              <a href="assets/pdf/all_ethiks.pdf" target="_blank" class="primary-btn sm-button flex items-center gap-1">
+                <svg class="h-5 w-5"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />  <polyline points="14 2 14 8 20 8" />  <line x1="16" y1="13" x2="8" y2="13" />  <line x1="16" y1="17" x2="8" y2="17" />  <polyline points="10 9 9 9 8 9" /></svg>
+                <span>قراءة</span>
+              </a>
+              <a href="assets/pdf/all_ethiks.pdf" download class="bg-yellow-500 hover:bg-yellow-600 sm-button  flex items-center gap-1">
+                <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>تحميل</span>
+              </a>
+            </div>
           </div>
         </div>
-        <!-- <h2 class="text-primaryTextColor text-center  text-lg md:text-2xl mt-12 my-4">تصفح باقي النماذج</h2> -->
-
       </div>
       
-              <!-- pdf viewer -->
-      <div x-show="show_pdf" @click.outside="show_pdf = false" class="fixed text-gray-500 overflow-auto z-50 bg-black bg-opacity-50 left-0 right-0 top-0 bottom-0 h-screen flex items-center" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-        <div class="w-full md:w-9/12 h-full mx-auto z-20 inset-0 mt-8">
-          <div class="flex flex-col p-5 h-full rounded-lg shadow bg-white">
-
-            <object id="pdf-viewer" type="application/pdf" class="h-full w-full">
-              <div>No online PDF viewer installed</div>
-            </object>
-          </div>
-        </div>   
-      </div>
     </div>
 
 
@@ -469,42 +502,5 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
 
-    <script>
-      function includeHTML() {
-        var z, i, elmnt, file, xhttp;
-        /* Loop through a collection of all HTML elements: */
-        z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i++) {
-          elmnt = z[i];
-          /*search for elements with a certain atrribute:*/
-          file = elmnt.getAttribute("w3-include-html");
-          if (file) {
-            /* Make an HTTP request using the attribute value as the file name: */
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-              if (this.readyState == 4) {
-                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                /* Remove the attribute, and call this function once more: */
-                elmnt.removeAttribute("w3-include-html");
-                includeHTML();
-              }
-            }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            /* Exit the function: */
-            return;
-          }
-        }
-      }
-      function setPdf($url){
-         var obj = document.getElementById("pdf-viewer");
-          obj.setAttribute('data', $url);
-          var cl = obj.cloneNode(true);
-          var parent = obj.parentNode;
-          parent.removeChild(obj);
-          parent.appendChild(cl);
-      }
-      </script>
   </body>
 </html>
