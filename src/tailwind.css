@@ -270,3 +270,18 @@ input[type="radio"]:checked + label{
 #ethiks .what_gets_from_ethiks{
   @apply leading-10  text-black flex justify-start gap-2 items-center 
 }
+.blog-content p{
+  @apply leading-7 text-sm
+}
+.blog-content ul{
+  @apply list-disc my-3 px-4
+}
+.blog-title{
+  @apply text-lg md:text-2xl font-bold my-3  text-gray-700
+}
+.related-articles-title{
+  @apply text-[10px] leading-3 font-extrabold
+}
+.article-meta{
+  @apply text-[9px] mt-2
+}

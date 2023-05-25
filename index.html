@@ -219,16 +219,19 @@
                        <span> مشروع جديد  </span>
                     </a>
                   </li>
+                  <!-- vision and about -->
                   <li class="group relative my-2">
                     
                     <div class="dropdown " x-data="{dropOpen:false}">
-                      <a    href=""  class="flex items-center justify-between"        @click.prevent="dropOpen = !dropOpen"   >
-                        <div class="sidenav-link  flex items-center justify-between">
-                          <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
-                           <span> المحترف القوي الأمين </span>
+                      <a    href=""  class=" sidenav-link flex items-center justify-between"        @click.prevent="dropOpen = !dropOpen"   >
+                        <div class=" flex items-center justify-between gap-3">
+                          <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                          </svg>
+                          <span> اعرف أكثر</span>
                         </div>
                         <svg x-show="!dropOpen" class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
-                         <svg x-show="dropOpen" class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M18 15l-6-6l-6 6h12" transform="rotate(180 12 12)" /></svg>
+                        <svg  x-show="dropOpen" class="h-5 w-5 text-gray-700"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="6 9 12 15 18 9" /></svg>                      </a>
                       </a>
                       <div class="  dropdown-content min-w-[14rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
                         <ul class=" border-t p-4">
@@ -243,6 +246,30 @@
                             </a>
                           </li>
                           <li class="group relative my-2">
+                            <a   href="vision.html"   class="sidenav-link"           >
+                              أهذافنا
+                            </a>
+                          </li>
+                          
+                          
+                        </ul>
+                      </div>
+                    </div> 
+                  </li>
+                  <!-- links of prodc -->
+                  <li class="group relative my-2">
+                    
+                    <div class="dropdown " x-data="{dropOpen:false}">
+                      <a    href=""  class="sidenav-link flex items-center justify-between"        @click.prevent="dropOpen = !dropOpen"   >
+                        <div class="  flex items-center justify-between gap-3">
+                          <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
+                           <span> المحترف القوي الأمين </span>
+                        </div>
+                        <svg x-show="!dropOpen" class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+                        <svg  x-show="dropOpen" class="h-5 w-5 text-gray-700"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="6 9 12 15 18 9" /></svg>                      </a>
+                      <div class="  dropdown-content min-w-[14rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
+                        <ul class=" border-t p-4">
+                          <li class="group relative my-2">
                             <a   href="ethiks.html"   class="sidenav-link"           >
                               ميثاق المحترف القوي الأمين
                             </a>
@@ -253,8 +280,18 @@
                             </a>
                           </li>
                           <li class="group relative my-2">
+                            <a   href="index.html#prodc-network"   class="sidenav-link"           >
+                              شبكة القوي الأمين
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
                             <a   href="offers.html"   class="sidenav-link"           >
                               باقات المحترف
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="blog.html"   class="sidenav-link"           >
+                              مدونة المحترف القوي الأمين
                             </a>
                           </li>
                           <li class="group relative my-2">
