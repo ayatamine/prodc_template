@@ -31,6 +31,18 @@ body {
 #navbarCollapse li .topnav-link{
  @apply  mx-1 flex px-2 py-2 text-[13.5px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
 }
+.blog li .topnav-link{
+ @apply  mx-2 flex px-4 py-2 !text-[15px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
+}
+.blog .submenu.top-dropdown{
+  right:4px;left:auto
+}
+.blog .submenu .topnav-link {
+  @apply py-3 px-4 !mx-0
+}
+.ud-header.sticky .search-box{
+  @apply !top-[3.4rem]
+}
 .sidenav-link{
   @apply  flex items-center gap-x-2 px-5 py-2 text-sm  hover:bg-body   transition-all duration-200 ease-in-out
 }
