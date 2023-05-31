@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Prodc
+      المحترف القوي الامين
     </title>
+    <meta name="og:title" content="المحترف القوي الامين" />
+    <meta name="description" content="أنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين الأكفَّاء والأمناء من خلال المحترف القوي الأمين" />
+    <meta name="og:description" content="أنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين الأكفَّاء والأمناء من خلال المحترف القوي الأمين" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/real_logo.jpeg"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/real_logo.jpeg"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/real_logo.jpeg"/>
     <link
       rel="shortcut icon"
       href="assets/images/logo/logonew.jpg"
@@ -34,12 +40,12 @@
     >
       <div class="container">
         <div class="relative -mx-4 flex items-center justify-between">
-          <div class="w-60 max-w-full px-4">
+          <div class="w-64 max-w-full px-4">
             <a href="index.html" class="navbar-logo block  py-2 md-py-3" >
               <img
               src="assets/images/logo/WhatsApp Image 2023-05-03 at 5.54.05 PM.jpeg"
               alt="logo"
-              class="header-logo w-full w-11/12 h-10 object-contain"
+              class="header-logo h-full w-full object-contain"
             />
             </a>
           </div>
@@ -72,13 +78,39 @@
                      v-0.0.8
                     </a>
                   </li>
-                  <li class="group relative">
+                  <li class="submenu-item group relative">
                     <a
-                      href="#home"
-                      class="ud-menu-scroll topnav-link active"
+                      href="index.html"
+                      class="relative topnav-link"
                     >
-                     الرئيسية
+                      الرئيسية
                     </a>
+                    <div
+                      class="submenu top-dropdown px-0 py-1 shadow-black drop-shadow-md"
+                    >
+                      <a
+                        href="about.html"
+                        class="topnav-link m-0 w-full" style="padding:0.25rem 1rem;margin:0"
+                        
+                      >
+                        من نحن
+                      </a>
+                      <a
+                        href="values.html"
+                        class="topnav-link m-0 w-full" style="padding:0.25rem 1rem;margin:0"
+                        
+                      >
+                      قيمنا
+                      </a>
+                      <a
+                        href="vision.html"
+                        class="topnav-link m-0 w-full" style="padding:0.25rem 1rem;margin:0"
+                        
+                      >
+                      أهدافنا
+                      </a>
+                     
+                    </div>
                   </li>
                   <li class="group relative">
                     <a
@@ -109,7 +141,15 @@
                       href="categories.html"
                       class="ud-menu-scroll topnav-link "
                     >
-                      التصنيفات
+                      الفئات
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="blog.html"
+                      class="ud-menu-scroll topnav-link "
+                    >
+                      المدونة
                     </a>
                   </li>
                   <!-- <li class="submenu-item group relative">
@@ -147,7 +187,7 @@
             <div x-data="{ open: false,activeItem:false }" :class="{ 'overflow-hidden': open }" class="flex justify-end items-center gap-2">
              
               <!-- Sidebar -->
-              <div class="fixed inset-y-0 left-0 z-20 bg-white w-64  py-4 transform transition duration-300 ease-in-out h-screen "
+              <div class="fixed overflow-y-scroll inset-y-0 left-0 z-20 bg-white w-[18.5rem]  py-4 transform transition duration-300 ease-in-out h-screen "
                    x-show="open"
                    x-transition:enter="transition transform ease-out duration-300"
                    x-transition:enter-start="-translate-x-full opacity-0"
@@ -159,11 +199,11 @@
                    :class="{ '-translate-x-full': !open }">
                    <div x-show="open" class="absolute border-l -right-16 top-8 bg-white w-16 h-16 z-40 flex items-center justify-center ">
                     <button class="border rounded p-1 bg-body" @click.prevent="open =false">
-                      <svg class="h-9 w-9 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="4" y1="12" x2="14" y2="12" />  <line x1="4" y1="12" x2="8" y2="16" />  <line x1="4" y1="12" x2="8" y2="8" />  <line x1="20" y1="4" x2="20" y2="20" /></svg>
+                      <svg class="h-9 w-9 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />  <line x1="9" y1="9" x2="15" y2="15" />  <line x1="15" y1="9" x2="9" y2="15" /></svg>
                     </button>
                   </div>
                 <!-- Sidebar content here -->
-                <!-- <div class="dropdown px-4" x-data="{dropOpen:false}">
+                <div class="dropdown px-4 md:hidden" x-data="{dropOpen:false}">
                   <button class="w-full flex justify-between items-center gap-2 bg-white  text-gray-700 font-semibold p-1 text-sm border-1" @click="dropOpen = !dropOpen">
                     <div class="flex justify-start gap-2 items-center ">
                       <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33a457" d="M96.502 156.137V36.589H8.504v119.548h87.998z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M118.932 93.49l11.347 3.584-11.351 3.738.222 12.086-7.142-9.802-11.112 3.658 6.836-9.58-6.839-9.318 11.007 3.48 6.698-9.125.334 11.279z"/><path d="M127.129 115.793c-4.4 3.689-10.205 5.902-16.393 5.902-13.997 0-25.343-11.361-25.343-25.377 0-14.014 11.347-25.375 25.343-25.375 6.211 0 12.059 2.218 16.467 5.931-5.578-6.741-13.846-11.056-23.271-11.056-16.795 0-30.412 13.633-30.412 30.451 0 16.816 13.617 30.449 30.412 30.449 9.371.001 17.619-4.251 23.197-10.925z" fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229"/><path fill="none" stroke="#000" stroke-width=".497" stroke-miterlimit="2.613" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/></svg>
@@ -181,14 +221,14 @@
                       Francais
                     </a>
                   </div>
-                </div>  -->
+                </div> 
                 <ul class="mt-4 border-t py-4">
                   <li class="group relative my-2">
                     <a    href="projects.html"   class="sidenav-link"           >
                     <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
                     </svg>
-                    <span> تصفح الطلبات  </span>
+                    <span> تصفح الخدمات المطلوبة  </span>
                     </a>
                   </li>
                   <li class="group relative my-2"> 
@@ -210,13 +250,13 @@
                       <svg class="h-5 w-5 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
                       </svg>
-                       <span> التصنيفات  </span>
+                       <span> الفئات  </span>
                     </a>
                   </li>
                   <li class="group relative my-2">
                     <a    href="add_project.html"   class="sidenav-link"           >
                       <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="4" width="6" height="5" rx="2" />  <rect x="4" y="13" width="6" height="7" rx="2" />  <rect x="14" y="4" width="6" height="7" rx="2" />  <rect x="14" y="15" width="6" height="5" rx="2" /></svg>
-                       <span> مشروع جديد  </span>
+                       <span> طلب خدمة جديدة </span>
                     </a>
                   </li>
                   <!-- vision and about -->
@@ -236,18 +276,21 @@
                       <div class="  dropdown-content min-w-[14rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
                         <ul class=" border-t p-4">
                           <li class="group relative my-2">
-                            <a   href="about.html"   class="sidenav-link"           >
-                              من نحن
+                            <a   href="about.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-4 w-4 text-gray-700"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="2" y1="12" x2="22" y2="12" />  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                              <span>من نحن</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="values.html"   class="sidenav-link"           >
-                              قيمنا
+                            <a   href="values.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />  <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" />  <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" />  <line x1="11" y1="6" x2="20" y2="6" />  <line x1="11" y1="12" x2="20" y2="12" />  <line x1="11" y1="18" x2="20" y2="18" /></svg>
+                              <span>قيمنا</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="vision.html"   class="sidenav-link"           >
-                              أهذافنا
+                            <a   href="vision.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-4 w-4 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="3" y="12" width="6" height="8" rx="1" />  <rect x="9" y="8" width="6" height="12" rx="1" />  <rect x="15" y="4" width="6" height="16" rx="1" />  <line x1="4" y1="20" x2="18" y2="20" /></svg>                            
+                              <span>أهدافنا</span>
                             </a>
                           </li>
                           
@@ -270,43 +313,60 @@
                       <div class="  dropdown-content min-w-[14rem] text-right ltr:text-left z-40 flex flex-col" x-show="dropOpen">
                         <ul class=" border-t p-4">
                           <li class="group relative my-2">
-                            <a   href="ethiks.html"   class="sidenav-link"           >
-                              ميثاق المحترف القوي الأمين
+                            <a   href="ethiks.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M14 3v4a1 1 0 0 0 1 1h4" />  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />  <line x1="9" y1="9" x2="10" y2="9" />  <line x1="9" y1="13" x2="15" y2="13" />  <line x1="9" y1="17" x2="15" y2="17" /></svg>
+                              <span>ميثاق المحترف القوي الأمين</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="properties.html"   class="sidenav-link"           >
-                              صفات المحترف القوي الأمين
+                            <a   href="properties.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="9" x2="19" y2="9" />  <line x1="5" y1="15" x2="19" y2="15" />  <line x1="11" y1="4" x2="7" y2="20" />  <line x1="17" y1="4" x2="13" y2="20" /></svg>
+                              <span>  صفات المحترف القوي الأمين</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="index.html#prodc-network"   class="sidenav-link"           >
-                              شبكة القوي الأمين
+                            <a   href="index.html#prodc-network"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M17.905 13.057c2.208 1.756 3.436 3.308 3.012 4.035-.67 1.146-5.204-.204-10.129-3.016-4.924-2.812-8.374-6.022-7.705-7.168.418-.716 2.347-.458 4.936.524" />  <circle cx="12" cy="12" r="6" /></svg>
+                              <span> شبكة المحترف القوي الأمين</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="offers.html"   class="sidenav-link"           >
-                              باقات المحترف
+                            <a   href="offers.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-4 w-4 text-gray-700 "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />  <circle cx="9" cy="9" r="2" /></svg>
+                              <span>  باقات المحترف القوي الأمين</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="blog.html"   class="sidenav-link"           >
-                              مدونة المحترف القوي الأمين
+                            <a   href="blog.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /></svg>
+                              <span> المدونة</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="faqs.html"   class="sidenav-link"           >
-                              الأسئلة الشائعة
+                            <a   href="guarantite.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M14 3v4a1 1 0 0 0 1 1h4" />  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />  <path d="M9 15l2 2l4 -4" /></svg>
+                              <span> ضمان الحقوق</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="conditions.html"   class="sidenav-link"           >
-                              شروط الاستخدام
+                            <a   href="faqs.html"   class="sidenav-link flex items-center"           >
+                              <svg  class="h-4 w-5 text-gray-700" fill="#393737" width="64px" height="64px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" stroke="#605c5c"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g> <path d="M48,0A24.0275,24.0275,0,0,0,24,24a6,6,0,0,0,12,0,12,12,0,0,1,24,0c0,5.2031-3.0586,8.3965-8.0859,13.0371C47.2617,41.32,42,46.1719,42,54a6,6,0,0,0,12,0c0-2.4434,2.2969-4.6875,6.0469-8.1445C65.0859,41.2031,72,34.834,72,24A24.0275,24.0275,0,0,0,48,0Z"></path> <path d="M48,72A12,12,0,1,0,60,84,12.0119,12.0119,0,0,0,48,72Z"></path> </g> </g></svg>
+                              <span>الأسئلة الشائعة</span>
                             </a>
                           </li>
                           <li class="group relative my-2">
-                            <a   href="privacy.html"   class="sidenav-link"           >
-                            بيان الخصوصية
+                            <a   href="conditions.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />  <path d="M3.5 11.5l1.5 1.5l2.5 -2.5" />  <path d="M3.5 17.5l1.5 1.5l2.5 -2.5" />  <line x1="11" y1="6" x2="20" y2="6" />  <line x1="11" y1="12" x2="20" y2="12" />  <line x1="11" y1="18" x2="20" y2="18" /></svg>
+                              <span>  شروط الاستخدام</span>
+                            </a>
+                          </li>
+                          <li class="group relative my-2">
+                            <a   href="privacy.html"   class="sidenav-link flex items-center"           >
+                              <svg class="h-5 w-5 text-gray-700 "  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                              </svg>
+                              
+                              <span>بيان الخصوصية</span>
                             </a>
                           </li>
                           
@@ -324,7 +384,7 @@
                     <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
                         <div slot="icon" class="relative">
                             <div class="absolute text-xs rounded-full -mt-1 -mr-4 ltr:-ml-4 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
-                            <svg class="h-6 w-6 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
+                            <svg class="h-5 w-5 md:h-6 md:w-6 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
                             
                         </div>
                     </div>
@@ -394,7 +454,7 @@
                     <div class="flex flex-row-reverse mr-2 lt:ml-2 w-full">
                         <div slot="icon" class="relative">
                             <div class="absolute text-xs rounded-full -mt-1 -mr-3 ltr:-mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">3</div>
-                            <svg class="h-7 w-7 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                            <svg class="h-5 w-5 md:h-7 md:w-7 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
                         </div>
                     </div>
                 </div>
@@ -459,10 +519,10 @@
               </div>
               <!-- user component -->
               <div class="relative rounded-md" :class="{showUserDropDown:'bg-body'}" x-data="{showUserDropDown:false,toggle(){hideOthers(),this.showUserDropDown = !this.showUserDropDown}}">
-                <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2 rounded" :class="showUserDropDown && 'bg-body'" style="min-width:48px">
+                <div  @click.prevent="toggle()" class="topNotMessCallable flex flex-row cursor-pointer truncate p-2 rounded" :class="showUserDropDown && 'bg-body'" >
                     <div class="flex flex-row-reverse w-full">
                         <div slot="icon" class="relative">
-                            <img src="assets/images/team/profil_picture_2.jpeg" alt="user-logo" class="h-8 w-8 rounded-full border">
+                            <img src="assets/images/team/profil_picture_2.jpeg" alt="user-logo" class="h-6 w-6 md:h-8 md:w-8 rounded-full border">
                         </div>
                     </div>
                 </div>
@@ -501,7 +561,7 @@
                   </div>
                 </div>
               </div>
-              <div class="dropdown" x-data="{dropOpen:false}" >
+              <div class="dropdown hidden md:block" x-data="{dropOpen:false}" >
                 <button class="w-full flex justify-between items-center gap-2 bg-white  text-gray-700  p-1 text-[13px] border-1" @click="dropOpen = !dropOpen">
                   <div class="flex justify-start gap-2 items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 192.756 192.756"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M0 0h192.756v192.756H0V0z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#33a457" d="M96.502 156.137V36.589H8.504v119.548h87.998z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229" d="M118.932 93.49l11.347 3.584-11.351 3.738.222 12.086-7.142-9.802-11.112 3.658 6.836-9.58-6.839-9.318 11.007 3.48 6.698-9.125.334 11.279z"/><path d="M127.129 115.793c-4.4 3.689-10.205 5.902-16.393 5.902-13.997 0-25.343-11.361-25.343-25.377 0-14.014 11.347-25.375 25.343-25.375 6.211 0 12.059 2.218 16.467 5.931-5.578-6.741-13.846-11.056-23.271-11.056-16.795 0-30.412 13.633-30.412 30.451 0 16.816 13.617 30.449 30.412 30.449 9.371.001 17.619-4.251 23.197-10.925z" fill-rule="evenodd" clip-rule="evenodd" fill="#cc2229"/><path fill="none" stroke="#000" stroke-width=".497" stroke-miterlimit="2.613" d="M184.252 156.166V36.62H8.537v119.546h175.715z"/></svg>
@@ -520,7 +580,7 @@
                 </div>
               </div> 
 
-              <!-- Toggle button -->
+              <!--  button -->
               <button @click="open = !open" class=" p-3 pt-2">
                 <svg x-show="!open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 <svg x-show="open" class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -569,7 +629,7 @@
         </div>
         <div class="mt-32">
           <h2 class="text-center text-xl font-semibold text-white">
-            إنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين الأكفاء والأمناء 
+            أنجز أعمالك بسهولة وبجودة عالية على يد نخبة من أفضل المحترفين  الأكفَّاء والأمناء 
           </h2>
           <form action="" class="my-8 text-white" x-data="{activeTriangle:'professionals',activePlaceholder:'اسم صنف المهنة أو الشركة'}">
             <div class="flex justify-center gap-5 text-sm" >
@@ -603,7 +663,7 @@
               </div>
               <!-- products -->
               <div>
-                <label @click="activeTriangle = 'products';activePlaceholder='اكتب اسم المنتوج مثلا: كمبيوتر'" for="products" class=" cursor-pointer">السلع</label>
+                <label @click="activeTriangle = 'products';activePlaceholder='اكتب اسم المنتوج مثلا: كمبيوتر'" for="products" class=" cursor-pointer">المنتوجات</label>
                 <input type="text" value="products" class="hidden" id="products">
                 <div x-show="activeTriangle == 'products'"
                 x-transition:enter="transition ease-out duration-300"
@@ -619,7 +679,7 @@
             <!-- form -->
             <div class="relative w-full md:w-1/2 lg:1/3 mx-auto">
               <input type="text" name="search" :placeholder="activePlaceholder" class="w-full border border-t-0  border-gray-400  focus:outline-none focus:border-primary bg-white text-gray-500 text-sm py-2 px-3 rounded-sm ">
-              <button type="submit" class=" primary-btn text-[14px] py-1 px-2 absolute top-1 left-2 ">ابحث الان</button>
+              <button type="submit" class=" primary-btn text-[14px] py-1 px-3 absolute top-1 left-2 ">ابحث الان</button>
               <a href="register.html" class="text-white mt-2 block text-center text-[14px] underline mx-auto underline-offset-2">سجل كمحترف</a>
 
             </div>
@@ -635,38 +695,42 @@
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 items-center py-8 px-14">
         <div class="intro-cards" >
+          <svg class="h-10 w-10 mx-auto my-3" width="64px" height="64px" viewBox="0 -8.5 1041 1041" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M55.634646 16.125984h630.525984C707.930709 16.125984 725.669291 33.864567 725.669291 55.634646v912.730708c0 21.770079-17.738583 39.508661-39.508661 39.508662H55.634646c-21.770079 0-39.508661-17.738583-39.508662-39.508662V55.634646C16.125984 33.864567 33.864567 16.125984 55.634646 16.125984z" fill="#FFFFFF"></path><path d="M686.16063 1024H55.634646c-30.63937 0-55.634646-24.995276-55.634646-55.634646V55.634646C0 24.995276 24.995276 0 55.634646 0h630.525984C716.8 0 741.795276 24.995276 741.795276 55.634646v912.730708c0 30.63937-24.995276 55.634646-55.634646 55.634646zM55.634646 32.251969C42.733858 32.251969 32.251969 42.733858 32.251969 55.634646v912.730708c0 12.900787 10.48189 23.382677 23.382677 23.382677h630.525984c12.900787 0 23.382677-10.48189 23.382677-23.382677V55.634646C709.543307 42.733858 699.061417 32.251969 686.16063 32.251969H55.634646z" fill=""></path><path d="M275.754331 866.771654c-4.031496 0-8.062992-1.612598-11.288189-4.837796L171.741732 770.015748c-6.450394-6.450394-6.450394-16.125984 0-22.576378 6.450394-6.450394 16.125984-6.450394 22.576378 0l92.72441 92.72441c6.450394 6.450394 6.450394 16.125984 0 22.576377-3.225197 2.418898-7.256693 4.031496-11.288189 4.031497z" fill=""></path><path d="M181.417323 869.190551c-4.031496 0-8.062992-1.612598-11.288189-4.837795-6.450394-6.450394-6.450394-16.125984 0-22.576378l96.755905-96.755906c6.450394-6.450394 16.125984-6.450394 22.576378 0 6.450394 6.450394 6.450394 16.125984 0 22.576378l-96.755905 96.755906c-3.225197 3.225197-7.256693 4.837795-11.288189 4.837795z" fill=""></path><path d="M420.08189 721.637795l541.833071-541.833071c8.869291-7.256693 22.576378-6.450394 29.83307 2.418898l26.607875 26.607874c8.869291 7.256693 9.675591 20.96378 2.418897 29.833071L478.941732 780.497638l-83.855118 24.188976 24.995276-83.048819z" fill="#7BAEEF"></path><path d="M395.086614 820.812598c-4.031496 0-8.062992-1.612598-11.288189-4.837795-4.031496-4.031496-5.644094-10.48189-4.031496-16.125984l24.995276-83.048819c0.806299-2.418898 2.418898-4.837795 4.031496-6.450394l541.833071-541.833071 0.806299-0.806299c15.319685-12.900787 38.702362-10.48189 51.603149 4.031496l25.801575 25.801575c14.513386 12.900787 16.932283 36.283465 4.031496 51.60315 0 0.806299-0.806299 0.806299-0.806299 0.806299L490.229921 791.785827c-1.612598 1.612598-4.031496 3.225197-7.256693 4.031496l-83.855118 24.188976c-0.806299 0.806299-2.418898 0.806299-4.031496 0.806299z m39.508662-91.111811L419.275591 781.303937l51.603149-15.319685 538.607874-538.607874c1.612598-2.418898 0.806299-4.837795-0.806299-7.256693l-0.806299-0.806299-26.607874-26.607874-0.806299-0.806299c-1.612598-1.612598-4.837795-2.418898-7.256693-0.8063L434.595276 729.700787z" fill=""></path><path d="M838.551181 528.932283c-4.031496 0-8.062992-1.612598-11.288189-4.837795-6.450394-6.450394-6.450394-16.125984 0-22.576378l145.133858-145.133858L878.866142 262.853543c-6.450394-6.450394-6.450394-16.125984 0-22.576378 6.450394-6.450394 16.125984-6.450394 22.576378 0l105.625197 105.625197c3.225197 3.225197 4.837795 7.256693 4.837795 11.288189 0 4.031496-1.612598 8.062992-4.837795 11.288189l-156.422048 156.422047c-3.225197 3.225197-8.062992 4.031496-12.094488 4.031496zM588.598425 191.092913H159.647244c-8.869291 0-16.125984-7.256693-16.125984-16.125984s7.256693-16.125984 16.125984-16.125984H588.598425c8.869291 0 16.125984 7.256693 16.125984 16.125984s-7.256693 16.125984-16.125984 16.125984zM588.598425 283.817323H159.647244c-8.869291 0-16.125984-7.256693-16.125984-16.125984s7.256693-16.125984 16.125984-16.125985H588.598425c8.869291 0 16.125984 7.256693 16.125984 16.125985s-7.256693 16.125984-16.125984 16.125984zM588.598425 380.573228H159.647244c-8.869291 0-16.125984-7.256693-16.125984-16.125984s7.256693-16.125984 16.125984-16.125984H588.598425c8.869291 0 16.125984 7.256693 16.125984 16.125984s-7.256693 16.125984-16.125984 16.125984z" fill=""></path><path d="M588.598425 473.297638H159.647244c-8.869291 0-16.125984-7.256693-16.125984-16.125984s7.256693-16.125984 16.125984-16.125985H588.598425c8.869291 0 16.125984 7.256693 16.125984 16.125985s-7.256693 16.125984-16.125984 16.125984z" fill=""></path><path d="M356.384252 577.310236H159.647244c-8.869291 0-16.125984-7.256693-16.125984-16.125984s7.256693-16.125984 16.125984-16.125984h195.930709c8.869291 0 16.125984 7.256693 16.125984 16.125984s-6.450394 16.125984-15.319685 16.125984z" fill=""></path></g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">ملتزم بميثاق الأخلاق المهنية</h6>
           <p >
-            لأن المحترف القوي الأمين يعمل بنزاهة وشفافية
-            ملتزمًا بضوابط ميثاق األخالق المهنية في عمله
+            لأنّ المحترف القوي الأمين يعمل بنزاهة وشفافية
+            ملتزمًا بضوابط ميثاق الأخلاق المهنية في عمله
             <span class="text-red-500">مؤديًا للقسم الأعظم</span> على الوفاء بالعهد واحترام هذا
             الميثاق والعمل به في كل ممارساته المهنية 
           </p>
         </div>
         <div class="intro-cards" >
+          <svg class="h-10 w-10 mx-auto my-3" width="92px" height="92px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:#669df6;}.cls-1,.cls-2{fill-rule:evenodd;}.cls-2{fill:#4285f4;}</style> </defs> <title>Icon_24px_IAM_Color</title> <g data-name="Product Icons"> <g> <path class="cls-1" d="M12,2,3.79,5.42v5.63c0,5.06,3.5,9.8,8.21,11,4.71-1.15,8.21-5.89,8.21-10.95V5.42Zm0,3.79a2.63,2.63,0,1,1-1.86.77A2.63,2.63,0,0,1,12,5.79Zm4.11,11.15A8.64,8.64,0,0,1,12,19.87a8.64,8.64,0,0,1-4.11-2.93V14.69c0-1.67,2.74-2.52,4.11-2.52s4.11.85,4.11,2.52v2.25Z"></path> <path class="cls-2" d="M12,2V5.79a2.63,2.63,0,1,1,0,5.26v1.12c1.37,0,4.11.85,4.11,2.52v2.25A8.64,8.64,0,0,1,12,19.87V22c4.71-1.15,8.21-5.89,8.21-10.95V5.42Z"></path> </g> </g> </g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3"> لديه هوية إلكترونية </h6>
           <p >
-            لأن المحترف القوي الأمين له هوية إلكترونية وملفات
+            لأنّ المحترف القوي الأمين له هوية إلكترونية وملفات
           شخصية على الموقع تعرض أعماله وتقييمات العملاء
           السابقين ونبذة عن أهم خبراته ومهاراته مما
-          يساعدك على إختيار المحترف األنسب لك، ثم يمكنك
+          يساعدك على إختيار المحترف الأنسب لك، ثم يمكنك
           تقديم تقييم له بعد الانتهاء من التعامل معه
           </p>
         </div>
         <div class="intro-cards" >
+          <svg class="h-10 w-10 mx-auto my-3"  viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M379.5 624.5L73 507.8c-12.4-4.7-13.1-21.9-1.1-27.6L937.7 65.8c12.1-5.8 25.1 5.8 20.7 18.4L669 918.1c-3.8 10.9-18 13.7-25.6 5l-258-294.5c-1.6-1.8-3.6-3.3-5.9-4.1z" fill="#22bf2c"></path><path d="M316 600.3l493.2-401.4c3.6-3 8.3 2.2 5 5.5l-422.4 418c-3.5 3.5-3.7 9.1-0.5 12.9l83.5 95.4-135.1 92c-10.1 6.9-23.7-0.3-23.7-12.5V600.3z" fill="#24a83e"></path></g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">الكفاءة والأمانة وخدمات ذات جودة عالية</h6>
           <p >
-            لأن المحترف القوي الأمين يتحلى بالكفاءة والأمانة
-            ويعمل باإلتقان واإلحسان مع الحرص الدائم على
-         تجنب اإلهمال والتقصير والغش والفساد، يقدم أعمالا
+            لأنّ المحترف القوي الأمين يتحلى بالكفاءة والأمانة
+            ويعمل بالإتقان والإحسان مع الحرص الدائم على
+         تجنب الإهمال والتقصير والغش والفساد، يقدم أعمالا
             ذات جودة عالية، وكل تعاملاته المهنية مبنية على
             الصدق والشفافية والثقة المتبادلة مع العميل 
           </p>
         </div>
         <div class="intro-cards">
-          <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">ملتزم بميثاق الأخلاق المهنية</h6>
+          <svg class="h-10 w-10 mx-auto my-3"  width="64px" height="64px" viewBox="0 -0.04 81.281 81.281" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="price_tag_dolar" data-name="price tag dolar" transform="translate(-1064.359 -1760.026)"> <g id="Group_75" data-name="Group 75"> <path id="Path_191" data-name="Path 191" d="M1079.909,1782.409a6.9,6.9,0,1,1,4.884-2.017,6.871,6.871,0,0,1-4.884,2.017Zm0-10.48a3.578,3.578,0,1,0,2.533,1.045,3.564,3.564,0,0,0-2.533-1.045Z" fill="#f4f4f4"></path> <path id="Path_192" data-name="Path 192" d="M1102.663,1760.026h-20.84l-17.464,17.459v20.707l43.043,43.043L1145.64,1803Zm-17.87,20.366a6.9,6.9,0,1,1,0-9.764A6.892,6.892,0,0,1,1084.793,1780.392Z" fill="#fdb53f"></path> <g id="Group_74" data-name="Group 74"> <path id="Path_193" data-name="Path 193" d="M1076.724,1776.358a1.727,1.727,0,0,0,2.439,0l1.527-1.529a1.732,1.732,0,0,0,0-2.441l-10.785-10.787a1.72,1.72,0,0,0-2.439,0l-1.528,1.527a1.73,1.73,0,0,0,0,2.441Z" fill="#163844"></path> </g> </g> <g id="Group_76" data-name="Group 76"> <path id="Path_194" data-name="Path 194" d="M1103.958,1796.417a32.429,32.429,0,0,1,3.741-2.121,11.137,11.137,0,0,1,3.511-1.051,7.291,7.291,0,0,1,3.357.391,8.993,8.993,0,0,1,3.232,2.193,10.154,10.154,0,0,1,2.287,3.326,8.843,8.843,0,0,1,.673,3.641,9.947,9.947,0,0,1-.848,3.715,14.105,14.105,0,0,1-2.305,3.55l2.381,2.381-2.028,2.032-2.386-2.385a16.336,16.336,0,0,1-3.615,2.373,8.9,8.9,0,0,1-7.442.2,13.522,13.522,0,0,1-3.864-2.482l4.354-4.354a6.543,6.543,0,0,0,3.429,1.654,4.788,4.788,0,0,0,3.432-1.1l-6.429-6.428a24.67,24.67,0,0,1-3.445,1.893,11.091,11.091,0,0,1-3.452.941,7.728,7.728,0,0,1-3.361-.383,8.349,8.349,0,0,1-3.194-2.117,9.46,9.46,0,0,1-2.114-3.058,7.735,7.735,0,0,1-.632-3.364,9.891,9.891,0,0,1,.82-3.537,14.425,14.425,0,0,1,2.234-3.519l-2.338-2.342,2.03-2.029,2.376,2.38a10.75,10.75,0,0,1,6.671-2.851,9.43,9.43,0,0,1,6.379,2.531l-4.4,4.4a3.8,3.8,0,0,0-4.951-.37Zm-7.958-3.9c-1.338,1.888-1.236,3.619.317,5.162a3.188,3.188,0,0,0,2.426,1.113,6.162,6.162,0,0,0,2.676-.859Zm17.9,13.836a4.3,4.3,0,0,0,1.087-3.016,4.651,4.651,0,0,0-1.5-2.8,3.421,3.421,0,0,0-2.36-1.137,6.308,6.308,0,0,0-3.117,1.057Z" fill="#ff5245"></path> </g> </g> </g></svg>
+          <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">أسعاره معلنة ومدروسة</h6>
           <p>
-            لأن المحترف القوي الأمين أسعاره معلنة للعميل
+            لأنّ المحترف القوي الأمين أسعاره معلنة للعميل
             ومدروسة ويفصح عن التكلفة الحقيقية لخدماته
             ومنتجاته بكل دقة ووضوح
           </p>
@@ -674,43 +738,44 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 items-center py-8 px-14">
         <div class="intro-cards !leading-7" >
+          <svg   class="h-10 w-10 mx-auto my-3" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.638 291.638" xml:space="preserve" width="64px" height="64px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <circle style="fill:#F9BA48;" cx="164.57" cy="126.923" r="65.625"></circle> <path style="fill:#333333;" d="M261.934,19.111c-32.906,0-65.076-6.197-95.62-18.412L164.57,0l-1.739,0.698 C132.283,12.914,100.112,19.11,67.206,19.11H56.757v98.438H33.32c-7.753,0-14.062,6.309-14.062,14.062v79.688 c0,7.753,6.309,14.063,14.062,14.063h42.187c0.009,0,0.014,0,0.023,0c11.072,17.592,26.414,32.123,44.705,42.094l44.334,24.183 l44.334-24.183c39.159-21.356,63.478-62.33,63.478-106.931V19.111H261.934z M28.632,211.298V131.61c0-2.583,2.1-4.687,4.687-4.687 h42.187c2.587,0,4.687,2.105,4.687,4.687v79.688c0,2.583-2.1,4.688-4.687,4.688H33.32 C30.732,215.986,28.632,213.881,28.632,211.298z M89.57,140.944c15.652-0.848,28.125-13.852,28.125-29.709V87.08 c0-6.459,5.255-11.719,11.719-11.719s11.719,5.259,11.719,11.719v29.503c0,8.287,6.741,15.028,15.028,15.028h34.364 c8.948,0,16.233,7.28,16.233,16.233v51.909c0,8.953-7.284,16.233-16.233,16.233h-69.066c-3.722,0-7.172-1.852-9.239-4.945 c-3.806-5.709-10.177-9.117-17.039-9.117h-5.611L89.57,140.944L89.57,140.944z M263.007,160.523 c0,41.166-22.448,78.989-58.589,98.7l-39.848,21.736l-39.848-21.736c-16.308-8.897-30.089-21.708-40.223-37.205 c2.845-2.391,4.716-5.859,4.978-9.797c9.459,16.317,23.081,29.686,39.736,38.77l35.358,19.289l35.358-19.289 c33.127-18.066,53.705-52.73,53.705-90.464V89.423h-9.375v71.105c0,34.298-18.703,65.813-48.816,82.233l-30.872,16.838 l-30.872-16.838c-13.209-7.205-24.305-17.386-32.644-29.705c1.308,0.82,2.48,1.861,3.366,3.188 c3.806,5.709,10.177,9.117,17.039,9.117h69.066c14.123,0,25.608-11.489,25.608-25.608v-51.909 c0-14.119-11.484-25.608-25.608-25.608h-34.364c-3.117,0-5.653-2.536-5.653-5.653V87.08c0-11.63-9.464-21.094-21.094-21.094 c-11.63,0-21.094,9.464-21.094,21.094v24.15c0,10.688-8.292,19.378-18.769,20.217c-0.047-4.073-1.852-7.702-4.669-10.242V46.697 c27.225-1.673,54.005-7.237,79.687-16.566c25.683,9.328,52.458,14.892,79.687,16.566v5.227h9.375V37.777l-4.472-0.206 c-28.378-1.298-56.292-6.961-82.964-16.828l-1.627-0.605l-1.627,0.6c-26.677,9.867-54.591,15.53-82.964,16.828l-4.472,0.211 v79.772h-9.375V28.486h1.073c33.483,0,66.225-6.188,97.364-18.394c31.139,12.206,63.881,18.394,97.364,18.394h1.073v132.037 H263.007z"></path> <rect x="244.257" y="70.673" style="fill:#333333;" width="9.375" height="9.375"></rect> <rect x="38.007" y="197.236" style="fill:#333333;" width="32.812" height="9.375"></rect> </g> </g> </g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">لديه خدمة ما بعد البيع   </h6>
           <p >
-            لأن المحترف القوي الأمين التزم بتوفير خدمة ما بعد
-            البيع للعملاء ومعالجة أي مشاكل قد تظهر بعد إتمام
-            ًما بالوقت
-            عملية البيع أو بعد تقديم الخدمة، ملتز
-            المحدد في الاتفاق.
+            لأنّ المحترف القوي الأمين التزم بتوفير خدمة ما بعد
+            البيع للعملاء ومعالجة أي مشاكل قد تظهر بعد إتمام عملية البيع أو بعد تقديم الخدمة، ملتزما بالوقت المحدد في الاتفاق
           </p>
         </div>
         <div class="intro-cards !leading-7" >
+          <svg  class="h-10 w-10 mx-auto my-3" fill="#1996f5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504 504" xml:space="preserve" stroke="#1996f5"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M356,360h-72v-3.696c15.904-3.592,30.856-9.784,44.608-18.448l13.896,13.904l45.256-45.256l-13.904-13.896 c8.664-13.752,14.848-28.704,18.448-44.608H412v-48h32v-16h-16c0-83.168-58.352-154.712-139.288-171.904 C284.56,4.904,276.88,0,268,0h-32c-8.88,0-16.56,4.904-20.712,12.096C134.352,29.288,76,100.832,76,184H60v16h32v48h19.696 c3.592,15.904,9.784,30.856,18.448,44.608l-13.904,13.896l45.256,45.256l13.896-13.904c13.752,8.664,28.704,14.848,44.608,18.448 V360h-72c-1.504,0-2.968,0.184-4.464,0.224l-44.984-44.992C99.512,311.44,100,307.672,100,304 c0-31.744-31.192-56.88-64.208-45.032l-11.856,4.272L48.688,288L36,300.688l-24.76-24.76l-4.272,11.856 C5,293.272,4,298.728,4,304c0,26.472,21.528,48,48,48c3.672,0,7.44-0.488,11.232-1.448l23.384,23.376 C37.872,397.032,4,446.576,4,504h16c0-36.168,15.144-68.816,39.352-92.12C80.384,437.904,92,470.504,92,504h16 c0-5.36-0.336-10.696-0.864-16H244v16h16v-16h136.864c-0.528,5.304-0.864,10.64-0.864,16h16c0-33.496,11.616-66.096,32.648-92.12 C468.856,435.184,484,467.832,484,504h16C500,424.6,435.4,360,356,360z M92,184c0-73.312,49.888-136.696,120-154.728V120h16V24 c0-4.416,3.584-8,8-8h32c4.416,0,8,3.584,8,8v96h16V29.272C362.112,47.304,412,110.688,412,184h-13.768l-8,24H113.768l-8-24H92z M323.528,224C319.536,259.944,289,288,252,288s-67.536-28.056-71.528-64H323.528z M178.928,321.016l-5.496-3.832l-11.944,11.952 l-22.632-22.632l11.952-11.944l-3.832-5.496c-10.576-15.184-17.6-32.168-20.864-50.48L124.944,232H108v-8h56.408 c4.056,44.784,41.768,80,87.592,80c45.824,0,83.536-35.216,87.592-80H396v8h-16.944l-1.168,6.592 c-3.264,18.304-10.288,35.288-20.864,50.48l-3.832,5.496l11.952,11.944l-22.632,22.632l-11.944-11.952l-5.496,3.832 c-15.184,10.576-32.168,17.6-50.48,20.864L268,343.056V360h-32v-16.944l-6.592-1.176 C211.104,338.616,194.12,331.592,178.928,321.016z M67.568,332.256l-4.784,1.712C59,335.336,55.472,336,52,336 c-16.464,0-30.064-12.496-31.816-28.496L36,323.312L71.312,288l-15.808-15.816C71.504,273.936,84,287.536,84,304 c0,3.472-0.664,7-2.032,10.792l-1.712,4.784l42.752,42.752c-6.944,1.224-13.72,2.904-20.288,5.088L67.568,332.256z M244,472 H104.688c-5.168-25.68-16.448-49.92-33.096-70.448C92.944,385.584,119.344,376,148,376h28l68,90.672V472z M252,450.664L196,376 h24h64h24L252,450.664z M399.312,472H260v-5.328L328,376h28c28.656,0,55.056,9.584,76.408,25.552 C415.76,422.08,404.488,446.32,399.312,472z"></path> <rect x="124" y="168" width="256" height="16"></rect> </g> </g> </g> </g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3"> ملتزم بالتطوير المهني المستمر  </h6>
           <p >
-            لأن المحترف القوي الأمين ملتزم بتطوير مهاراته
+            لأنّ المحترف القوي الأمين ملتزم بتطوير مهاراته
             ومعرفته المهنية باستمرار وتحديثها بما يتوافق مع
             أحدث التطورات التقنية والتكنولوجية في مجاله
           </p>
         </div>
         <div class="intro-cards !leading-7" >
+          <svg class="h-10 w-10 mx-auto my-3" width="64px" height="64px" viewBox="0 0 91 91" enable-background="new 0 0 91 91" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M71.619,16.685c-10.5,0-19.045,8.545-19.045,19.051c0,10.504,8.545,19.051,19.045,19.051 c10.508,0,19.055-8.547,19.055-19.051C90.674,25.229,82.127,16.685,71.619,16.685z M79.365,38.407h-5.438v5.439 c0,1.385-1.123,2.506-2.506,2.506s-2.504-1.121-2.504-2.506v-5.439h-5.439c-1.383,0-2.506-1.121-2.506-2.506 c0-1.383,1.123-2.504,2.506-2.504h5.439v-5.436c0-1.383,1.121-2.504,2.504-2.504s2.506,1.121,2.506,2.504v5.436h5.438 c1.383,0,2.504,1.121,2.504,2.504C81.869,37.286,80.748,38.407,79.365,38.407z" fill="#6EC4A7"></path> <g> <polygon fill="#6EC4A7" points="25.506,55.183 21.086,78.269 26.541,82.632 31.99,78.272 27.504,55.183 "></polygon> <path d="M43.961,47.731c-3.236,3.193-7.326,5.506-11.889,6.576l4.76,24.412c0.18,0.859-0.139,1.744-0.82,2.289 l-2.051,1.639c5.709-0.682,11.896-2.17,18.375-4.889V59.64C52.336,54.269,49.566,50.374,43.961,47.731z" fill="#647F94"></path> <path d="M20.922,54.384c-4.67-1.041-8.855-3.381-12.152-6.635c-5.375,2.635-8.027,6.525-8.027,11.891v18.205 c2.584,1.201,9.234,3.908,18.488,4.896l-2.162-1.73c-0.682-0.547-1.002-1.428-0.826-2.283L20.922,54.384z" fill="#647F94"></path> <path d="M26.35,50.341c11.309,0,20.506-9.262,20.506-20.648S37.658,9.044,26.35,9.044 c-11.299,0-20.492,9.262-20.492,20.648S15.051,50.341,26.35,50.341z" fill="#647F94"></path> </g> </g> </g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">يتعامل بجدية مع الشكاوي والإنتقادات  </h6>
           <p >
-            لأن المحترف القوي الأمين يتبنى مبدأ الإنصات
+            لأنّ المحترف القوي الأمين يتبنى مبدأ الإنصات
             والتفهم لزبائنه، ويتلقى بكل سعة صدر شكاويهم
             وتقييماتهم الصادقة والبناءة ليعمل على تحسين
             خدماته ومنتجاته .
           </p>
         </div>
         <div class="intro-cards !text-[12px]">
+          <svg class="h-10 w-10 mx-auto my-3"  fill="#16b13d" width="64px" height="64px" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" stroke="#16b13d"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M26,2c3,0,5.43,3.29,8.09,4.42s6.82.51,8.84,2.65,1.51,6.07,2.65,8.84S50,23,50,26s-3.29,5.43-4.42,8.09-.51,6.82-2.65,8.84-6.07,1.53-8.84,2.65S29,50,26,50s-5.43-3.29-8.09-4.42-6.82-.51-8.84-2.65-1.53-6.07-2.65-8.84S2,29,2,26s3.29-5.43,4.42-8.09.51-6.82,2.65-8.84,6.07-1.53,8.84-2.65S23,2,26,2Zm0,7.58A16.42,16.42,0,1,0,42.42,26h0A16.47,16.47,0,0,0,26,9.58Zm7.62,9.15,1.61,1.52a1.25,1.25,0,0,1,0,1.51L25.08,33.07a2.07,2.07,0,0,1-1.61.7,2.23,2.23,0,0,1-1.61-.7L16.37,27.6a1,1,0,0,1-.1-1.42l.1-.11L18,24.56a1.1,1.1,0,0,1,1.54-.07l.07.07,3.89,4,8.59-9.8A1.1,1.1,0,0,1,33.62,18.73Z"></path></g></svg>
           <h6 class="text-yellow-600 font-semibold text-sm text-center mb-3">حقوقك مضمونة          </h6>
           <p>
-            <span class="text-yellow-600 font-semibold ">أولا: </span> لأنه ملتزم بتقوى الله عز وجل في تعاملاته 
+            <span class="text-yellow-600 font-semibold ">أولا: </span> لأنّه ملتزم بتقوى الله عز وجل في تعاملاته 
           </p>
           <p>
-            <span class="text-yellow-600 font-semibold ">ثانيا: </span> لأن تقييمك لخدماته يعد هو المفتاح الرئيسي لنجاحه
+            <span class="text-yellow-600 font-semibold ">ثانيا: </span> لأنّ تقييمك لخدماته يعد هو المفتاح الرئيسي لنجاحه
             وإستمراره في السوق والمسوق الحقيقي لخدماته ومنتجاته
           </p>
           <p>
-            <span class="text-yellow-600 font-semibold ">ثالثا: </span> لأن أي إخلال متعمد للميثاق الذي أبرمه معنا أو الاتفاق الذي
+            <span class="text-yellow-600 font-semibold ">ثالثا: </span> لأنّ أي إخلال متعمد للميثاق الذي أبرمه معنا أو الاتفاق الذي
             أبرمه مع العميل قد يؤدي إلى سحب الثقة منه وإدراجه في القائمة
             السوداء وإلغاء عضويته نهائيا من شبكة المحترف القوي الأمين
           </p>
@@ -726,11 +791,11 @@
           <h6 class="text-yellow-600 font-semibold text-center mb-3">استعرض المحترفين </h6>
           <p class="min-h-[95px]">
             ابحث عن المحترف الذي تحتاجه باستخدام مربع البحث
-              في الأعلى أو تصفح المحترفين حسب التصنيفات
+              في الأعلى أو تصفح المحترفين حسب الفئات
               والمجالات المختلفة      
           </p>
           <div class="relative px-4 my-2">
-            <span class="bg-yellow-500 p-3 py-0  text-black mx-auto intro-card-divider block w-fit">
+            <span class="bg-yellow-500 p-3 py-0  text-black text-justify mx-auto intro-card-divider block w-fit">
               الطريقة الثانية
             </span>
           </div>
@@ -749,7 +814,7 @@
             بتحديد المحترف الأكثر توافقا مع احتياجاتك
           </p>
          <div class="relative px-4 my-2">
-          <span class="bg-yellow-500 p-3 py-0  text-black mx-auto intro-card-divider block w-fit">
+          <span class="bg-yellow-500 p-3 py-0  text-black text-justify mx-auto intro-card-divider block w-fit">
             الطريقة الثانية
           </span>
          </div>
@@ -787,7 +852,7 @@
                 تعليق حول تجربتك معه .
             </li>
             <li class="text-[12px]">
-              إن تقييمك للمحترف ومشارتك لتجربتك معه يساهم
+              إن تقييمك للمحترف ومشاركتك لتجربتك معه يساهم
               في تحسين جودة خدماتنا وتوجيه المستخدمين
               الآخرين ويساعد في بناء مجتمع أفضل
             </li>
@@ -887,8 +952,8 @@
                   
                 </div>
             </div>
-            <label for="carousel-33" class="prev control-11 w-10 h-10 mr-2 ltr:ml-2 md:mr-10 ltr:md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">›</label>
-            <label for="carousel-22" class="next control-11 w-10 h-10 ml-2 ltr:mr-2  md:ml-10 ltr:md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">‹</label>
+            <label for="carousel-33" class="prev text-center control-11 w-10 h-10 mr-2 ltr:ml-2 md:mr-10 ltr:md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">›</label>
+            <label for="carousel-22" class="next text-center control-11 w-10 h-10 ml-2 ltr:mr-2  md:ml-10 ltr:md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">‹</label>
       
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-22" name="carousel2" aria-hidden="true" hidden="">
@@ -967,11 +1032,11 @@
                 
               </div>
             </div>
-            <label for="carousel-11" class="prev control-22 w-10 h-10 mr-2 ltr:ml-2 md:mr-10 ltr:md:mr-10  absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">›</label>
-            <label for="carousel-33" class="next control-22 w-10 ml-2 ltr:mr-2  md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">‹</label>
+            <label for="carousel-11" class="prev control-22 w-10 h-10 mr-2 ltr:ml-2 md:mr-10 ltr:md:mr-10  absolute cursor-pointer hidden text-3xl font-bold text-black text-center hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">›</label>
+            <label for="carousel-33" class="next control-22 w-10 ml-2 ltr:mr-2  md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black text-center hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">‹</label>
       
-            <label for="carousel-22" class="prev control-33 w-10 h-10 mr-2 ltr:ml-2 md:mr-10 ltr:md:mr-10  absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">›</label>
-            <label for="carousel-11" class="next control-33 w-10 ml-2 ltr:mr-2  md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">‹</label>
+            <label for="carousel-22" class="prev control-33 w-10 h-10 mr-2 ltr:ml-2 md:mr-10 ltr:md:mr-10  absolute cursor-pointer hidden text-3xl font-bold text-black text-center hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">›</label>
+            <label for="carousel-11" class="next control-33 w-10 ml-2 ltr:mr-2  md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black text-center hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">‹</label>
       
       
           </div>
@@ -999,27 +1064,33 @@
                     alt="image"
                     class="mx-auto lg:h-96 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor"
                   />
+                  <div class="text-white absolute top-16 left-12">
+                    <p class="text-base md:text-2xl">
+                      المحترف القوي الأمين
+                    </p>
+                    <p class="text-base md:text-lg mt-2">الكفاءة والأمانة</p>
+                  </div>
                 </div>
               </div>
               <div
                 class="w-full py-12 px-7 sm:px-12 md:p-8 lg:w-2/5 lg:py-9 lg:px-10 "
               >
                 <!-- <img src="assets/images/home/aya.png" alt="اية  من القرءان"> -->
-                <h6 class="text-yellow-600 text-center mb-3">أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ</h6>
+                <h6 class="text-[#385623] text-center mb-3">أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ</h6>
                 <div class="flex justify-center ">
-                  <p class="text-[#246da7] text-xl text-center font-semibold leading-10">
+                  <p class="text-[#00256E] text-xl text-center leading-10">
                     <span class="text-2xl text-yellow-600 " style="font-family:auto">﴿</span>
 
-                    قَالَتْ إِحْدَاهُمَا يَا أَبَتِ اسْتَأْجِرْهُ ۖ إِنَّ خَيْرَ مَنِ اسْتَأْجَرْتَ <span class="text-yellow-600">الْقَوِيُّ الْأَمِين</span>
+                    قَالَتْ إِحْدَاهُمَا يَا أَبَتِ اسْتَأْجِرْهُ ۖ إِنَّ خَيْرَ مَنِ اسْتَأْجَرْتَ <span class="text-[#806000]">الْقَوِيُّ الْأَمِين</span>
                     <span class="text-2xl text-yellow-600"  style="font-family:auto">﴾</span>
-                    <span class="text-yellow-600 text-sm">   [ القصص: 26]  </span>
+                    <span class="text-[#385623] text-sm">   [ القصص: 26]  </span>
                   </p>
                 </div>
                 <img src="assets/images/qoran_border.png" alt="qoran border" class="w-44 m-auto mt-2">
                 <div class="text-center leading-10 mt-6">
-                  <p class="text-primaryTextColor text-md lg:text-xl mb-2">إجعل المحترف الحاصل على علامة</p> 
-                  <span class="text-yellow-500 text-lg lg:text-2xl font-semibold "> المحترف الْقَوِيُّ الْأَمِينُ </span> 
-                  <p class="text-primaryTextColor text-lg lg:text-2xl font-bold "> هو خيارك الأول</p> 
+                  <p class="text-[#00256E] text-md lg:text-xl mb-2">إجعل المحترف الحاصل على علامة</p> 
+                  <span class="text-[#ac8e34] text-lg lg:text-2xl font-semibold "> المحترف الْقَوِيُّ الْأَمِينُ </span> 
+                  <p class="text-[#385623] text-lg lg:text-2xl font-bold "> هو خيارك الأول</p> 
                 </div>
               </div>
               
@@ -1038,16 +1109,22 @@
         >
       <div class="container p-0">
         <div class="wow fadeInUp bg-white" data-wow-delay=".2s">
-          <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full md:px-6 lg:px-6 lg:py-20">
             <div class="md:flex items-center justify-center gap-3">
-              <div class="w-full md:w-1/3 p-5">
+              <div class="w-full md:w-3/5 p-5 md:flex justify-center items-center gap-3">
                 <img
-                  class="mx-auto h-[14rem] md:h-auto lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
+                  class="mx-auto  h-[15rem] w-[23rem] md:h-auto lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
                   src="assets/images/home/prodc_certificate.jpg"
                   alt=""
                 />
+                <div class="intro-cards py-3 mt-6 md:mt-0 w-2/3 md:w-auto mx-auto">
+                  <p class="text-base md:text-lg text-primaryTextColor mb-2 px-6 leading-10  text-center">احصل على علامة  </p> 
+                  <p class="text-base md:text-lg text-yellow-500 mb-2 px-6 leading-10 text-center font-semibold">المحترف القوي الأمين  </p> 
+                  
+                  <p class="text-base md:text-lg text-primaryTextColor mb-2  text-center font-semibold">في أربع خطوات</p> 
+                </div>
               </div>    
-              <div class="w-full md:w-2/3 mt-3 md:mt-0 text-sm md:text-base">
+              <div class="w-full md:w-2/5 mt-3 md:mt-0 text-sm md:text-base">
                 <div class="flex">
                   <div class="flex flex-col items-center ltr:mr-4 ml-4">
                     <div>
@@ -1062,8 +1139,8 @@
                   </div>
                   <div class="pt-1 pb-8">
                     <p class="mb-2 text-md md:text-lg font-bold  text-primaryTextColor">الخطوة الأولى</p>
-                    <p class="text-gray-700 font-semibold">
-                                            الدخول في موقع المحترف القوي الأمين أو تحميل تطبيق
+                    <p class="text-gray-900">
+                                            الدخول الى موقع المحترف القوي الأمين أو تحميل تطبيق
                       المحترف القوي الأمين
                     </p>
                   </div>
@@ -1082,7 +1159,7 @@
                   </div>
                   <div class="pt-1 pb-8">
                     <p class="mb-2 text-md md:text-lg font-bold  text-primaryTextColor">الخطوة الثانية</p>
-                    <p class="text-gray-700 font-semibold">
+                    <p class="text-gray-900">
                       التسجيل وإدخال البيانات المطلوبة
                     </p>
                   </div>
@@ -1101,7 +1178,7 @@
                   </div>
                   <div class="pt-1 pb-8">
                     <p class="mb-2 text-md md:text-lg font-bold text-primaryTextColor">الخطوة الثالثة</p>
-                    <p class="text-gray-700 font-semibold">
+                    <p class="text-gray-900">
                       القسم على الإلتزام بميثاق الأخلاق المهنية
                     </p>
                   </div>
@@ -1118,7 +1195,7 @@
                   </div>
                   <div class="pt-1 pb-8">
                     <p class="mb-2 text-md md:text-lg font-bold text-primaryTextColor">الخطوة الرابعة</p>
-                    <p class="text-gray-700 font-semibold">
+                    <p class="text-gray-900">
                       الحصول على شهادة المحترف القوي الأمين
                     </p>
                   </div>
@@ -1143,7 +1220,7 @@
         <div class="-mx-4 flex flex-wrap">
           <div class="w-full px-4 ">
             <!-- first intro explain -->
-           <div class="border">
+           <div class="border p-5 lg:p-0">
              <!-- plans section -->
              <div
              class="items-center justify-between overflow-hidden  lg:flex"
@@ -1151,7 +1228,7 @@
             <div class="text-center lg:w-[40%] h-full">
               <div class="relative z-10 inline-block">
                 <img
-                  src="assets/images/plans_prodc.png"
+                  src="assets/images/about/plans.jpg"
                   alt="image"
                   class="mx-auto lg:h-80 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
                 />
@@ -1166,18 +1243,20 @@
              باقات المحترف القوي الأمين
              </span>
                <h2 class="text-lg text-yellow-600">الباقة المجانية</h2>
-               <p class="leading-8 text-sm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-8 text-sm md:text-smd  text-black text-justify mb-2">
                 الباقة المجانية هي باقة متاحة لجميع الشركات من مختلف المجالات والقطاعات. يقوم صاحب الباقة بدفع عمولة للمنصة
-                بنسبة تتراوح بين  %1و) %5تختلف العمولة على حسب المجال( من كل معاملة تمت من خلال المنصة بطريقة مباشرة أو غير
+                  بنسبة تتراوح بين (1%  و 5%) 
+                  تختلف العمولة على حسب المجال
+                  من كل معاملة تمت من خلال المنصة بطريقة مباشرة أو غير
                 مباشرة أو من خلال تسهيل وصول العميل إلى المحترف أو من خلال التعامل المباشر مع العملاء الأعضاء في المنصة     
                </p>
-               <p class="leading-8 text-sm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-8 text-sm md:text-smd  text-black text-justify mb-2">
                 الفئات التي يمكن لها الحصول على شهادة المحترف القوي الأمين<span class="text-red-500"> بدون رسوم وبدون عمولة</span> : 
                 <span class="text-primaryTextColorDarken underline underline-offset-4">سلك التعليم والإدارات</span>
                </p>
                <h2 class="text-lg text-yellow-600">الباقة المدفوعة</h2>
-               <p class="leading-8 text-sm md:text-smd font-semibold text-slate-700 mb-2">
-                تعد الباقة المدفوعة خيارًا مثاليا للشركات والمؤسسات التي تتعامل ببيع السلع المرتفعة القيمة أو تقديم الخدمات الراقية
+               <p class="leading-8 text-sm md:text-smd  text-black text-justify mb-2">
+                تعد الباقة المدفوعة خيارًا مثاليا للشركات والمؤسسات التي تتعامل ببيع المنتوجات المرتفعة القيمة أو تقديم الخدمات الراقية
                 والمكلفة. تتيح هذه الباقة للشركة دفع رسوم ثابتة (قيمة الباقة المدفوعة) للاستفادة من خدمات المنصة والاستمتاع
                 بمزاياها، دون الحاجة لتقديم عمولة على كل معاملة تتم عبر المنصة - سواء بشكل مباشر أو غير مباشر. وذلك بغض النظر عن
                 حجم المبيعات المحرزة
@@ -1189,7 +1268,7 @@
            <!-- plans section -->
              <!-- first section -->
              <div
-             class="items-center justify-between overflow-hidden  lg:flex"
+             class="items-center justify-between overflow-hidden  flex flex-col-reverse md:flex-row"
            >
              <div
                class="w-full text-sm md:text-md py-12 px-7 sm:px-12 pb-0 lg:w-[57%] lg:py-9 lg:px-14 xl:p-[50px]"
@@ -1200,16 +1279,16 @@
              شبكة المحترف القوي الأمين
              </span>
                
-               <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 textsm md:text-smd  text-black text-justify mb-2">
                  تتكون شبكة المحترف القوي الأمين من محترفين في كافة المجالات والقطاعات، أقوياء وأمناء ومن أفضل  
                  الكفاءات المهنية بمعايير عالمية وأخلاق مهنية إسلامية        
                </p>
-               <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 textsm md:text-smd  text-black text-justify mb-2">
                  تهدف الشبكة إلى تحفيز ودعم جهود المحترفين الأعضاء وإعطائهم القيمة المضافة في إظهار منتوجاتهم
                  وخدماتهم من خلال التسويق الرقمي وتوفير آخر التقنيات الرقمية والأساليب التسويقية المعاصرة والمبتكرة
                  ودعم تطورهم المهني والتشجيع على بناء علاقات شبكية فعالة تمكنهم من التواصل مباشرة مع العملاء
                </p>
-               <p class="leading-10 textsm md:text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 textsm md:text-smd  text-black text-justify mb-2">
                  يمكن لأي محترف يستوفي شروط الكفاءة والأمانة الانضمام إلى شبكة المحترف القوي الأمين عن طريق
                  <a href="#" class="text-primaryTextColor underline">استكمال النموذج الموجود أدناه</a>
                </p>
@@ -1237,7 +1316,7 @@
             <div class="text-center lg:w-[40%] h-full">
               <div class="relative z-10 inline-block p-4">
                 <img
-                  src="assets/images/home/enterprenership.jpg"
+                  src="assets/images/about/angry photo.jpg"
                   alt="image"
                   class="mx-auto lg:h-[20rem] lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
                 />
@@ -1247,18 +1326,18 @@
                class="w-full text-sm md:text-md py-12 px-7 sm:px-12  lg:w-[60%] lg:py-9 lg:px-12 xl:p-[70px]"
              >
                
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
-                 <span class="text-red-500">هل</span> دخلت في شراكة مع شخص لتكتشف لاحق ًا أنه لم يكن الشريك المناسب وأن الثقة التي كنت قد منحتها إياه
+               <p class="leading-10 text-smd  text-black text-justify mb-2">
+                 <span class="text-red-500">هل</span> دخلت في شراكة مع شخص لتكتشف لاحقا أنه لم يكن الشريك المناسب وأن الثقة التي كنت قد منحته إياها
                  لم تكن مبنية على أسس مهنية سليمة<span class="text-red-500">؟</span>
                </p>
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 text-smd  text-black text-justify mb-2">
                  <span class="text-red-500">هل</span> شعرت بخيبة أمل كبيرة عندما أدركت أن المقاول الذي اخترته قد أنجز الأشغال المتفق عليها بجودة سيئة
                  وبسعر مبالغ فيه<span class="text-red-500">؟</span>
                </p>
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 text-smd  text-black text-justify mb-2">
                  <span class="text-red-500">هل</span>  أدخلت سيارتك إلى الورشة لتصليح عطل بسيط، ولكنك إستلمتها في حالة أسوأ من الحالة التي كانت عليها <span class="text-red-500">؟</span>
                </p>
-               <p class="leading-10 text-smd font-semibold text-slate-700 mb-2">
+               <p class="leading-10 text-smd  text-black text-justify mb-2">
                  <span class="text-red-500">هل</span>  شعرت يوما ما بمرارة وبإحباط كبيرين عندما إكتشفت أنك ضحية لعملية غش واحتيال <span class="text-red-500">؟</span>
                </p>
                <span
@@ -1273,7 +1352,7 @@
            <!-- end third section -->
            <!-- forth section -->
            <div
-           class="mt-4 items-center justify-center overflow-hidden  lg:flex"
+           class="mt-4 items-center justify-center overflow-hidden  flex flex-col-reverse md:flex-row"
            >
              
              <div
@@ -1315,7 +1394,7 @@
     <!-- testimonials -->
     <section id="testimonial" class="bg-white">
       <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8  relative">
-        <h2 class="text-xl lg:text-3xl text-sectionTitleColor text-center mb-10 underline underline-offset-8">شهادات .. قالوا عنا</h2>
+        <h2 class="text-xl lg:text-3xl text-sectionTitleColor text-center mb-10 underline underline-offset-8"> قالوا عنا</h2>
         <div class="swiper-container !overflow-hidden pt-20">
           <div class="swiper-wrapper">
             <div class="swiper-slide border border-gray-500 " >
@@ -1323,7 +1402,7 @@
                 <img
                   alt="human"
                   src="assets/images/team/profil_picture_4.jpeg"
-                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-[#dfac13] shadow-md shadow-[#dfac13]"
                 />
   
                
@@ -1355,7 +1434,7 @@
                 <img
                   alt="human"
                   src="assets/images/team/profil_picture_1.png"
-                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-[#dfac13] shadow-md shadow-[#dfac13]"
                 />
   
                
@@ -1387,7 +1466,7 @@
                 <img
                   alt="human"
                   src="assets/images/team/profil_picture_3.png"
-                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-[#dfac13] shadow-md shadow-[#dfac13]"
                 />
   
                
@@ -1419,7 +1498,7 @@
                 <img
                   alt="human"
                   src="assets/images/team/profil_picture_2.jpeg"
-                  class="h-24 w-24 rounded-full object-cover ring-4 ring-sectionTitleColor shadow-md shadow-sectionTitleColor"
+                  class="h-24 w-24 rounded-full object-cover ring-4 ring-[#dfac13] shadow-md shadow-[#dfac13]"
                 />
   
                
@@ -1464,9 +1543,9 @@
 
     <!-- partners -->
     <section id="partners" class="bg-[#f3f4fe] pt-12 pb-12 lg:pt-[50px] lg:pb-[50px]">
-      <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8 bg-white">
+      <div class="mx-auto max-w-screen-xl px-8 py-16  lg:px-8 bg-white relative">
         <h2 class="text-xl lg:text-3xl text-sectionTitleColor text-center mb-10 underline underline-offset-8">شركاؤنا</h2>
-        <div class="swiper-container !overflow-hidden pt-8">
+        <div class="swiper-container !overflow-hidden ">
           <div class="swiper-wrapper md:flex gap-x-2">
             <a href="" class="swiper-slide w-1/7">
               <img src="/assets/images/brands/graygrids.svg" class="h-12 w-52" alt="">
@@ -1488,15 +1567,21 @@
           
           <div class="swiper-pagination !relative !bottom-0 mt-12"></div>
         </div>
+        <div class="swiper-button-next swiper-button-next2">
+          <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="9 18 15 12 9 6" /></svg>
+        </div>
+         <div class="swiper-button-prev swiper-button-prev2">
+          <svg class="h-8 w-8 text-white z-40"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
+         </div>
       </div>
     </section>
     <!-- end partners -->
     <!-- download-app -->
     <section id="download-app" class="py-12 lg:pt-[50px] lg:pb-[50px] bg-white mb-5">
       <div
-           class="mt-4 items-center justify-center overflow-hidden  lg:flex"
+           class="mt-4 items-center justify-center overflow-hidden  lg:flex lg:w-4/5 mx-auto"
            >
-             <div class="text-center lg:w-1/5 h-4/5">
+             <div class="text-center w-36 mx-auto lg:w-[210px] lg:ml-[17px] h-4/5">
                <div class="relative z-10 inline-block p-4">
                  <img
                    src="assets/images/home/prodc_app.jpg"
@@ -1506,13 +1591,13 @@
                </div>
              </div>
              <div
-               class="w-full  px-7 sm:px-12 md:p-8 lg:w-2/5  lg:px-10 "
+               class="w-full  px-7 sm:px-12 md:p-8 lg:w-3/5  lg:px-10 "
              >
-               <div class="intro-cards py-3">
-                 <p class="text-xl text-[#1d3c5f] mb-2 px-6 leading-10  text-center">حمل تطبيق المحترف القوي الأمين  </p> 
+               <div class="intro-cards py-3 mx-4">
+                 <p class="text-base md:text-xl text-[#1d3c5f] mb-2 px-6 leading-10  text-center">حمل تطبيق المحترف القوي الأمين  </p> 
                  <p class="text-xl text-yellow-500 mb-2 px-6 leading-10 text-center font-semibold">PRODC  </p> 
                  
-                 <p class="text-[#1d3c5f] mb-2  text-center font-semibold">تطبيق لتأكيد وضمان جودة الخدمات بأيادي المحترف القوي الأمين</p> 
+                 <p class="text-base text-[#1d3c5f] mb-2  text-center font-semibold">تطبيق لتأكيد وضمان جودة الخدمات بأيادي المحترف القوي الأمين</p> 
                </div>
               <div class="flex justify-center gap-3 p-4 mt-3">
                 <a href="https://itunes.apple.com/" target="_blank" >
@@ -1616,10 +1701,11 @@
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
         <div class="sm:flex sm:items-center sm:justify-between text-center">
-          <span class="text-sm text-gray-600 font-semibold sm:text-center dark:text-gray-400">
+          <span class="sm:w-1/3"></span>
+          <span class="sm:w-1/3 text-sm text-gray-600 font-semibold sm:text-center dark:text-gray-400">
             جميع الحقوق محفوظة © للمنصة المحترف القوي الأمين 2023
           </span>
-          <div class="flex flex-wrap justify-center gap-2 p-4 my-2">
+          <div class="sm:w-1/3 flex flex-wrap justify-center sm:justify-end gap-2 p-4 my-2">
             <!-- facebook -->
             <a href="#" class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded hover:animate-bounce duration-300 ease-in">
               <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
@@ -1685,6 +1771,10 @@
           spaceBetween: 9,
           autoplay: {
             delay: 8000,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next2",
+            prevEl: ".swiper-button-prev2",
           },
           pagination: {
             el: '.swiper-pagination',
