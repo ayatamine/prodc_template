@@ -272,8 +272,10 @@ input[type="radio"]:checked + label{
   width: 35px;
   /* background: #0e99fb;; */
 }
+@media(min-width:680px){
 #testimonial .swiper-button-prev{left:-2rem}
 #testimonial .swiper-button-next{right:-2rem}
+}
 
 .swiper-button-next::after,
 .swiper-button-prev::after {

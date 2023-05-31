@@ -1567,10 +1567,10 @@
           
           <div class="swiper-pagination !relative !bottom-0 mt-12"></div>
         </div>
-        <div class="swiper-button-next swiper-button-next2">
+        <div class=" swiper-button-next2">
           <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="9 18 15 12 9 6" /></svg>
         </div>
-         <div class="swiper-button-prev swiper-button-prev2">
+         <div class=" swiper-button-prev2">
           <svg class="h-8 w-8 text-white z-40"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="15 6 9 12 15 18" /></svg>
          </div>
       </div>
@@ -1747,6 +1747,8 @@
           observer: true,
           autoplay: {
             delay: 8000,
+            disableOnInteraction:false,
+            reverseDirection:true,
           },
           pagination: {
             el: '.swiper-pagination2',
@@ -1771,6 +1773,8 @@
           spaceBetween: 9,
           autoplay: {
             delay: 8000,
+            disableOnInteraction:false,
+            reverseDirection:true,
           },
           navigation: {
             nextEl: ".swiper-button-next2",
