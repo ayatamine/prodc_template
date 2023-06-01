@@ -434,10 +434,10 @@
 
       <div class="md:flex justify-between  gap-8 space-x-2">
         <!-- left side -->
-          <div class="hidden md:block w-full md:w-3/12  shadow-md border p-5 rounded bg-white">
+          <div class="hidden md:block w-full md:w-[26%]  shadow-md border p-5 pt-2 rounded bg-white">
             <div class="flex items-center justify-between my-4 text-smd">
-              <p class="font-semibold ">
-              تخصيص البحث 
+              <p class="font-semibold text-md">
+              البحث عن محترفين 
               </p>
           
               <button class=" text-red-400  hover:text-secondaryHover font-medium hover:font-semibold text-smd">
@@ -451,7 +451,7 @@
                 </svg>
               </a>
         
-             <input type="text" class="w-full rounded pr-10 ltr:pl-10 bg-input border border-gray-300 px-4 py-2 text-sm text-gray-500 focus:outline-none focus-visible:ring-1  focus-visible:ring-primary ring-inset focus:text-gray-900 focus-visible:font-bold" placeholder="ابحث عن أي شيء" />
+             <input type="text" class="w-full rounded pr-10 ltr:pl-10 bg-input border border-gray-300 px-4 py-2 text-sm text-gray-500 focus:outline-none focus-visible:ring-1  focus-visible:ring-primary ring-inset focus:text-gray-900 focus-visible:font-bold" placeholder="" />
             </div>
         
         
@@ -460,11 +460,11 @@
               <!-- speciality -->
               <div class=" border-b py-3 ">
                   <label class="ml-2 text-gray-600 font-semibold  flex justify-between">
-                    <span class="text-md">التخصص</span>
+                    <span class="text-md">الفئة</span>
                     <!-- show categories modal -->
                     <div x-data="{ showCatModel : false }">
                       <!-- Button -->
-                      <a @click.prevent="showCatModel = !showCatModel" href="#" class="underline text-sm text-primaryTextColor">عرض كل الأقسام</a>
+                      <a @click.prevent="showCatModel = !showCatModel" href="#" class="underline text-sm text-primaryTextColor">فئات أخرى</a>
               
                       <!-- Modal Background -->
                       <div x-show="showCatModel" @click.self="showCatModel = !showCatModel" class="fixed text-gray-500 flex items-center justify-center overflow-auto z-50 bg-black bg-opacity-40 left-0 right-0 top-0 bottom-0" x-transition:enter="transition ease duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
@@ -475,6 +475,7 @@
                                 <div class="bg-green-400 text-white flex flex-col items-center justify-center py-2">
                                   <svg class="h-8 w-8 text-gray-800"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
                                   <span class="text-lg font-bold ml-2 text-red-500">مباني وأشغال</span>
                                 </div>
                                 <div class="">
@@ -562,9 +563,9 @@
                   </ul>
               </div>
               <!-- skills -->
-              <div class=" border-b py-3 ">
+              <!-- <div class=" border-b py-3 ">
                   <label class="ml-2 text-gray-600 font-semibold text-md">المهارات</label>
-                  <!-- categories list -->
+             
                   <div class="mt-4 mb-6 flex flex-wrap justify-start items-center gap-2">
                     <span class="bg-primaryTextColor text-white text-sm p-1">هندسة برمحيات
                       <span class="mr-1 font-semibold cursor-pointer">X</span>
@@ -584,9 +585,9 @@
                       <option value="fsdf">مهارة جديدة</option>
                     </select>
                   </div>
-              </div>
+              </div> -->
               <!-- joined at -->
-              <div class=" border-b py-3 ">
+              <!-- <div class=" border-b py-3 ">
                 <div class="py-1">
                   <details class="group" open>
                     <summary class="flex justify-between items-center  cursor-pointer list-none text-smd font-semibold">
@@ -637,7 +638,7 @@
                     </d>
                   </details>
                 </div>
-              </div>
+              </div> -->
                 <!-- other properties -->
               <div class=" py-3 ">
                   <label class="ml-2 text-gray-600 font-semibold text-lg">خصائص أخرى</label>
@@ -645,7 +646,7 @@
                   <ul class="mt-4">
                     <li class="flex justify-start items-center">
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " checked><span class="ml-2 text-gray-700 text-smd">موثوق الهوية</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " checked><span class="ml-2 text-gray-700 text-sm">هوية موثقة</span>
                       </label>
                       <svg class="h-6 w-6 text-green-600 mr-2 ltr:ml-2 mt-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
@@ -653,37 +654,42 @@
                     </li>
                     <li>
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">يقبل الخصم</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm">أضاف عرضا على الخدمات التي اخترتها</span>
                       </label>
                     </li>
                     <li>
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">نسبة الخصم</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm">أقسم بالله على الإلتزام بالميثاق</span>
                       </label>
                     </li>
                     <li>
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">يعطي فاتورة</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm">يقدم خصومات خاصة لأعضاء المنصة      </span>
                       </label>
                     </li>
                     <li>
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">خدمة مابعد البيع</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm">يعطي فاتورة</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm" >لديه خدمة مابعد البيع</span>
                       </label>
                     </li>
                     <li class="flex justify-start items-center">
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">متصل الان</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm">متصل الان</span>
                       </label>
                       <span class="h-4 w-4 rounded-full bg-green-500  mr-2 ltr:ml-2 mt-2"></span>
   
                     </li>
                     <li>
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
-                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">يقبل التقسيط</span>
+                        <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-sm">يقبل البيع بالتقسيط                        </span>
                       </label>
                     </li>
-                    <li>
+                    <!-- <li>
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
                         <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">يعمل بنظام HACCP</span>
                       </label>
@@ -692,13 +698,13 @@
                       <label class="inline-flex items-center text-sm mt-3 gap-x-4 cursor-pointer">
                         <input type="checkbox" class="form-checkbox h-4 w-4 text-gray-600 accent-primaryTextColor " ><span class="ml-2 text-gray-700 text-smd">يقبل الرقابة الالكترونية</span>
                       </label>
-                    </li>
+                    </li> -->
                   </ul>
               </div>
             </div>
           </div>
           <!-- right side -->
-          <div class="w-full md:w-9/12" x-data="{isGrid:false}">
+          <div class="w-full md:w-[74%]" x-data="{isGrid:false}">
             <!-- result count -->
             <div class="bg-white rounded p-3 flex justify-between items-center">
               <h3 class="text-sm md:text-base font-semibold text-gray-600">
@@ -733,7 +739,7 @@
                           <!-- speciality -->
                           <div class=" border-b py-3 ">
                               <label class="ml-2 text-gray-600 font-semibold  flex justify-between">
-                                <span class="text-md">التخصص</span>
+                                <span class="text-md">الفئة</span>
                                 <!-- show categories modal -->
                                 <div x-data="{ showCatModel : false }">
                                   <!-- Button -->
@@ -985,11 +991,11 @@
                 <button @click="isGrid =false">                
                   <svg class="h-7 w-7 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="8" y1="6" x2="21" y2="6" />  <line x1="8" y1="12" x2="21" y2="12" />  <line x1="8" y1="18" x2="21" y2="18" />  <line x1="3" y1="6" x2="3.01" y2="6" />  <line x1="3" y1="12" x2="3.01" y2="12" />  <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
                 </button>
-                <select class=" filter-input " style="width:auto !important">
+                <!-- <select class=" filter-input " style="width:auto !important">
                   <option value="" disabled>التاريخ</option>
                   <option value="newest">الأحدث</option>
                   <option value="oldest">الأقدم</option>
-                </select>
+                </select> -->
               </div>
              </div>
             </div>

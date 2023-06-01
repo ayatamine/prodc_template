@@ -57,6 +57,7 @@ module.exports = {
     },
     fontFamily: {
       'Noto': ['Noto Kufi Arabic', 'sans-serif'],
+      'Noto-Naskh': ['Noto Naskh Arabic', 'sans-serif'],
     },
   },
   variants: {

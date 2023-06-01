@@ -442,7 +442,7 @@
             <!-- speciality -->
             <div class=" border-b py-3 ">
                 <label class="ml-2 text-gray-600 font-semibold  flex justify-between">
-                  <span class="text-md">التخصص</span>
+                  <span class="text-md">الفئة</span>
                   <!-- show categories modal -->
                   <div x-data="{ showCatModel : false }">
                     <!-- Button -->
@@ -601,9 +601,9 @@
                 </ul>
             </div>
             <!-- price range -->
-            <div class=" py-3 ">
+            <!-- <div class=" py-3 ">
                 <label class="ml-2 text-gray-600 font-semibold text-md">الميزانية</label>
-                <!-- price input -->
+               
                 <div x-data="{total_value:25}" class="p-2 ">
                   <input class="w-full" type="range" x-model="total_value" min="25" max="11000" step="50">
 
@@ -613,18 +613,18 @@
                   </div>
                 </div>
 
-            </div>
+            </div> -->
           </div>
           </div>
           <!-- right side -->
           <div class="w-full md:w-9/12">
             <!-- result count -->
-            <div class="bg-white rounded p-3 flex justify-between items-center">
-              <h3 class="text-sm md:text-base font-semibold text-gray-600">
+            <div class="bg-white rounded p-3 md:flex justify-between items-center">
+              <h3 class="hidden md:block text-sm md:text-base font-semibold text-gray-600">
                 نتائج البحث 
                 <span class="font-bold text-base text-primaryTextColor mx-1"></span>
               </h3>
-             <div class="flex justify-start gap-x-4 items-center">
+             <div class="flex justify-between gap-x-4 items-center">
 
               <div class="md:hidden"  x-data="{ showFilterModel : false ,toggle() { this.showFilterModel = ! this.showFilterModel } }" class=" overflow-y-scroll">
                 <!-- Button -->
@@ -652,7 +652,7 @@
                         <!-- speciality -->
                         <div class=" border-b py-3 ">
                             <label class="ml-2 text-gray-600 font-semibold  flex justify-between">
-                              <span class="text-md">التخصص</span>
+                              <span class="text-md">الفئة</span>
                               <!-- show categories modal -->
                               <div x-data="{ showCatModel : false }">
                                 <!-- Button -->
@@ -831,12 +831,15 @@
                     </div>
                 </div>
               </div>
+              <div class="flex items-center gap-x-3">
+                <a href="add_project.html" class="sm-button primary-btn">أضف الخدمة التي تحتاجها الان</a>
               <!-- end filter in popup -->
               <select class=" filter-input " style="width:auto !important">
                 <option value="" disabled>التاريخ</option>
                 <option value="newest">الأحدث</option>
                 <option value="oldest">الأقدم</option>
               </select>
+              </div>
              </div>
             </div>
             <!-- results blocks -->
@@ -880,38 +883,45 @@
                       </div>   
                     </div>
                   </div>
+                  <!-- project details -->
+                  <div class=" md:flex justify-start gap-3 p-1 my-3">
+                    <div class="flex items-center gap-3 text-sm">
+                      <a href="professional_details.html" >
+                        <img class="h-10 w-10 rounded-full" src="assets/images/team/profil_picture_2.jpeg" width="50" height="50" alt="">
+                      </a>
+                      <div>
+                          <a href="professional_details.html"  class="mb-2 block  hover:text-primaryTextColor">عياط احمد امين</a>
+                          <div class="flex gap-5 flex-wrap">
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>منذ 30 دقيقة</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>مفتوح</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                              </svg>
+                              <span>7 عروض</span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                  </div>
                   <!-- short description -->
-                  <p class="text-ellipsis overflow-hidden text-sm my-3 leading-8">
+                  <p class="text-ellipsis overflow-hidden text-md text-black my-3 leading-8 font-Noto-Naskh">
                     <span class="block md:hidden">ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة ...</span>
                    <span class="hidden md:block"> ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة متقنه وترقيم وفهرسه الكتاب وتسليم الكتاب بصيغة psd و pdfتقل بالمحتوى المطلوب كتابة الاطلاع بشكل عميق على المحتوي وفهمه فهما جيدا يجب                    
                     ...</span>
                   </p>
-                  <div class="grid grid-cols-2 md:flex justify-start gap-3 p-1 border">
-                    <a href="professional_details.html" class="flex items-center gap-1 text-sm hover:text-primaryTextColor">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
-                      <span>عياط احمد امين</span>
-                    </a>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                      <span>منذ 30 دقيقة</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>                        
-                      <span>مفتوح</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                      </svg>                                               
-                      <span>7 عروض</span>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
               <!-- project item -->
@@ -919,7 +929,7 @@
                 <div class="flex-1">
                   <div class="flex items-center justify-between"  x-data="{ showReportModel : false ,toggle() { this.showReportModel = ! this.showReportModel } }" class=" overflow-y-scroll">
                     <a href="project_details.html" class="text-smd md:text-base  text-primaryTextColor">
-                        برمجة موقع 3 صفحات
+                        برمجة موقع 3 صفحات  بشكل متناسف باستخدام  tailwind css 
                     </a>
                    
                     <a href="#" @click.prevent="toggle()" class="flex items-center justify-center gap-x-2 px-3 py-1 text-sm text-white bg-primaryTextColor rounded hover:bg-primaryTextColorDarken">
@@ -953,38 +963,44 @@
                       </div>   
                     </div>
                   </div>
+                  <!-- project details -->
+                  <div class=" md:flex justify-start gap-3 p-1 my-3">
+                    <div class="flex items-center gap-3 text-sm">
+                      <a href="professional_details.html" >
+                        <img class="h-10 w-10 rounded-full" src="assets/images/team/profil_picture_2.jpeg" width="50" height="50" alt="">
+                      </a>
+                      <div>
+                          <a href="professional_details.html"  class="mb-2 block  hover:text-primaryTextColor">عياط احمد امين</a>
+                          <div class="flex gap-5 flex-wrap">
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>منذ 30 دقيقة</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>مفتوح</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                              </svg>
+                              <span>7 عروض</span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                  </div>
                   <!-- short description -->
-                  <p class="text-ellipsis overflow-hidden text-sm my-3 leading-8">
+                  <p class="text-ellipsis overflow-hidden text-md text-black my-3 leading-8 font-Noto-Naskh">
                     <span class="block md:hidden">ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة ...</span>
                    <span class="hidden md:block"> ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة متقنه وترقيم وفهرسه الكتاب وتسليم الكتاب بصيغة psd و pdfتقل بالمحتوى المطلوب كتابة الاطلاع بشكل عميق على المحتوي وفهمه فهما جيدا يجب                    
                     ...</span>
                   </p>
-                  <div class="flex justify-start gap-x-3 p-1 border">
-                    <a href="professional_details.html"  class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
-                      <span>عياط احمد امين</span>
-                    </a>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                      <span>منذ 30 دقيقة</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>                        
-                      <span>مفتوح</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                      </svg>                                               
-                      <span>7 عروض</span>
-                    </div>
-                  </div>
                 </div>
               </div>
               <!-- project item -->
@@ -1026,38 +1042,44 @@
                       </div>   
                     </div>
                   </div>
+                  <!-- project details -->
+                  <div class=" md:flex justify-start gap-3 p-1 my-3">
+                    <div class="flex items-center gap-3 text-sm">
+                      <a href="professional_details.html" >
+                        <img class="h-10 w-10 rounded-full" src="assets/images/team/profil_picture_2.jpeg" width="50" height="50" alt="">
+                      </a>
+                      <div>
+                          <a href="professional_details.html"  class="mb-2 block  hover:text-primaryTextColor">عياط احمد امين</a>
+                          <div class="flex gap-5 flex-wrap">
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>منذ 30 دقيقة</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>مفتوح</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                              </svg>
+                              <span>7 عروض</span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                  </div>
                   <!-- short description -->
-                  <p class="text-ellipsis overflow-hidden text-sm my-3 leading-8">
+                  <p class="text-ellipsis overflow-hidden text-md text-black my-3 leading-8 font-Noto-Naskh">
                     <span class="block md:hidden">ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة ...</span>
                    <span class="hidden md:block"> ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة متقنه وترقيم وفهرسه الكتاب وتسليم الكتاب بصيغة psd و pdfتقل بالمحتوى المطلوب كتابة الاطلاع بشكل عميق على المحتوي وفهمه فهما جيدا يجب                    
                     ...</span>
                   </p>
-                  <div class="flex justify-start gap-x-3 p-1 border">
-                    <a  href="professional_details.html" class="flex items-center gap-1 text-sm hover:text-primaryTextColor">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
-                      <span>عياط احمد امين</span>
-                    </a>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                      <span>منذ 30 دقيقة</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>                        
-                      <span>مفتوح</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                      </svg>                                               
-                      <span>7 عروض</span>
-                    </div>
-                  </div>
                 </div>
               </div>
               <!-- project item -->
@@ -1099,38 +1121,44 @@
                       </div>   
                     </div>
                   </div>
+                  <!-- project details -->
+                  <div class=" md:flex justify-start gap-3 p-1 my-3">
+                    <div class="flex items-center gap-3 text-sm">
+                      <a href="professional_details.html" >
+                        <img class="h-10 w-10 rounded-full" src="assets/images/team/profil_picture_2.jpeg" width="50" height="50" alt="">
+                      </a>
+                      <div>
+                          <a href="professional_details.html"  class="mb-2 block  hover:text-primaryTextColor">عياط احمد امين</a>
+                          <div class="flex gap-5 flex-wrap">
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>منذ 30 دقيقة</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              <span>مفتوح</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-sm ">
+                              <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                              </svg>
+                              <span>7 عروض</span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                  </div>
                   <!-- short description -->
-                  <p class="text-ellipsis overflow-hidden text-sm my-3 leading-8">
+                  <p class="text-ellipsis overflow-hidden text-md text-black my-3 leading-8 font-Noto-Naskh">
                     <span class="block md:hidden">ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة ...</span>
                    <span class="hidden md:block"> ارغب في التعاون مع مستقل لغرض تنسيق كتاب عائلي مطلوب من المستقل المراجعة اللغوية والتنسيق وإعادة كتابة المحتوى بطريقة متقنه وترقيم وفهرسه الكتاب وتسليم الكتاب بصيغة psd و pdfتقل بالمحتوى المطلوب كتابة الاطلاع بشكل عميق على المحتوي وفهمه فهما جيدا يجب                    
                     ...</span>
                   </p>
-                  <div class="flex justify-start gap-x-3 p-1 border">
-                    <div class="flex items-center gap-1 text-sm hover:text-primaryTextColor">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                      </svg>
-                      <span>عياط احمد امين</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>
-                      <span>منذ 30 دقيقة</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-green-600"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                      </svg>                        
-                      <span>مفتوح</span>
-                    </div>
-                    <div class="flex items-center gap-1 text-sm ">
-                      <svg class="h-4 w-4 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                      </svg>                                               
-                      <span>7 عروض</span>
-                    </div>
-                  </div>
                 </div>
               </div>
               <!-- pagination -->
