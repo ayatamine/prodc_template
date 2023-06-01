@@ -673,16 +673,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 1.25rem;
 }
 
+.left-1\/2{
+  left: 50%;
+}
+
 .-top-1{
   top: -0.25rem;
 }
 
 .-right-2{
   right: -0.5rem;
-}
-
-.left-1\/2{
-  left: 50%;
 }
 
 .z-40{
@@ -1018,10 +1018,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: -0.5rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
-}
-
 .block{
   display: block;
 }
@@ -1174,12 +1170,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 10rem;
 }
 
-.h-\[2\.4rem\]{
-  height: 2.4rem;
-}
-
 .h-60{
   height: 15rem;
+}
+
+.h-\[2\.4rem\]{
+  height: 2.4rem;
 }
 
 .max-h-\[270px\]{
@@ -1386,6 +1382,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 33.333333%;
 }
 
+.\!w-20{
+  width: 5rem !important;
+}
+
 .w-1\/3{
   width: 33.333333%;
 }
@@ -1408,14 +1408,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-1\/12{
   width: 8.333333%;
-}
-
-.w-48{
-  width: 12rem;
-}
-
-.\!w-20{
-  width: 5rem !important;
 }
 
 .min-w-\[14rem\]{
@@ -1486,10 +1478,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex: 1 1 auto;
 }
 
-.flex-none{
-  flex: none;
-}
-
 .flex-shrink-0{
   flex-shrink: 0;
 }
@@ -1523,18 +1511,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.-translate-y-2\/3{
-  --tw-translate-y: -66.666667%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-full{
-  --tw-translate-y: 100%;
+.-translate-y-2\/3{
+  --tw-translate-y: -66.666667%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1704,6 +1687,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-start{
   justify-content: flex-start;
+}
+
+.\!justify-start{
+  justify-content: flex-start !important;
 }
 
 .justify-end{
@@ -2236,6 +2223,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .bg-yellow-50{
   --tw-bg-opacity: 1;
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
@@ -2274,16 +2266,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-red-500{
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.bg-gray-800{
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-90{
@@ -2378,10 +2360,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-0\.5{
   padding: 0.125rem;
-}
-
-.p-1\.5{
-  padding: 0.375rem;
 }
 
 .px-4{
@@ -3186,14 +3164,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.transition-transform{
-  transition-property: transform;
+.transition-opacity{
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.transition-opacity{
-  transition-property: opacity;
+.transition-transform{
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -4769,28 +4747,20 @@ input[type="radio"]:checked + label{
     width: 25%;
   }
 
-  .md\:w-10\/12{
-    width: 83.333333%;
-  }
-
-  .md\:w-1\/12{
-    width: 8.333333%;
-  }
-
-  .md\:w-\[30\%\]{
-    width: 30%;
-  }
-
-  .md\:w-\[70\%\]{
-    width: 70%;
-  }
-
   .md\:w-\[26\%\]{
     width: 26%;
   }
 
+  .md\:w-10\/12{
+    width: 83.333333%;
+  }
+
   .md\:w-\[74\%\]{
     width: 74%;
+  }
+
+  .md\:w-1\/12{
+    width: 8.333333%;
   }
 
   .md\:max-w-full{
