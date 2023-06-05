@@ -32,9 +32,22 @@ body {
 #navbarCollapse li .topnav-link{
  @apply  mx-1 flex px-2 py-2 text-[13px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
 }
+.blog-p{
+  @apply block font-Noto-Naskh text-[1rem] font-medium text-gray-500 leading-8
+}
+.blog-t{
+  @apply block h-[50px] leading-7 text-base md:text-lg font-semibold text-primaryTextColor mt-5 mb-3
+}
+.blog-category{
+  @apply bg-body p-1 py-0.5
+}
+.blog-img{
+  @apply max-h-[270px] w-full object-cover
+}
 .blog li .topnav-link{
  @apply  mx-2 flex px-4 py-2 !text-[15px] text-gray-600  lg:inline-flex  hover:bg-body   transition-all duration-200 ease-in-out
 }
+.blog li .topnav-link.active{@apply bg-body}
 .submenu.top-dropdown{
   right:4px;left:auto
 }
@@ -249,7 +262,7 @@ input[type="radio"]:checked + label{
 }
 .dashboard-tab.active{ @apply bg-primary text-white transition-colors duration-300 ease-in-out delay-75}
 .md-button{ @apply px-3 py-2 rounded text-white text-sm}
-.smd-button{ @apply px-5 py-2.5 rounded text-white text-sm}
+.[1rem]-button{ @apply px-5 py-2.5 rounded text-white text-sm}
 .sm-button{ @apply px-4 py-1.5 rounded text-white text-sm}
 .primary-btn{
   @apply bg-primaryTextColor  hover:bg-primaryTextColorDarken 
@@ -283,13 +296,13 @@ input[type="radio"]:checked + label{
   content: "";
 }
 #ethiks .bg-white p{
-  @apply mb-4 text-[1.125rem] text-black leading-9 text-justify
+  @apply mb-4 text-[1rem] text-black leading-9 text-justify
 }
 #ethiks .what_gets_from_ethiks{
   @apply leading-10  text-black flex justify-start gap-2 items-center 
 }
 .blog-content p{
-  @apply leading-7 text-sm
+  @apply leading-8 text-justify text-base font-Noto-Naskh text-gray-900
 }
 .blog-content ul{
   @apply list-disc my-3 px-4
@@ -303,3 +316,8 @@ input[type="radio"]:checked + label{
 .article-meta{
   @apply text-[9px] mt-2
 }
+
+#buy_offer_form .header-tab-item{
+  @apply flex justify-center items-center gap-2 p-3 px-5 cursor-pointer;
+}
+#buy_offer_form .header-tab-item.active{@apply bg-white}

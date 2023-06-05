@@ -36,12 +36,12 @@
 
         <!-- the main menu -->
         <div class="relative -mx-4 flex items-center justify-between">
-          <div class="w-60 max-w-full px-4">
+          <div class="w-64 max-w-full px-4">
             <a href="index.html" class="navbar-logo block  py-2 md-py-3" >
               <img
               src="assets/images/logo/WhatsApp Image 2023-05-03 at 5.54.05 PM.jpeg"
               alt="logo"
-              class="header-logo w-11/12 h-10 object-contain"
+              class="header-logo h-full w-full object-contain"
             />
             </a>
           </div>
@@ -66,13 +66,37 @@
                 class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-white lg:py-0 lg:px-4 lg:shadow-none xl:px-6"
               >
                 <ul class="block lg:flex items-center blog">
-                  <li class="group relative">
+                  <li class="submenu-item group relative">
                     <a
-                      href="blog.html"
-                      class="ud-menu-scroll topnav-link active"
+                      href="javascript:void(0)"
+                      class="relative topnav-link active"
                     >
-                    الرئيسية
+                    <span>    الرئيسية   </span>
+                    <svg class="h-[0.6rem] w-[0.6rem] self-center mr-1" fill="#d0d5d7" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#dedede"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></g></svg>
                     </a>
+                    <div
+                      class="submenu top-dropdown px-0 py-1 !pb-0 shadow-black drop-shadow-md"
+                    >
+                      <a
+                        href="about.html"
+                        class="topnav-link m-0 w-full" 
+                      >
+                       من نحن
+                      </a>
+                      <a
+                        href="values.html"
+                        class="topnav-link m-0 w-full" 
+                      >
+                       قيمنا
+                      </a>
+                      <a
+                        href="vision.html"
+                        class="topnav-link m-0 w-full" 
+                      >
+                       أهدافنا
+                      </a>
+                     
+                    </div>
                   </li>
                   <li class="submenu-item group relative">
                     <a
@@ -83,7 +107,7 @@
                     <svg class="h-[0.6rem] w-[0.6rem] self-center mr-1" fill="#d0d5d7" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#dedede"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></g></svg>
                     </a>
                     <div
-                      class="submenu top-dropdown px-0 py-1 shadow-black drop-shadow-md"
+                      class="submenu top-dropdown px-0 py-1 !pb-0 shadow-black drop-shadow-md"
                     >
                       <a
                         href="blog.html"
@@ -109,7 +133,7 @@
                     <svg class="h-[0.6rem] w-[0.6rem] self-center mr-1" fill="#d0d5d7" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#dedede"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></g></svg>
                     </a>
                     <div
-                      class="submenu top-dropdown px-0 py-1 shadow-black drop-shadow-md"
+                      class="submenu top-dropdown px-0 py-1 !pb-0 shadow-black drop-shadow-md"
                     >
                       <a
                         href="blog.html"
@@ -140,7 +164,7 @@
               </button>
           
               <!-- primary button -->
-              <a href="index.html" class="primary-btn md-button block w-max">ابدأ مشروعك</a>
+              <a href="index.html" class="primary-btn md-button block w-max">اطلب خدمتك</a>
             </div>
           </div>
         </div>
@@ -156,104 +180,136 @@
       <!-- intro articles -->
      <div class="intro-articles  w-full md:w-11/12 mx-auto md:flex justify-center gap-12">
       <!-- first article -->
-      <a href="blog_details.html"  class="article w-full md:w-1/2 block ">
+      <div class="article w-full md:w-1/2 block ">
         <div class="article-img">
-          <img width="720" height="405" src="assets/images/blog/blog-01.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-01.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-lg font-semibold text-primaryTextColor my-3">5 قواعد لتحسين الاكواد البرمجية</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">برمجة الويب</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 قواعد لتحسين الاكواد البرمجية</a>
+          <a  href="blog_details.html" class="blog-p">
             تصميم صفحة ويب احترافية ليس بالأمر السهل، حيث يتعين على المطورين أن يوازنوا بين التصميم المرئي (كيف يبدو شكل صفحة…
-          </p>
+          </a>
         </div>
-      </a>
+      </div>
       <!-- second article -->
-      <a href="blog_details.html"  class="article w-full md:w-1/2  mt-8 md:mt-0 block">
+      <div class="article w-full md:w-1/2 block ">
         <div class="article-img">
-          <img src="assets/images/blog/blog-02.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-02.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-lg font-semibold text-primaryTextColor my-3">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">الربح من الانترنت</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
             هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
-          </p>
+          </a>
         </div>
-      </a>
+      </div>
      </div>
      <!-- blog other articles -->
      <div class="my-12 w-full md:w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <!-- first article -->
-      <a href="blog_details.html" class="article">
+      <div class="article ">
         <div class="article-img">
-          <img width="720" height="200" src="assets/images/blog/blog-01.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-02.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-md font-semibold text-primaryTextColor my-3">5 قواعد لتحسين الاكواد البرمجية</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
-            تصميم صفحة ويب احترافية ليس بالأمر السهل، حيث يتعين على المطورين أن يوازنوا بين التصميم المرئي (كيف يبدو شكل صفحة…
-          </p>
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">مقالات متنوعة</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
+            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
+          </a>
         </div>
-      </a>
+      </div>
+      <!-- second article -->
+      <div class="article ">
+        <div class="article-img">
+          <img width="720" height="405" src="assets/images/blog/blog-01.jpg" alt="" class="blog-img">
+        </div>
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">الربح من الانترنت</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
+            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
+          </a>
+        </div>
+      </div>
       <!-- third article -->
-      <a  href="blog_details.html"  class="article ">
+      <div class="article ">
         <div class="article-img">
-          <img width="720" height="200"  src="assets/images/blog/blog-02.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-03.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-md font-semibold text-primaryTextColor my-3">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
-            هل فكرت في إنشاء مدونة علىgdfg dg بيس سيبسيصشفالعتالا تابتابلا الإنترنت وا المدونة ستجدها…
-          </p>
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">الربح من الانترنت</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
+            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
+          </a>
         </div>
-      </a>
+      </div>
       <!-- fourth article -->
-      <a  href="blog_details.html"  class="article ">
+      <div class="article ">
         <div class="article-img">
-          <img width="720" height="200" src="assets/images/blog/blog-03.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-02.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-md font-semibold text-primaryTextColor my-3">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
-            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك بب لأساسية والعمل المستمر على المدونة ستجدها…
-          </p>
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">تصليح أجهزة</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
+            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
+          </a>
         </div>
-      </a>
-      <!-- fifth article -->
-      <a  href="blog_details.html"  class="article ">
+      </div>
+      <!-- second article -->
+      <div class="article ">
         <div class="article-img">
-          <img width="720" height="200"  src="assets/images/blog/blog-01.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-01.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-md font-semibold text-primaryTextColor my-3">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
-            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك بب لأساسية والعمل المستمر على المدونة ستجدها…
-          </p>
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">تعليم</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
+            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
+          </a>
         </div>
-      </a>
-      <!-- sixth article -->
-      <a  href="blog_details.html"  class="article ">
+      </div>
+      <!-- third article -->
+      <div class="article ">
         <div class="article-img">
-          <img width="720" height="200"  src="assets/images/blog/blog-02.jpg" alt="" class="max-h-[270px] w-full object-cover">
+          <img width="720" height="405" src="assets/images/blog/blog-03.jpg" alt="" class="blog-img">
         </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-md font-semibold text-primaryTextColor my-3">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
-            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك بب لأساسية والعمل المستمر على المدونة ستجدها…
-          </p>
+        <div class="article-content p-3  bg-white">
+          <div class="flex justify-between items-center leading-7 text-[13px] mt-3">
+            <a href="blog.html" class="blog-category">الربح من الانترنت</a>
+            <span class="blog-date">16 مايو 2023</span>
+          </div>
+          <a  href="blog_details.html" class="blog-t">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</a>
+          <a  href="blog_details.html" class="blog-p">
+            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك ببعض الأمور الأساسية والعمل المستمر على المدونة ستجدها…
+          </a>
         </div>
-      </a>
-      <!-- sixth article -->
-      <a  href="blog_details.html"  class="article ">
-        <div class="article-img">
-          <img width="720" height="200"  src="assets/images/blog/blog-01.jpg" alt="" class="max-h-[270px] w-full object-cover">
-        </div>
-        <div class="article-content p-3 py-4 bg-white">
-          <h2 class="h-[50px] leading-7 text-base md:text-md font-semibold text-primaryTextColor my-3">5 طرق تتيح لك ربح المال من المدونة الخاصة بك</h2>
-          <p class="text-sm font-medium text-gray-500 leading-8">
-            هل فكرت في إنشاء مدونة على الإنترنت والربح منها؟ عن طريق قيامك بب لأساسية والعمل المستمر على المدونة ستجدها…
-          </p>
-        </div>
-      </a>
+      </div>
      </div>
      <!-- pagination -->
      <ol class="flex justify-center my-6 gap-1 text-xs font-medium">

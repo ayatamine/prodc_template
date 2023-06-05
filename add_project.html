@@ -631,7 +631,7 @@
       </span>
   
       <span class="text-primaryTextColor dark:text-blue-400 hover:underline">
-           إضافة مشروع
+           إضافة طلب خدمة
       </span>
     </div>
     <section class="px-4 md:px-14 pb-16  bg-body text-gray-700 relative overflow-hidden ">
@@ -642,21 +642,21 @@
           <div class="bg-white p-6">
             <div class="project-title mb-5"> 
               <label for="project-title" class=" my-2 flex">
-                <span>عنوان المشروع</span>
+                <span>عنوان الخدمة المطلوبة</span>
                 <span class="text-red-600 text-xl font-bold mr-2">*</span>
               </label>
              <input type="text" class="white-input-theme" id="project-title"  value="">
             </div>
             <div class="description mb-5">
               <label for="description" class=" my-2 flex">
-                <span>وصف المشروع</span>
+                <span>وصف الخدمة المطلوبة</span>
                 <span class="text-red-600 text-xl font-bold mr-2">*</span>
               </label>
               <textarea class="white-input-theme" name="description" id="description" rows="10"></textarea>
               <span class="block mt-2 text-sm">أدخل وصفاً مفصلاً لمشروعك وأرفق أمثلة لما تريد ان أمكن  </span>
             </div>
              <!-- skills -->
-            <div class=" mb-5">
+            <!-- <div class=" mb-5">
               <label class="my-2  text-md block" for="select-skill"
                 >المهارات المستخدمة</label
               >
@@ -676,9 +676,9 @@
                 <option value="sdf">MArketing</option>
                 </select>
               </div>
-            </div>
+            </div> -->
             <!-- budget and duration -->
-            <div class="project-budget mb-5 md:flex justify-between gap-2 items-center"> 
+            <!-- <div class="project-budget mb-5 md:flex justify-between gap-2 items-center"> 
               <div class="w-full md:w-1/2 mb-4 md:mb-0">
                 <label for="project-budget" class=" my-2 flex">
                   <span>الميزانية المتوقعة</span>
@@ -710,19 +710,19 @@
                <span class=" block mt-2 text-sm">متى تحتاج استلام مشروعك</span>
               </div>
               
-            </div>
+            </div> -->
           </div>
           <!-- advanced form -->
           <div class="bg-white p-6 mt-8" x-data="addRemove()">
             <h2 class="text-lg flex items-center gap-2 cursor-pointer font-semibold" @click="isAdvancedForm =! isAdvancedForm">
-              <span>تخصيص المشروع</span>
+              <span>تخصيص الخدمة المطلوبة</span>
               <svg class="h-5 w-5" x-show="!isAdvancedForm"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
               <svg class="h-5 w-5" x-show="isAdvancedForm"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 15 12 9 18 15" /></svg>
             </h2> 
             <div class="mt-3 py-2" x-show="isAdvancedForm" >
               <div class="project-questions mb-5" > 
                 <label for="project-questions" class=" my-2 flex">
-                  <span>أسئلة المشروع</span>
+                  <span>أسئلة  تخص الخدمة المطلوبة</span>
                 </label>
                <template x-for="(field, index) in questions" :key="field" >
                  <div class="mb-3">
@@ -744,34 +744,50 @@
           </div>
           <div class="py-3 ">
             <!-- end of the form -->
-            <button type="submit"  class="smd-button success-btn mt-8 ">إضافة المشروع</button>
+            <button type="submit"  class="smd-button success-btn mt-8 ">إضافة الخدمة المطلوبة</button>
           </div>
           
         </form>
         <div class="w-full md:w-1/3 p-6 pt-0">
           <div class="mb-6">
-            <h2 class="text-xl mb-3">ابدأ بانجاز مشروعك</h2>
+            <h2 class="text-xl mb-3">ابدأ بإنجاز أي خدمة تريدها</h2>
             <p class="leading-9 text-sm">
-              تستطيع إنجاز مشروعك بالشكل الذي تريده من خلال الفورم، أدخل تفاصيل المشروع والميزانية والمدة المتوقعة ليتم مراجعته ونشره مجاناً، بعد ذلك سيظهر للمحترفين في صفحة المشاريع ويقدموا عروضهم عليه لتختار العرض الأنسب لك ويبدأ المحترف بتنفيذ المشروع.
+              تستطيع إنجاز أي خدمة تحتاجها بالشكل الذي تريده من خلال هذا النموذج ، أدخل تفاصيل
+              الخدمة والمدة المتوقعة ليتم مراجعته ونشره مجانا، بعد ذلك سيظهر هذا الإعلان للمحترفين
+              صفحة الخدمات المطلوبة ويقدموا عروضهم عليه لتختار العرض الأنسب لك ويبدأ المحترف
+              بتنفيد الخدمة التي طلبتها
             </p>
           </div>
           <div class="mb-6">
-            <h2 class="text-xl mb-3">نحن نضمن حقوقك </h2>
-            <p class="leading-9 text-sm">
-              يقوم الموقع بدور الوسيط بينك وبين المحترف الذي توظفه لتنفيذ مشروعك، فقط بعد انتهاء المحترف من تنفيذ المشروع كاملاً يتم تحويل المبلغ إلى حسابه.
-            </p>
-          </div>
-          <div class="mb-6">
-            <h2 class="text-xl mb-3">نصائح للحصول على عمل ناجح   </h2>
+            <h2 class="text-xl mb-3">إضمن حقوقك</h2>
+            <h2 class="text-smd mb-3">  من أجل ضمان حقوقك وتقديم أفضل خدمة ممكنة، نحثك على إتباع الإرشادات التالي:</h2>
             <ul class="list-disc pr-6">
               <li class="text-sm leading-9">
-                وضح جميع التفاصيل والمهام المطلوب إنجازها
+                قبل إختيارك لأي محترف نوصيك بمراجعة ملفه التعريفي 
+                 على الموقع والإطلاع بعناية على
+                أعماله وتقييمات العملاء السابقين له ومعرفة خبراته ومهاراته وسيرته المهنية.
               </li>
-              <li class="text-smd leading-9">
-                املأ جميع الحقول ووفّر أمثلة لما تريد تنفيذه
+              <li class="text-sm leading-9">
+                الأفضل الحصول على الأقل ثلاث عروض على الخدمة المطلوبة هذا سيتيح لك
+                فرصة لتقارن بينها وتختار الأنسب لك من حيث السعر والجودة.
               </li>
-              <li class="text-smd leading-9">
-                جزّء المشروع والمهام الكبيرة على عدّة مراحل صغيرة
+              <li class="text-sm leading-9">
+                إبلاغ إدارة الموقع بتفاصيل الاتفاق الذي ستتوصل إليه مع المحترف من خلال مسح رمز الإستجابة السريعة (QR Code)
+                الخاص بالمحترف والموجود على بطاقة هويته الالكترونية 
+                <strong class="group relative text-red-500 !text-smd cursor-pointer">*1
+                  <div class="group-hover:opacity-100 transition-opacity bg-gray-200  rounded-md absolute bottom-2 left-1/2
+                  -translate-x-1/2  opacity-0 m-4 z-40 border border-gray-400 p-1 mx-auto w-max">
+                   <img src="assets/images/id_card.png" alt="" class="h-32 w-32">
+                  </div>
+                </strong>
+                والنقر على زر "<strong class="text-md">تم الاتفاق</strong>" 
+                <strong class="group relative text-red-500 !text-smd cursor-pointer">*2
+                  <div class="group-hover:opacity-100 transition-opacity bg-gray-200  rounded-md absolute bottom-2 left-1/2
+                  -translate-x-1/2  opacity-0 m-4 z-40 border border-gray-400 p-1 mx-auto w-max">
+                   <img src="assets/images/prodc_preview.png" alt="" class="h-64 w-64">
+                  </div>
+                </strong>
+                مع ذكر المدة المحدد لإنجاز الخدمة والتكلفة المتفق عليها.
               </li>
             </ul>
           </div>
