@@ -2560,6 +2560,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
 }
 
+.\!pb-0{
+  padding-bottom: 0px !important;
+}
+
 .pt-\[58px\]{
   padding-top: 58px;
 }
@@ -2642,10 +2646,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pr-2{
   padding-right: 0.5rem;
-}
-
-.\!pb-0{
-  padding-bottom: 0px !important;
 }
 
 .text-center{
