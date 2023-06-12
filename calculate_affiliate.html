@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      احمد امين
+     حساب العمولة 
     </title>
     <link
       rel="shortcut icon"
@@ -15,13 +15,11 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
  
 
+    <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
-    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="assets/css/tailwind.css" />
 
-    <script>
-      new WOW().init();
-    </script>
   </head>
   <body class="font-Noto">
     <!-- ====== Navbar Section Start -->
@@ -597,197 +595,228 @@
       </div>
     </div>
     <!-- ====== Navbar Section End -->
-    <section class="px-4 md:px-14 py-6 mt-[65px] bg-body text-gray-700 relative overflow-hidden ">
-
-      <div class="w-full mx-auto my-6 md:flex gap-3" id="myTabContent" >
-        <div class="w-full md:w-3/12    mt-2 pt-2 lg:mt-0 z-20" id="nav-content">
-          <!-- user avatar -->
-          <div>
-            <div class="w-fit mx-auto relative">
-              <a href="" class="">
-                <img src="assets/images/hero/hero-image.jpg" class="mx-auto h-28 w-28 rounded-full shadow-lg border" alt="">
-            
-              </a>
-              <a href=""><span class="absolute bottom-[1rem] left-[-1rem] h-10 w-10 rounded-full border border-dotted bg-white flex items-center justify-center hover:bg-primaryTextColor">
-                <svg class="h-5 w-5 text-gray-700 hover:text-white"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />  <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />  <line x1="16" y1="5" x2="19" y2="8" /></svg>
-              </span></a>
-            
-            </div>
-            <h3 class="text-lg md:text-xl my-3 text-center text-gray-800">عياط احمد امين  </h3>
+    <!--main content  -->
+    <div class=" bg-body mt-16 py-8  px-6 md:px-12" id="calculate_percentage">
+      <div class="bg-white py-12 px-8 mt-4 text-smd">
+        <h2 class="text-primaryTextColorDarken font-semibold text-center  text-lg md:text-2xl my-4">حساب وسداد عمولة الموقع</h2>
+        <!-- first section -->
+        <div    class="items-center justify-between overflow-hidden  flex flex-col-reverse md:flex-row mt-6">
+          <div
+            class="w-full text-sm md:text-md py-12 px-7 sm:px-12 pb-0 lg:w-[57%] lg:py-9 lg:px-14 xl:p-[50px]"
+          >
+            <p
+              class="mb-5 block text-md md:text-lg font-semibold text-primaryTextColorDarken"
+              >
+              أصحاب الباقات المدفوعة لا يتوجب عليهم دفع أي عمولة للمنصة..
+            </p>
+            <p
+              class="mb-5 block text-lg md:text-xl font-semibold text-primaryTextColorDarken"
+              >
+              أصحاب الباقة المجانية يدفعون عمولة للمنصة موزعة كالتالي:
+            </p>
+            <ul class="" id="professions_percentages">
+              <li>
+                <span class="ml-3 ltr:mr-3 font-semibold">-</span>تقديم الخدمات أو بيع السلع هي <span class="text-red-500 font-semibold">5%</span>
+              </li>
+              <li>
+                <span class="ml-3 ltr:mr-3 font-semibold">-</span>الخدمات السياحية هي <span class="text-red-500 font-semibold">2.5%</span>
+              </li>
+              <li>
+                <span class="ml-3 ltr:mr-3 font-semibold">-</span>بيع السيارات والعقارات والمجوهرات هي <span class="text-red-500 font-semibold">1%</span>
+              </li>
+            </ul>
             
           </div>
-           <!-- user links -->
-          <div class="mt-6" x-data="{show:false}">
-            <h3 class="text-smd md:text-md my-3  text-gray-800 hidden md:block">لوحة التحكم  </h3>
-            <ul class="list-reset hidden md:grid grid-cols-3 gap-2  px-4 md:px-0" >
-              <li class="">
-                <a href="professional_dashboard.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                  
-                  <span class="pb-1 md:pb-0 text-sm">الرئيسية</span>
-                </a>
-              </li>  
-              <li class="" role="presentation">
-                    <a href="my_account_settings.html" class="dashboard-tab  hover:text-white hover:bg-primary" >
-                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">حسابي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_ballance.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">الرصيد</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_projects.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                      </svg>
-
-                      <span class="pb-1 md:pb-0 text-sm">مشاريعي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_portfolio.html" class="dashboard-tab active" >
-                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="15" y1="6" x2="15.01" y2="6" />  <rect x="3" y="3" width="18" height="14" rx="3" />  <path d="M3 13l4 -4a3 5 0 0 1 3 0l 4 4" />  <path d="M13 12l2 -2a3 5 0 0 1 3 0l 3 3" />  <line x1="8" y1="21" x2="8.01" y2="21" />  <line x1="12" y1="21" x2="12.01" y2="21" />  <line x1="16" y1="21" x2="16.01" y2="21" /></svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">أعمالي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_tickets.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">تذاكري</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_verifications.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.007 8.27C22.194 9.125 23 10.45 23 12c0 1.55-.806 2.876-1.993 3.73.24 1.442-.134 2.958-1.227 4.05-1.095 1.095-2.61 1.459-4.046 1.225C14.883 22.196 13.546 23 12 23c-1.55 0-2.878-.807-3.731-1.996-1.438.235-2.954-.128-4.05-1.224-1.095-1.095-1.459-2.611-1.217-4.05C1.816 14.877 1 13.551 1 12s.816-2.878 2.002-3.73c-.242-1.439.122-2.955 1.218-4.05 1.093-1.094 2.61-1.467 4.057-1.227C9.125 1.804 10.453 1 12 1c1.545 0 2.88.803 3.732 1.993 1.442-.24 2.956.135 4.048 1.227 1.093 1.092 1.468 2.608 1.227 4.05Zm-4.426-.084a1 1 0 0 1 .233 1.395l-5 7a1 1 0 0 1-1.521.126l-3-3a1 1 0 0 1 1.414-1.414l2.165 2.165 4.314-6.04a1 1 0 0 1 1.395-.232Z" fill="#3eb142"></path></g></svg>
-
-                      
-                      <span class="pb-1 md:pb-0 text-sm">توثيقات</span>
-                    </a>
-              </li>
-            </ul>
-            <div class="md:hidden flex justify-between items-center p-2 px-4 bg-white border rounded">
-              <h3 class="text-sm md:text-md my-3  text-gray-800">لوحة التحكم  </h3>
-              <span class="cursor-pointer" @click.prevent="show = !show">
-                <svg class="h-7 w-7"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-              </span>              
+          <div class="text-center lg:w-[43%] h-full">
+            <div class="relative z-10 inline-block p-4">
+              <img
+                src="assets/images/home/prodc network.jpg"
+                alt="image"
+                class="mx-auto lg:h-80 lg:ml-auto rtl:lg:mr-auto border-4 border-textBgColor shadow-md drop-shadow-lg shadow-black"
+              />
             </div>
-            <ul x-show="show" class="list-reset grid grid-cols-3 gap-3 md:hidden py-4 " >
-              <li class="">
-                <a href="professional_dashboard.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="5 12 3 12 12 3 21 12 19 12" />  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                  
-                  <span class="pb-1 md:pb-0 text-sm">الرئيسية</span>
-                </a>
-              </li>  
-              <li class="" role="presentation">
-                    <a href="my_account_settings.html" class="dashboard-tab hover:bg-primary hover:text-white " >
-                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="7" r="4" />  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">حسابي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_ballance.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">الرصيد</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_projects.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                      </svg>
+          </div>
+        </div>
+        <!-- alert section  -->
+        <div class="text-center max-w-2xl !leading-[3rem] p-2 mx-auto border-4 border-red-500 text-red-500 text-md md:text-lg">
+          تعد عمولة المنصة في ذمة كل محترف يستفيد من خدمات المنصة، عن
+          طريق التعامل المباشر أو غير المباشر أو عن بعد مع أي شخص مسجل في
+          المنصة وكانت المنصة سببا في وصول الطرفين لبعض (المحترف والعميل) 
+        </div>
+        <!-- calculate section -->
+        <div class="mt-5 ">
+          <button class="flex justify-center items-center gap-2 text-white p-3 px-6 bg-blue-800">
+            <span>حساب العمولة</span>
+            <svg class="h-5 w-6 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="5" y1="12" x2="11" y2="18" />  <line x1="5" y1="12" x2="11" y2="6" /></svg>
+          </button>
+          <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="border border-gray-800 p-3">
+              <div class="mx-auto rounded-full w-16 h-16 p-3 mb-3 bg-blue-200 flex text-center items-center">
+                <svg class="h-10 w-10 text-blue-800"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="8" y1="12" x2="8" y2="12.01" />  <line x1="12" y1="12" x2="12" y2="12.01" />  <line x1="16" y1="12" x2="16" y2="12.01" /></svg>
+              </div>
+              <h2 class="title text-center text-primaryTextColorDarken text-md md:text-lg font-semibold">عمولة الموقع لكل المجالات</h2>
+              <h2 class="sub-title text-center text-primaryTextColorDarken text-md md:text-lg font-semibold">تقديم خدمات – بيع سلع    </h2>
+              <h2 class="percentage my-6 text-center text-blue-800 text-md md:text-2xl font-semibold">5%    </h2>
+              <div>
+                <ul class="px-3 text-primaryTextColorDarken text-base lg:text-md">
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>تقديم خدمات 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%5</span> من قيمة الخدمة المقدمة.
+                      وفي حالة تقديم الخدمة لأكثر من شخص فيتم تحويل
+                      %1عن كل خدمة تم تقديمها
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>بيع السلع والبضائع 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%5</span> من قيمة الخدمة المقدمة.
+                      وفي حالة تقديم الخدمة لأكثر من شخص فيتم تحويل
+                      %1عن كل خدمة تم تقديمها
+                    </span>
+                  </li>
+                </ul>
+              </div>
 
-                      <span class="pb-1 md:pb-0 text-sm">مشاريعي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_portfolio.html" class="dashboard-tab active" >
-                      <svg class="h-6 w-6 mb-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="15" y1="6" x2="15.01" y2="6" />  <rect x="3" y="3" width="18" height="14" rx="3" />  <path d="M3 13l4 -4a3 5 0 0 1 3 0l 4 4" />  <path d="M13 12l2 -2a3 5 0 0 1 3 0l 3 3" />  <line x1="8" y1="21" x2="8.01" y2="21" />  <line x1="12" y1="21" x2="12.01" y2="21" />  <line x1="16" y1="21" x2="16.01" y2="21" /></svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">أعمالي</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_tickets.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6 mb-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
-                      </svg>
-                      
-                      <span class="pb-1 md:pb-0 text-sm">تذاكري</span>
-                    </a>
-              </li>
-              <li class="" role="presentation">
-                    <a href="my_verifications.html" class="dashboard-tab hover:bg-primary hover:text-white" >
-                      <svg class="h-6 w-6" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.007 8.27C22.194 9.125 23 10.45 23 12c0 1.55-.806 2.876-1.993 3.73.24 1.442-.134 2.958-1.227 4.05-1.095 1.095-2.61 1.459-4.046 1.225C14.883 22.196 13.546 23 12 23c-1.55 0-2.878-.807-3.731-1.996-1.438.235-2.954-.128-4.05-1.224-1.095-1.095-1.459-2.611-1.217-4.05C1.816 14.877 1 13.551 1 12s.816-2.878 2.002-3.73c-.242-1.439.122-2.955 1.218-4.05 1.093-1.094 2.61-1.467 4.057-1.227C9.125 1.804 10.453 1 12 1c1.545 0 2.88.803 3.732 1.993 1.442-.24 2.956.135 4.048 1.227 1.093 1.092 1.468 2.608 1.227 4.05Zm-4.426-.084a1 1 0 0 1 .233 1.395l-5 7a1 1 0 0 1-1.521.126l-3-3a1 1 0 0 1 1.414-1.414l2.165 2.165 4.314-6.04a1 1 0 0 1 1.395-.232Z" fill="#3eb142"></path></g></svg>
+            </div>
+            <div class="border border-gray-800 p-3">
+              <div class="mx-auto rounded-full w-16 h-16 p-3 mb-3 bg-blue-200 flex text-center items-center">
+                <svg class="h-10 w-10 text-blue-800"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <h2 class="title text-center text-primaryTextColorDarken text-md md:text-lg font-semibold">عمولة الموقع الوكالات السياحية    </h2>
+              <h2 class="sub-title text-center text-primaryTextColorDarken text-md md:text-lg font-semibold">عمرة – حج - تذاكر          </h2>
+              <h2 class="percentage my-6 text-center text-blue-800 text-md md:text-2xl font-semibold">2.5%    </h2>
+              <div>
+                <ul class="px-3 text-primaryTextColorDarken text-base lg:text-md">
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3">-</span>الحج 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%2.5</span> :  من قيمة برنامج الحج 
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>العمرة 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%2.5</span> :  من قيمة برنامج العمرة 
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>تذاكر 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%2.5</span> :  من قيمة تذاكر الطيران 
+                    </span>
+                  </li>
+                </ul>
+              </div>
 
-                      <span class="pb-1 md:pb-0 text-sm">توثيقات</span>
-                    </a>
-              </li>
-            </ul>
+            </div>
+            <div class="border border-gray-800 p-3">
+              <div class="mx-auto rounded-full w-16 h-16 p-3 mb-3 bg-blue-200 flex text-center items-center">
+                <svg class="h-10 w-10 text-blue-800"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="7" cy="17" r="2" />  <circle cx="17" cy="17" r="2" />  <path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" /></svg>
+              </div>
+              <h2 class="title text-center text-primaryTextColorDarken text-md md:text-lg font-semibold">عمولة الموقع في بيع السيارات  </h2>
+              <h2 class="sub-title text-center text-primaryTextColorDarken text-md md:text-lg font-semibold">والعقارات والمجوهرات</h2>
+              <h2 class="percentage my-6 text-center text-blue-800 text-md md:text-2xl font-semibold">1%    </h2>
+              <div>
+                <ul class="px-3 text-primaryTextColorDarken text-base lg:text-md">
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3">-</span>بيع عقار عن طريق المالك: 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%1</span> :  من قيمة العقار 
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>-بيع عقار عن طريق وسيط 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%1</span> :   يعتبر الموقع شريك في
+                      الوساطة ويقتسم السعي مع الوسطاء بالتساوي ، أو
+                      يدفع المعلن للموقع <span class="font-bold">%1</span> من قيمة العقار
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>تأجير عقارات 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%1</span> :  من قيمة عقد الإيجار الجديد فقط
+                      ، وليس العقد المجدد لنفس الشخص
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>بيع السيارات 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%1</span> :  من قيمة السيارة
+                    </span>
+                  </li>
+                  <li class="leading-7 text-justify mb-3">
+                    <span class="ml-3 ltr:mr-3 font-semibold">-</span>بيع الذهب والمجوهرات 
+                    <span class="text-gray-900 ">
+                      :  <span class="font-bold">%1</span> :  من قيمة المصوغ
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- subscribe -->
+        <div class="mt-5 md:flex justify-center gap-6 items-center">
+          <div class="flex justify-between gap-3 items-center max-w-md bg-[#c5e0b3] border border-[#adc59d] p-3">
+            <span class="font-semibold">    للاشتراك بالباقة المجانية</span>
+            <a href="register.html" class="md-button primary-btn">اضغط هنا</a>
+          </div>
+          <div class="flex justify-between gap-3 items-center max-w-md bg-[#deeaf6] border border-[#8aaed3] p-3">
+            <span class="font-semibold">    للاشتراك بالباقة المدفوعة      </span>
+            <a href="buy_offer.html" class="md-button primary-btn">اضغط هنا</a>
+          </div>
+        </div>
+        <!-- calculate percentagess -->
+        <h2 class="text-primaryTextColorDarken font-semibold text-center  text-lg md:text-2xl my-4">حساب  العمولة</h2>
+        <form action="" id="calculate_percentage_form" class="md:w-1/2 mx-auto">
+          <div class="flex items-center justify-center gap-2  border p-3">
+            <label for="purchase-value" class=" my-2 flex-1 md:w-1/2 text-center">
+              <span>ادخل سعر البيع</span>
+            </label>
+            <input type="number" class="white-input-theme flex-1 md:w-1/2" id="purchase-value" value="">
+
+          </div>
+          <div class="flex items-center justify-center gap-2  border p-3">
+            <label for="profession-type" class=" my-2 flex-1 md:w-1/2 text-center">
+              <span>ادخل المجال</span>
+            </label>
+            <select class="white-input-theme flex-1 md:w-1/2" id="profession-type" >
+              <option value="" selected disabled>اختر</option>
+              <option value="خدمات">خدمات </option>
+              <option value="سلع">سلع </option>
+              <option value="عمرة ">عمرة  </option>
+              <option value="حج">حج </option>
+              <option value="تذاكر طيران">تذاكر طيران </option>
+              <option value="العقارات ">العقارات </option>
+            </select>
            
           </div>
+          <div class="flex items-center justify-center gap-2  border p-3">
+            <label for=percentage-value" class=" my-2 flex-1 md:w-1/2 text-center">
+              <span>العمولة المستحقة</span>
+            </label>
+            <input type="text" class="white-input-theme flex-1 md:w-1/2" id=percentage-value" placeholder="€0">
 
-        </div>
-        <div class="w-full md:w-9/12 mt-2  lg:mt-0  z-20">
-          
-          <div id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab" class="">
-            <div class="bg-white p-2 rounded flex justify-between items-center  ">
-              <h2 class=" px-6 text-md">معرض أعمالي</h2>
-              <a href="add_work.html" class="md-button primary-btn">إضافة عمل</a>
-            </div>
-            <div class="w-full py-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3">
-              <!-- my works -->
-       
-              <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                <a href="" ><img class="w-full" src="assets/images/blog/blog-02.jpg" alt="Your image alt text"></a>
-                <div class="px-2 py-4">
-                  <a href="work_details.html" class="text-[14px] text-gray-900 mb-2">تصميم الصفحة الشخصية الخاصة بي كمطور ويب باستخدام tailwind css</a>
-                  <div class="flex flex-wrap -mx-2 mt-2">
-                    <a href="" class="inline-block bg-gray-200 rounded px-2 py-1 text-[13px]  text-gray-700 mr-2 mb-2">#برمجة_المواقع</a>
-                    <a href="" class="inline-block bg-gray-200 rounded px-2 py-1 text-[13px]  text-gray-700 mr-2 mb-2">#تصميم</a>
-                    <a href="" class="inline-block bg-gray-200 rounded px-2 py-1 text-[13px]  text-gray-700 mr-2 mb-2">#tailwind</a>
-                  </div>
-                </div>
-              </div>
-              <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                <a href="" ><img class="w-full" src="assets/images/blog/blog-03.jpg" alt="Your image alt text"></a>
-                <div class="px-2 py-4">
-                  <a href="work_details.html" class="text-[14px] text-gray-900 mb-2">تصميم الصفحة الشخصية الخاصة بي كمطور ويب باستخدام tailwind css</a>
-                  <div class="flex flex-wrap -mx-2 mt-2">
-                    <a href="" class="inline-block bg-gray-200 rounded px-2 py-1 text-[13px]  text-gray-700 mr-2 mb-2">#برمجة_المواقع</a>
-                    <a href="" class="inline-block bg-gray-200 rounded px-2 py-1 text-[13px]  text-gray-700 mr-2 mb-2">#تصميم</a>
-                    <a href="" class="inline-block bg-gray-200 rounded px-2 py-1 text-[13px]  text-gray-700 mr-2 mb-2">#tailwind</a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+        </form>
+        <!-- paying -->
+        <div class="mt-5">
+          <h2 class="text-primaryTextColorDarken font-semibold text-center  text-lg md:text-2xl my-4">طريقة الدفع</h2>
+          <h2 class="text-sectionTitleColor font-semibold text-center  text-md md:text-lg my-4">الطريقة الأولى: الدفع اونلاين</h2>
+          <p class="text-primaryTextColorDarken text-center text-md md:text-lg my-3 leading-6">
+            إذا تم الدفع ( اونلاين ) يتم تفعيل العمولة بحسابك بشكل تلقائي خلال  24ساعة (لا يحتاج تعبئة نموذج التحويل )
+          </p>
+          <a href="buy_offer.html" class="mx-auto my-5 block w-fit !p-3 border-2 border-gray-500 md-button primary-btn !bg-primaryTextColorDarken">اضغط هنا للدفع مباشرة على المنصة</a>
         </div>
 
-       
+      </div>
+
     </div>
-      
-    
-      
-    </section>
 
 
 
@@ -900,25 +929,6 @@
     <!-- ====== All Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="assets/js/main.js"></script>
-      <!-- tabs script -->
-      <script>
-        document.querySelectorAll('#myTab li a').forEach(link => 
-        link.addEventListener('click',function(e){
-          e.preventDefault()
-          changeTab(e.currentTarget)
-        })
-        )
-        function changeTab(target){
-          document.querySelectorAll('#myTab li a').forEach(child => child.classList.remove('tab-active'))
-           target.classList.add('tab-active')
-           let data_tabcontent = target.getAttribute('data-tabs-target');
-           document.querySelectorAll('#myTabContent > div').forEach(d => {
-            d.classList.add('hidden')
-           }); 
 
-           document.querySelector(""+data_tabcontent+"").classList.remove('hidden')
-        }
-  
-      </script>
   </body>
 </html>

@@ -262,7 +262,7 @@ input[type="radio"]:checked + label{
 }
 .dashboard-tab.active{ @apply bg-primary text-white transition-colors duration-300 ease-in-out delay-75}
 .md-button{ @apply px-3 py-2 rounded text-white text-sm}
-.[1rem]-button{ @apply px-5 py-2.5 rounded text-white text-sm}
+.smd-button{ @apply px-5 py-2.5 rounded text-white text-sm}
 .sm-button{ @apply px-4 py-1.5 rounded text-white text-sm}
 .primary-btn{
   @apply bg-primaryTextColor  hover:bg-primaryTextColorDarken 
@@ -321,3 +321,12 @@ input[type="radio"]:checked + label{
   @apply flex justify-center items-center gap-2 p-3 px-5 cursor-pointer;
 }
 #buy_offer_form .header-tab-item.active{@apply bg-white}
+.changed-font-p p,.changed-font-p ul li,changed-font-div{
+  @apply !font-Noto-Naskh text-[1.2rem] leading-8
+}
+#professions_percentages{
+  @apply px-3 text-primaryTextColorDarken text-[1rem] lg:text-lg
+}
+#professions_percentages li {
+  @apply mb-4
+}
